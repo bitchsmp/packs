@@ -1,0 +1,42 @@
+parry_ready:
+  Skills:
+  - actionmessage{m="Parrying"} @self
+#  - setmaterialcooldown{m=iron_sword;d=40} @self
+ # - potion{type=WEAKNESS;level=254;duration=2} @self
+ # - effect:particles{particle=witch_magic;amount=20} @self
+parry_miss:
+  Skills:
+  - setmaterialcooldown{m=iron_sword;d=120} @self
+  - stopusingitem @self
+  - actionmessage{m=" ";delay=1} @self
+  - actionmessage{m="Parry missed!";delay=2} @self
+parry_stop:
+  Skills:
+  - actionmessage{m=" ";delay=2} @self
+  - Aura{auraName=post_parry_attempt;duration=120;onendskill=post_parry_attempt_ended;doendskillonterminate=false} @self
+
+post_parry_attempt_ended:
+  Skills:
+  - actionmessage{m="Post-Parry attempt ended"} @self
+
+
+
+
+
+
+
+
+
+
+
+
+right_clicking_not_using:
+  Skills:
+ # - message{message="[debug] i am rightclicking and not using!"} @self
+
+artillery_explosion:
+  Skills:
+  - effect:explosion{}
+holding_right_click:
+  Skills:
+  - message{message="[debug] i am using!"} @self

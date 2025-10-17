@@ -1,0 +1,5 @@
+cummer:
+  Id: stick
+  Options:
+    PreventStacking: true
+  Skills:
