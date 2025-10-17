@@ -1,0 +1,11 @@
+
+spaa:
+  Id: STICK
+  Display: <gold>SPAA</gold>
+  Options:
+    Repairable: false
+    Unbreakable: true
+    HideFlags: true
+    PreventStacking: true
+  Skills:
+  - shoot{velocity=1;hs=60;vs=60;pi=true;md=300} ~onUse

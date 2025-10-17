@@ -1,0 +1,115 @@
+#Normal Attack (skill 1)
+hakurei_gohei_1: 
+  Conditions:
+  - itemrecharging false
+  TargetConditions:
+  - isMonster true
+  Skills:
+    - effect:lightning 
+    - effect:explosion
+    - damage{amount=20;ignoreArmor=true;ii=true;delay=2;ir=true}
+    
+
+
+
+
+
+#Try to cast Skill 2
+hakurei_gohei_2: 
+  Conditions:
+  - isCrouching false
+  - skillOnCooldown{s=hakurei_gohei_2_t} cast hakurei_gohei_2_f
+  Skills:
+  - skill{s=hakurei_gohei_2_t}
+#Skill 2 On cooldown
+hakurei_gohei_2_f: 
+  Cooldown: 1
+  Conditions:
+  Skills:
+  - randommessage{m="&cI can't cast continuously!";repeat=1} @self
+#Skill 2 Cast
+hakurei_gohei_2_t: 
+  Cooldown: 3
+  Conditions:
+  Skills:
+ 
+  - effect:particlesphere{particle=FIREWORKS_SPARK;amount=600;radius=10;delay=1} @self
+  - summon{type=hakurei_gohei_skill_2_marker} @self
+
+
+
+
+
+
+
+
+
+#Try to cast skill 3
+hakurei_gohei_3: 
+  Skills:
+  Conditions:
+  - isCrouching true
+  - skillOnCooldown{s=hakurei_gohei_3_t} cast hakurei_gohei_3_f
+  Skills:
+  - skill{s=hakurei_gohei_3_t}
+
+#Skill 3 on cooldown
+hakurei_gohei_3_f: 
+  Cooldown: 1
+  Conditions:
+  Skills:
+  - randommessage{m="&cI can't cast continuously!";repeat=1} @self
+  
+
+  
+    
+  
+#Cast skill 3
+hakurei_gohei_3_t: 
+  Cooldown: 3
+  Conditions:
+  Skills:
+
+  #Main Function
+  - summon{type=hakurei_gohei_skill_3_marker} @self
+
+
+# Skill 3 polygon effect
+hakurei_gohei_3_effect:
+  Skills:
+    # Effect
+  - polygon{db=0.25;y=-3.2;mpd=false;scale=6;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;yaw=45} @Origin
+  - polygon{db=0.25;y=1;x=4.3;mpd=false;scale=6;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=1;x=-4.3;mpd=false;scale=6;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=5.3;mpd=false;scale=6;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;yaw=45} @Origin
+  - polygon{db=0.25;y=-1.6;mpd=false;scale=3;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;yaw=45} @Origin
+  - polygon{db=0.25;y=0.5;x=2.15;mpd=false;scale=3;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=0.5;x=-2.15;mpd=false;scale=3;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=2.65;mpd=false;scale=3;
+    oE=[ - effect:particles{p=FLAME} ];
+    oS=[ - effect:particles{p=reddust} ]
+    ;p=4;skip=0;duration=1;yaw=45} @Origin
+
+
+
