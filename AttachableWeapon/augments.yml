@@ -1,0 +1,10 @@
+GEM:
+  Enabled: true
+  Display: 'Gem'
+  Formatting:
+    Empty: '<augment.icon> Empty <augment.type> Slot'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''

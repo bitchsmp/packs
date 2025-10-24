@@ -1,0 +1,18 @@
+GemRemover:
+  Material: SHEARS
+  Display: '<aqua>Gem Remover'
+  AugmentationRemover:
+    Type: GEM           
+    DestroySocket: false  
+    ReturnAugment: true
+
+attachable_iron_sword:
+  id: iron_sword
+  AugmentationSlots:
+    Type: GEM
+    Amount: 1to2
+    Chance: 1
+    MaxAmount: 3
+  Lore:
+    Template: attachable_iron_sword
+

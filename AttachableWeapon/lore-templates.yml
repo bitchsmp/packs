@@ -1,0 +1,9 @@
+attachable_iron_sword:
+  - Filler: ' '
+  - Line:
+    - '{augments:GEM}Gems:'
+    - '{augments-each:GEM}<augment.display>'
+  - Filler: ' '
+  - Conditions:
+    - notEmpty <item.lore.Description>
+    Line: '<item.lore.Description>'
