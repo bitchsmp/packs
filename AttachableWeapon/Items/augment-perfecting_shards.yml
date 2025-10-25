@@ -6,4 +6,4 @@ TestPerfectingShard:
     Tooltip: 'Add 4.368 Attack Damage'
     Conditions:
     Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=4.368;dur=2;operation=ADD_NUMBER;name=kmjnbvcxgvbc2wed} @self ~onTimer:1
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=4.368;dur=2;operation=ADD_NUMBER} @self ~onTimer:1
