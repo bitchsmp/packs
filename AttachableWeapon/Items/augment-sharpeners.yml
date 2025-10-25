@@ -1,9 +1,82 @@
-TestSharpener:
+SharpenerWooden:
   Material: IRON_NUGGET
-  Display: '<white>Iron Sharpener'
+  Display: '<#9e8629>Wooden <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any wooden weapons'
   Augmentation:
-    Type: SHARPENER
+    Type: WOODEN_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Skills:
       - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+
+SharpenerStone:
+  Material: IRON_NUGGET
+  Display: '<gray>Stone <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any stone weapons'
+  Augmentation:
+    Type: STONE_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Skills:
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+
+SharpenerCopper:
+  Material: IRON_NUGGET
+  Display: '<gold>Copper <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any copper weapons'
+  Augmentation:
+    Type: COPPER_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Skills:
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+SharpenerIron:
+  Material: IRON_NUGGET
+  Display: '<white>Iron <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any iron weapons'
+  Augmentation:
+    Type: IRON_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Skills:
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+SharpenerGold:
+  Material: IRON_NUGGET
+  Display: '<yellow>Gold <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any gold weapons'
+  Augmentation:
+    Type: GOLD_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Skills:
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+
+SharpenerDiamond:
+  Material: IRON_NUGGET
+  Display: '<aqua>Diamond <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any diamond weapons'
+  Augmentation:
+    Type: DIAMOND_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Skills:
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+
+SharpenerNetherite:
+  Material: IRON_NUGGET
+  Display: '<dark_gray>Netherite <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to any netherite weapons'
+  Augmentation:
+    Type: NETHERITE_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Skills:
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+

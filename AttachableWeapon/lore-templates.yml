@@ -4,9 +4,21 @@ attachable_weapons:
     - '{augments-each:SKIN}<augment.display>'
   - Filler: ' '
   - Line:
-    - '{augments-each:SHARPENER}<augment.display>'
+    - '{augments-each:WOODEN_SHARPENER}<augment.display>'
+    - '{augments-each:STONE_SHARPENER}<augment.display>'
+    - '{augments-each:COPPER_SHARPENER}<augment.display>'
+    - '{augments-each:IRON_SHARPENER}<augment.display>'
+    - '{augments-each:GOLD_SHARPENER}<augment.display>'
+    - '{augments-each:DIAMOND_SHARPENER}<augment.display>'
+    - '{augments-each:NETHERITE_SHARPENER}<augment.display>'
   - Line:
-    - '{augments-each:PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:WOODEN_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:STONE_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:COPPER_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:IRON_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:GOLD_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:DIAMOND_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:NETHERITE_PERFECTING_SHARD}<augment.display>'
   - Filler: ' '
   - Conditions:
     - notEmpty <item.lore.Description>
