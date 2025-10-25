@@ -9,5 +9,5 @@ TestSharpener:
       - attributeModifier{attribute=ATTACK_DAMAGE;a=1.2;dur=2;operation=ADD_NUMBER;name=asdfhhii} @self ~onTimer:1
   AugmentationSocket:
     Type: SMITHING_STONE
-    MaxSockets: 1  
+    MaxSockets: 1
 

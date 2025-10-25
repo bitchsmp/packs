@@ -1,9 +1,12 @@
 TestSmithingStone:
   Material: GOLD_NUGGET
-  Display: '<gold> Iron Smithing Stone'
+  Display: '<white>Iron <gold>Smithing Stone'
   Augmentation:
     Type: SMITHING_STONE
     Tooltip: 'Add 2.64 Attack Damage'
     Conditions:
     Skills:
       - attributeModifier{attribute=ATTACK_DAMAGE;a=2.64;dur=2;operation=ADD_NUMBER;name=kmjnbvcx2wed} @self ~onTimer:1
+  AugmentationSocket:
+    Type: PERFECTING_SHARD
+    MaxSockets: 1  

@@ -1,16 +1,13 @@
 attachable_iron_sword:
   - Filler: ' '
   - Line:
-    - '{augments:GEM}Gems:'
-    - '{augments-each:GEM}<augment.display>'
+#    - '{augments:SKIN}Skin:'
+    - '{augments-each:SKIN}<augment.display>'
   - Filler: ' '
   - Line:
-    - '{augments:SHARPENER}Sharpeners:'
     - '{augments-each:SHARPENER}<augment.display>'
-  - Filler: ' '
-  - Line:
-    - '{augments:SMITHING_STONE}Smithing Stones:'
     - '{augments-each:SMITHING_STONE}<augment.display>'
+    - '{augments-each:PERFECTING_SHARD}<augment.display>'
   - Filler: ' '
   - Conditions:
     - notEmpty <item.lore.Description>

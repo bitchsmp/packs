@@ -1,7 +1,7 @@
-GemRemover:
+SkinRemover:
   Material: SHEARS
-  Display: '<aqua>Gem Remover'
+  Display: '<aqua>Skin Remover'
   AugmentationRemover:
-    Type: GEM           
+    Type: SKIN         
     DestroySocket: false  
     ReturnAugment: true

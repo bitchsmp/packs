@@ -1,7 +1,7 @@
 attachable_iron_sword:
   id: iron_sword
   AugmentationSlots:
-  - Type: GEM
+  - Type: SKIN
     Amount: 1
     Chance: 1
     MaxAmount: 1
@@ -10,6 +10,10 @@ attachable_iron_sword:
     Chance: 1
     MaxAmount: 1
   - Type: SMITHING_STONE
+    Amount: 0
+    Chance: 1
+    MaxAmount: 1
+  - Type: PERFECTING_SHARD
     Amount: 0
     Chance: 1
     MaxAmount: 1

@@ -1,9 +1,9 @@
-TestGem:
+TestSkin:
   Material: DIAMOND
-  Display: '<red>Brimstone Gem'
+  Display: '<red>Brimstone Claymore'
   Augmentation:
-    Type: GEM
-    Tooltip: '<red>Fiery Gem <gray>(On Use: Shoot Fireballs)'
+    Type: SKIN
+    Tooltip: '<red>Brimstone Claymore<gray> (On Use: Shoot Fireballs)'
     ReplaceItemModel: brimstone_claymore
     ReplaceItemModelNamespace: minecraft
     Conditions:

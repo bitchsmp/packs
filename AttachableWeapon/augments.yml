@@ -1,8 +1,8 @@
-GEM:
+SKIN:
   Enabled: true
-  Display: 'Gem'
+  Display: 'Skin'
   Formatting:
-    Empty: '<augment.icon> Empty <augment.type> Slot'
+    Empty: '<augment.icon> Default <augment.type>'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -12,8 +12,8 @@ SHARPENER:
   Enabled: true
   Display: 'Sharpener'
   Formatting:
-    Empty: '<augment.icon> Empty <augment.type> Slot'
-    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+    Empty: '<red>Not sharpened'
+    Filled: '<white>Sharpened: <augment.tooltip>'
   Icons:
     Empty: '☆'
     Filled: '★'
@@ -22,8 +22,18 @@ SMITHING_STONE:
   Enabled: true
   Display: 'Smithing Stone'
   Formatting:
-    Empty: '<augment.icon> Empty <augment.type> Slot'
-    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+    Empty: '<red>Not re-smithed'
+    Filled: '<gold>Re-smithed: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
+PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Perfecting Shard'
+  Formatting:
+    Empty: '<red>Not perfected'
+    Filled: '<aqua>Perfected: <augment.tooltip>'
   Icons:
     Empty: '☆'
     Filled: '★'
