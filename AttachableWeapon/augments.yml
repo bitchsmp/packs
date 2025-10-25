@@ -8,33 +8,151 @@ SKIN:
     Empty: '☆'
     Filled: '★'
     Invalid: ''
-SHARPENER:
+WOODEN_SHARPENER:
   Enabled: true
-  Display: 'Sharpener'
+  Display: 'Wooden Sharpener'
   Formatting:
-    Empty: '<red>Not sharpened'
-    Filled: '<white>Sharpened: <augment.tooltip>'
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
   Icons:
-    Empty: '☆'
-    Filled: '★'
+    Empty: '✖'
+    Filled: '✔'
     Invalid: ''
-SMITHING_STONE:
+STONE_SHARPENER:
   Enabled: true
-  Display: 'Smithing Stone'
+  Display: 'Stone Sharpener'
   Formatting:
-    Empty: '<red>Not re-smithed'
-    Filled: '<gold>Re-smithed: <augment.tooltip>'
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
   Icons:
-    Empty: '☆'
-    Filled: '★'
+    Empty: '✖'
+    Filled: '✔'
     Invalid: ''
-PERFECTING_SHARD:
+COPPER_SHARPENER:
   Enabled: true
-  Display: 'Perfecting Shard'
+  Display: 'Copper Sharpener'
   Formatting:
-    Empty: '<red>Not perfected'
-    Filled: '<aqua>Perfected: <augment.tooltip>'
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
   Icons:
-    Empty: '☆'
-    Filled: '★'
+    Empty: '✖'
+    Filled: '✔'
     Invalid: ''
+IRON_SHARPENER:
+  Enabled: true
+  Display: 'Iron Sharpener'
+  Formatting:
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+  Icons:
+    Empty: '✖'
+    Filled: '✔'
+    Invalid: ''
+
+GOLD_SHARPENER:
+  Enabled: true
+  Display: 'Gold Sharpener'
+  Formatting:
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+  Icons:
+    Empty: '✖'
+    Filled: '✔'
+    Invalid: ''
+DIAMOND_SHARPENER:
+  Enabled: true
+  Display: 'Diamond Sharpener'
+  Formatting:
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+  Icons:
+    Empty: '✖'
+    Filled: '✔'
+    Invalid: ''
+NETHERITE_SHARPENER:
+  Enabled: true
+  Display: 'Netherite Sharpener'
+  Formatting:
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+  Icons:
+    Empty: '✖'
+    Filled: '✔'
+    Invalid: ''
+
+WOODEN_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Wooden Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+
+STONE_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Stone Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+
+COPPER_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Copper Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+IRON_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Iron Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+
+GOLD_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Gold Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+
+DIAMOND_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Diamond Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+
+NETHERITE_PERFECTING_SHARD:
+  Enabled: true
+  Display: 'Netherite Perfecting Shard'
+  Formatting:
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
+  Icons:
+    Empty: '💩'
+    Filled: '💎'
+    Invalid: ''
+

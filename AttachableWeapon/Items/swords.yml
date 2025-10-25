@@ -1,3 +1,58 @@
+# Rules:
+# Max Damage: x*1.2^3
+# x is base damage of the sword
+
+attachable_wooden_sword:
+  id: wooden_sword
+  AugmentationSlots:
+  - Type: SKIN
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: WOODEN_SHARPENER
+    Amount: 2
+    Chance: 1
+  - Type: WOODEN_PERFECTING_SHARD
+    Amount: 9
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+
+attachable_stone_sword:
+  id: stone_sword
+  AugmentationSlots:
+  - Type: SKIN
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: STONE_SHARPENER
+    Amount: 3
+    Chance: 1
+  - Type: STONE_PERFECTING_SHARD
+    Amount: 6
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+
+
+attachable_copper_sword:
+  id: copper_sword
+  AugmentationSlots:
+  - Type: SKIN
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: COPPER_SHARPENER
+    Amount: 3
+    Chance: 1
+  - Type: COPPER_PERFECTING_SHARD
+    Amount: 6
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
 attachable_iron_sword:
   id: iron_sword
   AugmentationSlots:
@@ -5,18 +60,61 @@ attachable_iron_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: SHARPENER
+  - Type: IRON_SHARPENER
+    Amount: 4
+    Chance: 1
+  - Type: IRON_PERFECTING_SHARD
+    Amount: 3
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+attachable_gold_sword:
+  id: golden_sword
+  AugmentationSlots:
+  - Type: SKIN
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: SMITHING_STONE
-    Amount: 0
+  - Type: GOLD_SHARPENER
+    Amount: 2
     Chance: 1
-    MaxAmount: 1
-  - Type: PERFECTING_SHARD
-    Amount: 0
+  - Type: GOLD_PERFECTING_SHARD
+    Amount: 9
     Chance: 1
-    MaxAmount: 1
   Lore:
-    Template: attachable_iron_sword
+    Template: attachable_weapons
 
+
+attachable_diamond_sword:
+  id: diamond_sword
+  AugmentationSlots:
+  - Type: SKIN
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: DIAMOND_SHARPENER
+    Amount: 5
+    Chance: 1
+  - Type: DIAMOND_PERFECTING_SHARD
+    Amount: 0
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+
+attachable_netherite_sword:
+  id: netherite_sword
+  AugmentationSlots:
+  - Type: SKIN
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: NETHERITE_SHARPENER
+    Amount: 5
+    Chance: 1
+  - Type: NETHERITE_PERFECTING_SHARD
+    Amount: 8
+    Chance: 1
+  Lore:
+    Template: attachable_weapons

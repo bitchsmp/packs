@@ -1,13 +1,24 @@
-attachable_iron_sword:
+attachable_weapons:
   - Filler: ' '
   - Line:
-#    - '{augments:SKIN}Skin:'
     - '{augments-each:SKIN}<augment.display>'
   - Filler: ' '
   - Line:
-    - '{augments-each:SHARPENER}<augment.display>'
-    - '{augments-each:SMITHING_STONE}<augment.display>'
-    - '{augments-each:PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:WOODEN_SHARPENER}<augment.display>'
+    - '{augments-each:STONE_SHARPENER}<augment.display>'
+    - '{augments-each:COPPER_SHARPENER}<augment.display>'
+    - '{augments-each:IRON_SHARPENER}<augment.display>'
+    - '{augments-each:GOLD_SHARPENER}<augment.display>'
+    - '{augments-each:DIAMOND_SHARPENER}<augment.display>'
+    - '{augments-each:NETHERITE_SHARPENER}<augment.display>'
+  - Line:
+    - '{augments-each:WOODEN_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:STONE_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:COPPER_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:IRON_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:GOLD_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:DIAMOND_PERFECTING_SHARD}<augment.display>'
+    - '{augments-each:NETHERITE_PERFECTING_SHARD}<augment.display>'
   - Filler: ' '
   - Conditions:
     - notEmpty <item.lore.Description>
