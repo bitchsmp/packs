@@ -1,4 +1,4 @@
-TestSkin:
+Skin-Brimstone_Claymore:
   Material: DIAMOND
   Display: '<red>Brimstone Claymore'
   Augmentation:
@@ -9,4 +9,4 @@ TestSkin:
     Conditions:
     Stats:
     Skills:
-    - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=UltraBurnTick} @target ~onAttack
+    - skill{s=UltraBurn} @target ~onAttack ?!itemRecharging{}
