@@ -1,0 +1,4 @@
+UltraBurnTick:
+  Skills:
+  - damage{a=1;preventknockback=true}
+  - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}

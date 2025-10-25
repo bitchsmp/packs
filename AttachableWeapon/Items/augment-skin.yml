@@ -3,10 +3,10 @@ TestSkin:
   Display: '<red>Brimstone Claymore'
   Augmentation:
     Type: SKIN
-    Tooltip: '<red>Brimstone Claymore<gray> (On Use: Shoot Fireballs)'
+    Tooltip: '<red>Brimstone Claymore<gray> Inflict UltraBurn on hit.'
     ReplaceItemModel: brimstone_claymore
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
     Skills:
-    - fireball{cooldown=3} @targetlocation ~onUse
+    - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=UltraBurnTick} @target ~onAttack
