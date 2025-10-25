@@ -1,9 +1,9 @@
 TestPerfectingShard:
-  Material: AMETHYST_SHARD
-  Display: '<white>Iron <AQUA>Perfecting Shard'
+  Material: Amethyst_shard
+  Display: '<aqua>Perfecting Shard'
   Augmentation:
     Type: PERFECTING_SHARD
-    Tooltip: 'Add 4.368 Attack Damage'
+    Tooltip: 'Add 0.1 Attack Damage'
     Conditions:
     Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=4.368;dur=2;operation=ADD_NUMBER} @self ~onTimer:1
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1

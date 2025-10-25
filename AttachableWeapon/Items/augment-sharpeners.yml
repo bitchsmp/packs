@@ -3,10 +3,7 @@ TestSharpener:
   Display: '<white>Iron Sharpener'
   Augmentation:
     Type: SHARPENER
-    Tooltip: 'Add 1.2 Attack Damage'
+    Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1.2;dur=2;operation=ADD_NUMBER} @self ~onTimer:1
-  AugmentationSocket:
-    Type: SMITHING_STONE
-    MaxSockets: 1
+      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1

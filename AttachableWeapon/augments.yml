@@ -12,29 +12,20 @@ SHARPENER:
   Enabled: true
   Display: 'Sharpener'
   Formatting:
-    Empty: '<red>Not sharpened'
-    Filled: '<white>Sharpened: <augment.tooltip>'
+    Empty: '<red><augment.icon> Not sharpened'
+    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
   Icons:
-    Empty: '☆'
-    Filled: '★'
+    Empty: '✖'
+    Filled: '✔'
     Invalid: ''
-SMITHING_STONE:
-  Enabled: true
-  Display: 'Smithing Stone'
-  Formatting:
-    Empty: '<red>Not re-smithed'
-    Filled: '<gold>Re-smithed: <augment.tooltip>'
-  Icons:
-    Empty: '☆'
-    Filled: '★'
-    Invalid: ''
+
 PERFECTING_SHARD:
   Enabled: true
   Display: 'Perfecting Shard'
   Formatting:
-    Empty: '<red>Not perfected'
-    Filled: '<aqua>Perfected: <augment.tooltip>'
+    Empty: '<#a16357><augment.icon> Not Perfected'
+    Filled: '<aqua><augment.icon> Perfected: <augment.tooltip>'
   Icons:
-    Empty: '☆'
-    Filled: '★'
+    Empty: '💩'
+    Filled: '💎'
     Invalid: ''

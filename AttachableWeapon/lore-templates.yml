@@ -1,12 +1,11 @@
-attachable_iron_sword:
+attachable_weapons:
   - Filler: ' '
   - Line:
-#    - '{augments:SKIN}Skin:'
     - '{augments-each:SKIN}<augment.display>'
   - Filler: ' '
   - Line:
     - '{augments-each:SHARPENER}<augment.display>'
-    - '{augments-each:SMITHING_STONE}<augment.display>'
+  - Line:
     - '{augments-each:PERFECTING_SHARD}<augment.display>'
   - Filler: ' '
   - Conditions:

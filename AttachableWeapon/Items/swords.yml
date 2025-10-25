@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 attachable_iron_sword:
   id: iron_sword
   AugmentationSlots:
@@ -6,17 +18,10 @@ attachable_iron_sword:
     Chance: 1
     MaxAmount: 1
   - Type: SHARPENER
-    Amount: 1
+    Amount: 4
     Chance: 1
-    MaxAmount: 1
-  - Type: SMITHING_STONE
-    Amount: 0
-    Chance: 1
-    MaxAmount: 1
   - Type: PERFECTING_SHARD
-    Amount: 0
+    Amount: 3
     Chance: 1
-    MaxAmount: 1
   Lore:
-    Template: attachable_iron_sword
-
+    Template: attachable_weapons
