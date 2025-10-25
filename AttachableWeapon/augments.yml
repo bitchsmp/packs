@@ -8,3 +8,23 @@ GEM:
     Empty: '☆'
     Filled: '★'
     Invalid: ''
+SHARPENER:
+  Enabled: true
+  Display: 'Sharpener'
+  Formatting:
+    Empty: '<augment.icon> Empty <augment.type> Slot'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
+SMITHING_STONE:
+  Enabled: true
+  Display: 'Smithing Stone'
+  Formatting:
+    Empty: '<augment.icon> Empty <augment.type> Slot'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''

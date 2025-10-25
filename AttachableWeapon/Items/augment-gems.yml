@@ -1,0 +1,12 @@
+TestGem:
+  Material: DIAMOND
+  Display: '<red>Brimstone Gem'
+  Augmentation:
+    Type: GEM
+    Tooltip: '<red>Fiery Gem <gray>(On Use: Shoot Fireballs)'
+    ReplaceItemModel: brimstone_claymore
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - fireball{cooldown=3} @targetlocation ~onUse
