@@ -1,6 +1,8 @@
 Skin-Brimstone_Claymore:
   Material: DIAMOND
   Display: '<red>Brimstone Claymore'
+  Lore:
+  - <gray>Inflict UltraBurn on hit.
   Augmentation:
     Type: SKIN
     Tooltip: '<red>Brimstone Claymore<gray> Inflict UltraBurn on hit.'
