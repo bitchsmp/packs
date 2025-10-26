@@ -1,9 +1,15 @@
 attachable_weapons:
   - Filler: ' '
+  - Conditions:
+    - notEmpty <item.lore.Description>
+    Line: '<item.lore.Description>'
   - Line:
     - '{augments-each:SKIN}<augment.display>'
   - Filler: ' '
   - Line:
+    - '{stats}<yellow>Stats:'
+    - '{stats-each}<white><stat.display>'
+
     - '{augments-each:WOODEN_SHARPENER}<augment.display>'
     - '{augments-each:STONE_SHARPENER}<augment.display>'
     - '{augments-each:COPPER_SHARPENER}<augment.display>'
@@ -12,15 +18,13 @@ attachable_weapons:
     - '{augments-each:DIAMOND_SHARPENER}<augment.display>'
     - '{augments-each:NETHERITE_SHARPENER}<augment.display>'
   - Filler: ' '
-  - Line:
-    - '{augments-each:WOODEN_PERFECTING_SHARD}<augment.display>'
-    - '{augments-each:STONE_PERFECTING_SHARD}<augment.display>'
-    - '{augments-each:COPPER_PERFECTING_SHARD}<augment.display>'
-    - '{augments-each:IRON_PERFECTING_SHARD}<augment.display>'
-    - '{augments-each:GOLD_PERFECTING_SHARD}<augment.display>'
-    - '{augments-each:DIAMOND_PERFECTING_SHARD}<augment.display>'
-    - '{augments-each:NETHERITE_PERFECTING_SHARD}<augment.display>'
-  - Filler: ' '
-  - Conditions:
-    - notEmpty <item.lore.Description>
-    Line: '<item.lore.Description>'
+  # - Line:
+  #   - '{augments-each:WOODEN_PERFECTING_SHARD}<augment.display>'
+  #   - '{augments-each:STONE_PERFECTING_SHARD}<augment.display>'
+  #   - '{augments-each:COPPER_PERFECTING_SHARD}<augment.display>'
+  #   - '{augments-each:IRON_PERFECTING_SHARD}<augment.display>'
+  #   - '{augments-each:GOLD_PERFECTING_SHARD}<augment.display>'
+  #   - '{augments-each:DIAMOND_PERFECTING_SHARD}<augment.display>'
+  #   - '{augments-each:NETHERITE_PERFECTING_SHARD}<augment.display>'
+  # - Filler: ' '
+
