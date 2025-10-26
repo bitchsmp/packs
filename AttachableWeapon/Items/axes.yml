@@ -77,7 +77,7 @@ attachable_gold_axe:
     Chance: 1
     MaxAmount: 1
   - Type: GOLD_SHARPENER
-    Amount: 5
+    Amount: 10 #Gold axes has 5 additional sharpener slots
     Chance: 1
   - Type: GOLD_PERFECTING_SHARD
     Amount: 0
