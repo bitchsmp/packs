@@ -12,11 +12,10 @@ attachable_wooden_sword:
   - Type: WOODEN_SHARPENER
     Amount: 2
     Chance: 1
-  - Type: WOODEN_PERFECTING_SHARD
-    Amount: 9
-    Chance: 1
   Lore:
     Template: attachable_weapons
+    Description:
+    
 
 
 attachable_stone_sword:
@@ -28,9 +27,6 @@ attachable_stone_sword:
     MaxAmount: 1
   - Type: STONE_SHARPENER
     Amount: 3
-    Chance: 1
-  - Type: STONE_PERFECTING_SHARD
-    Amount: 6
     Chance: 1
   Lore:
     Template: attachable_weapons
@@ -47,9 +43,6 @@ attachable_copper_sword:
   - Type: COPPER_SHARPENER
     Amount: 3
     Chance: 1
-  - Type: COPPER_PERFECTING_SHARD
-    Amount: 6
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -63,9 +56,6 @@ attachable_iron_sword:
   - Type: IRON_SHARPENER
     Amount: 4
     Chance: 1
-  - Type: IRON_PERFECTING_SHARD
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -78,9 +68,6 @@ attachable_gold_sword:
     MaxAmount: 1
   - Type: GOLD_SHARPENER
     Amount: 10 #Gold Weapon has additional 8 sharpener slots
-    Chance: 1
-  - Type: GOLD_PERFECTING_SHARD
-    Amount: 20 #Gold Weapon has additional 11 perfecting shard slots
     Chance: 1
   Lore:
     Template: attachable_weapons
@@ -96,9 +83,6 @@ attachable_diamond_sword:
   - Type: DIAMOND_SHARPENER
     Amount: 5
     Chance: 1
-  - Type: DIAMOND_PERFECTING_SHARD
-    Amount: 0
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -112,9 +96,6 @@ attachable_netherite_sword:
     MaxAmount: 1
   - Type: NETHERITE_SHARPENER
     Amount: 5
-    Chance: 1
-  - Type: NETHERITE_PERFECTING_SHARD
-    Amount: 8
     Chance: 1
   Lore:
     Template: attachable_weapons

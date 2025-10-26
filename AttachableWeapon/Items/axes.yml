@@ -12,9 +12,6 @@ attachable_wooden_axe:
   - Type: WOODEN_SHARPENER
     Amount: 5
     Chance: 1
-  - Type: WOODEN_PERFECTING_SHARD
-    Amount: 0
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -28,9 +25,6 @@ attachable_stone_axe:
     MaxAmount: 1
   - Type: STONE_SHARPENER
     Amount: 6
-    Chance: 1
-  - Type: STONE_PERFECTING_SHARD
-    Amount: 5
     Chance: 1
   Lore:
     Template: attachable_weapons
@@ -47,9 +41,6 @@ attachable_copper_axe:
   - Type: COPPER_SHARPENER
     Amount: 6
     Chance: 1
-  - Type: COPPER_PERFECTING_SHARD
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -63,9 +54,6 @@ attachable_iron_axe:
   - Type: IRON_SHARPENER
     Amount: 6
     Chance: 1
-  - Type: IRON_PERFECTING_SHARD
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -78,9 +66,6 @@ attachable_gold_axe:
     MaxAmount: 1
   - Type: GOLD_SHARPENER
     Amount: 10 #Gold axes has 5 additional sharpener slots
-    Chance: 1
-  - Type: GOLD_PERFECTING_SHARD
-    Amount: 0
     Chance: 1
   Lore:
     Template: attachable_weapons
@@ -96,9 +81,6 @@ attachable_diamond_axe:
   - Type: DIAMOND_SHARPENER
     Amount: 6
     Chance: 1
-  - Type: DIAMOND_PERFECTING_SHARD
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -112,9 +94,6 @@ attachable_netherite_axe:
     MaxAmount: 1
   - Type: NETHERITE_SHARPENER
     Amount: 7
-    Chance: 1
-  - Type: NETHERITE_PERFECTING_SHARD
-    Amount: 2
     Chance: 1
   Lore:
     Template: attachable_weapons
