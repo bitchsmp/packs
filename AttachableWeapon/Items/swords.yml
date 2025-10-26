@@ -77,10 +77,10 @@ attachable_gold_sword:
     Chance: 1
     MaxAmount: 1
   - Type: GOLD_SHARPENER
-    Amount: 2
+    Amount: 10 #Gold Weapon has additional 8 sharpener slots
     Chance: 1
   - Type: GOLD_PERFECTING_SHARD
-    Amount: 9
+    Amount: 20 #Gold Weapon has additional 11 perfecting shard slots
     Chance: 1
   Lore:
     Template: attachable_weapons
