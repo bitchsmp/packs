@@ -4,6 +4,7 @@
 
 attachable_wooden_sword:
   id: wooden_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -20,6 +21,7 @@ attachable_wooden_sword:
 
 attachable_stone_sword:
   id: stone_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -35,6 +37,7 @@ attachable_stone_sword:
 
 attachable_copper_sword:
   id: copper_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -48,6 +51,7 @@ attachable_copper_sword:
 
 attachable_iron_sword:
   id: iron_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -61,6 +65,7 @@ attachable_iron_sword:
 
 attachable_gold_sword:
   id: golden_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -75,6 +80,7 @@ attachable_gold_sword:
 
 attachable_diamond_sword:
   id: diamond_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -89,6 +95,7 @@ attachable_diamond_sword:
 
 attachable_netherite_sword:
   id: netherite_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
