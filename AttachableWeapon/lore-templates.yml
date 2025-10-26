@@ -7,9 +7,10 @@ attachable_weapons:
     - '{augments-each:SKIN}<augment.display>'
   - Filler: ' '
   - Line:
-    - '{stats}<yellow>Stats:'
-    - '{stats-each}<white><stat.display>'
-
+    - '{stats}<yellow>Bonus Stats:'
+    - '{stats-each}<blue><stat.display>'
+  - Filler: ' '
+  - Line:
     - '{augments-each:WOODEN_SHARPENER}<augment.display>'
     - '{augments-each:STONE_SHARPENER}<augment.display>'
     - '{augments-each:COPPER_SHARPENER}<augment.display>'

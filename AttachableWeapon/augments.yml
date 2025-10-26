@@ -13,7 +13,7 @@ WOODEN_SHARPENER:
   Display: 'Wooden Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
   Icons:
     Empty: '✖'
     Filled: '✔'
@@ -23,7 +23,7 @@ STONE_SHARPENER:
   Display: 'Stone Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
   Icons:
     Empty: '✖'
     Filled: '✔'
@@ -33,7 +33,7 @@ COPPER_SHARPENER:
   Display: 'Copper Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
   Icons:
     Empty: '✖'
     Filled: '✔'
@@ -43,7 +43,7 @@ IRON_SHARPENER:
   Display: 'Iron Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
   Icons:
     Empty: '✖'
     Filled: '✔'
@@ -54,7 +54,7 @@ GOLD_SHARPENER:
   Display: 'Gold Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
   Icons:
     Empty: '✖'
     Filled: '✔'
@@ -64,7 +64,7 @@ DIAMOND_SHARPENER:
   Display: 'Diamond Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
   Icons:
     Empty: '✖'
     Filled: '✔'
@@ -74,7 +74,8 @@ NETHERITE_SHARPENER:
   Display: 'Netherite Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened' #: <augment.tooltip>'
+    Filled: '<green><augment.icon> Sharpened'
+#backup:     Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
   Icons:
     Empty: '✖'
     Filled: '✔'
