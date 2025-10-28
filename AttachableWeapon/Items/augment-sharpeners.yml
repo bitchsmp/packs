@@ -81,3 +81,14 @@ SharpenerNetherite:
     Stats:
     - ATTACK_DAMAGE 1 ADDITIVE
 
+SharpenerMace:
+  Material: IRON_NUGGET
+  Display: '<dark_gray>Netherite <gold>Sharpener'
+  Lore:
+  - '<green>Add 1 Attack Damage to maces'
+  Augmentation:
+    Type: MACE_SHARPENER
+    Tooltip: 'Add 1 Attack Damage'
+    Conditions:
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE

@@ -81,6 +81,17 @@ NETHERITE_SHARPENER:
     Filled: '✔'
     Invalid: ''
 
+MACE_SHARPENER:
+  Enabled: true
+  Display: 'Mace Condenser'
+  Formatting:
+    Empty: '<red><augment.icon> Not condensed'
+    Filled: '<green><augment.icon> Condensed'
+  Icons:
+    Empty: '✖'
+    Filled: '✔'
+    Invalid: ''
+
 # WOODEN_PERFECTING_SHARD:
 #   Enabled: true
 #   Display: 'Wooden Perfecting Shard'
