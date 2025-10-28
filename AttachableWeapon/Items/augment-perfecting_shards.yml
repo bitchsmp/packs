@@ -1,83 +1,83 @@
-PerfectingShardWooden:
-  Material: Amethyst_shard
-  Display: '<#9e8629>Wooden <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any wooden weapons'
-  Augmentation:
-    Type: WOODEN_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+# PerfectingShardWooden:
+#   Material: Amethyst_shard
+#   Display: '<#9e8629>Wooden <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any wooden weapons'
+#   Augmentation:
+#     Type: WOODEN_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
 
-PerfectingShardStone:
-  Material: Amethyst_shard
-  Display: '<gray>Stone <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any stone weapons'
-  Augmentation:
-    Type: STONE_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
-PerfectingShardCopper:
-  Material: Amethyst_shard
-  Display: '<gold>COPPER <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any copper weapons'
-  Augmentation:
-    Type: COPPER_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+# PerfectingShardStone:
+#   Material: Amethyst_shard
+#   Display: '<gray>Stone <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any stone weapons'
+#   Augmentation:
+#     Type: STONE_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
+# PerfectingShardCopper:
+#   Material: Amethyst_shard
+#   Display: '<gold>COPPER <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any copper weapons'
+#   Augmentation:
+#     Type: COPPER_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
 
-PerfectingShardIron:
-  Material: Amethyst_shard
-  Display: '<white>Iron <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any iron weapons'
-  Augmentation:
-    Type: IRON_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+# PerfectingShardIron:
+#   Material: Amethyst_shard
+#   Display: '<white>Iron <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any iron weapons'
+#   Augmentation:
+#     Type: IRON_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
       
-PerfectingShardGold:
-  Material: Amethyst_shard
-  Display: '<yellow>Gold <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any gold weapons'
-  Augmentation:
-    Type: GOLD_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+# PerfectingShardGold:
+#   Material: Amethyst_shard
+#   Display: '<yellow>Gold <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any gold weapons'
+#   Augmentation:
+#     Type: GOLD_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
 
-PerfectingShardDiamond:
-  Material: Amethyst_shard
-  Display: '<aqua>Diamond <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any diamond weapons'
-  Augmentation:
-    Type: DIAMOND_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+# PerfectingShardDiamond:
+#   Material: Amethyst_shard
+#   Display: '<aqua>Diamond <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any diamond weapons'
+#   Augmentation:
+#     Type: DIAMOND_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
 
-PerfectingShardNetherite:
-  Material: Amethyst_shard
-  Display: '<dark_gray>Netherite <aqua>Perfecting Shard'
-  Lore:
-  - '<aqua>Add 0.1 Attack Damage to any netherite weapons'
-  Augmentation:
-    Type: NETHERITE_PERFECTING_SHARD
-    Tooltip: 'Add 0.1 Attack Damage'
-    Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=0.1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+# PerfectingShardNetherite:
+#   Material: Amethyst_shard
+#   Display: '<dark_gray>Netherite <aqua>Perfecting Shard'
+#   Lore:
+#   - '<aqua>Add 0.1 Attack Damage to any netherite weapons'
+#   Augmentation:
+#     Type: NETHERITE_PERFECTING_SHARD
+#     Tooltip: 'Add 0.1 Attack Damage'
+#     Conditions:
+#     Stats:
+#     - BONUS_DAMAGE 0.1 ADDITIVE
 

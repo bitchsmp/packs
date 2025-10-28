@@ -4,6 +4,7 @@
 
 attachable_wooden_sword:
   id: wooden_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -12,15 +13,15 @@ attachable_wooden_sword:
   - Type: WOODEN_SHARPENER
     Amount: 2
     Chance: 1
-  - Type: WOODEN_PERFECTING_SHARD
-    Amount: 9
-    Chance: 1
   Lore:
     Template: attachable_weapons
+    Description:
+    
 
 
 attachable_stone_sword:
   id: stone_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -29,9 +30,6 @@ attachable_stone_sword:
   - Type: STONE_SHARPENER
     Amount: 3
     Chance: 1
-  - Type: STONE_PERFECTING_SHARD
-    Amount: 6
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -39,6 +37,7 @@ attachable_stone_sword:
 
 attachable_copper_sword:
   id: copper_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -47,14 +46,12 @@ attachable_copper_sword:
   - Type: COPPER_SHARPENER
     Amount: 3
     Chance: 1
-  - Type: COPPER_PERFECTING_SHARD
-    Amount: 6
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
 attachable_iron_sword:
   id: iron_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -63,24 +60,19 @@ attachable_iron_sword:
   - Type: IRON_SHARPENER
     Amount: 4
     Chance: 1
-  - Type: IRON_PERFECTING_SHARD
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
 attachable_gold_sword:
   id: golden_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: GOLD_SHARPENER
-    Amount: 2
-    Chance: 1
-  - Type: GOLD_PERFECTING_SHARD
-    Amount: 9
+    Amount: 10 #Gold Weapon has additional 8 sharpener slots
     Chance: 1
   Lore:
     Template: attachable_weapons
@@ -88,6 +80,7 @@ attachable_gold_sword:
 
 attachable_diamond_sword:
   id: diamond_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -96,15 +89,13 @@ attachable_diamond_sword:
   - Type: DIAMOND_SHARPENER
     Amount: 5
     Chance: 1
-  - Type: DIAMOND_PERFECTING_SHARD
-    Amount: 0
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
 
 attachable_netherite_sword:
   id: netherite_sword
+  EquipSlot: HAND
   AugmentationSlots:
   - Type: SKIN
     Amount: 1
@@ -112,9 +103,6 @@ attachable_netherite_sword:
     MaxAmount: 1
   - Type: NETHERITE_SHARPENER
     Amount: 5
-    Chance: 1
-  - Type: NETHERITE_PERFECTING_SHARD
-    Amount: 8
     Chance: 1
   Lore:
     Template: attachable_weapons

@@ -7,8 +7,9 @@ SharpenerWooden:
     Type: WOODEN_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
+
 
 SharpenerStone:
   Material: IRON_NUGGET
@@ -19,8 +20,8 @@ SharpenerStone:
     Type: STONE_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 SharpenerCopper:
   Material: IRON_NUGGET
@@ -31,8 +32,8 @@ SharpenerCopper:
     Type: COPPER_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
 SharpenerIron:
   Material: IRON_NUGGET
   Display: '<white>Iron <gold>Sharpener'
@@ -42,8 +43,8 @@ SharpenerIron:
     Type: IRON_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
 SharpenerGold:
   Material: IRON_NUGGET
   Display: '<yellow>Gold <gold>Sharpener'
@@ -53,8 +54,8 @@ SharpenerGold:
     Type: GOLD_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 SharpenerDiamond:
   Material: IRON_NUGGET
@@ -65,8 +66,8 @@ SharpenerDiamond:
     Type: DIAMOND_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 SharpenerNetherite:
   Material: IRON_NUGGET
@@ -77,6 +78,6 @@ SharpenerNetherite:
     Type: NETHERITE_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
-    Skills:
-      - attributeModifier{attribute=ATTACK_DAMAGE;a=1;dur=1;operation=ADD_NUMBER} @self ~onTimer:1
+    Stats:
+    - ATTACK_DAMAGE 1 ADDITIVE
 
