@@ -5,7 +5,7 @@
 ################################################################
 
 ATTACK_DAMAGE:
-  Enabled: false
+  Enabled: true
   AlwaysActive: false
   Display: 'Damage'
   Formatting:
@@ -15,7 +15,7 @@ ATTACK_DAMAGE:
   BaseValue: 1
 
 ATTACK_SPEED:
-  Enabled: false
+  Enabled: true
   Display: 'Attack Speed'
   Formatting:
     Additive: '+<value> Attack Speed'

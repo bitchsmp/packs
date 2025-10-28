@@ -8,7 +8,7 @@ SharpenerWooden:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 
 SharpenerStone:
@@ -21,7 +21,7 @@ SharpenerStone:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 SharpenerCopper:
   Material: IRON_NUGGET
@@ -33,7 +33,7 @@ SharpenerCopper:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 SharpenerIron:
   Material: IRON_NUGGET
   Display: '<white>Iron <gold>Sharpener'
@@ -44,7 +44,7 @@ SharpenerIron:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 SharpenerGold:
   Material: IRON_NUGGET
   Display: '<yellow>Gold <gold>Sharpener'
@@ -55,7 +55,7 @@ SharpenerGold:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 SharpenerDiamond:
   Material: IRON_NUGGET
@@ -67,7 +67,7 @@ SharpenerDiamond:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 
 SharpenerNetherite:
   Material: IRON_NUGGET
@@ -79,5 +79,5 @@ SharpenerNetherite:
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:
-    - BONUS_DAMAGE 1 ADDITIVE
+    - ATTACK_DAMAGE 1 ADDITIVE
 
