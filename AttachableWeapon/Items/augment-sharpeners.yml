@@ -83,7 +83,7 @@ SharpenerNetherite:
 
 SharpenerMace:
   Material: IRON_NUGGET
-  Display: '<dark_gray>Netherite <gold>Sharpener'
+  Display: '<light_purple>Mace <gold>Sharpener'
   Lore:
   - '<green>Add 1 Attack Damage to maces'
   Augmentation:

@@ -18,6 +18,7 @@ attachable_weapons:
     - '{augments-each:GOLD_SHARPENER}<augment.display>'
     - '{augments-each:DIAMOND_SHARPENER}<augment.display>'
     - '{augments-each:NETHERITE_SHARPENER}<augment.display>'
+    - '{augments-each:MACE_SHARPENER}<augment.display>'
   - Filler: ' '
   # - Line:
   #   - '{augments-each:WOODEN_PERFECTING_SHARD}<augment.display>'
