@@ -44,16 +44,17 @@ SkinStopSign:
     - ATTACK_DAMAGE 10 ADDITIVE
     - ATTACK_SPEED -0.4 ADDITIVE
     Skills:
+# code xấu, hạn chế học theo
 #Condition checks:
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="yes";scope=caster} @self ?fallspeed{s=>6} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=1;scope=caster} @self ?!fallspeed{s=>6} ~onTimer:1
     - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="yes"}  ~onTimer:1
-    - message{m="0"} @self ?varequals{name=caster.stop_sign.is.falling;value="no";scope=caster}  ~onTimer:1
+    - message{m="0"} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
 
     - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
 
-
+    - aura{aura=STOP_SIGN_MARKED_FOR_DAMAGED;onEndSkill=STOP_SIGN_MARKED_FOR_DAMAGED;ticks=10} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}

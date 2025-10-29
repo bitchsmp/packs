@@ -29,3 +29,6 @@ STOP_SIGN_SLAM_FX:
   Skills:
     - sound{sound=ultrakill:hammerimpact;volume=1} @self
     - sound{sound=ultrakill:hammerexplosion1;volume=0.5;delay=10} @self
+STOP_SIGN_MARKED_FOR_DAMAGED:
+  Skills:
+  - damage{a=10;pkb=true} @target
