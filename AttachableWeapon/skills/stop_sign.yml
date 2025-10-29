@@ -1,0 +1,31 @@
+STOP_SIGN_WIND_BURST_0:
+  Conditions:
+  - hasEnchant{type=WIND_BURST} false 
+  Skills:
+    - skill{s=STOP_SIGN_SLAM_FX}
+STOP_SIGN_WIND_BURST_1:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=1}
+  Skills:
+    - velocity{m=add;x=0;y=1.2;z=0;delay=10}
+    - skill{s=STOP_SIGN_SLAM_FX}
+
+
+STOP_SIGN_WIND_BURST_2:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=2}
+  Skills:
+    - velocity{m=add;x=0;y=1.6;z=0;delay=10}
+    - skill{s=STOP_SIGN_SLAM_FX}
+
+
+STOP_SIGN_WIND_BURST_3:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=3}
+  Skills:
+    - velocity{m=add;x=0;y=2;z=0;delay=10}
+    - skill{s=STOP_SIGN_SLAM_FX}
+STOP_SIGN_SLAM_FX:
+  Skills:
+    - sound{sound=ultrakill:hammerimpact;volume=1} @self
+    - sound{sound=ultrakill:hammerexplosion1;volume=0.5;delay=10} @self

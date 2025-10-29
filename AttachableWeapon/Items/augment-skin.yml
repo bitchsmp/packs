@@ -12,6 +12,7 @@ SkinBrimstone_Claymore:
     Stats:
     Skills:
     - skill{s=UltraBurn} @target ~onAttack ?!itemRecharging{}
+    - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
 SkinFrostBlade:
   Material: DIAMOND
@@ -28,6 +29,35 @@ SkinFrostBlade:
     Skills:
     - freeze{ticks=140} @target ~onAttack
 
+SkinStopSign:
+  Material: DIAMOND
+  Display: 'Stop Sign'
+  Lore:
+  - <gray>Much higher damage and lower attack speed, also HITSTOPS!
+  Augmentation:
+    Type: SKIN
+    Tooltip: 'Stop Sign<gray> (Much higher damage and lower attack speed, also HITSTOPS!)'
+    ReplaceItemModel: stop_sign
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    - ATTACK_DAMAGE 10 ADDITIVE
+    - ATTACK_SPEED -0.4 ADDITIVE
+    Skills:
+#Condition checks:
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="yes";scope=caster} @self ?fallspeed{s=>6} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=1;scope=caster} @self ?!fallspeed{s=>6} ~onTimer:1
+    - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="yes"}  ~onTimer:1
+    - message{m="0"} @self ?varequals{name=caster.stop_sign.is.falling;value="no";scope=caster}  ~onTimer:1
+
+    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+
+
+    - skill{s=STOP_SIGN_WIND_BURST_0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - skill{s=STOP_SIGN_WIND_BURST_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - skill{s=STOP_SIGN_WIND_BURST_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - skill{s=STOP_SIGN_WIND_BURST_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
 SkinHolyMoonlightSword:
   Material: DIAMOND
   Display: '<aqua>Holy Moonlight Sword'
