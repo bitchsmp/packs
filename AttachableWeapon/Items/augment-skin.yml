@@ -41,20 +41,31 @@ SkinStopSign:
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
-    - ATTACK_DAMAGE 10 ADDITIVE
-    - ATTACK_SPEED -0.4 ADDITIVE
+    - ATTACK_DAMAGE 2
+    - ATTACK_SPEED -0.2 ADDITIVE
     Skills:
+#Debug:
+    # - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="yes"}  ~onTimer:1
+    # - message{m="0"} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
+
 # code xấu, hạn chế học theo
 #Condition checks:
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="yes";scope=caster} @self ?fallspeed{s=>6} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=1;scope=caster} @self ?!fallspeed{s=>6} ~onTimer:1
-    - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="yes"}  ~onTimer:1
-    - message{m="0"} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
-
+#on slam skills:
     - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
 
-    - aura{aura=STOP_SIGN_MARKED_FOR_DAMAGED;onEndSkill=STOP_SIGN_MARKED_FOR_DAMAGED;ticks=10} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
+
+    - addtag{t=STOP_SIGN_MARKED_FOR_DAMAGED} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED;delay=10} @EIR{r=64} ~onAttack
+
+    - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - command{c="title <caster.name> title """;asTarget=true;asop=true} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - command{c="title <caster.name> times 0t 10t 0t";asTarget=true;asop=true} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - potion{type=NIGHT_VISION;d=10} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
