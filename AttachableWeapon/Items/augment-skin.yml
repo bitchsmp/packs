@@ -63,13 +63,15 @@ SkinStopSign:
     - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED;delay=10} @EIR{r=64} ~onAttack
 
     - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - command{c="title <caster.name> title """;asTarget=true;asop=true} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - command{c="title <caster.name> times 0t 10t 0t";asTarget=true;asop=true} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - potion{type=NIGHT_VISION;d=10} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+
+#if entity killed by the slam attack before fx skills trigger:
+    - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="yes"}
 SkinHolyMoonlightSword:
   Material: DIAMOND
   Display: '<aqua>Holy Moonlight Sword'

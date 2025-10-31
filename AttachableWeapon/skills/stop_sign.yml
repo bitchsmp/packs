@@ -34,5 +34,5 @@ STOP_SIGN_MARKED_FOR_DAMAGED:
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED} true
   Skills:
   - damage{a=10;pkb=true}
-  - effect:firework{t=BALL_LARGE;d=0;f=true}
+  - effect:firework{t=BALL_LARGE;d=0}
   - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED}
