@@ -45,32 +45,91 @@ SkinStopSign:
     - ATTACK_SPEED -0.2 ADDITIVE
     Skills:
 #Debug:
-    # - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="yes"}  ~onTimer:1
-    # - message{m="0"} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
-
+    # - message{m="0";cooldown=0.5} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
+    # - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="1"}  ~onTimer:1
+    # - message{m="2"} @self ?varequals{name=caster.stop_sign.is.falling;val="2"}  ~onTimer:1
+    # - message{m="3"} @self ?varequals{name=caster.stop_sign.is.falling;val="3"}  ~onTimer:1
+    # - message{m="4"} @self ?varequals{name=caster.stop_sign.is.falling;val="4"}  ~onTimer:1
 # code xấu, hạn chế học theo
 #Condition checks:
-    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="yes";scope=caster} @self ?fallspeed{s=>6} ~onTimer:1
-    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=1;scope=caster} @self ?!fallspeed{s=>6} ~onTimer:1
-#on slam skills:
-    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=2;scope=caster} @self ?directionalvelocity{y=0}  ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="1";scope=caster} @self ?directionalvelocity{y=<-0.4} ?directionalvelocity{y=>-0.6} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="2";scope=caster} @self ?directionalvelocity{y=<-0.6} ?directionalvelocity{y=>-0.8} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="3";scope=caster} @self ?directionalvelocity{y=<-0.8} ?directionalvelocity{y=>-1.2} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="4";scope=caster} @self ?directionalvelocity{y=<-1.2} ~onTimer:1
 
-    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+# 1: 0s hitstop
+# 2: 0.15s hitstop
+# 3: 0.2s hitstop
+# 4: 0.5s hitstop
+#on slam skills 1:
+    - velocity{m=set;x=0;y=0;z=0;repeat=0;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - velocity{m=set;x=0;y=0;z=0;repeat=0;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=1;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
     - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
-    - addtag{t=STOP_SIGN_MARKED_FOR_DAMAGED} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED;delay=10} @EIR{r=64} ~onAttack
+    - addtag{t=STOP_SIGN_MARKED_FOR_DAMAGED_1} @target{limit=1} ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_1;delay=0} @EIR{r=64} ~onAttack
 
-    - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - potion{type=NIGHT_VISION;d=10} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - skill{s=STOP_SIGN_WIND_BURST_0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - skill{s=STOP_SIGN_WIND_BURST_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - skill{s=STOP_SIGN_WIND_BURST_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - skill{s=STOP_SIGN_WIND_BURST_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - sound{sound=ultrakill:hammerimpact;volume=0.9} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - skill{s=STOP_SIGN_WIND_BURST_0_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - skill{s=STOP_SIGN_WIND_BURST_1_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - skill{s=STOP_SIGN_WIND_BURST_2_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - skill{s=STOP_SIGN_WIND_BURST_3_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+
+#on slam skills 2:
+    - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=6;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
+
+    - addtag{t=STOP_SIGN_MARKED_FOR_DAMAGED_2} @target{limit=1} ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_2;delay=3} @EIR{r=64} ~onAttack
+
+    - sound{sound=ultrakill:hammerimpact;volume=1.0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - skill{s=STOP_SIGN_WIND_BURST_0_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - skill{s=STOP_SIGN_WIND_BURST_1_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - skill{s=STOP_SIGN_WIND_BURST_2_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - skill{s=STOP_SIGN_WIND_BURST_3_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+#on slam skills 3:
+    - velocity{m=set;x=0;y=0;z=0;repeat=3;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - velocity{m=set;x=0;y=0;z=0;repeat=3;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=7;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
+
+    - addtag{t=STOP_SIGN_MARKED_FOR_DAMAGED_3} @target{limit=1} ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_3;delay=4} @EIR{r=64} ~onAttack
+
+    - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - skill{s=STOP_SIGN_WIND_BURST_0_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - skill{s=STOP_SIGN_WIND_BURST_1_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - skill{s=STOP_SIGN_WIND_BURST_2_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - skill{s=STOP_SIGN_WIND_BURST_3_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+#on slam skills 4:
+    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
+
+    - addtag{t=STOP_SIGN_MARKED_FOR_DAMAGED_4} @target{limit=1} ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_4;delay=10} @EIR{r=64} ~onAttack
+
+    - potion{type=NIGHT_VISION;duration=10;hasparticles=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - sound{sound=ultrakill:hammerimpact;volume=1.2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - skill{s=STOP_SIGN_WIND_BURST_0_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - skill{s=STOP_SIGN_WIND_BURST_1_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - skill{s=STOP_SIGN_WIND_BURST_2_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - skill{s=STOP_SIGN_WIND_BURST_3_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
 #if entity killed by the slam attack before fx skills trigger:
-    - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="yes"}
+    - effect:firework{t=BALL;d=0;delay=0;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="1"}
+    - effect:firework{t=BALL;d=0;delay=3;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - effect:firework{t=BALL_LARGE;d=0;delay=4;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="4"}
 SkinHolyMoonlightSword:
   Material: DIAMOND
   Display: '<aqua>Holy Moonlight Sword'

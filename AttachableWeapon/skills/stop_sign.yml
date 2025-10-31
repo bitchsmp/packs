@@ -1,38 +1,155 @@
-STOP_SIGN_WIND_BURST_0:
+STOP_SIGN_WIND_BURST_0_1:
   Conditions:
   - hasEnchant{type=WIND_BURST} false 
   Skills:
-    - skill{s=STOP_SIGN_SLAM_FX;delay=10} @self
-STOP_SIGN_WIND_BURST_1:
+    - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
+STOP_SIGN_WIND_BURST_1_1:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=1}
+  Skills:
+  - velocity{m=add;x=0;y=1.2;z=0;delay=0}
+  - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
+
+
+STOP_SIGN_WIND_BURST_2_1:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=2}
+  Skills:
+  - velocity{m=add;x=0;y=1.6;z=0;delay=0}
+  - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
+
+
+STOP_SIGN_WIND_BURST_3_1:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=3}
+  Skills:
+  - velocity{m=add;x=0;y=2;z=0;delay=0}
+  - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
+#
+STOP_SIGN_WIND_BURST_0_2:
+  Conditions:
+  - hasEnchant{type=WIND_BURST} false 
+  Skills:
+    - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
+STOP_SIGN_WIND_BURST_1_2:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=1}
+  Skills:
+  - velocity{m=add;x=0;y=1.2;z=0;delay=3}
+  - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
+
+
+STOP_SIGN_WIND_BURST_2_2:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=2}
+  Skills:
+  - velocity{m=add;x=0;y=1.6;z=0;delay=3}
+  - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
+
+
+STOP_SIGN_WIND_BURST_3_2:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=3}
+  Skills:
+  - velocity{m=add;x=0;y=2;z=0;delay=3}
+  - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
+#
+STOP_SIGN_WIND_BURST_0_3:
+  Conditions:
+  - hasEnchant{type=WIND_BURST} false 
+  Skills:
+    - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
+STOP_SIGN_WIND_BURST_1_3:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=1}
+  Skills:
+  - velocity{m=add;x=0;y=1.2;z=0;delay=4}
+  - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
+
+
+
+STOP_SIGN_WIND_BURST_2_3:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=2}
+  Skills:
+  - velocity{m=add;x=0;y=1.6;z=0;delay=4}
+  - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
+
+
+STOP_SIGN_WIND_BURST_3_3:
+  Conditions:
+  - hasEnchant{type=WIND_BURST;level=3}
+  Skills:
+  - velocity{m=add;x=0;y=2;z=0;delay=4}
+  - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
+#
+STOP_SIGN_WIND_BURST_0_4:
+  Conditions:
+  - hasEnchant{type=WIND_BURST} false 
+  Skills:
+    - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
+STOP_SIGN_WIND_BURST_1_4:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=1}
   Skills:
   - velocity{m=add;x=0;y=1.2;z=0;delay=10}
-  - skill{s=STOP_SIGN_SLAM_FX;delay=10} @self
+  - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
 
 
-STOP_SIGN_WIND_BURST_2:
+STOP_SIGN_WIND_BURST_2_4:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=2}
   Skills:
   - velocity{m=add;x=0;y=1.6;z=0;delay=10}
-  - skill{s=STOP_SIGN_SLAM_FX;delay=10} @self
+  - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
 
 
-STOP_SIGN_WIND_BURST_3:
+STOP_SIGN_WIND_BURST_3_4:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=3}
   Skills:
   - velocity{m=add;x=0;y=2;z=0;delay=10}
-  - skill{s=STOP_SIGN_SLAM_FX;delay=10} @self
-STOP_SIGN_SLAM_FX:
+  - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
+STOP_SIGN_SLAM_FX_1:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion1;volume=0.7} @self
-
-STOP_SIGN_MARKED_FOR_DAMAGED:
+  - sound{sound=ultrakill:hammerexplosion1;volume=0.2} @self
+STOP_SIGN_SLAM_FX_2:
+  Skills:
+  - sound{sound=ultrakill:hammerexplosion2;volume=0.7} @self
+STOP_SIGN_SLAM_FX_3:
+  Skills:
+  - sound{sound=ultrakill:hammerexplosion2;volume=1} @self
+STOP_SIGN_SLAM_FX_4:
+  Skills:
+  - sound{sound=ultrakill:hammerexplosion3;volume=4} @self
+STOP_SIGN_MARKED_FOR_DAMAGED_1:
   TargetConditions:
-  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED} true
+  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1} true
   Skills:
-  - damage{a=10;pkb=true}
+  - damage{a=10;pkb=true;ignoreinvulnerability=true}
+  - effect:firework{t=BALL;d=0}
+  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1;delay=1}
+
+STOP_SIGN_MARKED_FOR_DAMAGED_2:
+  TargetConditions:
+  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_2} true
+  Skills:
+  - damage{a=20;pkb=true;ignoreinvulnerability=true}
+  - effect:firework{t=BALL;d=0}
+  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_2;delay=1}
+
+STOP_SIGN_MARKED_FOR_DAMAGED_3:
+  TargetConditions:
+  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_3} true
+  Skills:
+  - damage{a=30;pkb=true;ignoreinvulnerability=true}
   - effect:firework{t=BALL_LARGE;d=0}
-  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED}
+  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_3;delay=1}
+
+STOP_SIGN_MARKED_FOR_DAMAGED_4:
+  TargetConditions:
+  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4} true
+  Skills:
+  - damage{a=60;pkb=true;ignoreinvulnerability=true}
+  - effect:firework{t=BALL_LARGE;d=0}
+  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4;delay=1}
