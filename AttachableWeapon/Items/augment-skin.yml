@@ -63,7 +63,6 @@ SkinStopSign:
     - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED;delay=10} @EIR{r=64} ~onAttack
 
     - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
-    - command{c="title <caster.name> times 0t 10t 0t";asTarget=true;asop=true} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - potion{type=NIGHT_VISION;d=10} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
     - skill{s=STOP_SIGN_WIND_BURST_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="yes"}
