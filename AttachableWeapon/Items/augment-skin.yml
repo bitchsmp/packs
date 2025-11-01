@@ -31,7 +31,7 @@ SkinFrostBlade:
 
 SkinStopSign:
   Material: DIAMOND
-  Display: 'Stop Sign'
+  Display: '<orange>Stop Sign'
   Lore:
   - <gray>Much higher damage and lower attack speed, also HITSTOPS!
   Augmentation:
