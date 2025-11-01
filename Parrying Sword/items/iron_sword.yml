@@ -4,15 +4,16 @@ parrying_iron_sword:
   Skills:
 
   - Aura{auraName=parry;onTickskill=parry_ready;interval=1;duration=10;onendskill=parry_stop;doendskillonterminate=false;cooldown=2} @self ~onUse ?!materialIsOnCooldown{mat=iron_sword}
-  - sound{sound=block.anvil.land;audience=nearby} @self ~onDamaged ?hasAura{aura=parry}
+  - Aura{auraName=invulnerable;doendskillonterminate=false;cooldown=2} @self ~onUse ?!materialIsOnCooldown{mat=iron_sword}
+    - sound{sound=block.anvil.land;audience=nearby} @self ~onDamaged ?hasAura{aura=parry}
   - armAnimation{} @self ~onDamaged ?hasAura{aura=parry}
   - cancelEvent{} @self ~onDamaged ?hasAura{aura=parry}
   - effect:particle{particle=end_rod;speed=0.4;amount=200;origin=} @self ~onDamaged ?hasAura{aura=parry}
   - potion{type=STRENGTH;duration=40;level=1} @self ~onDamaged ?hasAura{aura=parry}
   - potion{type=BlIND;duration=30;level=0} @trigger{} ~onDamaged ?hasAura{aura=parry}
-  - recoil{r=1;pitch=-80to80;yaw=-20to20} @trigger ~onDamaged ?hasAura{aura=parry}
+  - recoil{r=1;pitch=-10to10;yaw=-20to20} @trigger ~onDamaged ?hasAura{aura=parry}
   #
-  - cancelEvent{} @self ~onAttack ?hasAura{aura=parry}
+  - cancelEvent{} @self ~onAttack ?hasAura{aura=invulnerable} ?hasAura{aura=parry}
   - consumeuseddurability{a=10} @self ~onDamaged ?hasAura{aura=parry}
   - actionmessage{m=" ";delay=2} @self ~onDamaged ?hasAura{aura=parry}
   - setmaterialcooldown{m=iron_sword;d=40;delay=3} @self ~onDamaged ?hasAura{aura=parry}

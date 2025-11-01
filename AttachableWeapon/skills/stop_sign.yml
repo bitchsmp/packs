@@ -124,6 +124,7 @@ STOP_SIGN_SLAM_FX_4:
   - sound{sound=ultrakill:hammerexplosion3;volume=4} @self
 STOP_SIGN_MARKED_FOR_DAMAGED_1:
   TargetConditions:
+  - hasAura{aura=invulnerable} false
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1} true
   Skills:
   - damage{a=10;pkb=true;ignoreinvulnerability=true}
@@ -131,6 +132,7 @@ STOP_SIGN_MARKED_FOR_DAMAGED_1:
 
 STOP_SIGN_MARKED_FOR_DAMAGED_2:
   TargetConditions:
+  - hasAura{aura=invulnerable} false
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_2} true
   Skills:
   - damage{a=20;pkb=true;ignoreinvulnerability=true}
@@ -139,6 +141,7 @@ STOP_SIGN_MARKED_FOR_DAMAGED_2:
 
 STOP_SIGN_MARKED_FOR_DAMAGED_3:
   TargetConditions:
+  - hasAura{aura=invulnerable} false
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_3} true
   Skills:
   - damage{a=30;pkb=true;ignoreinvulnerability=true}
@@ -147,6 +150,7 @@ STOP_SIGN_MARKED_FOR_DAMAGED_3:
 
 STOP_SIGN_MARKED_FOR_DAMAGED_4:
   TargetConditions:
+  - hasAura{aura=invulnerable} false
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4} true
   Skills:
   - damage{a=99;pkb=true;ignoreinvulnerability=true}
