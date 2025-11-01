@@ -7,7 +7,7 @@ STOP_SIGN_WIND_BURST_1_1:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=1}
   Skills:
-  - velocity{m=add;x=0;y=1.2;z=0;delay=0}
+  - velocity{m=add;x=0;y=1.2;z=0}
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
 
 
@@ -15,7 +15,7 @@ STOP_SIGN_WIND_BURST_2_1:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=2}
   Skills:
-  - velocity{m=add;x=0;y=1.6;z=0;delay=0}
+  - velocity{m=add;x=0;y=1.6;z=0}
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
 
 
@@ -23,7 +23,7 @@ STOP_SIGN_WIND_BURST_3_1:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=3}
   Skills:
-  - velocity{m=add;x=0;y=2;z=0;delay=0}
+  - velocity{m=add;x=0;y=2;z=0}
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
 #
 STOP_SIGN_WIND_BURST_0_2:
@@ -127,7 +127,6 @@ STOP_SIGN_MARKED_FOR_DAMAGED_1:
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1} true
   Skills:
   - damage{a=10;pkb=true;ignoreinvulnerability=true}
-  - effect:firework{t=BALL;d=0}
   - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1;delay=1}
 
 STOP_SIGN_MARKED_FOR_DAMAGED_2:
@@ -150,6 +149,6 @@ STOP_SIGN_MARKED_FOR_DAMAGED_4:
   TargetConditions:
   - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4} true
   Skills:
-  - damage{a=60;pkb=true;ignoreinvulnerability=true}
+  - damage{a=99;pkb=true;ignoreinvulnerability=true}
   - effect:firework{t=BALL_LARGE;d=0}
   - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4;delay=1}

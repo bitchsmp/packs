@@ -52,19 +52,17 @@ SkinStopSign:
     # - message{m="4"} @self ?varequals{name=caster.stop_sign.is.falling;val="4"}  ~onTimer:1
 # code xấu, hạn chế học theo
 #Condition checks:
-    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=2;scope=caster} @self ?directionalvelocity{y=0}  ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=2;scope=caster} @self ?directionalvelocity{y=>-0.4}  ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="1";scope=caster} @self ?directionalvelocity{y=<-0.4} ?directionalvelocity{y=>-0.6} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="2";scope=caster} @self ?directionalvelocity{y=<-0.6} ?directionalvelocity{y=>-0.8} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="3";scope=caster} @self ?directionalvelocity{y=<-0.8} ?directionalvelocity{y=>-1.2} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="4";scope=caster} @self ?directionalvelocity{y=<-1.2} ~onTimer:1
-
 # 1: 0s hitstop
 # 2: 0.15s hitstop
 # 3: 0.2s hitstop
 # 4: 0.5s hitstop
 #on slam skills 1:
-    - velocity{m=set;x=0;y=0;z=0;repeat=0;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
-    - velocity{m=set;x=0;y=0;z=0;repeat=0;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
+
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=1;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
     - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
@@ -77,7 +75,6 @@ SkinStopSign:
     - skill{s=STOP_SIGN_WIND_BURST_1_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
     - skill{s=STOP_SIGN_WIND_BURST_2_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
     - skill{s=STOP_SIGN_WIND_BURST_3_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
-
 #on slam skills 2:
     - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
@@ -126,7 +123,6 @@ SkinStopSign:
     - skill{s=STOP_SIGN_WIND_BURST_3_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
 #if entity killed by the slam attack before fx skills trigger:
-    - effect:firework{t=BALL;d=0;delay=0;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="1"}
     - effect:firework{t=BALL;d=0;delay=3;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - effect:firework{t=BALL_LARGE;d=0;delay=4;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="4"}
