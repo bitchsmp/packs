@@ -115,13 +115,13 @@ STOP_SIGN_SLAM_FX_1:
   - sound{sound=ultrakill:hammerexplosion1;volume=0.2} @self
 STOP_SIGN_SLAM_FX_2:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion2;volume=0.5} @self
+  - sound{sound=ultrakill:hammerexplosion2;volume=0.3} @self
 STOP_SIGN_SLAM_FX_3:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion2;volume=0.6} @self
+  - sound{sound=ultrakill:hammerexplosion2;volume=0.4} @self
 STOP_SIGN_SLAM_FX_4:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion3;volume=0.6;radius=128} @self
+  - sound{sound=ultrakill:hammerexplosion3;volume=0.4;radius=128} @self
 STOP_SIGN_MARKED_FOR_DAMAGED_1:
   Skills:
   - damage{a=10;pkb=true;ignoreinvulnerability=true} @trigger
