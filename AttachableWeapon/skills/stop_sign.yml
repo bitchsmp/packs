@@ -115,44 +115,28 @@ STOP_SIGN_SLAM_FX_1:
   - sound{sound=ultrakill:hammerexplosion1;volume=0.2} @self
 STOP_SIGN_SLAM_FX_2:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion2;volume=0.7} @self
+  - sound{sound=ultrakill:hammerexplosion2;volume=0.5} @self
 STOP_SIGN_SLAM_FX_3:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion2;volume=1} @self
+  - sound{sound=ultrakill:hammerexplosion2;volume=0.6} @self
 STOP_SIGN_SLAM_FX_4:
   Skills:
-  - sound{sound=ultrakill:hammerexplosion3;volume=4} @self
+  - sound{sound=ultrakill:hammerexplosion3;volume=0.6;radius=128} @self
 STOP_SIGN_MARKED_FOR_DAMAGED_1:
-  TargetConditions:
-  - hasAura{aura=invulnerable} false
-  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1} true
   Skills:
-  - damage{a=10;pkb=true;ignoreinvulnerability=true}
-  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_1;delay=1}
+  - damage{a=10;pkb=true;ignoreinvulnerability=true} @trigger
 
 STOP_SIGN_MARKED_FOR_DAMAGED_2:
-  TargetConditions:
-  - hasAura{aura=invulnerable} false
-  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_2} true
   Skills:
-  - damage{a=20;pkb=true;ignoreinvulnerability=true}
-  - effect:firework{t=BALL;d=0}
-  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_2;delay=1}
+  - damage{a=20;pkb=true;ignoreinvulnerability=true}  @trigger
+  - effect:firework{t=BALL;d=0}  @trigger
 
 STOP_SIGN_MARKED_FOR_DAMAGED_3:
-  TargetConditions:
-  - hasAura{aura=invulnerable} false
-  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_3} true
   Skills:
-  - damage{a=30;pkb=true;ignoreinvulnerability=true}
-  - effect:firework{t=BALL_LARGE;d=0}
-  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_3;delay=1}
+  - damage{a=30;pkb=true;ignoreinvulnerability=true}  @trigger
+  - effect:firework{t=BALL_LARGE;d=0;colors=#FFDF00;fadecolors=#FFFFFF}  @trigger
 
 STOP_SIGN_MARKED_FOR_DAMAGED_4:
-  TargetConditions:
-  - hasAura{aura=invulnerable} false
-  - hasTag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4} true
   Skills:
-  - damage{a=99;pkb=true;ignoreinvulnerability=true}
-  - effect:firework{t=BALL_LARGE;d=0}
-  - removetag{tag=STOP_SIGN_MARKED_FOR_DAMAGED_4;delay=1}
+  - damage{a=99;pkb=true;ignoreinvulnerability=true}  @trigger
+  - effect:firework{t=BALL_LARGE;d=0;colors=#FF5252;fadecolors=#FFFFFF}  @trigger

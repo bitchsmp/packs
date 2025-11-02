@@ -18,3 +18,13 @@ debug_shoes:
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="2";scope=caster} @self ?directionalvelocity{y=<-0.6} ?directionalvelocity{y=>-0.8} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="3";scope=caster} @self ?directionalvelocity{y=<-0.8} ?directionalvelocity{y=>-1.2} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="4";scope=caster} @self ?directionalvelocity{y=<-1.2} ~onTimer:1
+
+debug_rod:
+  Id: stick
+  Display: 'Debug Rod'
+  Options:
+    PreventStacking: true
+  Skills:
+  - skill{s=marked_for_damaged} ~onAttack @trigger
+
+#  - damage{a=100} ~onAttack @target{sort=NEAREST;limit=1}
