@@ -93,3 +93,19 @@ SkinStopSign:
     - effect:firework{t=BALL;d=0;delay=3;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - effect:firework{t=BALL_LARGE;d=0;delay=4;f=true;colors=#FFDF00;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true;colors=#FF5252;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="4"}
+
+SkinMjolnir:
+  Material: DIAMOND
+  Display: '<white>Mjolnir'
+  Lore:
+  - <white>
+  - <yellow>Mace Skin
+  - <gray>Summons a lightning bolt upon attacking
+  Augmentation:
+    Type: SKIN_MACE
+    Tooltip: 'Mjolnir<gray> (Summons a lightning bolt upon attacking)'
+    ReplaceItemModel: mjolnir
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - lightning{damage=10} ~onAttack @target
