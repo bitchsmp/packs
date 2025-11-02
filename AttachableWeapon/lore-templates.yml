@@ -4,7 +4,9 @@ attachable_weapons:
     - notEmpty <item.lore.Description>
     Line: '<item.lore.Description>'
   - Line:
-    - '{augments-each:SKIN}<augment.display>'
+    - '{augments-each:SKIN_SWORD}<augment.display>'
+    - '{augments-each:SKIN_AXE}<augment.display>'
+    - '{augments-each:SKIN_MACE}<augment.display>'
   - Filler: ' '
   - Line:
     - '{stats}<yellow>Bonus Stats:'

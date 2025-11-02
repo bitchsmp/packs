@@ -1,41 +1,12 @@
-SkinBrimstone_Claymore:
-  Material: DIAMOND
-  Display: '<red>Brimstone Claymore'
-  Lore:
-  - <gray>Inflict UltraBurn on hit
-  Augmentation:
-    Type: SKIN
-    Tooltip: '<red>Brimstone Claymore<gray> (Inflict UltraBurn on hit)'
-    ReplaceItemModel: brimstone_claymore
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Stats:
-    Skills:
-    - skill{s=UltraBurn} @trigger ~onAttack ?!itemRecharging{}
-    - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
-
-SkinFrostBlade:
-  Material: DIAMOND
-  Display: '<aqua>Frost Blade'
-  Lore:
-  - <gray>Inflict Freezing on hit
-  Augmentation:
-    Type: SKIN
-    Tooltip: '<aqua>Frost Blade<gray> (Inflict Freezing on hit)'
-    ReplaceItemModel: frostblade
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Stats:
-    Skills:
-    - freeze{ticks=140} @trigger ~onAttack
-
 SkinStopSign:
   Material: DIAMOND
-  Display: '<orange>Stop Sign'
+  Display: '<gold>Stop Sign'
   Lore:
+  - <white>
+  - <yellow>Mace Skin
   - <gray>Much higher damage and lower attack speed, also HITSTOPS!
   Augmentation:
-    Type: SKIN
+    Type: SKIN_MACE
     Tooltip: 'Stop Sign<gray> (Much higher damage and lower attack speed, also HITSTOPS!)'
     ReplaceItemModel: stop_sign
     ReplaceItemModelNamespace: minecraft
@@ -122,38 +93,3 @@ SkinStopSign:
     - effect:firework{t=BALL;d=0;delay=3;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - effect:firework{t=BALL_LARGE;d=0;delay=4;f=true;colors=#FFDF00;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true;colors=#FF5252;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="4"}
-SkinHolyMoonlightSword:
-  Material: DIAMOND
-  Display: '<aqua>Holy Moonlight Sword'
-  Lore:
-  - <gray>Becomes powerful at night, even more powerful on full moons
-  Augmentation:
-    Type: SKIN
-    Tooltip: '<aqua>Holy Moonlight Sword<gray> (Becomes powerful at night, even more powerful on full moons)'
-    ReplaceItemModel: holymoonlightsword
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Stats:
-    Skills:
-    - stataura{stat=ATTACK_DAMAGE;val=1;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_NIGHT_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?night
-    - effect:particles{particle=end_rod;count=5;offset=0.5;speed=0;yoffset=0.1} @self ~onTimer:20 ?night
-
-    - stataura{stat=ATTACK_DAMAGE;val=1;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE23456_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=2,3,4,5,6} ?night
-    - effect:particles{particle=end_rod;count=3;offset=0.4;speed=0;yoffset=0} @self ~onTimer:10 ?lunarPhase{phases=2,3,4,5,6}
-
-    - stataura{stat=ATTACK_DAMAGE;val=4;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE017_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0,1,7} ?night
-    - effect:particles{particle=end_rod;count=5;offset=0.6;speed=0;yoffset=0} @self ~onTimer:5 ?lunarPhase{phases=0,1,7}
-SkinSabre:
-  Material: DIAMOND
-  Display: 'Sabre'
-  Lore:
-  - <gray>Deals more damage when in water
-  Augmentation:
-    Type: SKIN
-    Tooltip: '<white>Sabre<gray> (Deals 2 more damage when in water)'
-    ReplaceItemModel: sabre
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Stats:
-    Skills:
-    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_WATER_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?inblock{type=WATER}
