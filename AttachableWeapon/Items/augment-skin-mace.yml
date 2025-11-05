@@ -7,7 +7,7 @@ SkinStopSign:
   - <gray>Much higher damage and lower attack speed, also HITSTOPS!
   Augmentation:
     Type: SKIN_MACE
-    Tooltip: 'Stop Sign<gray> (Much higher damage and lower attack speed, also HITSTOPS!)'
+    Tooltip: '<gold>Stop Sign<gray> (Much higher damage and lower attack speed, also HITSTOPS!)'
     ReplaceItemModel: stop_sign
     ReplaceItemModelNamespace: minecraft
     Conditions:
@@ -103,9 +103,24 @@ SkinMjolnir:
   - <gray>Summons a lightning bolt upon attacking
   Augmentation:
     Type: SKIN_MACE
+    Tooltip: '<white>Mjolnir<gray> (Summons a lightning bolt upon attacking)'
+    ReplaceItemModel: mjolnir
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - lightning{damage=10;cooldown=1} ~onAttack @target
+SkinMjolnir:
+  Material: DIAMOND
+  Display: '<white>Mjolnir'
+  Lore:
+  - <white>
+  - <yellow>Mace Skin
+  - <gray>Summons a lightning bolt upon attacking
+  Augmentation:
+    Type: SKIN_MACE
     Tooltip: 'Mjolnir<gray> (Summons a lightning bolt upon attacking)'
     ReplaceItemModel: mjolnir
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Skills:
-    - lightning{damage=10} ~onAttack @target
+    - lightning{damage=10;cooldown=1} ~onAttack @target

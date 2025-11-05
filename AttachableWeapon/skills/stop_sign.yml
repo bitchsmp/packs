@@ -124,19 +124,21 @@ STOP_SIGN_SLAM_FX_4:
   - sound{sound=ultrakill:hammerexplosion3;volume=0.4;radius=128} @self
 STOP_SIGN_MARKED_FOR_DAMAGED_1:
   Skills:
-  - damage{a=10;pkb=true;ignoreinvulnerability=true} @trigger
+  - damage{a=10;pkb=true;ignoreinvulnerability=true;delay=1} @trigger
 
 STOP_SIGN_MARKED_FOR_DAMAGED_2:
   Skills:
-  - damage{a=20;pkb=true;ignoreinvulnerability=true}  @trigger
   - effect:firework{t=BALL;d=0}  @trigger
+  - damage{a=20;pkb=true;ignoreinvulnerability=true;delay=1}  @trigger
+
 
 STOP_SIGN_MARKED_FOR_DAMAGED_3:
   Skills:
-  - damage{a=30;pkb=true;ignoreinvulnerability=true}  @trigger
   - effect:firework{t=BALL_LARGE;d=0;colors=#FFDF00;fadecolors=#FFFFFF}  @trigger
+  - damage{a=30;pkb=true;ignoreinvulnerability=true;delay=1}  @trigger
+
 
 STOP_SIGN_MARKED_FOR_DAMAGED_4:
   Skills:
-  - damage{a=99;pkb=true;ignoreinvulnerability=true}  @trigger
   - effect:firework{t=BALL_LARGE;d=0;colors=#FF5252;fadecolors=#FFFFFF}  @trigger
+  - damage{a=99;pkb=true;ignoreinvulnerability=true;delay=1}  @trigger
