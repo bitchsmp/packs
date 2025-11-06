@@ -4,7 +4,7 @@ parrying_iron_sword:
   Skills:
   - Aura{auraName=trying_to_parry;doendskillonterminate=false;duration=3;ontickskill=trying_to_parry;onendskill=parry_start} @self ~onUse ?!materialIsOnCooldown{mat=iron_sword}
   #
-
+  - command{command="say the invulnerable is presented";asop=true} ~onTimer:1 @self ?hasAura{aura=invulnerable}
   - skill{skill=parry} ~onDamaged 
   # Parry hụt
   - skill{s=parry_miss;delay=0} @self ~onDamaged ?!hasAura{aura=parry} ?!materialIsOnCooldown{mat=iron_sword} ?hasAura{aura=trying_to_parry}
@@ -14,6 +14,7 @@ parrying_iron_sword:
   - removeaura{aura=invulnerable;delay=1} @self ~onCanceluse
   - removeaura{aura=trying_to_parry;delay=1} @self ~onCanceluse
   - actionmessage{m=" ";delay=1} @self ~onCanceluse
+
   # Right-click detection
   - skill{s=right_clicking_not_using} @self ~onUse
   - skill{s=holding_right_click} @Self 

@@ -52,7 +52,7 @@ SkinStopSign:
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=6;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
-    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_2;delay=3} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_2} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
 
     - sound{sound=ultrakill:hammerimpact;volume=1.0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - skill{s=STOP_SIGN_WIND_BURST_0_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
@@ -66,7 +66,7 @@ SkinStopSign:
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=7;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
-    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_3;delay=4} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_3} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
 
     - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - skill{s=STOP_SIGN_WIND_BURST_0_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
@@ -80,7 +80,7 @@ SkinStopSign:
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
     - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
-    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_4;delay=10} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_4} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
     - potion{type=NIGHT_VISION;duration=10;hasparticles=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
     - sound{sound=ultrakill:hammerimpact;volume=1.2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}

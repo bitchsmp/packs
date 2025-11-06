@@ -1,6 +1,6 @@
-parry_ready:
+trying_to_parry:
   Skills:
-  - actionmessage{m="Parrying"} @self
+  - actionmessage{m="Trying To Parry"} @self
 
 parry_start:
   Conditions:
@@ -8,6 +8,13 @@ parry_start:
   Skills:
   - Aura{auraName=parry;onTickskill=parry_ready;interval=1;duration=2147483647;doendskillonterminate=false;onendskill=parry_stop} @self
   - Aura{auraName=invulnerable;doendskillonterminate=false;duration=2147483647} @self
+
+parry_ready:
+  Skills:
+  - actionmessage{m="Parrying"} @self
+
+
+
 
 parry:
   Conditions:
@@ -18,6 +25,7 @@ parry:
   Skills:
   - removeaura{aura=trying_to_parry;delay=0} @self
   - removeaura{aura=parry;delay=1} @self
+  - removeaura{aura=invulnerable;delay=1} @self
   - sound{sound=block.anvil.land} @self
   - armAnimation{} @self
   - cancelEvent{} @self
@@ -37,9 +45,6 @@ parry_miss:
   - stopusingitem @self
   - actionmessage{m=" ";delay=1} @self
   - actionmessage{m="Parry missed!";delay=2} @self
-trying_to_parry:
-  Skills:
-  - actionmessage{m="Trying To Parry"} @self
 
 trying_to_parry_ended:
   Skills:
