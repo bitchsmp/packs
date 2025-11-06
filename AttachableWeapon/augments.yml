@@ -1,6 +1,26 @@
-SKIN:
+SKIN_SWORD:
   Enabled: true
-  Display: 'Skin'
+  Display: 'Sword Skin'
+  Formatting:
+    Empty: '<augment.icon> Default <augment.type>'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
+SKIN_AXE:
+  Enabled: true
+  Display: 'Axe Skin'
+  Formatting:
+    Empty: '<augment.icon> Default <augment.type>'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
+SKIN_MACE:
+  Enabled: true
+  Display: 'Mace Skin'
   Formatting:
     Empty: '<augment.icon> Default <augment.type>'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
@@ -76,6 +96,17 @@ NETHERITE_SHARPENER:
     Empty: '<red><augment.icon> Not sharpened'
     Filled: '<green><augment.icon> Sharpened'
 #backup:     Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
+  Icons:
+    Empty: '✖'
+    Filled: '✔'
+    Invalid: ''
+
+MACE_SHARPENER:
+  Enabled: true
+  Display: 'Mace Condenser'
+  Formatting:
+    Empty: '<red><augment.icon> Not condensed'
+    Filled: '<green><augment.icon> Condensed'
   Icons:
     Empty: '✖'
     Filled: '✔'

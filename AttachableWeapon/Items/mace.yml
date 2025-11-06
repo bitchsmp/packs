@@ -1,0 +1,21 @@
+# Rules:
+# Max Damage: x*1.2^3
+# x is base damage of the sword
+
+attachable_mace:
+  id: mace
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_MACE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: MACE_SHARPENER
+    Amount: 4
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+    Description:
+    
+
+

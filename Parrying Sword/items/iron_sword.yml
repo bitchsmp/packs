@@ -2,31 +2,18 @@ parrying_iron_sword:
   Id: iron_sword
   Options:
   Skills:
-
-  - Aura{auraName=parry;onTickskill=parry_ready;interval=1;duration=10;onendskill=parry_stop;doendskillonterminate=false;cooldown=2} @self ~onUse ?!materialIsOnCooldown{mat=iron_sword}
-  - sound{sound=block.anvil.land;audience=nearby} @self ~onDamaged ?hasAura{aura=parry}
-  - armAnimation{} @self ~onDamaged ?hasAura{aura=parry}
-  - cancelEvent{} @self ~onDamaged ?hasAura{aura=parry}
-  - effect:particle{particle=end_rod;speed=0.4;amount=200;origin=} @self ~onDamaged ?hasAura{aura=parry}
-  - potion{type=STRENGTH;duration=40;level=1} @self ~onDamaged ?hasAura{aura=parry}
-  - potion{type=BlIND;duration=30;level=0} @trigger{} ~onDamaged ?hasAura{aura=parry}
-  - recoil{r=1;pitch=-80to80;yaw=-20to20} @trigger ~onDamaged ?hasAura{aura=parry}
+  - Aura{auraName=trying_to_parry;doendskillonterminate=false;duration=3;ontickskill=trying_to_parry;onendskill=parry_start} @self ~onUse ?!materialIsOnCooldown{mat=iron_sword}
   #
-  - cancelEvent{} @self ~onAttack ?hasAura{aura=parry}
-  - consumeuseddurability{a=10} @self ~onDamaged ?hasAura{aura=parry}
-  - actionmessage{m=" ";delay=2} @self ~onDamaged ?hasAura{aura=parry}
-  - setmaterialcooldown{m=iron_sword;d=40;delay=3} @self ~onDamaged ?hasAura{aura=parry}
-  - stopusingitem @self ~onDamaged ?hasAura{aura=parry}
-  #
-  - removeaura{aura=post_parry_attempt;delay=0} @self ~onDamaged ?hasAura{aura=parry}
-  - removeaura{aura=parry;delay=1} @self ~onDamaged ?hasAura{aura=parry}
 
+  - skill{skill=parry} ~onDamaged 
   # Parry hụt
-  - skill{s=parry_miss;delay=1} @self ~onDamaged ?!hasAura{aura=parry} ?!materialIsOnCooldown{mat=iron_sword} ?hasAura{aura=post_parry_attempt}
+  - skill{s=parry_miss;delay=0} @self ~onDamaged ?!hasAura{aura=parry} ?!materialIsOnCooldown{mat=iron_sword} ?hasAura{aura=trying_to_parry}
 
-
-
-
+  # Stop right-clicking
+  - removeaura{aura=parry;delay=1} @self ~onCanceluse
+  - removeaura{aura=invulnerable;delay=1} @self ~onCanceluse
+  - removeaura{aura=trying_to_parry;delay=1} @self ~onCanceluse
+  - actionmessage{m=" ";delay=1} @self ~onCanceluse
   # Right-click detection
   - skill{s=right_clicking_not_using} @self ~onUse
   - skill{s=holding_right_click} @Self 
@@ -34,5 +21,3 @@ parrying_iron_sword:
     Animation: BLOCK
     HasParticles: false
     ConsumeSeconds: 2147483678
-
-  

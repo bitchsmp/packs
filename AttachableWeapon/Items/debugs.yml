@@ -1,0 +1,30 @@
+debug_shoes:
+  Id: leather_boots
+  Display: 'Debug Shoes'
+  Lore:
+  - 'These shoes are used for debugging purposes.'
+  - 'They provide various debug information when worn.'
+  Skills:
+#Debug:
+    - message{m="0";cooldown=0.5} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
+    - message{m="1"} @self ?varequals{name=caster.stop_sign.is.falling;val="1"}  ~onTimer:1
+    - message{m="2"} @self ?varequals{name=caster.stop_sign.is.falling;val="2"}  ~onTimer:1
+    - message{m="3"} @self ?varequals{name=caster.stop_sign.is.falling;val="3"}  ~onTimer:1
+    - message{m="4"} @self ?varequals{name=caster.stop_sign.is.falling;val="4"}  ~onTimer:1
+# code xấu, hạn chế học theo
+#Condition checks:
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="no";delay=1;scope=caster} @self ?!directionalvelocity{y=<-0.4}  ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="1";scope=caster} @self ?directionalvelocity{y=<-0.4} ?directionalvelocity{y=>-0.6} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="2";scope=caster} @self ?directionalvelocity{y=<-0.6} ?directionalvelocity{y=>-0.8} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="3";scope=caster} @self ?directionalvelocity{y=<-0.8} ?directionalvelocity{y=>-1.2} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="4";scope=caster} @self ?directionalvelocity{y=<-1.2} ~onTimer:1
+
+debug_rod:
+  Id: stick
+  Display: 'Debug Rod'
+  Options:
+    PreventStacking: true
+  Skills:
+  - skill{s=marked_for_damaged} ~onAttack @trigger
+
+#  - damage{a=100} ~onAttack @target{sort=NEAREST;limit=1}
