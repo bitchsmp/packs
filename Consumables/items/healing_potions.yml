@@ -1,0 +1,50 @@
+infinite_lesser_healing_potion:
+  Id: potion
+  Display: Infinite Lesser Healing Potion
+  Options:
+    StackSize: 1
+    Glint: true
+  Consumable:
+    ConsumeSeconds: 2147483647
+    HasParticles: false
+    Animation: BLOCK
+    Sound: entity.generic.drink
+  Skills:
+  - aura{aura=using_infinite_lesser_healing_potion;doendskillonterminate=false;ticks=20;onendskill=infinite_lesser_healing_potion_effect} @self{} ~onUse ?!itemGroupOnCooldown{group=infinite_healing_potion}
+  - removeAura{aura=using_infinite_lesser_healing_potion} @self ~onStopusing
+  UseCooldown:
+    CooldownGroup: infinite_healing_potion
+
+infinite_healing_potion:
+  Id: potion
+  Display: Infinite Healing Potion
+  Options:
+    StackSize: 1
+    Glint: true
+  Consumable:
+    ConsumeSeconds: 2147483647
+    HasParticles: false
+    Animation: BLOCK
+    Sound: entity.generic.drink
+  Skills:
+  - aura{aura=using_infinite_healing_potion;doendskillonterminate=false;ticks=20;onendskill=infinite_healing_potion_effect} @self{} ~onUse ?!itemGroupOnCooldown{group=infinite_healing_potion}
+  - removeAura{aura=using_infinite_healing_potion} @self ~onStopusing
+  UseCooldown:
+    CooldownGroup: infinite_healing_potion
+
+infinite_greater_healing_potion:
+  Id: potion
+  Display: Infinite Large Healing Potion
+  Options:
+    StackSize: 1
+    Glint: true
+  Consumable:
+    ConsumeSeconds: 2147483647
+    HasParticles: false
+    Animation: BLOCK
+    Sound: entity.generic.drink
+  Skills:
+  - aura{aura=using_infinite_greater_healing_potion;doendskillonterminate=false;ticks=20;onendskill=infinite_greater_healing_potion_effect} @self{} ~onUse ?!itemGroupOnCooldown{group=infinite_healing_potion}
+  - removeAura{aura=using_infinite_greater_healing_potion} @self ~onStopusing
+  UseCooldown:
+    CooldownGroup: infinite_healing_potion
