@@ -1,3 +1,17 @@
+bottle_of_adrenaline_effect:
+  Skills:
+  - potion{type=INSTANT_HEALTH;duration=1;level=1}
+  - potion{type=STRENGTH;duration=100;level=4}
+  - potion{type=NIGHT_VISION;duration=100;level=0}
+  - effect:sound{sound=calamitymod:adrenalineactivate} @self
+  - stopusingitem
+  - setItemGroupCooldown{key=bottle_of_adrenaline;ticks=400}
+bottle_of_rage_effect:
+  Skills:
+  - potion{type=STRENGTH;duration=180;level=2}
+  - effect:sound{sound=calamitymod:rageactivate} @self
+  - stopusingitem
+  - setItemGroupCooldown{key=bottle_of_rage;ticks=600}
 infinite_lesser_healing_potion_effect:
   Skills:
   - potion{type=INSTANT_HEALTH;duration=1;level=1}
