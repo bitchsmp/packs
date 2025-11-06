@@ -1,0 +1,16 @@
+infinite_lesser_healing_potion_effect:
+  Skills:
+  - potion{type=INSTANT_HEALTH;duration=1;level=1}
+  - setItemGroupCooldown{key=infinite_healing_potion;ticks=600}
+  - stopusingitem{}
+
+infinite_healing_potion_effect:
+  Skills:
+  - potion{type=INSTANT_HEALTH;duration=2;level=1}
+  - setItemGroupCooldown{key=infinite_healing_potion;ticks=600}
+  - stopusingitem{}
+infinite_greater_healing_potion_effect:
+  Skills:
+  - potion{type=INSTANT_HEALTH;duration=3;level=1}
+  - setItemGroupCooldown{key=infinite_healing_potion;ticks=600}
+  - stopusingitem{}
