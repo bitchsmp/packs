@@ -198,16 +198,17 @@ PARRY_COUNTERATTACK:
     Compound: 'x<value> Parry Counterattack'
 
 ARMOR:
-  Enabled: false
+  Enabled: true
   Display: 'Armor'
   Formatting:
     Additive: '+<value> Armor'
     Multiply: '+<value> Armor'
     Compound: 'x<value> Armor'
   BaseValue: 0
+  MinValue: -2147483648
 
 ARMOR_TOUGHNESS:
-    Enabled: false
+    Enabled: true
     Display: 'Armor Toughness'
     Formatting:
         Additive: '+<value> Armor Toughness'
@@ -329,7 +330,7 @@ WATER_MOVEMENT_EFFICIENCY:
 ################################################################
 
 ARMOR_GENERIC:
-  Enabled: false
+  Enabled: true
   Type: DAMAGE_MODIFIER
   Triggers:
     - DAMAGED

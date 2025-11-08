@@ -70,7 +70,10 @@ SkinSabre:
   Lore:
   - <white>
   - <yellow>Sword Skin
-  - <gray>Deals up to 4 more damage when in plains biome and on horseback
+  - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
+  - <white>
+  - <light_purple>In plains biome:</light_purple> +2 Attack Damage
+  - <light_purple>On horseback:</light_purple> +2 Attack Damage
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Sabre<gray> (Deals up to 4 more damage when in plains biome and on horseback)'
@@ -98,3 +101,25 @@ SkinEpicSword:
     Stats:
     Skills:
      - projectile{bulletType=BLOCK;material=ANVIL;syo=20;velocity=30;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=epicsword_on_anvil_hit;deathdelay=40;chance=0.20} @trigger ~onAttack
+
+
+SkinAncient_royal_great_sword:
+  Material: DIAMOND
+  Display: '<yellow>Ancient Royal Great Sword'
+  Lore:
+  - <white>
+  - <yellow>Sword Skin
+  - <gray>Disable up to 10 Armor points of the target</gray>
+  - <white>
+  - <light_purple>Each hit reduces 1 armor point of the target, stacks up to 10 times; effect lasts for 2 seconds
+  - "<red>Each missed swing reduces the wielder's attack speed for 2 seconds."
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Ancient Royal Great Sword<gray> (Disable up to 10 Armor points of the target)'
+    ReplaceItemModel: ancient_royal_great_sword
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - stataura{stat=ARMOR;val=-1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ARMOR_DEPLETION;duration=40;maxstacks=10} @trigger ~onAttack
+    - stataura{stat=ATTACK_SPEED;val=-0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_REDUCTION;duration=40;maxstacks=10} @self ~onSwing
+    - stataura{stat=ATTACK_SPEED;val=0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_ADDITION;duration=40;maxstacks=10} @self ~onattack
