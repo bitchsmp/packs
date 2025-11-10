@@ -2,18 +2,21 @@ SkinStopSign:
   Material: DIAMOND
   Display: '<gold>Stop Sign'
   Lore:
+  - <yellow><bold>Mace Skin</bold>
   - <white>
-  - <yellow>Mace Skin
-  - <gray>Much higher damage and lower attack speed, also HITSTOPS!
+  - <gray>"A subtle reference to that other game weapon, add a nice touch of satisfaction"
+  - <white>
+  - "<red>[Hitstop]"
+  - '<white>  "Freezes" both you and the target when attacks'
+  - "<yellow>[Jackhammer]"
+  - "<white>  Deals bonus 99 explosion damage when velocity is high enough"
   Augmentation:
     Type: SKIN_MACE
-    Tooltip: '<gold>Stop Sign<gray> (Much higher damage and lower attack speed, also HITSTOPS!)'
+    Tooltip: '<gold>Stop Sign<gray> (A subtle reference to that other game weapon, add a nice touch of satisfaction)'
     ReplaceItemModel: stop_sign
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
-    - ATTACK_DAMAGE 2
-    - ATTACK_SPEED -0.2 ADDITIVE
     Skills:
 #Debug:
     # - message{m="0";cooldown=0.5} @self ?varequals{name=caster.stop_sign.is.falling;val="no";scope=caster}  ~onTimer:1
@@ -98,9 +101,12 @@ SkinMjolnir:
   Material: DIAMOND
   Display: '<white>Mjolnir'
   Lore:
+  - <yellow><bold>Mace Skin</bold>
   - <white>
-  - <yellow>Mace Skin
   - <gray>Summons a lightning bolt upon attacking
+  - <white>
+  - "<aqua>[Zeus]"
+  - '<white>  Summons a 10 damage lightning bolt upon attacking'
   Augmentation:
     Type: SKIN_MACE
     Tooltip: '<white>Mjolnir<gray> (Summons a lightning bolt upon attacking)'

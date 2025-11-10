@@ -1,13 +1,43 @@
+SkinCreationSplitter:
+  Material: DIAMOND
+  Display: '<gold>Creation Splitter'
+  Lore:
+  - <yellow><bold>Sword Skin</bold>
+  - <white>
+  - <gray>Strip your target armor</gray>
+  - <white>
+  - "<light_purple>[Off-Guard]"
+  - "<white>  Attacks reduce 20 armor point of the target; effect lasts for 10 seconds"
+  - "<red>[⚠Stuck!]"
+  - "<white>  Missing a swing disables the weapon for 2 seconds"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<gold>Creation Splitter<gray> (Strip your target armor)'
+    ReplaceItemModel: creationsplitter
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - stataura{stat=ARMOR;val=-20;type=ADDITIVE;aura=CREATIONSPLITTER_ARMOR_STRIPPER;duration=200;delay=1} @trigger ~onAttack ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+    - aura{aura=CREATIONSPLITTER_ATTACK_SUCCESS;ticks=2} @self ~onAttack
+    - aura{aura=CREATIONSPLITTER_ATTACK_FAILED;delay=1;ticks=40;onstartskill=CREATIONSPLITTER_ATTACK_FAILED_FX;ontickskill=CREATIONSPLITTER_ATTACK_FAILED_FX_TICK} @self ~onSwing ?!hasAura{aura=CREATIONSPLITTER_ATTACK_SUCCESS} ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+    - aura{aura=CREATIONSPLITTER_ATTACK_DISABLE;ticks=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+
+    - aura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY;ticks=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED_END2TICK_EARLY}
+    - cancelEvent ~onSwing ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE}
+    - cancelEvent ~onAttack ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE}
+    - potion{type=HASTE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
+    - potion{type=MINING_FATIGUE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
+
 SkinBrimstone_Claymore:
   Material: DIAMOND
   Display: '<yellow>Brimstone Claymore'
   Lore:
+  - <yellow><bold>Sword Skin</bold>
   - <white>
-  - <yellow>Sword Skin
-  - <gray>Inflict <dark_red>UltraBurn</dark_red> on hit
+  - <gray>Inflict UltraBurn on hit</gray>
   - <white>
-  - <light_purple>Ultraburn:</light_purple>
-  - <white>Causes unextinguishable burning effect
+  - "<dark_red>[UltraBurn]"
+  - "<white>  Causes unextinguishable burning effect to the target"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<yellow>Brimstone Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
@@ -23,9 +53,11 @@ SkinFrostBlade:
   Material: DIAMOND
   Display: '<white>Frost Blade'
   Lore:
+  - <yellow><bold>Sword Skin</bold>
   - <white>
-  - <yellow>Sword Skin
-  - <gray>Inflict Freezing on hit
+  - <gray>Inflict Freezing on hit</gray>
+  - <white>
+  - "<aqua>[Freezing]"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Frost Blade<gray> (Inflict Freezing on hit)'
@@ -41,13 +73,14 @@ SkinHolyMoonlightSword:
   Material: DIAMOND
   Display: '<aqua>Holy Moonlight Sword'
   Lore:
+  - <yellow><bold>Sword Skin</bold>
   - <white>
-  - <yellow>Sword Skin
   - <gray>Becomes powerful at night, even more powerful on full moons, up to 6 extra damage</gray>
   - <white>
-  - <light_purple>At night:</light_purple> +1 Attack Damage
-  - <light_purple>During Full moon:</light_purple> +6 Attack Damage
-  - <light_purple>During other moon phases except new moon:</light_purple> +3 Attack Damage
+  - "<light_purple>[Lunar Blessing]"
+  - <white>  At night:</white> +1 Attack Damage
+  - <white>  During Full moon:</white> +6 Attack Damage
+  - <white>  During other moon phases except new moon:</white> +3 Attack Damage
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<aqua>Holy Moonlight Sword<gray> (Becomes powerful at night, even more powerful on full moons, up to 6 extra damage)'
@@ -68,12 +101,14 @@ SkinSabre:
   Material: DIAMOND
   Display: 'Sabre'
   Lore:
+  - <yellow><bold>Sword Skin</bold>
   - <white>
-  - <yellow>Sword Skin
   - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
   - <white>
-  - <light_purple>In plains biome:</light_purple> +2 Attack Damage
-  - <light_purple>On horseback:</light_purple> +2 Attack Damage
+  - "<green>[Grassland Domination]"
+  - <white>  When in plains biome:</white> +2 Attack Damage
+  - "<yellow>[Cavalry]"
+  - <white>  When on horseback:</white> +2 Attack Damage
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Sabre<gray> (Deals up to 4 more damage when in plains biome and on horseback)'
@@ -89,9 +124,11 @@ SkinEpicSword:
   Material: DIAMOND
   Display: '<yellow>Epic Sword'
   Lore:
+  - <yellow><bold>Sword Skin</bold>
   - <white>
-  - <yellow>Sword Skin
-  - <gray>20% chance to summon an anvil falling onto the target, dealing 120 damage
+  - "<yellow>[The Enlightment]"
+  - <white>  20% chance to summon an anvil falling onto the target, dealing 120 damage
+
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<yellow>Epic Sword<gray> (20% chance summon an anvil falling onto the target, dealing 120 damage)'
@@ -107,12 +144,14 @@ SkinAncient_royal_great_sword:
   Material: DIAMOND
   Display: '<yellow>Ancient Royal Great Sword'
   Lore:
+  - <yellow><bold>Sword Skin</bold>
   - <white>
-  - <yellow>Sword Skin
   - <gray>Disable up to 10 Armor points of the target</gray>
   - <white>
-  - <light_purple>Each hit reduces 1 armor point of the target, stacks up to 10 times; effect lasts for 2 seconds
-  - "<red>Each missed swing reduces the wielder's attack speed for 2 seconds."
+  - "<yellow>[Blunt]"
+  - <white>  Each hit reduces 1 armor point of the target, stacks up to 10 times; effect lasts for 2 seconds
+  - "<red>[⚠Heavy Duty]"
+  - "<white>  Each missed swing reduces the wielder's attack speed for 2 seconds"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<yellow>Ancient Royal Great Sword<gray> (Disable up to 10 Armor points of the target)'

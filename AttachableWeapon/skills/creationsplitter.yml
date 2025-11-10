@@ -1,0 +1,7 @@
+CREATIONSPLITTER_ATTACK_FAILED_FX:
+  Skills:
+  - sound{sound=entity.generic.explode;volume=0.5}
+  - aura{aura=CREATIONSPLITTER_ATTACK_FAILED_END2TICK_EARLY;delay=1;ticks=38} @self
+CREATIONSPLITTER_ATTACK_FAILED_FX_TICK:
+  Skills:
+  - sound{sound=block.fire.extinguish;volume=0.05}
