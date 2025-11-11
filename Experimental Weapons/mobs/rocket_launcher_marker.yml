@@ -1,0 +1,16 @@
+rocket_launcher_hit_block_marker:
+  Type: armor_stand
+  Options:
+    VisibleByDefault: false
+    Invisible: true
+    NoGravity: true
+    PreventLeashing: true
+    Silent: true
+    CanMove: false
+    Marker: true
+
+  Skills:
+  #effect
+  - throw{velocity=10;velocityY=4} @EIR{r=6} ~onSpawn
+  #remove
+  - remove{delay=5} @self ~onSpawn

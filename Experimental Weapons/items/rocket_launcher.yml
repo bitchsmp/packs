@@ -1,0 +1,6 @@
+rocket_launcher:
+  Id: stick
+  Options:
+    PreventStacking: true
+  Skills:
+    - projectile{bulletType=DISPLAY;material=ultrakill_rocket;sfo=0;velocity=20;syo=1.4;onhitskill=terrablade_projectile_hit;cooldown=0.1;drawhitbox=false;stopatentity=true;hr=0.2;vr=0.2;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;rotation=0,4.71238898,0;onTickSkill=rocket_launcher_tick;onHitBlockSkill=rocket_launcher_hit_block} @Forward{yOffset=1.4} ~onSwing

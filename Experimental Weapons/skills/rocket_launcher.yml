@@ -1,0 +1,9 @@
+rocket_launcher_tick:
+  Skills:
+  - effect:particle{particle=flame;delay=2}
+rocket_launcher_hit_block:
+  Skills:
+  - summon{type=rocket_launcher_hit_block_marker}
+
+rocket_launcher_hit_block_sudoskill:
+  Skills:
