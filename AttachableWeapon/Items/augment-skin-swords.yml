@@ -27,7 +27,52 @@ SkinCreationSplitter:
     - cancelEvent ~onAttack ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE}
     - potion{type=HASTE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
     - potion{type=MINING_FATIGUE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
-
+SkinMoltenBlade:
+  Material: DIAMOND
+  Display: '<white>Molten Blade'
+  Lore:
+  - <yellow><bold>Sword Skin</bold>
+  - <white>
+  - <gray>Sharp as it was fresh from the furnace</gray>
+  - <white>
+  - "<yellow>[Fresh]"
+  - "<white>  Deals 4 extra damage, but consumes twice the durability"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Molten Blade<gray> (Sharp as it was fresh from the furnace)'
+    ReplaceItemModel: moltenblade
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - stataura{stat=ATTACK_DAMAGE;value=4;type=ADDITIVE;ticks=2;aura=MoltenBlade_damage_buff} ~onTimer:1 @self
+    - consumehelddurability{a=1} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
+    - consumehelddurability{a=1;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
+    - consumehelddurability{a=1;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
+    - consumehelddurability{a=1;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
+SkinMoltenSword:
+  Material: DIAMOND
+  Display: '<white>Molten Sword'
+  Lore:
+  - <yellow><bold>Sword Skin</bold>
+  - <white>
+  - <gray>Sharp as it was fresh from the furnace</gray>
+  - <white>
+  - "<yellow>[Fresh]"
+  - "<white>  Deals 8 extra damage, but consumes five times as much durability"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Molten Sword<gray> (Sharp as it was fresh from the furnace)'
+    ReplaceItemModel: moltensword
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - stataura{stat=ATTACK_DAMAGE;value=8;type=ADDITIVE;ticks=2;aura=MoltenSword_damage_buff} ~onTimer:1 @self
+    - consumehelddurability{a=4} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
+    - consumehelddurability{a=4;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
+    - consumehelddurability{a=4;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
+    - consumehelddurability{a=4;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
 SkinBrimstone_Claymore:
   Material: DIAMOND
   Display: '<yellow>Brimstone Claymore'
