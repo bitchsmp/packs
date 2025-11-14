@@ -8,9 +8,21 @@ rocket_launcher_hit_block_marker:
     Silent: true
     CanMove: false
     Marker: true
-
   Skills:
   #effect
-  - throw{velocity=10;velocityY=4} @EIR{r=6} ~onSpawn
+  - throw{velocity=3;velocityY=8} @EIR{r=4} ~onSpawn
+
   #remove
-  - remove{delay=5} @self ~onSpawn
+  - remove{delay=2} @self ~onSpawn
+rocket_launcher_cannonball_hitbox:
+  Type: interaction
+  Options:
+    Height: 1.2
+    Width: 1.2
+    summonerIsOwner: true
+  Skills:
+  - message{message=ouch} @AllInWorld{} ~onDamaged 
+  #- message{message=<target.var.caster_name>} @AllInWorld  ~onSpawn
+  #- movevariable{from=target.caster_name;to=caster.caster_name}
+  - skill{s=rocket_launcher_cannonball_onAttacked} ~ondamaged
+  - remove{delay=2} @self ~onspawn

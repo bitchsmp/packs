@@ -1,9 +1,55 @@
-rocket_launcher_tick:
+rocket_launcher_fire:
   Skills:
-  - effect:particle{particle=flame;delay=2}
+  - sound{sound=ultrakill:rocketfire5;volume=0.4;radius=16} @caster 
+  # - setvar{value=<caster.name>;type=STRING;scope=skill;var=skill.caster_name}
+  # - message{message=<skill.var.caster_name>}
 rocket_launcher_hit_block:
   Skills:
   - summon{type=rocket_launcher_hit_block_marker}
-
-rocket_launcher_hit_block_sudoskill:
+  - sound{s=ultrakill:explosion_harmless;audience=nearby;volume=0.8;radius=16} @Origin
+rocket_launcher_hit:
+  TargetConditions:
+  - MythicMobType{types=rocket_launcher_hit_block_marker} false #need improvement here: support all types of markers
   Skills:
+  - damage{a=10;preventknockback=true}
+  - sound{s=ultrakill:explosion_1;volume=0.8;radius=16} @Origin
+rocket_launcher_cannonball_tick:
+  Skills:
+
+  - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_hitbox} 
+  - movevariable{from=caster.caster_name;to=target.caster_name} @Children
+  - setprojectiledirection @Forward{yOffset=0.9;forward=10} ?hasaura{aura=rocket_launcher_cannonball_boosted}
+rocket_launcher_cannonball_onspawn_interaction_initial:
+  Skills:
+   - movevariable{from=caster.caster_name;to=target.interaction_caster_name}
+  #  - setvar{value=<target.var.caster_name>;scope=target;type=STRING;var=target.caster_name}
+  #  - message{message=<target.var.interaction_caster_name>} @AllInWorld 
+  #  - message{message=a} @AllInWorld 
+rocket_launcher_cannonball_hit_block:
+  Skills:
+  - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=32;audience=nearby}
+rocket_launcher_cannonball_hit:
+  TargetConditions:
+  - entityType{types=INTERACTION} false
+  Skills:
+  - sound{sound=ultrakill:metal_hit_crash_199;volume=0.3;radius=32;audience=nearby}
+  - projectilevelocity{mode=SET;vy=0.3;vx=0.0;vz=-0.2}
+ # - projectilevelocity{mode=ADD;vx=0.0;vz=-0.001;relative=true}
+  - skill{s=rocket_launcher_cannonball_hit_damage}
+rocket_launcher_cannonball_hit_damage:
+  TargetConditions:
+  - mobtype{types=IRON_GOLEM} castinstead rocket_launcher_cannonball_hit_golem_damage
+  Skills:
+  - damage{a=40;poweraffectsdamage=false}
+rocket_launcher_cannonball_hit_golem_damage:
+  Skills:
+  - damage{a=80;poweraffectsdamage=false}
+rocket_launcher_cannonball_onAttacked:
+  Skills:
+  - message{message=ouch}
+  - aura{aura=rocket_launcher_cannonball_boosted;ticks=2} @trigger
+  - effect:sound{sound=ultrakill:punch_projectile;volume=0.5;radius=16} 
+# rocket_launcher_cannonball_projectile_boost:
+#   Skills:
+#   - aura
+  
