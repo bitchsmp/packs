@@ -1,5 +1,5 @@
 rocket_launcher_hit_block_marker:
-  Type: armor_stand
+  Type: MARKER
   Options:
     VisibleByDefault: false
     Invisible: true
@@ -8,21 +8,50 @@ rocket_launcher_hit_block_marker:
     Silent: true
     CanMove: false
     Marker: true
+    Invincible: true
   Skills:
   #effect
-  - throw{velocity=3;velocityY=8} @EIR{r=4} ~onSpawn
-
+  - throw{velocity=3;velocityY=12} @EIR{r=4} ~onSpawn
+  - potion{type=SLOW_FALLING;duration=20} @EIR{r=4} ~onSpawn
   #remove
   - remove{delay=2} @self ~onSpawn
+
+
+
+
+
+
+
+
+
+
+  
 rocket_launcher_cannonball_hitbox:
   Type: interaction
   Options:
     Height: 1.2
     Width: 1.2
-    summonerIsOwner: true
   Skills:
   - message{message=ouch} @AllInWorld{} ~onDamaged 
-  #- message{message=<target.var.caster_name>} @AllInWorld  ~onSpawn
-  #- movevariable{from=target.caster_name;to=caster.caster_name}
   - skill{s=rocket_launcher_cannonball_onAttacked} ~ondamaged
   - remove{delay=2} @self ~onspawn
+
+rocket_launcher_cannonball_marker:
+  Type: INTERACTION
+  Options:
+    VisibleByDefault: false
+    Invisible: true
+    NoGravity: true
+    PreventLeashing: true
+    Silent: true
+    CanMove: false
+    Marker: true
+    summonerIsOwner: true
+  Skills:
+  # - variableSet{value=0;type=INTEGER;scope=caster;var=caster.cannonball_bounce} @self ~onspawn
+  # - message{message=<caster.var.cannonball_bounce>} @everyone{}  ~onTimer:1
+  # - variableAdd{var=caster.cannonball_bounce;value=1;type=INTEGER;scope=caster} @self ~onSignal:bounce
+  - message{message=bounce} @everyone ~onSignal:bounce
+  - aura{aura=ROCKET_LAUNCHER_CANNONBALL_BOUNCED;ticks=150} ~onSignal:bounce @parent
+  #- signal{signal=bounced} @parent ~onSignal:bounce
+  - remove{delay=2000} ~onSpawn

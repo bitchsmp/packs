@@ -1,6 +1,6 @@
 rocket_launcher_fire:
   Skills:
-  - sound{sound=ultrakill:rocketfire5;volume=0.4;radius=16} @caster 
+  - sound{sound=ultrakill:rocketfire5;volume=0.4;radius=16} @self
   # - setvar{value=<caster.name>;type=STRING;scope=skill;var=skill.caster_name}
   # - message{message=<skill.var.caster_name>}
 rocket_launcher_hit_block:
@@ -8,23 +8,36 @@ rocket_launcher_hit_block:
   - summon{type=rocket_launcher_hit_block_marker}
   - sound{s=ultrakill:explosion_harmless;audience=nearby;volume=0.8;radius=16} @Origin
 rocket_launcher_hit:
-  TargetConditions:
+  TriggerConditions:
   - MythicMobType{types=rocket_launcher_hit_block_marker} false #need improvement here: support all types of markers
+  Skills:
+  - skill{s=rocket_launcher_damage}
+rocket_launcher_damage:
+  TargetConditions:
+  - onGround orelsecast rocket_launcher_damage_falling
+
   Skills:
   - damage{a=10;preventknockback=true}
   - sound{s=ultrakill:explosion_1;volume=0.8;radius=16} @Origin
+rocket_launcher_damage_falling:
+  Skills:
+  - damage{a=20;preventknockback=true}
+  - sound{s=ultrakill:explosion_2;volume=0.8;radius=16} @Origin
+
+
+rocket_launcher_cannonball_fire:
+  Skills:
+  - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160} @self
+  - command{command="say Cannonball!";asOp=true;ascaster=true} @self ~onshoot
+  - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_marker;sio=true}
 rocket_launcher_cannonball_tick:
   Skills:
-
   - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_hitbox} 
   - movevariable{from=caster.caster_name;to=target.caster_name} @Children
-  - setprojectiledirection @Forward{yOffset=0.9;forward=10} ?hasaura{aura=rocket_launcher_cannonball_boosted}
-rocket_launcher_cannonball_onspawn_interaction_initial:
-  Skills:
-   - movevariable{from=caster.caster_name;to=target.interaction_caster_name}
-  #  - setvar{value=<target.var.caster_name>;scope=target;type=STRING;var=target.caster_name}
-  #  - message{message=<target.var.interaction_caster_name>} @AllInWorld 
-  #  - message{message=a} @AllInWorld 
+  # ?hasaura{aura=rocket_launcher_cannonball_boosted} is the condition to check if the cannonball was punched
+  - setprojectiledirection @Forward{yOffset=1;forward=10} ?hasaura{aura=rocket_launcher_cannonball_boosted}
+  - modifyprojectile{trait=VELOCITY;action=ADD;value=1} ?hasaura{aura=rocket_launcher_cannonball_boosted}
+  - signal{signal=bounce} @children ?hasaura{aura=rocket_launcher_cannonball_boosted}
 rocket_launcher_cannonball_hit_block:
   Skills:
   - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=32;audience=nearby}
@@ -33,9 +46,10 @@ rocket_launcher_cannonball_hit:
   - entityType{types=INTERACTION} false
   Skills:
   - sound{sound=ultrakill:metal_hit_crash_199;volume=0.3;radius=32;audience=nearby}
-  - projectilevelocity{mode=SET;vy=0.3;vx=0.0;vz=-0.2}
- # - projectilevelocity{mode=ADD;vx=0.0;vz=-0.001;relative=true}
+  - projectilevelocity{mode=SET;vy=0.3;vx=0.0;vz=-0.2} ?!hasaura{aura=ROCKET_LAUNCHER_CANNONBALL_BOUNCED}
   - skill{s=rocket_launcher_cannonball_hit_damage}
+  - signal{signal=bounce} @children
+
 rocket_launcher_cannonball_hit_damage:
   TargetConditions:
   - mobtype{types=IRON_GOLEM} castinstead rocket_launcher_cannonball_hit_golem_damage
@@ -44,12 +58,19 @@ rocket_launcher_cannonball_hit_damage:
 rocket_launcher_cannonball_hit_golem_damage:
   Skills:
   - damage{a=80;poweraffectsdamage=false}
-rocket_launcher_cannonball_onAttacked:
+rocket_launcher_cannonball_end:
   Skills:
-  - message{message=ouch}
+  - remove{delay=1} @children
+  - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=32;audience=nearby}
+  - removeaura{aura=ROCKET_LAUNCHER_CANNONBALL_BOUNCED} @self
+#Cannonball Parry Mechanics:
+rocket_launcher_cannonball_onAttacked:
+#@Caster: rocket_launcher_cannonball_hitbox
+#@trigger: the one who punched the cannonball
+  TriggerConditions:
+  - holding{types=rocket_launcher} false
+  Skills:
   - aura{aura=rocket_launcher_cannonball_boosted;ticks=2} @trigger
   - effect:sound{sound=ultrakill:punch_projectile;volume=0.5;radius=16} 
-# rocket_launcher_cannonball_projectile_boost:
-#   Skills:
-#   - aura
-  
+
+
