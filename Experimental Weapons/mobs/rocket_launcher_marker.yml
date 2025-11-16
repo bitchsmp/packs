@@ -9,10 +9,15 @@ rocket_launcher_hit_block_marker:
     CanMove: false
     Marker: true
     Invincible: true
+    summonerIsOwner: true
   Skills:
   #effect
-  - throw{velocity=3;velocityY=12} @EIR{r=4} ~onSpawn
-  - potion{type=SLOW_FALLING;duration=20} @EIR{r=4} ~onSpawn
+  - throw{velocity=3;velocityY=12} @EIR{r=4;ignore=owner} ~onSpawn
+  - throw{velocity=3;velocityY=12} @EIR{r=2} ~onSpawn
+
+
+  - potion{type=SLOW_FALLING;duration=20} @EIR{r=4;ignore=owner} ~onSpawn
+  - potion{type=SLOW_FALLING;duration=20} @EIR{r=2} ~onSpawn
   #remove
   - remove{delay=2} @self ~onSpawn
 

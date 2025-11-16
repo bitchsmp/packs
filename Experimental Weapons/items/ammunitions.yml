@@ -2,7 +2,4 @@ ultrakill_rocket:
   id: blaze_rod
   Options:
     ItemModel: ultrakill:rocket
-brimstone_claymore:
-  id: blaze_rod
-  Options:
-    ItemModel: brimstone_claymore
+    PreventStacking: true

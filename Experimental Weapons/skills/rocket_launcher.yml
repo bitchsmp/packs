@@ -1,6 +1,7 @@
 rocket_launcher_fire:
   Skills:
   - sound{sound=ultrakill:rocketfire5;volume=0.4;radius=16} @self
+  - ConsumeItemDurability{a=1} @self
   # - setvar{value=<caster.name>;type=STRING;scope=skill;var=skill.caster_name}
   # - message{message=<skill.var.caster_name>}
 rocket_launcher_hit_block:
@@ -9,25 +10,28 @@ rocket_launcher_hit_block:
   - sound{s=ultrakill:explosion_harmless;audience=nearby;volume=0.8;radius=16} @Origin
 rocket_launcher_hit:
   TriggerConditions:
-  - MythicMobType{types=rocket_launcher_hit_block_marker} false #need improvement here: support all types of markers
+  - entitytype{t=ARMOR_STAND} false #need improvement here: support all types of markers
   Skills:
   - skill{s=rocket_launcher_damage}
 rocket_launcher_damage:
   TargetConditions:
   - onGround orelsecast rocket_launcher_damage_falling
+  - isliving true
 
   Skills:
-  - damage{a=10;preventknockback=true}
+  - damage{a=5;preventknockback=true} @entitiesNearOrigin{r=5}
   - sound{s=ultrakill:explosion_1;volume=0.8;radius=16} @Origin
 rocket_launcher_damage_falling:
+  TargetConditions:
+  - isliving true
   Skills:
-  - damage{a=20;preventknockback=true}
+  - damage{a=10;preventknockback=true} @entitiesNearOrigin{r=7}
   - sound{s=ultrakill:explosion_2;volume=0.8;radius=16} @Origin
 
 
 rocket_launcher_cannonball_fire:
   Skills:
-  - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160} @self
+  - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160;ShowBarTimer=true;bartimerdisplay="Cannonball reloading..."} @self
   - command{command="say Cannonball!";asOp=true;ascaster=true} @self ~onshoot
   - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_marker;sio=true}
 rocket_launcher_cannonball_tick:
@@ -40,7 +44,7 @@ rocket_launcher_cannonball_tick:
   - signal{signal=bounce} @children ?hasaura{aura=rocket_launcher_cannonball_boosted}
 rocket_launcher_cannonball_hit_block:
   Skills:
-  - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=32;audience=nearby}
+  - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=16}
 rocket_launcher_cannonball_hit:
   TargetConditions:
   - entityType{types=INTERACTION} false
@@ -54,14 +58,14 @@ rocket_launcher_cannonball_hit_damage:
   TargetConditions:
   - mobtype{types=IRON_GOLEM} castinstead rocket_launcher_cannonball_hit_golem_damage
   Skills:
-  - damage{a=40;poweraffectsdamage=false}
+  - damage{a=50;poweraffectsdamage=false}
 rocket_launcher_cannonball_hit_golem_damage:
   Skills:
-  - damage{a=80;poweraffectsdamage=false}
+  - damage{a=100;poweraffectsdamage=false}
 rocket_launcher_cannonball_end:
   Skills:
   - remove{delay=1} @children
-  - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=32;audience=nearby}
+  - sound{sound=ultrakill:boulder_impact_on_stones_14;volume=0.2;radius=16}
   - removeaura{aura=ROCKET_LAUNCHER_CANNONBALL_BOUNCED} @self
 #Cannonball Parry Mechanics:
 rocket_launcher_cannonball_onAttacked:
