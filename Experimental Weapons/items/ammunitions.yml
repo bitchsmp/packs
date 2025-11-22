@@ -1,5 +1,18 @@
-ultrakill_rocket:
+ultrakill_rocket_display:
   id: blaze_rod
   Options:
     ItemModel: ultrakill:rocket
     PreventStacking: true
+
+ultrakill_cannonball:
+  id: observer
+  display: "<green>Cannonball Assembly Factory"
+  Options:
+    PreventStacking: true
+    Glint: true
+  Lore:
+  - <white>
+  - "Required for the conversion of arrow/firework rocket to <yellow>Cannonball</yellow>"
+  - "<light_purple>Consumes <white>2 Block of Iron</white> or <white>1 Netherite Ingot</white> on conversion"
+  - "To use, just keep this item in your inventory"
+
