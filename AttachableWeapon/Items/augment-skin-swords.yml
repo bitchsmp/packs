@@ -207,3 +207,22 @@ SkinAncient_royal_great_sword:
     - stataura{stat=ARMOR;val=-1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ARMOR_DEPLETION;duration=40;maxstacks=10} @trigger ~onAttack
     - stataura{stat=ATTACK_SPEED;val=-0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_REDUCTION;duration=40;maxstacks=10} @self ~onSwing
     - stataura{stat=ATTACK_SPEED;val=0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_ADDITION;duration=40;maxstacks=10} @self ~onattack
+
+SkinTerrablade:
+  Material: DIAMOND
+  Display: '<yellow>Terrablade'
+  Lore:
+  - <yellow><bold>Sword Skin</bold>
+  - <white>
+  - <gray>Terrarians love this thing</gray>
+  - <white>
+  - "<green>[Energy]"
+  - "<white>  Each swing fires a wave of energy"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Terrablade<gray> (Terrarians love this thing)'
+    ReplaceItemModel: terrablade
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - skill{s=terrablade_projectile_leftclick} ~onSwing 
