@@ -7,13 +7,24 @@
 #     █████    █████   █████ ██████████       ██████████   ██████████ █████   █████    █████    █████   █████       ░░░███████░   ██████████      █████   ░░█████████ ░░█████████  ██████████    █████   
 #    ░░░░░    ░░░░░   ░░░░░ ░░░░░░░░░░       ░░░░░░░░░░   ░░░░░░░░░░ ░░░░░   ░░░░░    ░░░░░    ░░░░░   ░░░░░          ░░░░░░░    ░░░░░░░░░░      ░░░░░     ░░░░░░░░░   ░░░░░░░░░  ░░░░░░░░░░    ░░░░░    
                                                                                                                                                                                                        
-                                                                                                                                                                        
+#Soundwork notes:
+  #rocketfire5: 85%
+  #rocketfire5: 85% ~pitch: 0.8 if cannonball
+  #impact_processed_179: 50%         
+  #machinepumploop: 40%
+rocket_launcher_leftclick:
+  Cooldown: 1
+
+  Conditions:
+  - equipslot{slot=HAND} true
+  Skills:
+  - projectile{bulletType=DISPLAY;material=ultrakill_rocket_display;sfo=0;velocity=16;syo=1.4;onHitskill=rocket_launcher_hit;onHitBlockSkill=rocket_launcher_hit_block;cooldown=0.1;drawhitbox=false;hr=0.3;vr=0.3;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;rotation=0,4.71238898,0;onTickSkill=rocket_launcher_tick;MaxRange=256;PowerAffectsVelocity=false;onstartskill=rocket_launcher_fire} @Forward{yOffset=1.4}                                                                                                                                                         
 rocket_launcher_fire:
   Skills:
-  - sound{sound=ultrakill:rocketfire5;volume=0.4;radius=16} @self
+
+  - sound{sound=ultrakill:rocketfire5;volume=0.42;radius=16} @self
+  - sound{sound=ultrakill:impacts_processed_179;volume=0.25;radius=16;delay=17} @self #Reload sound
   - ConsumeItemDurability{a=1} @self
-  # - setvar{value=<caster.name>;type=STRING;scope=skill;var=skill.caster_name}
-  # - message{message=<skill.var.caster_name>}
 rocket_launcher_hit_block:
   Skills:
   - summon{type=rocket_launcher_hit_block_marker}
@@ -54,13 +65,16 @@ rocket_launcher_damage_falling:
 
 rocket_launcher_rightclick:
   Conditions:
+  - skillOnCooldown{skill=rocket_launcher_leftclick} false
   - hasAura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN} false
   - hasitem{amount=>0;types=ultrakill_cannonball} true
   - hasitem{amount=>1;types=iron_block} orelsecast rocket_launcher_rightclick_ConditionCheck
+
   Skills:
   - skill{s=rocket_launcher_cannonball_projectile}
 rocket_launcher_rightclick_ConditionCheck:
   Conditions:
+  - skillOnCooldown{skill=rocket_launcher_leftclick} false
   - hasAura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN} false
   - hasitem{amount=>0;types=ultrakill_cannonball} true
   - hasitem{amount=>0;types=netherite_ingot} orelsecast rocket_launcher_cannonball_insufficient_material
@@ -71,15 +85,19 @@ rocket_launcher_cannonball_insufficient_material:
   - actionmessage{message="Insufficient material, missing Iron Block or Netherite Ingot"}
 rocket_launcher_cannonball_projectile:
   Skills:
-  - projectile{bulletType=BLOCK;material=black_concrete;sfo=0;velocity=36;syo=1.4;onhitskill=rocket_launcher_cannonball_hit;cooldown=0.1;drawhitbox=false;hr=0.6;vr=0.6;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;onHitBlockSkill=rocket_launcher_cannonball_hit_block;gravity=0.3;MaxRange=256;PowerAffectsVelocity=false;stopatentity=false;ontickskill=rocket_launcher_cannonball_tick;highaccuracymode=true;ImmuneDelay=1000;onstartskill=rocket_launcher_cannonball_fire;onendskill=rocket_launcher_cannonball_end;maxduration=159} @Forward{yOffset=1.4}
+  - setSkillCooldown{skill=rocket_launcher_leftclick;seconds=1} @self
+
+  - projectile{bulletType=BLOCK;material=black_concrete;sfo=0;velocity=36;syo=1.4;onhitskill=rocket_launcher_cannonball_hit;cooldown=0.1;drawhitbox=false;hr=0.6;vr=0.6;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;onHitBlockSkill=rocket_launcher_cannonball_hit_block;gravity=0.3;MaxRange=256;PowerAffectsVelocity=false;stopatentity=false;ontickskill=rocket_launcher_cannonball_tick;highaccuracymode=true;ImmuneDelay=1000;onstartskill=rocket_launcher_cannonball_fire;onendskill=rocket_launcher_cannonball_end;maxduration=159;deathdelay=20} @Forward{yOffset=1.4}
 rocket_launcher_cannonball_fire:
   Conditions:
   Skills:
-
+  - sound{sound=ultrakill:rocketfire5;volume=0.42;radius=16;pitch=0.8} @self
   - skill{s=rocket_launcher_cannonball_consume_iron}
   - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160;ShowBarTimer=true;bartimerdisplay="Cannonball reloading..."} @self
   - command{command="say Cannonball!";asOp=true;ascaster=true} @self ~onshoot
   - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_marker;sio=true}
+  - setSkillCooldown{skill=rocket_launcher_leftclick;seconds=1;forcesync=true} @self
+  - sound{sound=ultrakill:impacts_processed_179;volume=0.25;radius=16;delay=17} @self #Reload sound
 
 rocket_launcher_cannonball_consume_iron:
   Conditions:
