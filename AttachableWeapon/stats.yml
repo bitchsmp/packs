@@ -323,6 +323,14 @@ WATER_MOVEMENT_EFFICIENCY:
         Multiply: '+<value> Water Movement Efficiency'
         Compound: 'x<value> Water Movement Efficiency'
     BaseValue: 0
+ENTITY_INTERACTION_RANGE:
+    Enabled: true
+    Display: 'Entity Interaction Range'
+    Formatting:
+        Additive: '+<value> Entity Interaction Range'
+        Multiply: '+<value> Entity Interaction Range'
+        Compound: 'x<value> Entity Interaction Range'
+    BaseValue: 3
 ################################################################
 #
 # Example Custom Stats

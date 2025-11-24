@@ -142,28 +142,7 @@ SkinHolyMoonlightSword:
 
     - stataura{stat=ATTACK_DAMAGE;val=5;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0} ?night
     - effect:particles{particle=end_rod;count=5;offset=0.6;speed=0;yoffset=0} @self ~onTimer:5 ?lunarPhase{phases=0} ?night
-SkinSabre:
-  Material: DIAMOND
-  Display: 'Sabre'
-  Lore:
-  - <yellow><bold>Sword Skin</bold>
-  - <white>
-  - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
-  - <white>
-  - "<green>[Grassland Domination]"
-  - <white>  When in plains biome:</white> +2 Attack Damage
-  - "<yellow>[Cavalry]"
-  - <white>  When on horseback:</white> +2 Attack Damage
-  Augmentation:
-    Type: SKIN_SWORD
-    Tooltip: '<white>Sabre<gray> (Deals up to 4 more damage when in plains biome and on horseback)'
-    ReplaceItemModel: sabre
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Stats:
-    Skills:
-    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_PLAINS_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?biome{biome=plains}
-    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_MOUNTED_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?mounted
+
 
 SkinEpicSword:
   Material: DIAMOND
@@ -226,3 +205,50 @@ SkinTerrablade:
     Conditions:
     Skills:
     - skill{s=terrablade_projectile_leftclick} ~onSwing 
+SkinMasamune:
+  Material: DIAMOND
+  Display: "Masamune's Hand"
+  Lore:
+  - <yellow><bold>Sword Skin</bold>
+  - <white>
+  - "<gray>Turn your sword into a long katana, forged by Masamune's own technique</gray>"
+  - <white>
+  - "<green>[Looooong]"
+  - <white>  +3 Entity Interaction Range
+  - "<red>[⚠Too Long!!]"
+  - "<white>  80% reduction attack damage, counting modifiers"
+  - "<white>  Each attack to targets that are within 3 blocks deals further quarter the damage due to the law of the lever"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: "<white>Masamune<gray> (Turn your sword into a long katana, forged by Masamune's own technique)"
+    ReplaceItemModel: masamune
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - stataura{stat=ENTITY_INTERACTION_RANGE;val=3;type=ADDITIVE;aura=MASAMUNE_RANGE_BUFF;duration=2} @self ~onTimer:1 
+    - modifyDamage{a=-0.2;modifier=ADDITIVE;sync=true} @self ~onAttack
+    - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3}
+    - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3}
+SkinSabre:
+  Material: DIAMOND
+  Display: 'Sabre'
+  Lore:
+  - <yellow><bold>Sword Skin</bold>
+  - <white>
+  - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
+  - <white>
+  - "<green>[Grassland Domination]"
+  - <white>  When in plains biome: +2 Attack Damage</white>
+  - "<yellow>[Cavalry]"
+  - <white>  When on horseback: +2 Attack Damage</white>
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Sabre<gray> (Deals up to 4 more damage when in plains biome and on horseback)'
+    ReplaceItemModel: sabre
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_PLAINS_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?biome{biome=plains}
+    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_MOUNTED_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?mounted
