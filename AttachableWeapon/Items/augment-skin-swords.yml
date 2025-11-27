@@ -73,11 +73,15 @@ SkinMoltenSword:
     - consumehelddurability{a=4;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
     - consumehelddurability{a=4;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
     - consumehelddurability{a=4;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
-SkinBrimstone_Claymore:
+
+SkinNapalm_Claymore:
+# Original name from Blade of Majestica rspack: Brimstone_Claymore
   Material: DIAMOND
-  Display: '<yellow>Brimstone Claymore'
+  Display: 'Special: <yellow>Napalm Canister'
+  Options:
+    ItemModel: hbm:canister_napalm
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Napalm Claymore
   - <white>
   - <gray>Inflict UltraBurn on hit</gray>
   - <white>
@@ -85,7 +89,7 @@ SkinBrimstone_Claymore:
   - "<white>  Causes unextinguishable burning effect to the target"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<yellow>Brimstone Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
+    Tooltip: '<yellow>Napalm Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
     ReplaceItemModel: brimstone_claymore
     ReplaceItemModelNamespace: minecraft
     Conditions:
