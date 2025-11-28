@@ -1,8 +1,35 @@
-SkinCreationSplitter:
+#Each skin item is a representative item with a unique name(meaning not having the same as the weapon skin name) and item model&texture
+
+#Template:
+# Skin:
+#   Material: DIAMOND
+#   Display: 'Special: <gold>Representative Item Name'
+#   Options:
+#     ItemModel: minecraft:
+#   Lore:
+#   - <yellow><bold>Sword Skin:</bold> Skin Name
+#   - <white>
+#   - <gray>Description</gray>
+#   - <white>
+#   - "<light_purple>[Buff]"
+#   - "<white>  Buff Description"
+#   - "<red>[⚠Debuff]"
+#   - "<white>  Debuff Description"
+#   Augmentation:
+#     Type: SKIN_SWORD
+#     Tooltip: '<gold>Skin Name<gray> (Description)' #Rarity color + Name
+#     ReplaceItemModel: 
+#     ReplaceItemModelNamespace: minecraft
+#     Conditions:
+#     Skills:
+
+SkinCreationSplitter: #Internal Name
   Material: DIAMOND
-  Display: '<gold>Creation Splitter'
+  Display: 'Special: <gold>The End Of Reality' #Rarity color + Name
+  Options:
+    ItemModel: dueris:corrupted_item #Skin Item unique texture
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Creation Splitter #<bold>Sword Skin: Skin Name</bold>
   - <white>
   - <gray>Strip your target armor</gray>
   - <white>
@@ -12,7 +39,7 @@ SkinCreationSplitter:
   - "<white>  Missing a swing disables the weapon for 2 seconds"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<gold>Creation Splitter<gray> (Strip your target armor)'
+    Tooltip: '<gold>Creation Splitter<gray> (Strip your target armor)' #Rarity color + Name
     ReplaceItemModel: creationsplitter
     ReplaceItemModelNamespace: minecraft
     Conditions:
@@ -27,6 +54,11 @@ SkinCreationSplitter:
     - cancelEvent ~onAttack ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE}
     - potion{type=HASTE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
     - potion{type=MINING_FATIGUE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
+
+
+
+
+
 SkinMoltenBlade:
   Material: DIAMOND
   Display: '<white>Molten Blade'
@@ -77,7 +109,7 @@ SkinMoltenSword:
 SkinNapalm_Claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
   Material: DIAMOND
-  Display: 'Special: <yellow>Napalm Canister'
+  Display: 'Special: <yellow>Napalm B'
   Options:
     ItemModel: hbm:canister_napalm
   Lore:
