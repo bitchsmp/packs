@@ -10,13 +10,14 @@ terrablade_projectile_leftclick:
     - setskillcd{skill=terrablade_projectile_2;seconds=0.3} ?skillOnCooldown{skill=terrablade_projectile_2}
     - setskillcd{skill=terrablade_projectile_3;seconds=0.4} ?skillOnCooldown{skill=terrablade_projectile_3}
     - setskillcd{skill=terrablade_projectile_4;seconds=0.5} ?skillOnCooldown{skill=terrablade_projectile_4}
+    - sound{sound=terraria:item_1}
 terrablade_projectile_1:
   Cooldown: 0.2
   Conditions:
   Skills:
     - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=0.5}
     - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-0.5}
-
+    - sound{sound=terraria:item_60}
 terrablade_projectile_2:
   Cooldown: 0.3
   Skills:
