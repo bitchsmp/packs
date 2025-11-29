@@ -7,6 +7,7 @@ attachable_weapons:
     - '{augments-each:SKIN_SWORD}<augment.display>'
     - '{augments-each:SKIN_AXE}<augment.display>'
     - '{augments-each:SKIN_MACE}<augment.display>'
+    - '{augments-each:SKIN_HOE}<augment.display>'
   - Filler: ' '
   - Line:
     - '{stats}<yellow>Bonus Stats:'
@@ -21,14 +22,3 @@ attachable_weapons:
     - '{augments-each:DIAMOND_SHARPENER}<augment.display>'
     - '{augments-each:NETHERITE_SHARPENER}<augment.display>'
     - '{augments-each:MACE_SHARPENER}<augment.display>'
-  - Filler: ' '
-  # - Line:
-  #   - '{augments-each:WOODEN_PERFECTING_SHARD}<augment.display>'
-  #   - '{augments-each:STONE_PERFECTING_SHARD}<augment.display>'
-  #   - '{augments-each:COPPER_PERFECTING_SHARD}<augment.display>'
-  #   - '{augments-each:IRON_PERFECTING_SHARD}<augment.display>'
-  #   - '{augments-each:GOLD_PERFECTING_SHARD}<augment.display>'
-  #   - '{augments-each:DIAMOND_PERFECTING_SHARD}<augment.display>'
-  #   - '{augments-each:NETHERITE_PERFECTING_SHARD}<augment.display>'
-  # - Filler: ' '
-

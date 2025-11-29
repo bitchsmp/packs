@@ -1,0 +1,107 @@
+#Maxed Hoe damage = sword counterpart base damage
+
+
+attachable_wooden_hoe:
+  id: wooden_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: WOODEN_SHARPENER
+    Amount: 3
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+    Description:
+    
+
+
+attachable_stone_hoe:
+  id: stone_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: STONE_SHARPENER
+    Amount: 4
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+
+
+attachable_copper_hoe:
+  id: copper_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: COPPER_SHARPENER
+    Amount: 4
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+attachable_iron_hoe:
+  id: iron_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: IRON_SHARPENER
+    Amount: 5
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+attachable_gold_hoe:
+  id: golden_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: GOLD_SHARPENER
+    Amount: 3
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+
+attachable_diamond_hoe:
+  id: diamond_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: DIAMOND_SHARPENER
+    Amount: 6
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
+
+
+attachable_netherite_hoe:
+  id: netherite_hoe
+  EquipSlot: HAND
+  AugmentationSlots:
+  - Type: SKIN_HOE
+    Amount: 1
+    Chance: 1
+    MaxAmount: 1
+  - Type: NETHERITE_SHARPENER
+    Amount: 7
+    Chance: 1
+  Lore:
+    Template: attachable_weapons
