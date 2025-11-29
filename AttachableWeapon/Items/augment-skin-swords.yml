@@ -56,7 +56,53 @@ SkinCreationSplitter: #Internal Name
     - potion{type=MINING_FATIGUE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
 
 
+SkinNapalm_Claymore:
+# Original name from Blade of Majestica rspack: Brimstone_Claymore
+  Material: DIAMOND
+  Display: 'Canister: <yellow>Napalm B'
+  Options:
+    ItemModel: hbm:canister_napalm
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Napalm Claymore
+  - <white>
+  - <gray>Inflict UltraBurn on hit</gray>
+  - <white>
+  - "<dark_red>[UltraBurn]"
+  - "<white>  Causes unextinguishable burning effect to the target"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Napalm Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
+    ReplaceItemModel: brimstone_claymore
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - skill{s=UltraBurn} @trigger ~onAttack ?!itemRecharging{}
+    - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
+
+SculkSwordSkin:
+  Material: DIAMOND
+  Display: 'Special: <white>Elegant Sculk'
+  Options:
+    ItemModel: minecraft:calibrated_sculk_sensor
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Sculk Sword
+  - <white>
+  - <gray>Inflicts target with Darkness effect</gray>
+  - <white>
+  - "<gradient:#024050:#61c3cb>[Darkness]"
+  - "<white>  Inflicts target with Darkness effect for 7 seconds"
+  
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Sculk Sword<gray> (Inflicts target with Darkness effect)'
+    ReplaceItemModel: sculksword
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - potion{type=DARKNESS;duration=140} @trigger ~onAttack
 
 
 SkinMoltenBlade:
@@ -105,30 +151,6 @@ SkinMoltenSword:
     - consumehelddurability{a=4;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
     - consumehelddurability{a=4;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
     - consumehelddurability{a=4;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
-
-SkinNapalm_Claymore:
-# Original name from Blade of Majestica rspack: Brimstone_Claymore
-  Material: DIAMOND
-  Display: 'Canister: <yellow>Napalm B'
-  Options:
-    ItemModel: hbm:canister_napalm
-  Lore:
-  - <yellow><bold>Sword Skin:</bold> Napalm Claymore
-  - <white>
-  - <gray>Inflict UltraBurn on hit</gray>
-  - <white>
-  - "<dark_red>[UltraBurn]"
-  - "<white>  Causes unextinguishable burning effect to the target"
-  Augmentation:
-    Type: SKIN_SWORD
-    Tooltip: '<yellow>Napalm Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
-    ReplaceItemModel: brimstone_claymore
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Stats:
-    Skills:
-    - skill{s=UltraBurn} @trigger ~onAttack ?!itemRecharging{}
-    - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
 SkinFrostBlade:
   Material: DIAMOND
