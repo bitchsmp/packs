@@ -29,6 +29,7 @@ SculkScytheSkin:
   Display: 'Special: <white>Freaky Sculk'
   Options:
     ItemModel: minecraft:sculk_sensor
+    Glint: true
   Lore:
   - <yellow><bold>Hoe Skin:</bold> Sculk Scythe
   - <white>
@@ -38,7 +39,7 @@ SculkScytheSkin:
   - "<white>  Inflicts target with Darkness effect for 5 seconds"
   - "<yellow>[Scythe]"
   - "<white>  Pulls the target upon hitting"
-  
+
   Augmentation:
     Type: SKIN_HOE
     Tooltip: '<white>Sculk Scythe<gray> (Inflicts target with Darkness effect)' #Rarity color + Name
