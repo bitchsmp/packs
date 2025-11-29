@@ -255,7 +255,7 @@ SkinMasamune:
   - <white>  +3 Entity Interaction Range
   - "<red>[⚠Too Long!!]"
   - "<white>  80% reduction attack damage, counting modifiers"
-  - "<white>  Each attack to targets that are within 3 blocks deals further quarter the damage due to the law of the lever"
+  - "<white>  Each attack to targets that are within 3.5 blocks deals further quarter the damage due to the law of the lever"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: "<white>Masamune<gray> (Turn your sword into a long katana, forged by Masamune's own technique)"
@@ -266,8 +266,8 @@ SkinMasamune:
     Skills:
     - stataura{stat=ENTITY_INTERACTION_RANGE;val=3;type=ADDITIVE;aura=MASAMUNE_RANGE_BUFF;duration=2} @self ~onTimer:1 
     - modifyDamage{a=-0.2;modifier=ADDITIVE;sync=true} @self ~onAttack
-    - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3}
-    - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3}
+    - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3.5}
+    - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
 SkinSabre:
   Material: DIAMOND
   Display: 'Sabre'
