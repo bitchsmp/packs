@@ -109,7 +109,7 @@ SkinMoltenSword:
 SkinNapalm_Claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
   Material: DIAMOND
-  Display: 'Special: <yellow>Napalm B'
+  Display: 'Canister: <yellow>Napalm B'
   Options:
     ItemModel: hbm:canister_napalm
   Lore:
@@ -132,9 +132,11 @@ SkinNapalm_Claymore:
 
 SkinFrostBlade:
   Material: DIAMOND
-  Display: '<white>Frost Blade'
+  Display: '<white>Universal Fluid Barrel: Liquid Nitrogen'
+  Options:
+    ItemModel: hbm:fluid_barrel_nitrogen
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Frost Blade
   - <white>
   - <gray>Inflict Freezing on hit</gray>
   - <white>
