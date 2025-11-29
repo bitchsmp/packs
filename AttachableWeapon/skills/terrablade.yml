@@ -10,7 +10,7 @@ terrablade_projectile_leftclick:
     - setskillcd{skill=terrablade_projectile_2;seconds=0.3} ?skillOnCooldown{skill=terrablade_projectile_2}
     - setskillcd{skill=terrablade_projectile_3;seconds=0.4} ?skillOnCooldown{skill=terrablade_projectile_3}
     - setskillcd{skill=terrablade_projectile_4;seconds=0.5} ?skillOnCooldown{skill=terrablade_projectile_4}
-    - sound{sound=terraria:item_1}
+    - sound{sound=terraria:item_1;volume=0.6}
 terrablade_projectile_1:
   Cooldown: 0.2
   Conditions:
