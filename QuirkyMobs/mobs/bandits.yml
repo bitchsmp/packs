@@ -2,12 +2,12 @@ Stacked_challenger:
   Type: husk
   Display: Stacked Challenger
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.4
     PreventSunburn: true
     PreventConversion: true
     PreventRandomEquipment: true
+    PreventOtherDrops: true
     HealOnReload: true
-    PreventMobKillDrops: true
   Equipment:
   - DIAMOND_HELMET{enchants=PROTECTION_ENVIRONMENTAL:4,WATER_WORKER:1,OXYGEN:3} HEAD
   - DIAMOND_CHESTPLATE{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} CHEST
@@ -32,8 +32,8 @@ Challenger:
     PreventSunburn: true
     PreventConversion: true
     PreventRandomEquipment: true
+    PreventOtherDrops: true
     HealOnReload: true
-    PreventMobKillDrops: true
   Equipment:
   - DIAMOND_HELMET HEAD
   - DIAMOND_CHESTPLATE CHEST
