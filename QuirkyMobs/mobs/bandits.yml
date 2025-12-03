@@ -1,6 +1,6 @@
-Challenger:
+Stacked_challenger:
   Type: husk
-  Display: Challenger
+  Display: Stacked Challenger
   Options:
     MovementSpeed: 0.3
     PreventSunburn: true
@@ -14,6 +14,32 @@ Challenger:
   - DIAMOND_LEGGINGS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} LEGS
   - DIAMOND_BOOTS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1,PROTECTION_FALL:4,DEPTH_STRIDER:3} FEET
   - DIAMOND_SWORD{enchants=SHARPNESS:5,KNOCKBACK:1} MAINHAND
+  Skills:
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - players
+  Disguise: player setCustomName "Stacked Challenger"
+
+Challenger:
+  Type: husk
+  Display: Challenger
+  Options:
+    MovementSpeed: 0.3
+    PreventSunburn: true
+    PreventConversion: true
+    PreventRandomEquipment: true
+    HealOnReload: true
+    PreventMobKillDrops: true
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - DIAMOND_SWORD MAINHAND
   Skills:
   AIGoalSelectors:
   - clear
