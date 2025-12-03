@@ -1,6 +1,6 @@
-Bandit:
+Challenger:
   Type: husk
-  Display: Bandit
+  Display: Challenger
   Options:
     MovementSpeed: 0.3
     PreventSunburn: true
@@ -9,13 +9,12 @@ Bandit:
     HealOnReload: true
     PreventMobKillDrops: true
   Equipment:
-  - DIAMOND_HELMET{enchants=WATER_WORKER:1,OXYGEN:3} HEAD
+  - DIAMOND_HELMET{enchants=PROTECTION_ENVIRONMENTAL:4,WATER_WORKER:1,OXYGEN:3} HEAD
   - DIAMOND_CHESTPLATE{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} CHEST
   - DIAMOND_LEGGINGS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} LEGS
   - DIAMOND_BOOTS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1,PROTECTION_FALL:4,DEPTH_STRIDER:3} FEET
   - DIAMOND_SWORD{enchants=SHARPNESS:5,KNOCKBACK:1} MAINHAND
   Skills:
-#  - damage{amount=10;triggerSkills=true} @entitiesInRadius{limit=1;r=3;target=players,iron_golems;sort=HIGHEST_THREAT} ~onTimer:11
   AIGoalSelectors:
   - clear
   - meleeattack
@@ -23,3 +22,4 @@ Bandit:
   AITargetSelectors:
   - clear
   - players
+  Disguise: player setCustomName "Challenger"
