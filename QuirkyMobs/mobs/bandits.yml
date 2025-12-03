@@ -1,8 +1,8 @@
-Stacked_lt5:
+Stacked_LT5:
   Type: husk
   Display: Stacked LT5
   Options:
-    MovementSpeed: 0.4
+    MovementSpeed: 0.33
     PreventSunburn: true
     PreventConversion: true
     PreventRandomEquipment: true
