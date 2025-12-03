@@ -1,6 +1,6 @@
-Stacked_challenger:
+Stacked_lt5:
   Type: husk
-  Display: Stacked Challenger
+  Display: Stacked LT5
   Options:
     MovementSpeed: 0.4
     PreventSunburn: true
@@ -22,11 +22,11 @@ Stacked_challenger:
   AITargetSelectors:
   - clear
   - players
-  Disguise: player setCustomName "Stacked Challenger"
+  Disguise: player setCustomName "Stacked LT5"
 
-Challenger:
+LT5:
   Type: husk
-  Display: Challenger
+  Display: LT5
   Options:
     MovementSpeed: 0.3
     PreventSunburn: true
@@ -48,4 +48,4 @@ Challenger:
   AITargetSelectors:
   - clear
   - players
-  Disguise: player setCustomName "Challenger"
+  Disguise: player setCustomName "LT5"
