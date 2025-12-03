@@ -1,7 +1,7 @@
 # Mythicmobs and MythicCrucible packs
 This repository stores packs made for Minecraft Bukkit/Spigot/Paper plugin "Mythicmobs" and "MythicCrucible"
 
-Packs are made by VuFelix and Dueris
+Packs are mainly made by Dueris
 
 ## Dependencies:
 1. Minecraft Paper Server
@@ -29,3 +29,10 @@ Packs are made by VuFelix and Dueris
    - Current Version: Latest Stable Build
 
    - Download Link: https://ci.lib.co.nz/job/LibsDisguises/
+  
+
+## Contributors:
+
+Dueris: Lead Developer
+
+VuFelix: Main developer of the "Hakurei Gohei Pack"; supporter.
