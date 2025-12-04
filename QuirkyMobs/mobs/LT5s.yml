@@ -24,8 +24,8 @@ LT5Stacked:
   - players
   Disguise: player setCustomName "Stacked LT5"
   Skills:
-  - skill{skill=LT5Stacked_eat} ~onDamaged ?healthpercent{includeabsorption=true;percent=<25%} @self
-
+  - skill{skill=LT5Stacked_eat} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<25%} @self
+  - equip{item=LT5Stacked_sword MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5Stacked}
 LT5:
   Type: husk
   Display: LT5
@@ -51,3 +51,6 @@ LT5:
   - clear
   - players
   Disguise: player setCustomName "LT5"
+  Skills:
+  - skill{skill=LT5_eat} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+  - equip{item=DIAMOND_SWORD MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}

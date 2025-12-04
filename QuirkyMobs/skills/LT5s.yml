@@ -1,14 +1,31 @@
 LT5_eat_sound:
   Skills:
   - sound{sound=entity.generic.eat;delay=4;repeat=6;repeatinterval=4}
+LT5_eat_slow:
+  Skills:
+  - potion{type=SLOWNESS;duration=2;level=4;hasparticles=false}
+
+
 LT5Stacked_eat:
   Skills:
   - equip{item=golden_apple HAND}
-  - aura{aura=stackedLT5;ticks=32;onendskill=LT5Stacked_eat_finished;doendskillonterminate=false;onstartskill=LT5_eat_sound} @self
+  - aura{aura=LT5Stacked;ticks=32;onendskill=LT5Stacked_eat_finished;onstartskill=LT5_eat_sound;ontickskill=LT5_eat_slow;refreshDuration=false;doendskillonterminate=false} @self
 LT5Stacked_eat_finished:
   Skills:
-  - skill{skill=regeneration;repeati=25;repeat=4} #Replication of Regen II effect
-  - skill{skill=regeneration;repeati=10;repeat=5} #Replication of saturation effect
+  - aura{aura=regeneration;interval=25;ticks=76;ontickskill=regeneration;onstartskill=regeneration} #Replication of Regen II effect
+  - aura{aura=regeneration;interval=10;ticks=61;ontickskill=regeneration} #Replication of saturation effect
   - potion{type=ABSORPTION;duration=2400;level=0}
-  - equip{item=LT5Stacked_sword MAINHAND;delay=5}
+  - sound{sound=entity.player.burp}
+
+
+  
+
+
+LT5_eat:
+  Skills:
+  - equip{item=cooked_beef HAND}
+  - aura{aura=LT5;ticks=32;onendskill=LT5_eat_finished;onstartskill=LT5_eat_sound;ontickskill=LT5_eat_slow;refreshDuration=false;doendskillonterminate=false} @self
+LT5_eat_finished:
+  Skills:
+  - aura{aura=regeneration;interval=10;ticks=91;ontickskill=regeneration}  #Replication of saturation effect
   - sound{sound=entity.player.burp}
