@@ -1,5 +1,6 @@
 LT5Stacked:
-  Type: husk
+  Type: zombie
+  Damage: 1
   Display: Stacked LT5
   Options:
     MovementSpeed: 0.33
@@ -27,7 +28,8 @@ LT5Stacked:
   - equip{item=LT5Stacked_sword MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5Stacked}
   - cancelEvent  ~onAttack ?hasAura{aura=LT5Stacked}
 LT5:
-  Type: husk
+  Type: zombie
+  Damage: 1
   Display: LT5
   Options:
     MovementSpeed: 0.3
@@ -56,7 +58,8 @@ LT5:
   - cancelEvent ~onAttack ?hasAura{aura=LT5}
 
 LT5Naked:
-  Type: husk
+  Type: zombie
+  Damage: 1
   Display: Naked LT5
   Options:
     MovementSpeed: 0.3
