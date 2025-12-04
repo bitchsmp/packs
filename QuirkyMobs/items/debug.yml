@@ -1,0 +1,4 @@
+debug_quirky:
+  Id: stick
+  Skills:
+  - skill{skill=LT5Stacked_eat_finished} ~onUse 

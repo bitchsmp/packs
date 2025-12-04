@@ -1,4 +1,4 @@
-Stacked_LT5:
+LT5Stacked:
   Type: husk
   Display: Stacked LT5
   Options:
@@ -9,11 +9,11 @@ Stacked_LT5:
     PreventOtherDrops: true
     HealOnReload: true
   Equipment:
-  - DIAMOND_HELMET{enchants=PROTECTION_ENVIRONMENTAL:4,WATER_WORKER:1,OXYGEN:3} HEAD
+  - DIAMOND_HELMET{enchants=PROTECTION_ENVIRONMENTAL:4,WATER_WORKER:1,OXYGEN:3,MENDING:1} HEAD
   - DIAMOND_CHESTPLATE{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} CHEST
   - DIAMOND_LEGGINGS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} LEGS
   - DIAMOND_BOOTS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1,PROTECTION_FALL:4,DEPTH_STRIDER:3} FEET
-  - DIAMOND_SWORD{enchants=SHARPNESS:5,KNOCKBACK:1} MAINHAND
+  - LT5Stacked_sword MAINHAND
   Skills:
   AIGoalSelectors:
   - clear
@@ -23,6 +23,8 @@ Stacked_LT5:
   - clear
   - players
   Disguise: player setCustomName "Stacked LT5"
+  Skills:
+  - skill{skill=LT5Stacked_eat} ~onDamaged ?healthpercent{includeabsorption=true;percent=<25%} @self
 
 LT5:
   Type: husk
