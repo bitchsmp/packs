@@ -1,4 +1,5 @@
 debug_quirky:
   Id: stick
   Skills:
-  - skill{skill=LT5Stacked_eat_finished} ~onUse 
+  - aura{aura=regeneration;interval=1;ticks=2;ontickskill=regeneration} @self ~onUse 
+  - message{message=executed} @self ~onUse 
