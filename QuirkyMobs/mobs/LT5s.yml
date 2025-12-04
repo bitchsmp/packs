@@ -53,7 +53,7 @@ LT5:
   - players
   Disguise: player setCustomName "LT5"
   Skills:
-  - skill{skill=LT5_eat;cooldown=5} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+  - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
   - equip{item=DIAMOND_SWORD MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
   - cancelEvent ~onAttack ?hasAura{aura=LT5}
 
