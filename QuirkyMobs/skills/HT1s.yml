@@ -5,13 +5,13 @@ HT1_Judgement:
   - delay 20
   - teleport{preservepitch=true;preserveyaw=true;unsafe=true} @targetLocation{forwardOffset=-1;upoffset=1}
   - setgravity{g=false}
-  - delay 5  
+  - delay 4  
   - aura{aura=HT1_judgement_casting;onendskill=HT1_Judgement_success;doendskillonterminate=false;ticks=5}
-  - delay 7
+  - delay 6
   - setgravity{g=true}
 HT1_Judgement_success:
   Skills:
-  - damage{amount=18} @EIR{r=8}
+  - damage{amount=18;ignoreshield=true} @EIR{r=8}
   - effect:sound{sound=entity.generic.explode}
   - particle{particle=soulfire;amount=40;spread=0;speed=0.7}
 HT1_parry_sfx:
