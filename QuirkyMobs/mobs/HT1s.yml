@@ -11,14 +11,19 @@ HT1:
   Options:
     MovementSpeed: 0.1
     KnockbackResistance: 1
+    FollowRange: 64
+    Despawn: CHUNK
     Silent: true
     PreventSunburn: true
     PreventConversion: true
     PreventRandomEquipment: true
     PreventOtherDrops: true
     HealOnReload: true
+    DigOutOfGround: true
   DamageModifiers:
   - ENTITY_EXPLOSION 0.1
+  - SUFFOCATION 0
+  - CRAMMING 0
   Equipment:
   AIGoalSelectors:
   - clear
