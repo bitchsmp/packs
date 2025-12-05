@@ -1,0 +1,39 @@
+HT1:
+  Type: zombie
+  Health: 200
+  BossBar:
+    Title: Naked HT1
+    Color: BLUE
+    Enabled: true
+    Range: 64
+  Damage: 1
+  Display: Naked HT1
+  Options:
+    MovementSpeed: 0.1
+    KnockbackResistance: 1
+    Silent: true
+    PreventSunburn: true
+    PreventConversion: true
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    HealOnReload: true
+  DamageModifiers:
+  - ENTITY_EXPLOSION 0.1
+  Equipment:
+  AIGoalSelectors:
+  - clear
+  - float
+  - lookAtTarget{speed=10}
+  AITargetSelectors:
+  - clear
+  - players
+  Disguise: player ItzRealme setCustomName "Naked HT1"
+  Skills:
+  #Stamina System
+  - setVar{value=6;scope=caster;type=INTEGER;name=caster.stamina} @self ~onSpawn
+  - setVar{value=6;scope=caster;type=INTEGER;name=caster.stamina;delay=40} @self ~onTimer:20 ?varequals{value=0;name=caster.stamina}
+  - message{message=<caster.var.stamina>;audience=world} @EIR{r=100} ~onTimer:1
+
+  #Judgement
+  - skill{skill=HT1_Judgement} @self ~onTimer:100 
+  - skill{skill=HT1_Judgement_parried} @self ~onDamaged ?~fieldOfView{angle=180} ?hasAura{aura=HT1_judgement_casting} ?damageamount{amount=>6} ?~!itemRecharging{}
