@@ -23,3 +23,4 @@ HT1_Judgement_parried:
   - removeaura{aura=HT1_judgement_casting} @self
   - skill{skill=HT1_parry_sfx} @trigger
   - particle{particle=soulfire;amount=40;spread=0;speed=0.7;delay=3}
+  - sound{sound=ultrakill:mp_hurt;pitch=0.75}
