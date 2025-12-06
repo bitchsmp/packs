@@ -5,12 +5,15 @@ HT1_parry_sfx:
 
 
 HT1_Judgement:
+  Conditions:
+  - varrange{value=<2;name=caster.stamina} castinstead HT1_1stamina
   Skills:
   - addVar{value=-2;name=caster.stamina}
+  - setVar{value=true;scope=caster;type=BOOLEAN;name=caster.doingSkill} @self
   - speak{message="JUDGEMENT!"} @self
   - sound{sound=ultrakill:mp_judgement;volume=0.75;audience=target;pitch=0.75} @EIR{r=64}
   - delay 20
-  - teleport{preservepitch=true;preserveyaw=true;unsafe=true} @targetLocation{forwardOffset=-1;upoffset=1}
+  - teleport{preservepitch=true;preserveyaw=true;unsafe=true} @TargetLocation{forwardOffset=-1;upoffset=1;r=64;limit=1}
   - setgravity{g=false}
   - delay 4  
   - aura{aura=HT1_judgement_casting;onendskill=HT1_Judgement_success;doendskillonterminate=false;ticks=5}
@@ -22,36 +25,53 @@ HT1_Judgement_success:
   - particle{particle=soulfire;amount=40;spread=0;speed=0.7}
   - delay 6
   - setgravity{g=true;chance=1}
-
+  - setVar{value=false;scope=caster;type=BOOLEAN;name=caster.doingSkill} @self
 HT1_Judgement_parried:
   Conditions:
   Skills:
+  - addVar{value=5;name=caster.stamina}
+  - setVar{value=6;name=caster.stamina} ?varrange{value=>6;name=caster.stamina}
+
   - removeaura{aura=HT1_judgement_casting} @self
   - skill{skill=HT1_parry_sfx} @trigger
   - particle{particle=soulfire;amount=40;spread=0;speed=0.7;delay=3}
   - sound{sound=ultrakill:mp_hurt;pitch=0.75}
-  - delay 6
-  - setgravity{g=true;chance=0.5}
-  - skill{skill=HT1_Die} @self
+  - delay 20
+  - skill{skill=HT1_Judgement_followup} @self
 HT1_Judgement_followup:
   Skills:
-  - skill{s=HT1_Die}
+  - setgravity{g=false}
+  - skill{skill=HT1_Die} @self
+  - jump{velocity=0.1}
+  - delay 10
+  - velocity{velocityy=0;mode=SET}
+
+HT1_1stamina:
+  Conditions:
+  - varequals{value=0;name=caster.stamina} false
+  - varequals{name=caster.doingSkill;value=false} true
+  Skills:
+  - skill{s=HT1_Die_initial}
 HT1_Die_initial:
   Skills:
   - jump{velocity=2}
   - delay 10
   - setgravity{gravity=false}
   - velocity{velocityy=0;mode=SET}
-  - skill{skill=HT1_Die}
+  - skill{skill=HT1_Die} @self
 HT1_Die:
-  Conditions:
-  - gravity false 
-  - onGround false
+  # Conditions:
+  # - gravity false 
+  # - onGround false
+  # - varrange{value=caster.stamina;value=<1} false
   Skills:
+  - addVar{value=-1;name=caster.stamina}
   - speak{message="Die!"} @self
   - sound{sound=ultrakill:mp_die;volume=0.75;audience=target;pitch=0.75} @EIR{r=64}
   - projectile{bulletType=DISPLAY;onHitBlock=HT1_Die_hitblock;ontickskill=HT1_Die_tick;material=AIR;sfo=0.1;tickinterpolation=4;velocity=256;syo=1.62;maxrange=256;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=0.7;vr=0.7;hnp=true;highAccuracyMode=true;stopatblock=true} @PIR{radius=64;limit=1}
   - delay 20
+  - setgravity{gravity=true}
+  - setVar{value=false;scope=caster;type=BOOLEAN;name=caster.doingSkill} @self
 HT1_Die_tick:
   Skills:
   - summon{amount=1;onsurface=false;type=HT1_die_marker_damage;summonerisowner=true}

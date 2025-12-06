@@ -9,7 +9,7 @@ HT1:
   Damage: 1
   Display: Naked HT1
   Options:
-    MovementSpeed: 0.1
+    MovementSpeed: 0.2
     KnockbackResistance: 1
     FollowRange: 64
     Despawn: CHUNK
@@ -24,39 +24,32 @@ HT1:
   - ENTITY_EXPLOSION 0.1
   - SUFFOCATION 0
   - CRAMMING 0
+  - FALL 0
   Equipment:
   AIGoalSelectors:
   - clear
   - float
-  - lookAtTarget{}
+  - lookAtTarget{speed=10;maxrange=64}
   - moveTowardsTarget{}
   AITargetSelectors:
   - clear
-  - players
+  - player
   Disguise: player ItzRealme setCustomName "Naked HT1"
   Skills:
   #Stamina System
   - setVar{value=6;scope=caster;type=INTEGER;name=caster.stamina} @self ~onSpawn
+  - setVar{value=false;scope=caster;type=BOOLEAN;name=caster.doingSkill} @self ~onSpawn
   - setVar{value=6;scope=caster;type=INTEGER;name=caster.stamina;delay=40} @self ~onTimer:20 ?varequals{value=0;name=caster.stamina}
   - message{message=<caster.var.stamina>;audience=world} @EIR{r=100} ~onTimer:1
 
   #Judgement
-  # - skill{skill=HT1_Judgement} @self ~onTimer:100 ?!varequals{name=caster.stamina;value=<2}
-  # - skill{skill=HT1_Judgement_parried} @self ~onDamaged ?~fieldOfView{angle=180} ?hasAura{aura=HT1_judgement_casting} ?damageamount{amount=>6} ?~!itemRecharging{}
-  # - aura{aura=HT1_notDodged} @self ~onSkilldamage 
+  - skill{skill=HT1_Judgement} @self ~onTimer:100 ?varequals{name=caster.doingSkill;value=false}
+  - skill{skill=HT1_Judgement_parried} @self ~onDamaged ?~fieldOfView{angle=180} ?hasAura{aura=HT1_judgement_casting} ?damageamount{amount=>6} ?~!itemRecharging{}
+  - aura{aura=HT1_notDodged} @self ~onSkilldamage 
   #Die
-  - skill{skill=HT1_Die_initial} @self ~onTimer:100
+  # - skill{skill=HT1_Die_initial} @self ~onTimer:100 ?!varrange{value=<1;name=caster.stamina}
   #Death
   - sound{sound=ultrakill:mp_death;volume=0.75;audience=target;pitch=0.75} @EIR{r=64} ~onDeath 
-# HT1_die_marker:
-#   Type: interaction
-#   Options:
-#     DigOutOfGround: true
-#     summonerisowner: true
-#     Height: 0
-#     Width: 0
-#     Responsive: false
-#   Skills:
 HT1_die_marker_damage:
   Type: interaction
   Options:
