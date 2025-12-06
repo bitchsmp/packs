@@ -28,7 +28,8 @@ HT1:
   AIGoalSelectors:
   - clear
   - float
-  - lookAtTarget{speed=10}
+  - lookAtTarget{}
+  - moveTowardsTarget{}
   AITargetSelectors:
   - clear
   - players
@@ -40,5 +41,30 @@ HT1:
   - message{message=<caster.var.stamina>;audience=world} @EIR{r=100} ~onTimer:1
 
   #Judgement
-  - skill{skill=HT1_Judgement} @self ~onTimer:100 
-  - skill{skill=HT1_Judgement_parried} @self ~onDamaged ?~fieldOfView{angle=180} ?hasAura{aura=HT1_judgement_casting} ?damageamount{amount=>6} ?~!itemRecharging{}
+  # - skill{skill=HT1_Judgement} @self ~onTimer:100 ?!varequals{name=caster.stamina;value=<2}
+  # - skill{skill=HT1_Judgement_parried} @self ~onDamaged ?~fieldOfView{angle=180} ?hasAura{aura=HT1_judgement_casting} ?damageamount{amount=>6} ?~!itemRecharging{}
+  # - aura{aura=HT1_notDodged} @self ~onSkilldamage 
+  #Die
+  - skill{skill=HT1_Die_initial} @self ~onTimer:100
+  #Death
+  - sound{sound=ultrakill:mp_death;volume=0.75;audience=target;pitch=0.75} @EIR{r=64} ~onDeath 
+# HT1_die_marker:
+#   Type: interaction
+#   Options:
+#     DigOutOfGround: true
+#     summonerisowner: true
+#     Height: 0
+#     Width: 0
+#     Responsive: false
+#   Skills:
+HT1_die_marker_damage:
+  Type: interaction
+  Options:
+    DigOutOfGround: true
+    summonerisowner: true
+    Height: 0
+    Width: 0
+    Responsive: false
+  Skills:
+  - damage{amount=10;delay=21} @EIR{r=2.5;ignore=owner} ~onSpawn
+  - remove{delay=22} ~onSpawn @self

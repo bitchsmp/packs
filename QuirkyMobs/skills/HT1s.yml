@@ -1,22 +1,28 @@
+HT1_parry_sfx:
+  Skills:
+  - effect:sound{sound=ultrakill:punch_projectile;volume=0.5;radius=16}
+
+
+
 HT1_Judgement:
   Skills:
+  - addVar{value=-2;name=caster.stamina}
   - speak{message="JUDGEMENT!"} @self
-  - sound{sound=ultrakill:mp_judgement;volume=0.75;audience=world;pitch=0.75;radius=32}
+  - sound{sound=ultrakill:mp_judgement;volume=0.75;audience=target;pitch=0.75} @EIR{r=64}
   - delay 20
   - teleport{preservepitch=true;preserveyaw=true;unsafe=true} @targetLocation{forwardOffset=-1;upoffset=1}
   - setgravity{g=false}
   - delay 4  
   - aura{aura=HT1_judgement_casting;onendskill=HT1_Judgement_success;doendskillonterminate=false;ticks=5}
-  - delay 6
-  - setgravity{g=true}
+
 HT1_Judgement_success:
   Skills:
   - damage{amount=18;ignoreshield=true} @EIR{r=8}
   - effect:sound{sound=entity.generic.explode}
   - particle{particle=soulfire;amount=40;spread=0;speed=0.7}
-HT1_parry_sfx:
-  Skills:
-  - effect:sound{sound=ultrakill:punch_projectile;volume=0.5;radius=16}
+  - delay 6
+  - setgravity{g=true;chance=1}
+
 HT1_Judgement_parried:
   Conditions:
   Skills:
@@ -24,3 +30,59 @@ HT1_Judgement_parried:
   - skill{skill=HT1_parry_sfx} @trigger
   - particle{particle=soulfire;amount=40;spread=0;speed=0.7;delay=3}
   - sound{sound=ultrakill:mp_hurt;pitch=0.75}
+  - delay 6
+  - setgravity{g=true;chance=0.5}
+  - skill{skill=HT1_Die} @self
+HT1_Judgement_followup:
+  Skills:
+  - skill{s=HT1_Die}
+HT1_Die_initial:
+  Skills:
+  - jump{velocity=2}
+  - delay 10
+  - setgravity{gravity=false}
+  - velocity{velocityy=0;mode=SET}
+  - skill{skill=HT1_Die}
+HT1_Die:
+  Conditions:
+  - gravity false 
+  - onGround false
+  Skills:
+  - speak{message="Die!"} @self
+  - sound{sound=ultrakill:mp_die;volume=0.75;audience=target;pitch=0.75} @EIR{r=64}
+  - projectile{bulletType=DISPLAY;onHitBlock=HT1_Die_hitblock;ontickskill=HT1_Die_tick;material=AIR;sfo=0.1;tickinterpolation=4;velocity=256;syo=1.62;maxrange=256;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=0.7;vr=0.7;hnp=true;highAccuracyMode=true;stopatblock=true} @PIR{radius=64;limit=1}
+  - delay 20
+HT1_Die_tick:
+  Skills:
+  - summon{amount=1;onsurface=false;type=HT1_die_marker_damage;summonerisowner=true}
+HT1_Die_hitblock:
+  Skills:
+ # - summon{amount=1;onsurface=true;type=HT1_die_marker;summonerisowner=true}
+  - delay 20
+  - teleport{preservepitch=true;preserveyaw=true;unsafe=true} @origin
+  - delay 1
+  - skill{skill=HT1_shockwave}
+  - remove @child{}
+HT1_shockwave:
+  Skills:
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=20;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=40;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=60;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=80;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=100;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=120;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=140;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=160;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=180;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=200;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=220;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=240;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=260;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=280;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=300;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=320;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=340;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15} @Self
+  - projectile{bulletType=DISPLAY;material=ORANGE_STAINED_GLASS;onhitskill=HT1_shockwave_hit;onStartskill=;ho=360;sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=32;poweraffectsvelocity=false;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;stopatblock=false;HugSurface=true;bulletscale=2,2,2;bulletbrightness=15;bulletbrightness=15} @Self
+HT1_shockwave_hit:
+  Skills:
+  - damage{amount=10}

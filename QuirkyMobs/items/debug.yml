@@ -1,5 +1,4 @@
 debug_quirky:
   Id: stick
   Skills:
-  - aura{aura=regeneration;interval=1;ticks=2;ontickskill=regeneration} @self ~onUse 
-  - message{message=executed} @self ~onUse 
+  - projectile{bulletType=DISPLAY;onHitBlock=HT1_Die_hitblock;ontickskill=HT1_Die_tick;material=STONE;sfo=0.1;tickinterpolation=4;velocity=256;syo=1.62;maxrange=256;poweraffectsvelocity=false;drawhitbox=true;stopatentity=false;hr=0.7;vr=0.7;hnp=true;highAccuracyMode=true;stopatblock=true} ~onSwing @forward{yo=1.62}
