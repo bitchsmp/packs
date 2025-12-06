@@ -43,7 +43,7 @@ HT1:
   - message{message=<caster.var.stamina>;audience=world} @EIR{r=100} ~onTimer:1
 
   #Judgement
-  - skill{skill=HT1_Judgement} @self ~onTimer:100 ?varequals{name=caster.doingSkill;value=false}
+  - skill{skill=HT1_Judgement} @self ~onTimer:30 ?varequals{name=caster.doingSkill;value=false} ?targetInLineOfSight{}
   - skill{skill=HT1_Judgement_parried} @self ~onDamaged ?~fieldOfView{angle=180} ?hasAura{aura=HT1_judgement_casting} ?damageamount{amount=>6} ?~!itemRecharging{}
   - aura{aura=HT1_notDodged} @self ~onSkilldamage 
   #Die
