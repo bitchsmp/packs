@@ -1,0 +1,7 @@
+hainam_dick:
+  Id: iron_Sword
+  Options:
+    ItemModel: diamond_sword
+  Skills:
+  - potion{type=STRENGTH;duration=100;level=0;cooldown=10} @self ~onUse
+    
