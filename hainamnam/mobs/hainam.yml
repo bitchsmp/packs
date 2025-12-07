@@ -1,0 +1,4 @@
+hainam_deptrai:
+  Type: Zombie
+  Skills:
+  - pull{velocity=5} @entitiesInRadius{radius=5} ~onTimer:1
