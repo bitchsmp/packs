@@ -1,4 +1,21 @@
 debug_quirky:
   Id: stick
   Skills:
-  - projectile{bulletType=DISPLAY;onHitBlock=HT1_Die_hitblock;ontickskill=HT1_Die_tick;material=STONE;sfo=0.1;tickinterpolation=4;velocity=256;syo=1.62;maxrange=256;poweraffectsvelocity=false;drawhitbox=true;stopatentity=false;hr=0.7;vr=0.7;hnp=true;highAccuracyMode=true;stopatblock=true} ~onSwing @forward{yo=1.62}
+  - summon{type=Toinion;onsurface=true} @Self ~onUse
+  - removeHeldItem{amount=1} ~onUse
+debug_quirky_2:
+  Id: stick
+  Skills:
+  - summon{type=Dueris;onsurface=true} @self ~onUse
+  - removeHeldItem{amount=1} ~onUse
+
+debug_quirky_3:
+  Id: stick
+  Skills:
+  - summon{type=Toinion_archer;onsurface=true} @self ~onUse
+  - removeHeldItem{amount=1} ~onUse
+debug_quirky_4:
+  Id: stick
+  Skills:
+  - summon{type=Dueris_archer;onsurface=true} @self ~onUse
+  - removeHeldItem{amount=1} ~onUse

@@ -69,6 +69,7 @@ LT5Naked:
     PreventOtherDrops: true
     HealOnReload: true
   Equipment:
+
   AIGoalSelectors:
   - clear
   - meleeattack
@@ -78,3 +79,145 @@ LT5Naked:
   - players
   Disguise: player setCustomName "Naked LT5"
   Skills:
+
+
+### SPECIALS:
+Toinion:
+  Type: zombie
+  Faction: Toinion
+  Damage: 1
+  Display: 
+  Options:
+    MovementSpeed: 0.33
+    PreventSunburn: true
+    PreventConversion: true
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    HealOnReload: true
+    summonerisowner: true
+    FollowRange: 64
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - DIAMOND_SWORD MAINHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - hurtByTarget
+  - otherFaction
+  - ownerAttack
+
+  Disguise: player setCustomName "Toinion "
+  Skills:
+  - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+  - equip{item=DIAMOND_SWORD MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
+  - cancelEvent ~onAttack ?hasAura{aura=LT5}
+Toinion_archer:
+  Type: skeleton
+  Faction: Toinion
+  Damage: 1
+  Display: 
+  Options:
+    MovementSpeed: 0.33
+    PreventSunburn: true
+    PreventConversion: true
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    HealOnReload: true
+    summonerisowner: true
+    FollowRange: 64
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - LT5PunchBow MAINHAND
+  AIGoalSelectors:
+  - clear
+  - bowshoot
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - hurtByTarget
+  - otherFaction
+  - ownerAttack
+
+  Disguise: player setCustomName "Toinion "
+  Skills:
+  - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+  - equip{item=LT5PunchBow MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
+  - cancelEvent ~onAttack ?hasAura{aura=LT5}
+Dueris:
+  Type: zombie
+  Faction: Dueris
+  Damage: 1
+  Display: 
+  Options:
+    MovementSpeed: 0.33
+    PreventSunburn: true
+    PreventConversion: true
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    HealOnReload: true
+    summonerisowner: true
+    FollowRange: 64
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - DIAMOND_SWORD MAINHAND
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - hurtByTarget
+  - otherFaction
+  - ownerAttack
+  Disguise: player setCustomName "Dueris"
+  Skills:
+  - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+  - equip{item=DIAMOND_SWORD MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
+  - cancelEvent ~onAttack ?hasAura{aura=LT5}
+Dueris_archer:
+  Type: skeleton
+  Faction: Dueris
+  Damage: 1
+  Display: 
+  Options:
+    MovementSpeed: 0.33
+    PreventSunburn: true
+    PreventConversion: true
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    HealOnReload: true
+    summonerisowner: true
+    FollowRange: 64
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - DIAMOND_CHESTPLATE CHEST
+  - DIAMOND_LEGGINGS LEGS
+  - DIAMOND_BOOTS FEET
+  - LT5PunchBow MAINHAND
+  AIGoalSelectors:
+  - clear
+  - bowshoot
+  - randomstroll
+  AITargetSelectors:
+  - clear
+  - hurtByTarget
+  - otherFaction
+  - ownerAttack
+
+  Disguise: player setCustomName "Dueris"
+  Skills:
+  - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+  - equip{item=LT5PunchBow MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
+  - cancelEvent ~onAttack ?hasAura{aura=LT5}

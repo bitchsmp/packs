@@ -3,3 +3,8 @@ LT5Stacked_sword:
   Enchantments:
   - SHARPNESS 5
   - KNOCKBACK 1
+
+LT5PunchBow:
+  Id: BOW
+  Enchantments:
+  - PUNCH 2
