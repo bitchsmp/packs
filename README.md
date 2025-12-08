@@ -3,7 +3,7 @@ This repository stores packs made for Minecraft Bukkit/Spigot/Paper plugin "Myth
 
 Packs are mainly made by Dueris
 
-##Note:
+## Note:
 For AttachableWeapon pack, remember to copy the stats.yml and paste it in the main /plugin/MythicMobs folder
 
 ## Dependencies:
