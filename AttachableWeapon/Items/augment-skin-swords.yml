@@ -44,7 +44,7 @@ SkinCreationSplitter: #Internal Name
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Skills:
-    - stataura{stat=ARMOR;val=-20;type=ADDITIVE;aura=CREATIONSPLITTER_ARMOR_STRIPPER;duration=200;delay=1} @trigger ~onAttack ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+    - stataura{forcesync=true;stat=ARMOR;val=-20;type=ADDITIVE;aura=CREATIONSPLITTER_ARMOR_STRIPPER;duration=200;delay=1} @trigger ~onAttack ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
     - aura{aura=CREATIONSPLITTER_ATTACK_SUCCESS;ticks=2} @self ~onAttack
     - aura{aura=CREATIONSPLITTER_ATTACK_FAILED;delay=1;ticks=40;onstartskill=CREATIONSPLITTER_ATTACK_FAILED_FX;ontickskill=CREATIONSPLITTER_ATTACK_FAILED_FX_TICK} @self ~onSwing ?!hasAura{aura=CREATIONSPLITTER_ATTACK_SUCCESS} ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
     - aura{aura=CREATIONSPLITTER_ATTACK_DISABLE;ticks=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
@@ -151,7 +151,7 @@ SkinMoltenBlade:
     Conditions:
     Stats:
     Skills:
-    - stataura{stat=ATTACK_DAMAGE;value=8;type=ADDITIVE;ticks=2;aura=MoltenBlade_damage_buff} ~onTimer:1 @self
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;value=8;type=ADDITIVE;ticks=2;aura=MoltenBlade_damage_buff} ~onTimer:1 @self
     - consumehelddurability{a=4} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
     - consumehelddurability{a=4;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
     - consumehelddurability{a=4;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
@@ -176,7 +176,7 @@ SkinMoltenSword:
     Conditions:
     Stats:
     Skills:
-    - stataura{stat=ATTACK_DAMAGE;value=4;type=ADDITIVE;ticks=2;aura=MoltenSword_damage_buff} ~onTimer:1 @self
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;value=4;type=ADDITIVE;ticks=2;aura=MoltenSword_damage_buff} ~onTimer:1 @self
     - consumehelddurability{a=1} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
     - consumehelddurability{a=1;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
     - consumehelddurability{a=1;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
@@ -224,13 +224,13 @@ SkinHolyMoonlightSword:
     Conditions:
     Stats:
     Skills:
-    - stataura{stat=ATTACK_DAMAGE;val=1;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_NIGHT_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?worldtime{time=13000to23000}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=1;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_NIGHT_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?worldtime{time=13000to23000}
     - effect:particles{particle=end_rod;count=5;offset=0.5;speed=0;yoffset=0.1} @self ~onTimer:20 ?worldtime{time=13000to23000}
 
-    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE1234567_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=1,2,3,4,5,6,7} ?worldtime{time=13000to23000}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE1234567_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=1,2,3,4,5,6,7} ?worldtime{time=13000to23000}
     - effect:particles{particle=end_rod;count=3;offset=0.4;speed=0;yoffset=0} @self ~onTimer:10 ?lunarPhase{phases=1,2,3,4,5,6,7} ?worldtime{time=13000to23000}
 
-    - stataura{stat=ATTACK_DAMAGE;val=5;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=5;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
     - effect:particles{particle=end_rod;count=5;offset=0.6;speed=0;yoffset=0} @self ~onTimer:5 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
 
 
@@ -273,9 +273,9 @@ SkinAncient_royal_great_sword:
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Skills:
-    - stataura{stat=ARMOR;val=-1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ARMOR_DEPLETION;duration=40;maxstacks=10} @trigger ~onAttack
-    - stataura{stat=ATTACK_SPEED;val=-0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_REDUCTION;duration=40;maxstacks=10} @self ~onSwing
-    - stataura{stat=ATTACK_SPEED;val=0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_ADDITION;duration=40;maxstacks=10} @self ~onattack
+    - stataura{forcesync=true;stat=ARMOR;val=-1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ARMOR_DEPLETION;duration=40;maxstacks=10} @trigger ~onAttack
+    - stataura{forcesync=true;stat=ATTACK_SPEED;val=-0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_REDUCTION;duration=40;maxstacks=10} @self ~onSwing
+    - stataura{forcesync=true;stat=ATTACK_SPEED;val=0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_ADDITION;duration=40;maxstacks=10} @self ~onattack
 
 SkinTerrablade:
   Material: DIAMOND
@@ -316,7 +316,7 @@ SkinMasamune:
     Conditions:
     Stats:
     Skills:
-    - stataura{stat=ENTITY_INTERACTION_RANGE;val=3;type=ADDITIVE;aura=MASAMUNE_RANGE_BUFF;duration=2} @self ~onTimer:1 
+    - stataura{forcesync=true;stat=ENTITY_INTERACTION_RANGE;val=3;type=ADDITIVE;aura=MASAMUNE_RANGE_BUFF;duration=2} @self ~onTimer:1 
     - modifyDamage{a=-0.2;modifier=ADDITIVE;sync=true} @self ~onAttack
     - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3.5}
     - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
@@ -340,5 +340,5 @@ SkinSabre:
     Conditions:
     Stats:
     Skills:
-    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_PLAINS_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?biome{biome=plains}
-    - stataura{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_MOUNTED_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?mounted
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_PLAINS_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?biome{biome=plains}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=SABRE_MOUNTED_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?mounted
