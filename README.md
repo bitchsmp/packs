@@ -17,7 +17,7 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
 
 2. MythicMobs & MythicCrucible
 
-   - Plugins Offical Website: https://mythiccraft.io/
+   - Plugins Offical Website: mythiccraft.io
 
    - Current Version: Latest Dev Build
 
