@@ -1,0 +1,18 @@
+SkinGreatbow:
+  Material: DIAMOND
+  Display: '<yellow>Greatbow'
+  Options:
+    ItemModel: diamond
+  Lore:
+  - <yellow><bold>Bow Skin:</bold> Greatbow
+  - <white>
+  - <gray>Diddy bow</gray>
+  - <white>
+  - "<aqua>[Big daddy]"
+  Augmentation:
+    Type: SKIN_BOW
+    Tooltip: '<yellow>Greatbow<gray> (Diddy bow)'
+    ReplaceItemModel: nixx:greatbow
+    Conditions:
+    Stats:
+    Skills:
