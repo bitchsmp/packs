@@ -8,6 +8,7 @@ attachable_weapons:
     - '{augments-each:SKIN_AXE}<augment.display>'
     - '{augments-each:SKIN_MACE}<augment.display>'
     - '{augments-each:SKIN_HOE}<augment.display>'
+    - '{augments-each:SKIN_BOW}<augment.display>'
   - Filler: ' '
   - Line:
     - '{stats}<yellow>Bonus Stats:'

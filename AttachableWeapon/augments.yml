@@ -38,6 +38,16 @@ SKIN_MACE:
     Empty: '☆'
     Filled: '★'
     Invalid: ''
+SKIN_BOW:
+  Enabled: true
+  Display: 'Bow Skin'
+  Formatting:
+    Empty: '<augment.icon> Default <augment.type>'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
 WOODEN_SHARPENER:
   Enabled: true
   Display: 'Wooden Sharpener'
