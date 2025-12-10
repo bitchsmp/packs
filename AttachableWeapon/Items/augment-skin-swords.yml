@@ -322,16 +322,18 @@ SkinMasamune:
     - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
 SkinSabre:
   Material: DIAMOND
-  Display: 'Sabre'
+  Display: 'Smithing Style: Sabre'
+  Options:
+    ItemModel: knowledge_book
   Lore:
   - <yellow><bold>Sword Skin</bold>
   - <white>
   - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
   - <white>
   - "<green>[Grassland Domination]"
-  - <white>  When in plains biome: +2 Attack Damage</white>
+  - "<white>  When in plains biome: +2 Attack Damage</white>"
   - "<yellow>[Cavalry]"
-  - <white>  When on horseback: +2 Attack Damage</white>
+  - "<white>  When on horseback: +2 Attack Damage</white>"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Sabre<gray> (Deals up to 4 more damage when in plains biome and on horseback)'
