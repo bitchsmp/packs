@@ -1,14 +1,6 @@
-hakurei_gohei_skill_2_marker:
-  Type: armor_stand
+hakurei_gohei_rightclick_marker:
+  Type: marker
   Options:
-    VisibleByDefault: false
-    Invisible: true
-    NoGravity: true
-    PreventLeashing: true
-    Silent: true
-    CanMove: false
-    Marker: true
-
   Skills:
 
    - effect:particlesphere{particle=reddust;amount=600;radius=10;delay=20} @Self ~onSpawn
@@ -16,27 +8,19 @@ hakurei_gohei_skill_2_marker:
    - remove{delay=24} @self ~onSpawn 
 
 
-hakurei_gohei_skill_3_marker:
-  Type: armor_stand
+hakurei_gohei_ShiftRightclick_marker:
+  Type: marker
   Options:
-    VisibleByDefault: false
-    Invisible: true
-    NoGravity: true
-    PreventLeashing: true
-    Silent: true
-    CanMove: false
-    Marker: true
-
   Skills:
   #function
 
-  - throw{velocity=1;velocityY=1;repeat=39;repeatinterval=1} @EIR{r=5;ignore=owner} ~onspawn
-  - throw{velocity=10;velocityY=3;repeat=39;repeatinterval=1} @EIR{r=3;ignore=owner} ~onspawn
+  - throw{velocity=1;velocityY=1;repeat=39;repeatinterval=1} @EIR{r=5;ignore=owner;shape=CUBE} ~onspawn
+  - throw{velocity=10;velocityY=3;repeat=39;repeatinterval=1} @EIR{r=3;ignore=owner;shape=CUBE}~onspawn
 
   #effect
-  - skill{skill=hakurei_gohei_3_effect;repeat=39;repeatinterval=1} @Self ~onSpawn
+  - skill{skill=hakurei_gohei_ShiftRightclick_effect;repeat=19;repeatinterval=2} @Self ~onSpawn
   #remove
-  - remove{delay=40} @self ~onSpawn
+  - remove{delay=42} @self ~onSpawn
 
 
     
