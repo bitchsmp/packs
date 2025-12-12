@@ -10,34 +10,39 @@ greatbow_Failedcondition:
 
 greatbow_arrow_rain:
   Skills:
+  - sound{sound=entity.blaze.shoot}
   - delay 10
   - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;tickinterpolation=2;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onhitskill=greatbow_arrow_rain_tag_projectile_hit;drawhitbox=false;hr=3;vr=3;hnp=true;ontickskill=;highAccuracyMode=true;stopatblock=false;stopatentity=true;deathdelay=0} @Forward{yOffset=1.62}
 
 greatbow_arrow_rain_arrow_hit:
   Skills:
-  - damage{amount=20;poweraffectsdamage=true;preventimmunity=true}
+  - damage{amount=16;preventimmunity=true}
 
 
 greatbow_arrow_rain_tag_projectile_hit:
   Skills:
   - potion{type=GLOWING;duration=20}
-  - projectile{bulletType=ARROW;gravity=0.01;accuracy=0.8;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true} 
+  - skill{s=greatbow_arrow_rain_function;repeat=19;repeatinterval=2}
+greatbow_arrow_rain_function:
+  Skills:
+
+  - missile{bulletType=ARROW;intertia=10;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
   #
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=0;gravity=0.01;accuracy=0.8;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=90;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=1} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=180;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=2} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=270;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=3} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=45;gravity=0.01;accuracy=0.8;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=135;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=1} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=225;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=2} 
-  - projectile{bulletType=ARROW;verticaloffset=0.3;horizontaloffset=315;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=3} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=0;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=90;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=180;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=270;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=45;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=135;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=225;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.2;horizontaloffset=315;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
   #
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=0;gravity=0.01;accuracy=0.8;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=90;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=1} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=180;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=2} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=270;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=3} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=45;gravity=0.01;accuracy=0.8;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=135;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=1} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=225;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=2} 
-  - projectile{bulletType=ARROW;verticaloffset=0.6;horizontaloffset=315;gravity=0.01;accuracy=0.75;syo=64;maxrange=256;velocity=16;repeat=10;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;delay=3} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=0;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=90;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=180;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=270;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=45;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=135;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=225;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
+  - projectile{bulletType=ARROW;verticaloffset=0.4;horizontaloffset=315;gravity=0.01;accuracy=0.75;syo=32;maxrange=256;velocity=16;repeat=1;repeatinterval=4;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=greatbow_arrow_rain_arrow_hit;poweraffectsrange=false;poweraffectsvelocity=false;fromorigin=true;chance=0.06} 
 
