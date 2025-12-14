@@ -23,8 +23,6 @@ SkinGreatbow:
     - skill{s=greatbow_arrow_rain} ~onShoot @self ?hasAura{aura=looking_up_30degree}
     - removeaura{aura=looking_up_30degree;delay=1} ~onShoot @self
     - cancelEvent ~onShoot ?hasAura{aura=looking_up_30degree}
-    # Others
-
  
 
 
