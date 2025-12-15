@@ -39,7 +39,6 @@ SkinStopSign:
 
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=1;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
-    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
     - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_1} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
 
@@ -53,7 +52,6 @@ SkinStopSign:
     - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=6;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
-    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
     - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_2} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
 
@@ -67,7 +65,6 @@ SkinStopSign:
     - velocity{m=set;x=0;y=0;z=0;repeat=3;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=7;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
-    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
     - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_3} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
 
@@ -81,7 +78,6 @@ SkinStopSign:
     - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
-    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
     - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_4} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
@@ -96,6 +92,8 @@ SkinStopSign:
     - effect:firework{t=BALL;d=0;delay=3;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - effect:firework{t=BALL_LARGE;d=0;delay=4;f=true;colors=#FFDF00;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true;colors=#FF5252;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val="4"}
+# Prevent dying while freezed:
+    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
 SkinMjolnir:
   Material: DIAMOND
