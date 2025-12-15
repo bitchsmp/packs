@@ -1,0 +1,31 @@
+SkinAltCrossbow:
+  Material: DIAMOND
+  Display: '<white>Alternate Mechanism'
+  Options:
+    ItemModel: diamond
+  Lore:
+  - <yellow><bold>Crossbow Skin:</bold> Alternate
+  - <white>
+  - <gray>Turns shooted projectile into hitscans</gray>
+  - <white>
+  - "<aqua>[Hitscan]"
+  Augmentation:
+    Type: SKIN_CROSSBOW
+    Tooltip: '<yellow>Alternate<gray> (Turns shooted projectile into hitscans)'
+    ReplaceItemModel: minecraft:crossbow
+    Conditions:
+    Stats:
+    Skills:
+    - skill{s=alternate_crossbow_shoot_noEnchant} @self ~onShoot ?!hasEnchant{type=piercing} ?!hasEnchant{type=multishot} 
+    - skill{s=alternate_crossbow_shoot_piercing1} @self ~onShoot ?hasEnchant{type=piercing;level=1}
+    - skill{s=alternate_crossbow_shoot_piercing2} @self ~onShoot ?hasEnchant{type=piercing;level=2}
+    - skill{s=alternate_crossbow_shoot_piercing3} @self ~onShoot ?hasEnchant{type=piercing;level=3}
+    - skill{s=alternate_crossbow_shoot_piercing4} @self ~onShoot ?hasEnchant{type=piercing;level=4}
+    - skill{s=alternate_crossbow_shoot_multishot} @self ~onShoot ?hasEnchant{type=multishot}
+    - cancelEvent ~onShoot
+ 
+
+
+
+
+
