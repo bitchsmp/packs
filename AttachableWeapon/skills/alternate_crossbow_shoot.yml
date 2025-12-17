@@ -20,23 +20,23 @@ alternate_crossbow_shoot_piercing4:
   - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onhitskill=alternate_crossbow_projectile_hit_piercing4;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_projectile_hit:
   Skills:
-  - damage{amount=7;preventimmunity=true;poweraffectsdamage=false}
+  - damage{amount=14;preventimmunity=true;poweraffectsdamage=false}
 alternate_crossbow_projectile_hit_piercing1:
   Skills:
-  - damage{amount=7;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=14;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
 alternate_crossbow_projectile_hit_piercing2:
   Skills:
-  - damage{amount=7;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=14;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - delay 1
   - endprojectile{}
 alternate_crossbow_projectile_hit_piercing3:
   Skills:
-  - damage{amount=7;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=14;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - delay 2
   - endprojectile{}
 alternate_crossbow_projectile_hit_piercing4:
   Skills:
-  - damage{amount=7;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=14;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - delay 3
   - endprojectile{}
 alternate_crossbow_projectile_tick:

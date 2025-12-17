@@ -4,7 +4,7 @@ SkinAltCrossbow:
   Options:
     ItemModel: diamond
   Lore:
-  - <yellow><bold>Crossbow Skin:</bold> Alternate
+  - <yellow><bold>Crossbow Skin:</bold> B-Side
   - <white>
   - <gray>Turns shooted projectile into hitscans</gray>
   - <white>
@@ -12,7 +12,7 @@ SkinAltCrossbow:
   Augmentation:
     Type: SKIN_CROSSBOW
     Tooltip: '<yellow>Alternate<gray> (Turns shooted projectile into hitscans)'
-    ReplaceItemModel: minecraft:crossbow
+    ReplaceItemModel: minecraft:crossbow #Planned for later
     Conditions:
     Stats:
     Skills:
