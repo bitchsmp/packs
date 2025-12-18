@@ -10,10 +10,12 @@ greatbow_Failedcondition:
 
 greatbow_arrow_rain:
   Skills:
+  - potion{type=NIGHT_VISION;duration=10} @self
   - sound{sound=entity.blaze.shoot}
   - projectile{sfo=0.1;tickinterpolation=0;velocity=32;tickinterpolation=1;syo=1.62;maxrange=16;poweraffectsvelocity=false;drawhitbox=false;hr=0;vr=0;ontickskill=greatbow_arrow_rain_fx_projectile_tick;stopatblock=false;stopatentity=false;deathdelay=0} @Forward{yOffset=1.62}
   - delay 10
-  - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;tickinterpolation=2;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onhitskill=greatbow_arrow_rain_tag_projectile_hit;drawhitbox=false;hr=3;vr=3;hnp=true;ontickskill=;highAccuracyMode=true;stopatblock=false;stopatentity=true;deathdelay=0} @Forward{yOffset=1.62}
+  # Target tagging projectile:
+  - projectile{sfo=0.5;tickinterpolation=2;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onhitskill=greatbow_arrow_rain_tag_projectile_hit;drawhitbox=false;hr=3;vr=3;hnp=true;ontickskill=;highAccuracyMode=true;stopatblock=false;stopatentity=false;deathdelay=0} @Forward{yOffset=1.62}
 greatbow_arrow_rain_fx_projectile_tick:
   Skills:
   - particle{color=#f700ff;material=reddust}
@@ -21,7 +23,9 @@ greatbow_arrow_rain_fx_projectile_tick:
 greatbow_arrow_rain_tag_projectile_hit:
   Skills:
   - potion{type=GLOWING;duration=20}
-  - skill{s=greatbow_arrow_rain_function;repeat=19;repeatinterval=2}
+  - skill{s=greatbow_arrow_rain_function;repeat=12;repeatinterval=2}
+  - delay 2
+  - endprojectile{}
 greatbow_arrow_rain_function:
   Skills:
 
