@@ -1,4 +1,4 @@
-SkinAltCrossbow:
+SkinAlternateCrossbow:
   Material: DIAMOND
   Display: '<white>Alternate Mechanism'
   Options:
@@ -12,7 +12,7 @@ SkinAltCrossbow:
   Augmentation:
     Type: SKIN_CROSSBOW
     Tooltip: '<yellow>Alternate<gray> (Turns shooted projectile into hitscans)'
-    ReplaceItemModel: minecraft:crossbow #Planned for later
+    ReplaceItemModel: dueris:alternate_crossbow
     Conditions:
     Stats:
     Skills:
