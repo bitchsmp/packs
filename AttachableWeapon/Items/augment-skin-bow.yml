@@ -19,10 +19,10 @@ SkinGreatbow:
     # Rightclick-related functions
     - summon{type=GreatBow_marker;onSurface=false} ~onTimer:20 @selfLocation{yoffset=32}
     - skill{skill=greatbow_Checkcondition} @children ~onTimer:1
-    - consumeuseddurability{a=1} ~onShoot ?hasAura{aura=looking_up_30degree}
-    - skill{s=greatbow_arrow_rain} ~onShoot @self ?hasAura{aura=looking_up_30degree}
-    - removeaura{aura=looking_up_30degree;delay=1} ~onShoot @self
-    - cancelEvent ~onShoot ?hasAura{aura=looking_up_30degree}
+    - consumeuseddurability{a=1} ~onShoot ?hasAura{aura=looking_up_60degree}
+    - skill{s=greatbow_arrow_rain} ~onShoot @self ?hasAura{aura=looking_up_60degree}
+    - removeaura{aura=looking_up_60degree;delay=1} ~onShoot @self
+    - cancelEvent ~onShoot ?hasAura{aura=looking_up_60degree}
  
 
 

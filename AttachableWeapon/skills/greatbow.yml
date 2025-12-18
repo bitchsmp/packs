@@ -1,13 +1,14 @@
 greatbow_Checkcondition:
   TargetConditions:
   - mmType{types=GreatBow_marker} true
-  - fieldOfView{angle=30} orelsecast greatbow_Failedcondition 
+  - fieldOfView{angle=60} orelsecast greatbow_Failedcondition 
   Skills:
-  - aura{aura=looking_up_30degree;ticks=20} @self
+  - aura{aura=looking_up_60degree;ticks=20} @self
+#  - actionmessage{message="<light_purple>Arrow Rain <green>ready!"} @self
 greatbow_Failedcondition:
   Skills:
-  - removeaura{aura=looking_up_30degree} @self
-
+  - removeaura{aura=looking_up_60degree} @self
+ # - actionmessage{message="<light_purple>Arrow Rain <red>not ready!"} @self
 greatbow_arrow_rain:
   Skills:
   - potion{type=NIGHT_VISION;duration=10} @self
