@@ -1,3 +1,14 @@
+alternate_crossbow_onShoot:
+  Conditions:
+  - bowTension{force=1}
+  Skills:
+    - skill{s=alternate_crossbow_shoot_noEnchant} ?!hasEnchant{type=piercing} ?!hasEnchant{type=multishot} 
+    - skill{s=alternate_crossbow_shoot_piercing1} ?hasEnchant{type=piercing;level=1}
+    - skill{s=alternate_crossbow_shoot_piercing2} ?hasEnchant{type=piercing;level=2}
+    - skill{s=alternate_crossbow_shoot_piercing3} ?hasEnchant{type=piercing;level=3}
+    - skill{s=alternate_crossbow_shoot_piercing4} ?hasEnchant{type=piercing;level=4}
+    - skill{s=alternate_crossbow_shoot_multishot} ?hasEnchant{type=multishot}
+    - sound{sound=ultrakill:altrevolvershoot1d;radius=16;volume=0.25;soundcategory=PLAYERS}
 alternate_crossbow_shoot_multishot:
   Skills:
   - recoil{recoil=1;pitch=-15to-20;sprinting=1.5} @self

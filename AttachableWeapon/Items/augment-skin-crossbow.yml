@@ -16,13 +16,7 @@ SkinAlternateCrossbow:
     Conditions:
     Stats:
     Skills:
-    - skill{s=alternate_crossbow_shoot_noEnchant} @self ~onShoot ?!hasEnchant{type=piercing} ?!hasEnchant{type=multishot} 
-    - skill{s=alternate_crossbow_shoot_piercing1} @self ~onShoot ?hasEnchant{type=piercing;level=1}
-    - skill{s=alternate_crossbow_shoot_piercing2} @self ~onShoot ?hasEnchant{type=piercing;level=2}
-    - skill{s=alternate_crossbow_shoot_piercing3} @self ~onShoot ?hasEnchant{type=piercing;level=3}
-    - skill{s=alternate_crossbow_shoot_piercing4} @self ~onShoot ?hasEnchant{type=piercing;level=4}
-    - skill{s=alternate_crossbow_shoot_multishot} @self ~onShoot ?hasEnchant{type=multishot}
-    - sound{sound=ultrakill:altrevolvershoot1d;radius=16;volume=0.25;soundcategory=PLAYERS} @self ~onShoot
+    - skill{skill=alternate_crossbow_onShoot} ~onShoot @Self
     - cancelEvent ~onShoot
  
 
