@@ -14,9 +14,35 @@ hakurei_gohei:
     PreventStacking: true
     ItemModel: touhou_little_maid:hakurei_gohei
   Skills:
-  - cancelEvent ~onAttack
-  - skill{s=hakurei_gohei_leftclick} @trigger ~onAttack
+# Variable Skill System
+  - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} @self ~onhold
+  - addVariable{value=1;name=caster.hakureigohei} ?varrange{name=caster.hakureigohei;value=<5} ~onUse @self ?crouching
+  - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} ?varrange{name=caster.hakureigohei;value=>4} ~onUse ?crouching
+  - skill{s=hakurei_gohei_skillChooseDisplay} ~onUse  @self ?crouching
+  - skill{s=hakurei_gohei_skillChooseDisplay} ~onHold  @self 
+
+
+
   - skill{s=hakurei_gohei_rightclick} @self ~onUse
   - skill{s=hakurei_gohei_ShiftRightclick} @self ~onUse
 
+
+# Leftclick
+  - skill{s=hakurei_gohei_leftclick} @trigger ~onAttack
+  
+  - cancelEvent ~onAttack
+  
+variable_stick:
+  Id: STICK
+  Display: <gold>Variable stick</gold>
+  Options:
+    Repairable: false
+    Unbreakable: true
+    HideFlags: true
+    PreventStacking: true
+  Skills:
+  - setvar{value=1;scope=caster;name=caster.varstick;type=INTEGER} @self ~onhold
+  - addVariable{value=1;name=caster.varstick} ?varrange{name=caster.varstick;value=<5} ~onUse
+  - setvar{value=1;scope=caster;name=caster.varstick;type=INTEGER} ?varrange{name=caster.varstick;value=>4} ~onUse
+  - message{message=<caster.var.varstick>} @self ~onUse
   
