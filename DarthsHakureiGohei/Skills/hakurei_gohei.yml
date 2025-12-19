@@ -100,3 +100,48 @@ hakurei_gohei_ShiftRightclick_effect:
 
 
 
+hakurei_gohei_skill3:
+  Cooldown: 2
+  Conditions:
+  - isCrouching false
+  - varequals{name=caster.hakureigohei;value=3}
+  Skills:
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=32;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_hit;drawhitbox=true;stopatentity=true;hr=1;vr=1;hnp=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - delay 5
+
+
+  - missile{bullettype=DISPLAY;verticaloffset=0.7;horizontaloffset=-90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=12;syo=1.62;maxrange=64;intertia=10;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;onStartskill=hakurei_gohei_skill3_ball1_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Children{limit=1;sort=NEAREST}
+  - delay 3
+  - missile{bullettype=DISPLAY;verticaloffset=0.7;horizontaloffset=0;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=12;syo=1.62;maxrange=64;intertia=10;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;onStartskill=hakurei_gohei_skill3_ball2_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Children{limit=1;sort=NEAREST}
+  - delay 3
+  - missile{bullettype=DISPLAY;verticaloffset=0.7;horizontaloffset=90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=12;syo=1.62;maxrange=64;intertia=10;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;onStartskill=hakurei_gohei_skill3_ball3_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Children{limit=1;sort=NEAREST}
+  - delay 3
+  # - missile{bullettype=DISPLAY;verticaloffset=0.7;horizontaloffset=90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=12;syo=1.62;maxrange=64;intertia=10;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Children{limit=1;sort=NEAREST}
+
+
+hakurei_gohei_skill3_hit:
+  Skills:
+  - summon{amount=1;type=hakurei_gohei_skill3_targetMarker;summonerisowner=true;onsurface=false}
+hakurei_gohei_skill3_ball_hit:
+  Skills:
+  - remove @children{delay=20}
+  - damage{amount=5;sourceisorigin=true;damagecause=ENTITY_EXPLOSION;preventimmunity=true} @entitiesNearOrigin{radius=4;ignore=owner}
+  #- summon{amount=1;onsurface=false;type=hakurei_gohei_skill3_DamageMarker}
+hakurei_gohei_skill3_ball1_start:
+  Skills:
+  - delay 13
+  - projectilevelocity{velocityx=0;velocityy=2;velocityz=0;mode=SET}
+  - delay 2
+  - modifyProjectile{amount=1.5;action=MULTIPLY;trait=INERTIA}
+hakurei_gohei_skill3_ball2_start:
+  Skills:
+  - delay 10
+  - projectilevelocity{velocityx=0;velocityy=2;velocityz=0;mode=SET}
+  - delay 2
+  - modifyProjectile{amount=1.5;action=MULTIPLY;trait=INERTIA}
+hakurei_gohei_skill3_ball3_start:
+  Skills:
+  - delay 7
+  - projectilevelocity{velocityx=0;velocityy=2;velocityz=0;mode=SET}
+  - delay 2
+  - modifyProjectile{amount=1.5;action=MULTIPLY;trait=INERTIA}
