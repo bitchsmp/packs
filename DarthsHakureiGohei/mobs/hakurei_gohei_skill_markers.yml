@@ -4,7 +4,7 @@ hakurei_gohei_rightclick_marker:
   Skills:
 
    - effect:particlesphere{particle=reddust;amount=600;radius=10;delay=20} @Self ~onSpawn
-   - damage{a=2;pi=true;repeat=4;repeatInterval=1;delay=20;pk=true;ii=true} @EIR{r=10;target=monster} ~onSpawn
+   - damage{a=2;pi=true;repeat=5;repeatInterval=1;delay=20;pk=true;ii=true} @EIR{r=10;target=monster} ~onSpawn
    - remove{delay=24} @self ~onSpawn 
 
 
