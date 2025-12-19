@@ -48,8 +48,8 @@ SkinStopSign:
     - skill{s=STOP_SIGN_WIND_BURST_2_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
     - skill{s=STOP_SIGN_WIND_BURST_3_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="1"}
 #on slam skills 2:
-    - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
-    - velocity{m=set;x=0;y=0;z=0;repeat=2;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=2;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=2;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=6;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
 
@@ -61,8 +61,8 @@ SkinStopSign:
     - skill{s=STOP_SIGN_WIND_BURST_2_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
     - skill{s=STOP_SIGN_WIND_BURST_3_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="2"}
 #on slam skills 3:
-    - velocity{m=set;x=0;y=0;z=0;repeat=3;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
-    - velocity{m=set;x=0;y=0;z=0;repeat=3;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=3;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=3;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=7;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
 
@@ -74,8 +74,8 @@ SkinStopSign:
     - skill{s=STOP_SIGN_WIND_BURST_2_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
     - skill{s=STOP_SIGN_WIND_BURST_3_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="3"}
 #on slam skills 4:
-    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
-    - velocity{m=set;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
     - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val="4"}
 
