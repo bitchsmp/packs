@@ -236,7 +236,7 @@ SkinHolyMoonlightSword:
 
 SkinEpicSword:
   Material: PAPER
-  Display: '<yellow>Special: Holy Water'
+  Display: 'Special: <yellow>Holy Water'
   Options:
     ItemModel: terraria:item_422
   Lore:
