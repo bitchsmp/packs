@@ -1,8 +1,8 @@
 SkinAlternateCrossbow:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<white>Alternate Mechanism'
   Options:
-    ItemModel: diamond
+    ItemModel: paper
   Lore:
   - <yellow><bold>Crossbow Skin:</bold> B-Side
   - <white>

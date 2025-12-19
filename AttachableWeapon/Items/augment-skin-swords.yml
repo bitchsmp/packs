@@ -2,7 +2,7 @@
 
 #Template:
 # Skin:
-#   Material: DIAMOND
+#   Material: PAPER
 #   Display: 'Special: <gold>Representative Item Name'
 #   Options:
 #     ItemModel: minecraft:
@@ -24,7 +24,7 @@
 #     Skills:
 
 SkinCreationSplitter: #Internal Name
-  Material: DIAMOND
+  Material: PAPER
   Display: 'Special: <gold>The End Of Reality' #Rarity color + Name
   Options:
     ItemModel: dueris:corrupted_item #Skin Item unique texture
@@ -58,7 +58,7 @@ SkinCreationSplitter: #Internal Name
 
 SkinNapalm_Claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
-  Material: DIAMOND
+  Material: PAPER
   Display: 'Canister: <yellow>Napalm B'
   Options:
     ItemModel: hbm:canister_napalm
@@ -82,7 +82,7 @@ SkinNapalm_Claymore:
 
 
 SculkSwordSkin:
-  Material: DIAMOND
+  Material: PAPER
   Display: 'Special: <white>Elegant Sculk'
   Options:
     ItemModel: minecraft:calibrated_sculk_sensor
@@ -105,7 +105,7 @@ SculkSwordSkin:
     - potion{type=DARKNESS;duration=140} @trigger ~onAttack
 
 SculkCleaverSkin:
-  Material: DIAMOND
+  Material: PAPER
   Display: 'Special: <yellow>Restful Sculk'
   Options:
     ItemModel: minecraft:sculk_shrieker
@@ -131,7 +131,7 @@ SculkCleaverSkin:
     - skill{s=sculkcleaver_leftclick} @self ~onSwing
 
 SkinMoltenBlade:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<white>Meteorite Blade'
   Options:
     ItemModel: hbm:blade_meteorite_hot
@@ -157,7 +157,7 @@ SkinMoltenBlade:
     - consumehelddurability{a=4;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
     - consumehelddurability{a=4;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
 SkinMoltenSword:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<white>Forged Meteorite Ingot'
   Options:
     ItemModel: hbm:ingot_meteorite_forged_hot
@@ -183,7 +183,7 @@ SkinMoltenSword:
     - consumehelddurability{a=1;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
 
 SkinFrostBlade:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<white>Universal Fluid Barrel: Liquid Nitrogen'
   Options:
     ItemModel: hbm:fluid_barrel_nitrogen
@@ -205,7 +205,7 @@ SkinFrostBlade:
 
 
 SkinHolyMoonlightSword:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<aqua>Holy Moonlight Sword'
   Lore:
   - <yellow><bold>Sword Skin</bold>
@@ -235,7 +235,7 @@ SkinHolyMoonlightSword:
 
 
 SkinEpicSword:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<yellow>Epic Sword'
   Options:
     ItemModel: terraria:item_422
@@ -257,7 +257,7 @@ SkinEpicSword:
 
 
 SkinAncient_royal_great_sword:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<yellow>Ancient Royal Great Sword'
   Lore:
   - <yellow><bold>Sword Skin</bold>
@@ -280,7 +280,7 @@ SkinAncient_royal_great_sword:
     - stataura{forcesync=true;stat=ATTACK_SPEED;val=0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_ADDITION;duration=40;maxstacks=10} @self ~onattack
 
 SkinTerrablade:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<yellow>Terrablade'
   Lore:
   - <yellow><bold>Sword Skin</bold>
@@ -298,7 +298,7 @@ SkinTerrablade:
     Skills:
     - skill{s=terrablade_projectile_leftclick} ~onSwing 
 SkinMasamune:
-  Material: DIAMOND
+  Material: PAPER
   Display: "Masamune's Hand"
   Lore:
   - <yellow><bold>Sword Skin</bold>
@@ -323,7 +323,7 @@ SkinMasamune:
     - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3.5}
     - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
 SkinSabre:
-  Material: DIAMOND
+  Material: PAPER
   Display: 'Smithing Style: Sabre'
   Options:
     ItemModel: knowledge_book

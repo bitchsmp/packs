@@ -1,5 +1,5 @@
 SkinStopSign:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<gold>Stop Sign'
   Lore:
   - <yellow><bold>Mace Skin</bold>
@@ -96,7 +96,7 @@ SkinStopSign:
     - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
 
 SkinMjolnir:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<white>Mjolnir'
   Lore:
   - <yellow><bold>Mace Skin</bold>

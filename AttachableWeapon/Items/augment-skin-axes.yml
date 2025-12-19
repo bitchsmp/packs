@@ -1,5 +1,5 @@
 SkinFrostAxe:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<white>Universal Fluid Tank: Liquid Nitrogen'
   Options:
     ItemModel: hbm:fluid_tank_nitrogen

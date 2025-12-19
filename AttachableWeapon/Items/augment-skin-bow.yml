@@ -1,8 +1,8 @@
 SkinGreatbow:
-  Material: DIAMOND
+  Material: PAPER
   Display: '<yellow>Greatbow'
   Options:
-    ItemModel: diamond
+    ItemModel: paper
   Lore:
   - <yellow><bold>Bow Skin:</bold> Greatbow
   - <white>
