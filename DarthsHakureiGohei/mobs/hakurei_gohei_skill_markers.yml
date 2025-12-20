@@ -30,4 +30,4 @@ hakurei_gohei_skill3_BallTargetMarker:
     Responsive: false
   Skills:
   - remove{delay=100} @Self ~onSpawnorload 
-  - sudoskill{skill=hakurei_gohei_skill3_ball_projectile;setcasterastrigger=true} @Owner{limit=1} ~onSpawnorload 
+  - sudoskill{skill=hakurei_gohei_skill3_ball_projectile;setcasterastrigger=true;delay=1} @Owner{limit=1} ~onSpawnorload 
