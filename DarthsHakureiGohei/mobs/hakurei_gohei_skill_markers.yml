@@ -22,17 +22,12 @@ hakurei_gohei_ShiftRightclick_marker:
   #remove
   - remove{delay=42} @self ~onSpawn
 
-hakurei_gohei_skill3_targetMarker:
+hakurei_gohei_skill3_BallTargetMarker:
   Type: Interaction
   Options:
     Width: 1
     Height: 1
+    Responsive: false
   Skills:
   - remove{delay=100} @Self ~onSpawnorload 
-# hakurei_gohei_skill3_DamageMarker:
-#   Type: INTERACTION
-#   Options:
-
-#   Skills:
-#   - damage{amount=5} @EIR{radius=6;ignore=owner} ~onSpawn
-#   - remove{delay=1} @self ~onSpawnorload 
+  - sudoskill{skill=hakurei_gohei_skill3_ball_projectile;setcasterastrigger=true} @Owner{limit=1} ~onSpawnorload 
