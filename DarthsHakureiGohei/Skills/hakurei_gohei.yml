@@ -101,33 +101,34 @@ hakurei_gohei_skill3_tagProjectile_hit:
 
 hakurei_gohei_skill3_ball_projectile:
   Skills:
-  - missile{bullettype=DISPLAY;syo=4;verticaloffset=0.7;horizontaloffset=-90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball1_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Trigger
+  - missile{bullettype=DISPLAY;syo=4;verticaloffset=0.7;horizontaloffset=-90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball1_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
   - delay 3
-  - missile{bullettype=DISPLAY;syo=4;verticaloffset=0.7;horizontaloffset=0;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball2_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Trigger
+  - missile{bullettype=DISPLAY;syo=4;verticaloffset=0.7;horizontaloffset=0;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball2_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
   - delay 3
-  - missile{bullettype=DISPLAY;syo=4;verticaloffset=0.7;horizontaloffset=90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball3_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=3;hittargetonly=false} @Trigger
+  - missile{bullettype=DISPLAY;syo=4;verticaloffset=0.7;horizontaloffset=90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=1,1,1;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball3_start;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
 
 hakurei_gohei_skill3_ball_hit:
   Skills:
-  - damage{amount=10;sourceisorigin=true;damagecause=ENTITY_EXPLOSION;preventimmunity=true} @entitiesNearOrigin{radius=6;ignore=owner}
+  - explode{sourceisorigin=true;yield=2} @origin{y=0.5}
+  #- summon{amount=1;onsurface=false;type=useful_marker;sourceisorigin=true} @origin{yoffset=0.5}
 hakurei_gohei_skill3_ball1_start:
   Skills:
   - delay 7
   - projectilevelocity{velocityx=0;velocityy=0.1;velocityz=0;mode=SET;repeatinterval=1;repeat=0}
   - delay 1
-  - modifyprojectile{trait=VELOCITY;action=ADD;value=0.5;repeat=20;repeati=1}
+  - modifyprojectile{trait=VELOCITY;action=ADD;value=1;repeat=29;repeati=2}
 hakurei_gohei_skill3_ball2_start:
   Skills:
   - delay 7
   - projectilevelocity{velocityx=0;velocityy=0.1;velocityz=0;mode=SET;repeatinterval=1;repeat=0}
   - delay 1
-  - modifyprojectile{trait=VELOCITY;action=ADD;value=0.5;repeat=20;repeati=1}
+  - modifyprojectile{trait=VELOCITY;action=ADD;value=1;repeat=29;repeati=2}
 hakurei_gohei_skill3_ball3_start:
   Skills:
   - delay 7
   - projectilevelocity{velocityx=0;velocityy=0.1;velocityz=0;mode=SET;repeatinterval=1;repeat=0}
   - delay 1
-  - modifyprojectile{trait=VELOCITY;action=ADD;value=0.5;repeat=20;repeati=1}
+  - modifyprojectile{trait=VELOCITY;action=ADD;value=1;repeat=29;repeati=2}
 
 hakurei_gohei_skill_ball_tick:
   Conditions:
