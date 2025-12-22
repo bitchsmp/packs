@@ -125,3 +125,14 @@ hakurei_gohei_skill3_OrbitalBall_Hit:
 hakurei_gohei_skill3_OrbitalBall_start:
   Skills:
   - modifyprojectile{trait=RADIUS;value=0.25;action=ADD;repeat=12;repeatinterval=3}
+  
+hakurei_gohei_skill4:
+  Cooldown: 2
+  Conditions:
+  - isCrouching false
+  - varequals{name=caster.hakureigohei;value=4}
+  Skills:
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill4_projectile_hit;velocity=12;translation=0,-0.4,0;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;sfo=0;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;pitch=1.5708;accuracy=0.9;drawhitbox=false;hr=0.2;vr=0.2;repeat=19;repeatinterval=1;stopatblock=true;stopatentity=true} @forward{y=1.4}
+hakurei_gohei_skill4_projectile_hit:
+  Skills:
+  - damage{amount=2;preventimmunity=true}
