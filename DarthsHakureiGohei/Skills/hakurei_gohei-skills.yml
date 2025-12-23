@@ -24,9 +24,11 @@ hakurei_gohei_skill1:
   - varequals{name=caster.hakureigohei;value=1}
   Skills:
   - skill{skill=hakurei_gohei_skill1_projectile_1}
+
 hakurei_gohei_skill1_projectile_1:
   Conditions:
   Skills:
+  - sound{sound=entity.blaze.shoot;pitch=2} @self
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=10;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=11;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=12;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
@@ -41,10 +43,11 @@ hakurei_gohei_skill1_projectile_1:
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=21;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=22;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=23;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
-  - delay 12
+  - delay 10
   - skill{skill=hakurei_gohei_skill1_projectile_2}
 hakurei_gohei_skill1_projectile_2:
   Skills:
+  - sound{sound=entity.blaze.shoot;pitch=2} @self
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=10;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=11;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=12;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
