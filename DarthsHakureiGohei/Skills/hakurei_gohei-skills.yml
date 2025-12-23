@@ -93,7 +93,7 @@ hakurei_gohei_ShiftRightclick:
   Cooldown: 3
   Conditions:
   - isCrouching false
-  - varequals{name=caster.hakureigohei;value=3}
+  - varequals{name=caster.hakureigohei;value=2}
   Skills:
   - summon{type=hakurei_gohei_ShiftRightclick_marker} @self
 
