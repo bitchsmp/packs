@@ -22,24 +22,25 @@
 #     ReplaceItemModelNamespace: minecraft
 #     Conditions:
 #     Skills:
-SkinBinaryLivingFire:
+SkinUnaryLivingFire:
   Material: PAPER
-  Display: 'Special: <white>Binary Flame System'
+  Display: 'Special: <white>Unary Flame System'
   Options:
     ItemModel:
   Lore:
-  - <yellow><bold>Sword Skin:</bold> Binary Living Fire
+  - <yellow><bold>Sword Skin:</bold> Unary Living Fire
   - <white>
-  - <gray>Summons two orbiting flame</gray>
+  - <gray>Summons one orbiting flame</gray>
   - <white>
   - "<gold>[Orbiting Flame]"
   - "<white>  Deals 5 damage and causes burning on hit"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<white>Living Fire<gray> (Summons two orbiting flame)'
+    Tooltip: '<white>Unary Living Fire<gray> (Summons one orbiting flame)'
     Conditions:
     Skills:
-    - skill{s=binary_living_fire_orbital_projectile} @self ~onTimer:32
+    - skill{s=unary_living_fire_orbital_projectile} @self ~onTimer:32
+
 SkinBinaryLivingFire:
   Material: PAPER
   Display: 'Special: <white>Binary Flame System'
