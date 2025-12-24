@@ -1,4 +1,4 @@
-fire_floor0:
+fire_floor0_emissive:
   Id: paper
   Options:
-    ItemModel: minecraft:fire_floor0
+    ItemModel: minecraft:fire_floor0_emissive
