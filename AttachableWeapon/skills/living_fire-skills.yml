@@ -17,7 +17,7 @@ living_fire_orbital_projectile_Hit:
   - ignite{ticks=100}
 living_fire_orbital_projectile_start:
   Skills:
-  - modifyprojectile{trait=RADIUS;value=0.1;action=ADD;repeat=10;repeatinterval=3}
+  - modifyprojectile{trait=RADIUS;value=0.1;action=ADD;repeat=19;repeatinterval=3}
 living_fire_orbital_projectile_tick:
   Skills:
   - particle{particle=small_flame} @origin
