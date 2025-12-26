@@ -24,41 +24,59 @@
 #     Skills:
 SkinUnaryLivingFire:
   Material: PAPER
-  Display: 'Special: <white>Unary Flame System'
+  Display: 'Special: <white>Living Flame'
   Options:
-    ItemModel:
+    ItemModel: minecraft:fire_floor0_emissive
   Lore:
   - <yellow><bold>Sword Skin:</bold> Unary Living Fire
   - <white>
-  - <gray>Summons one orbiting flame</gray>
+  - <gray>Summons one orbiting living fire</gray>
   - <white>
   - "<gold>[Orbiting Flame]"
-  - "<white>  Deals 5 damage and causes burning on hit"
+  - "<white>  Deals 1 damage and causes burning on hit"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<white>Unary Living Fire<gray> (Summons one orbiting flame)'
+    Tooltip: '<white>Unary Living Fire<gray> (Summons one orbiting living fire)'
     Conditions:
     Skills:
-    - skill{s=unary_living_fire_orbital_projectile} @self ~onTimer:32
+    - skill{s=unary_living_fire_orbital_projectile} @self ~onTimer:64
 
 SkinBinaryLivingFire:
   Material: PAPER
-  Display: 'Special: <white>Binary Flame System'
+  Display: 'Special: <white>Loving Flames'
   Options:
-    ItemModel:
+    ItemModel: minecraft:fire_floor0_emissive
   Lore:
   - <yellow><bold>Sword Skin:</bold> Binary Living Fire
   - <white>
-  - <gray>Summons two orbiting flame</gray>
+  - <gray>Summons two orbiting living fire</gray>
   - <white>
   - "<gold>[Orbiting Flame]"
-  - "<white>  Deals 5 damage and causes burning on hit"
+  - "<white>  Deals 1 damage and causes burning on hit"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<white>Living Fire<gray> (Summons two orbiting flame)'
+    Tooltip: '<white>Binary Living Fire<gray> (Summons two orbiting living fire)'
     Conditions:
     Skills:
-    - skill{s=binary_living_fire_orbital_projectile} @self ~onTimer:32
+    - skill{s=binary_living_fire_orbital_projectile} @self ~onTimer:64
+SkinQuaternaryLivingFire:
+  Material: PAPER
+  Display: 'Special: <white>Squad of Living Flames'
+  Options:
+    ItemModel: minecraft:fire_floor0_emissive
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Quaternary Living Fire
+  - <white>
+  - <gray>Summons four orbiting living fire</gray>
+  - <white>
+  - "<gold>[Orbiting Flame]"
+  - "<white>  Deals 1 damage and causes burning on hit"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Quaternary Living Fire<gray> (Summons four orbiting living fire)'
+    Conditions:
+    Skills:
+    - skill{s=quaternary_living_fire_orbital_projectile} @self ~onTimer:64
 
 
 #  ███████████  ████                █████                                 ██████     ██████   ██████                ███                    █████     ███                    
