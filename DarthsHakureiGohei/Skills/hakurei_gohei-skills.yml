@@ -24,7 +24,16 @@ hakurei_gohei_skill1:
   - varequals{name=caster.hakureigohei;value=1}
   Skills:
   - skill{skill=hakurei_gohei_skill1_projectile_1}
-
+  - swingarm{}
+  - delay 7
+  - skill{skill=hakurei_gohei_skill1_projectile_2}
+  - swingarm{}
+  - delay 7
+  - skill{skill=hakurei_gohei_skill1_projectile_1}
+  - swingarm{}
+  - delay 7
+  - skill{skill=hakurei_gohei_skill1_projectile_2}
+  - swingarm{}
 hakurei_gohei_skill1_projectile_1:
   Conditions:
   Skills:
@@ -43,8 +52,7 @@ hakurei_gohei_skill1_projectile_1:
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=21;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=22;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
   - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=23;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
-  - delay 10
-  - skill{skill=hakurei_gohei_skill1_projectile_2}
+
 hakurei_gohei_skill1_projectile_2:
   Skills:
   - sound{sound=entity.blaze.shoot;pitch=2} @self
@@ -137,6 +145,7 @@ hakurei_gohei_skill3_tagProjectile_hit:
 hakurei_gohei_skill3_ball_projectile:
   Skills:
 
+  - swingarm{}
   - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=-135;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=true;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
   - delay 4
   - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=-90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=true;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
