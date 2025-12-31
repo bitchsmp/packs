@@ -13,18 +13,17 @@ hakurei_gohei_ShiftRightclick_marker:
   Options:
   Skills:
   #function
-
-  - throw{velocity=3;velocityY=1;repeat=39;repeatinterval=1} @EIR{r=5;ignore=owner;shape=CUBE} ~onspawn
-  - throw{velocity=10;velocityY=3;repeat=39;repeatinterval=1} @EIR{r=3;ignore=owner;shape=CUBE}~onspawn
+ # - throw{velocity=3;velocityY=1;repeat=39;repeatinterval=1} @EIR{r=5;ignore=owner;shape=CUBE} ~onspawn
+  - throw{velocity=20;velocityY=1} @EIR{r=5;ignore=owner;shape=CUBE} ~onspawn
 
   #effect
-  - skill{skill=hakurei_gohei_ShiftRightclick_effect;repeat=19;repeatinterval=2} @Self ~onSpawn
+  - skill{skill=hakurei_gohei_ShiftRightclick_effect;repeat=249;repeatinterval=2} @Self ~onSpawn
   #collision box creation
-  - skill{skill=hakurei_gohei_skill2_collision_box_summon} @Self ~onSpawn
+  - skill{skill=hakurei_gohei_skill2_collision_box_summon;delay=2} @Self ~onSpawn
 
   #remove
-  - remove{delay=42} @child ~onSpawn
-  - remove{delay=43} @self ~onSpawn
+  - remove{delay=502} @child ~onSpawn
+  - remove{delay=503} @self ~onSpawn
 
 hakurei_gohei_skill3_BallTargetMarker:
   Type: Interaction
@@ -45,7 +44,41 @@ hakurei_gohei_skill2_collision_box:
     Invisible: true
     PreventOtherDrops: true
     VisibleByDefault: false
+    Color: WHITE
   Skills:
+  - showentity{}
   - remove{delay=100} ~onSpawnorload 
   DamageModifiers:
   - SUFFOCATION -1 
+hakurei_gohei_skill2_display-1:
+  Type: block_display
+  DisplayOptions:
+    Block: glass
+    Scale: 9,1,1
+    Translation: -4.5,-4,-4.5
+  Skills:
+  - remove{delay=100} @self ~onSpawn
+hakurei_gohei_skill2_display-2:
+  Type: block_display
+  DisplayOptions:
+    Block: glass
+    Scale: 9,1,1
+    Translation: -4.5,-4,3.5
+  Skills:
+  - remove{delay=100} @self ~onSpawn
+hakurei_gohei_skill2_display-3:
+  Type: block_display
+  DisplayOptions:
+    Block: glass
+    Scale: 9,1,1
+    Translation: -4.5,4,-4.5
+  Skills:
+  - remove{delay=100} @self ~onSpawn
+hakurei_gohei_skill2_display-4:
+  Type: block_display
+  DisplayOptions:
+    Block: glass
+    Scale: 9,1,1
+    Translation: -4.5,4,3.5
+  Skills:
+  - remove{delay=100} @self ~onSpawn

@@ -390,3 +390,9 @@ hakurei_gohei_skill2_collision_box_summon:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=-2;y=4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=-3;y=4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=-4;y=4} ~onSpawn
+hakurei_gohei_skill2_display:
+  Skills:
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-1;yaw=0;pitch=0} @selfLocation
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-2;yaw=0;pitch=0} @selfLocation
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-3;yaw=0;pitch=0} @selfLocation
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-4;yaw=0;pitch=0} @selfLocation
