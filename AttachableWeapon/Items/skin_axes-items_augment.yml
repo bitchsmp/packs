@@ -30,6 +30,7 @@ SkinIcewhisper:
   - <white>
   - "<aqua>[Freezing]"
   - "<gradient:#c10000:#ff8080>[Lifesteal]"
+  - "<white>  Heals wielder 10% of the damage dealt on attack"
   Augmentation:
     Type: SKIN_AXE
     Tooltip: '<white>Icewhisper<gray> (Inflicts Freezing on hit, heals wielder based on the damage dealt)'
