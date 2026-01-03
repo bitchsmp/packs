@@ -58,5 +58,5 @@ alternate_crossbow_projectile_hit_piercing4:
   - endprojectile{}
 alternate_crossbow_projectile_tick:
   Skills:
-  - particle{particle=wax_off}
+  - particle{particle=electric_spark}
 
