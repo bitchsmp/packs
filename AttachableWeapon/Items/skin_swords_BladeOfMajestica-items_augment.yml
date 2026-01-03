@@ -93,7 +93,7 @@ SkinNapalm_Claymore:
     - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
 
-SculkSwordSkin:
+SkinSculkSword:
   Material: PAPER
   Display: 'Special: <white>Elegant Sculk'
   Options:
@@ -116,7 +116,7 @@ SculkSwordSkin:
     Skills:
     - potion{type=DARKNESS;duration=140} @trigger ~onAttack
 
-SculkCleaverSkin:
+SkinSculkCleaver:
   Material: PAPER
   Display: 'Special: <yellow>Restful Sculk'
   Options:
