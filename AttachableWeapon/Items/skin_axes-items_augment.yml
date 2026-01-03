@@ -6,15 +6,36 @@ SkinFrostAxe:
   Lore:
   - <yellow><bold>Axe Skin:</bold> Frost Axe
   - <white>
-  - <gray>Inflict Freezing on hit</gray>
+  - <gray>Inflicts Freezing on hit</gray>
   - <white>
   - "<aqua>[Freezing]"
   Augmentation:
     Type: SKIN_AXE
     Tooltip: '<white>Frost Axe<gray> (Inflict Freezing on hit)'
     ReplaceItemModel: frostaxe
-    ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
     Skills:
     - freeze{ticks=140} @trigger ~onAttack
+
+SkinIcewhisper:
+  Material: PAPER
+  Display: '<white>Icewhisper'
+  Options:
+    ItemModel: snowball
+  Lore:
+  - <yellow><bold>Axe Skin:</bold> Icewhisper
+  - <white>
+  - <gray>Inflicts Freezing on hit, heals wielder based on the damage dealt</gray>
+  - <white>
+  - "<aqua>[Freezing]"
+  - "<gradient:#c10000:#ff8080>[Lifesteal]"
+  Augmentation:
+    Type: SKIN_AXE
+    Tooltip: '<white>Icewhisper<gray> (Inflicts Freezing on hit, heals wielder based on the damage dealt)'
+    ReplaceItemModel: icewhisper
+    Conditions:
+    Stats:
+    Skills:
+    - freeze{ticks=140} @trigger ~onAttack
+    - stataura{stat=LIFESTEAL_CHANCE;value=1;type=ADD;aura=Icewhisper_lifesteal_buff;ticks=2} @self ~onTimer:1
