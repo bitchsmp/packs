@@ -24,8 +24,6 @@ hakurei_gohei:
   - skill{s=hakurei_gohei_skill1} @self ~onUse
   - skill{s=hakurei_gohei_skill3} @self ~onUse
   - skill{s=hakurei_gohei_skill2} @self ~onUse
-  # - skill{s=hakurei_gohei_skill4} @self ~onUse
-
 # Leftclick
   - skill{s=hakurei_gohei_leftclick} @trigger ~onAttack
   
