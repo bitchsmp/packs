@@ -1,5 +1,5 @@
 SkinGreatbow:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: '<yellow>Greatbow'
   Options:
     ItemModel: paper

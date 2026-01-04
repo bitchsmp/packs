@@ -1,5 +1,5 @@
 SkinAlternateCrossbow:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: '<white>Alternate Mechanism'
   Options:
     ItemModel: paper

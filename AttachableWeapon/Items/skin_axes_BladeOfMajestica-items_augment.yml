@@ -1,5 +1,5 @@
 SkinFrostAxe:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: '<white>Universal Fluid Tank: Liquid Nitrogen'
   Options:
     ItemModel: hbm:fluid_tank_nitrogen
@@ -19,7 +19,7 @@ SkinFrostAxe:
     - freeze{ticks=140} @trigger ~onAttack
 
 SkinIcewhisper:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: '<white>Icewhisper'
   Options:
     ItemModel: snowball
