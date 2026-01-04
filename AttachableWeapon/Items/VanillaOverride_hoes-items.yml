@@ -62,7 +62,7 @@ attachable_iron_hoe:
   Lore:
     Template: attachable_weapons
 
-attachable_gold_hoe:
+attachable_golden_hoe:
   id: golden_hoe
   EquipSlot: HAND
   AugmentationSlots:
@@ -70,7 +70,7 @@ attachable_gold_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLD_SHARPENER
+  - Type: GOLDEN_SHARPENER
     Amount: 3
     Chance: 1
   Lore:

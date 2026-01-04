@@ -2,7 +2,7 @@ SKIN_SWORD:
   Enabled: true
   Display: 'Sword Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -12,7 +12,7 @@ SKIN_HOE:
   Enabled: true
   Display: 'Hoe Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -22,7 +22,7 @@ SKIN_AXE:
   Enabled: true
   Display: 'Axe Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -32,7 +32,7 @@ SKIN_MACE:
   Enabled: true
   Display: 'Mace Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -42,7 +42,7 @@ SKIN_BOW:
   Enabled: true
   Display: 'Bow Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -52,7 +52,17 @@ SKIN_CROSSBOW:
   Enabled: true
   Display: 'Crossbow Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
+SKIN_SPEAR:
+  Enabled: true
+  Display: 'Spear Skin'
+  Formatting:
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -99,9 +109,9 @@ IRON_SHARPENER:
     Filled: '✔'
     Invalid: ''
 
-GOLD_SHARPENER:
+GOLDEN_SHARPENER:
   Enabled: true
-  Display: 'Gold Sharpener'
+  Display: 'Golden Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
     Filled: '<green><augment.icon> Sharpened'

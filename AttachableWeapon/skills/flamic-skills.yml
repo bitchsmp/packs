@@ -1,0 +1,13 @@
+flamic_projectile:
+  Skills:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamic_projectile_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+flamic_projectile_hit:
+  Skills:
+  - damage{a=1}
+  - ignite{ticks=100}
+flamic_projectile_end:
+  Skills:
+  - particle{particle=flame;speed=0.25;spread=0.01;count=20}
+flamic_projectile_tick:
+  Skills:
+  - particle{particle=small_flame;speed=0.03;spread=0.01;count=3}

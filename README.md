@@ -4,14 +4,14 @@ This repository stores packs made for Minecraft Bukkit/Spigot/Paper plugin "Myth
 Packs are mainly made by Dueris
 
 ## Note:
-For AttachableWeapon pack, remember to copy the stats.yml and paste it in the main /plugin/MythicMobs folder
+For AttachableWeapon pack, remember to copy the stats.yml and paste it in the main /plugin/MythicMobs folder, via init.sh or init.bat
 
 ## Dependencies:
 1. Minecraft Paper Server
    
    - Download here: https://papermc.io/downloads/paper
 
-   - Current Version: 1.21.10
+   - Current Version: 1.21.11
    
 
 
@@ -23,8 +23,8 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
 
    - Direct Download Links:
 
-     - MythicMobs: [5.11.0-20251126.041417-13](https://mvn.lumine.io/repository/maven/io/lumine/Mythic-Dist/5.11.0-SNAPSHOT/Mythic-Dist-5.11.0-20251126.041417-13.jar)
-     - MythicCrucible: [2.2.0-20251124.034619-171](https://mvn.lumine.io/repository/maven/io/lumine/MythicCrucible/2.2.0-SNAPSHOT/MythicCrucible-2.2.0-20251124.034619-171.jar)
+     - MythicMobs: [5.11.2-20260104.011315-10](https://mvn.lumine.io/repository/maven/io/lumine/Mythic-Dist/5.11.2-SNAPSHOT/Mythic-Dist-5.11.2-20260104.011315-10.jar)
+     - MythicCrucible: [2.4.0-20260102.205048-4](https://mvn.lumine.io/repository/maven/io/lumine/MythicCrucible/2.4.0-SNAPSHOT/MythicCrucible-2.4.0-20260102.205048-4.jar)
 
 
 3. LibsDisguise

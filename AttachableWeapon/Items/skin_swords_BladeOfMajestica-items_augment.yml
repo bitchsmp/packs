@@ -1,28 +1,14 @@
-#Each skin item is a representative item with a unique name(meaning not having the same as the weapon skin name) and item model&texture
-
-#Template:
-# Skin:
-#   Material: PAPER
-#   Display: 'Special: <gold>Representative Item Name'
-#   Options:
-#     ItemModel: minecraft:
-#   Lore:
-#   - <yellow><bold>Sword Skin:</bold> Skin Name
-#   - <white>
-#   - <gray>Description</gray>
-#   - <white>
-#   - "<light_purple>[Buff]"
-#   - "<white>  Buff Description"
-#   - "<red>[⚠Debuff]"
-#   - "<white>  Debuff Description"
-#   Augmentation:
-#     Type: SKIN_SWORD
-#     Tooltip: '<gold>Skin Name<gray> (Description)' #Rarity color + Name
-#     ReplaceItemModel: 
-#     ReplaceItemModelNamespace: minecraft
-#     Conditions:
-#     Skills:
-
+#  ███████████  ████                █████                                 ██████     ██████   ██████                ███                    █████     ███                    
+# ░░███░░░░░███░░███               ░░███                                 ███░░███   ░░██████ ██████                ░░░                    ░░███     ░░░                     
+#  ░███    ░███ ░███   ██████    ███████   ██████   █████      ██████   ░███ ░░░     ░███░█████░███   ██████       █████  ██████   █████  ███████   ████   ██████   ██████  
+#  ░██████████  ░███  ░░░░░███  ███░░███  ███░░███ ███░░      ███░░███ ███████       ░███░░███ ░███  ░░░░░███     ░░███  ███░░███ ███░░  ░░░███░   ░░███  ███░░███ ░░░░░███ 
+#  ░███░░░░░███ ░███   ███████ ░███ ░███ ░███████ ░░█████    ░███ ░███░░░███░        ░███ ░░░  ░███   ███████      ░███ ░███████ ░░█████   ░███     ░███ ░███ ░░░   ███████ 
+#  ░███    ░███ ░███  ███░░███ ░███ ░███ ░███░░░   ░░░░███   ░███ ░███  ░███         ░███      ░███  ███░░███      ░███ ░███░░░   ░░░░███  ░███ ███ ░███ ░███  ███ ███░░███ 
+#  ███████████  █████░░████████░░████████░░██████  ██████    ░░██████   █████        █████     █████░░████████     ░███ ░░██████  ██████   ░░█████  █████░░██████ ░░████████
+# ░░░░░░░░░░░  ░░░░░  ░░░░░░░░  ░░░░░░░░  ░░░░░░  ░░░░░░      ░░░░░░   ░░░░░        ░░░░░     ░░░░░  ░░░░░░░░      ░███  ░░░░░░  ░░░░░░     ░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░ 
+#                                                                                                              ███ ░███                                                     
+#                                                                                                             ░░██████                                                      
+#                                                                                                              ░░░░░░                                                       
 SkinCreationSplitter: #Internal Name
   Material: PAPER
   Display: 'Special: <gold>The End Of Reality' #Rarity color + Name
@@ -81,7 +67,7 @@ SkinNapalm_Claymore:
     - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
 
-SculkSwordSkin:
+SkinSculkSword:
   Material: PAPER
   Display: 'Special: <white>Elegant Sculk'
   Options:
@@ -104,7 +90,7 @@ SculkSwordSkin:
     Skills:
     - potion{type=DARKNESS;duration=140} @trigger ~onAttack
 
-SculkCleaverSkin:
+SkinSculkCleaver:
   Material: PAPER
   Display: 'Special: <yellow>Restful Sculk'
   Options:
@@ -142,7 +128,7 @@ SkinMoltenBlade:
   - <gray><italic>Sharper than most terrestrial blades</gray>
   - <white>
   - "<yellow>[Fresh]"
-  - "<white>  Deals 8 extra damage, but consumes five times as much durability"
+  - "<white>  Deals 8 extra damage, but has 1% chance of consuming 300 durability"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Molten Meteorite Blade<gray><italic> (Sharper than most terrestrial blades)'
@@ -152,10 +138,10 @@ SkinMoltenBlade:
     Stats:
     Skills:
     - stataura{forcesync=true;stat=ATTACK_DAMAGE;value=8;type=ADDITIVE;ticks=2;aura=MoltenBlade_damage_buff} ~onTimer:1 @self
-    - consumehelddurability{a=4} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
-    - consumehelddurability{a=4;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
-    - consumehelddurability{a=4;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
-    - consumehelddurability{a=4;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
+    - consumehelddurability{a=300;chance=0.01} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
+    - consumehelddurability{a=300;chance=0.005} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
+    - consumehelddurability{a=300;chance=0.0033} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
+    - consumehelddurability{a=300;chance=0.0025} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
 SkinMoltenSword:
   Material: PAPER
   Display: '<white>Forged Meteorite Ingot'
@@ -167,7 +153,7 @@ SkinMoltenSword:
   - <gray>Forged from a fallen star</gray>
   - <white>
   - "<yellow>[Fresh]"
-  - "<white>  Deals 4 extra damage, but consumes twice the durability"
+  - "<white>  Deals 4 extra damage, but has 1% chance of consuming 100 durability"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Molten Meteorite Sword<gray><italic> (Forged from a fallen star)'
@@ -177,10 +163,10 @@ SkinMoltenSword:
     Stats:
     Skills:
     - stataura{forcesync=true;stat=ATTACK_DAMAGE;value=4;type=ADDITIVE;ticks=2;aura=MoltenSword_damage_buff} ~onTimer:1 @self
-    - consumehelddurability{a=1} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
-    - consumehelddurability{a=1;chance=0.5} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
-    - consumehelddurability{a=1;chance=0.33} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
-    - consumehelddurability{a=1;chance=0.25} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
+    - consumehelddurability{a=100;chance=0.01} @self ~onAttack ?!hasEnchant{type=UNBREAKING}
+    - consumehelddurability{a=100;chance=0.005} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=1}
+    - consumehelddurability{a=100;chance=0.0033} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=2}
+    - consumehelddurability{a=100;chance=0.0025} @self ~onAttack ?hasEnchant{type=UNBREAKING;level=3}
 
 SkinFrostBlade:
   Material: PAPER
@@ -324,7 +310,7 @@ SkinMasamune:
     - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
 SkinSabre:
   Material: PAPER
-  Display: 'Smithing Style: Sabre'
+  Display: 'Blade Style: Sabre'
   Options:
     ItemModel: knowledge_book
   Lore:

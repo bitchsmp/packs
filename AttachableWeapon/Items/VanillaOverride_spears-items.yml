@@ -1,17 +1,18 @@
 # Rules:
 # Max Damage: x*1.2^3
-# x is base damage of the sword
+# x is base damage of the weapon
+# always down rounding
 
-attachable_wooden_sword:
-  id: wooden_sword
+attachable_wooden_spear:
+  id: wooden_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: WOODEN_SHARPENER
-    Amount: 2
+    Amount: 0
     Chance: 1
   Lore:
     Template: attachable_weapons
@@ -19,90 +20,90 @@ attachable_wooden_sword:
     
 
 
-attachable_stone_sword:
-  id: stone_sword
+attachable_stone_spear:
+  id: stone_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: STONE_SHARPENER
-    Amount: 3
+    Amount: 1
     Chance: 1
   Lore:
     Template: attachable_weapons
 
 
 
-attachable_copper_sword:
-  id: copper_sword
+attachable_copper_spear:
+  id: copper_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: COPPER_SHARPENER
-    Amount: 3
+    Amount: 1
     Chance: 1
   Lore:
     Template: attachable_weapons
 
-attachable_iron_sword:
-  id: iron_sword
+attachable_iron_spear:
+  id: iron_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: IRON_SHARPENER
-    Amount: 4
+    Amount: 2
     Chance: 1
   Lore:
     Template: attachable_weapons
 
-attachable_gold_sword:
-  id: golden_sword
+attachable_golden_spear:
+  id: golden_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLD_SHARPENER
-    Amount: 10 #Gold Weapon has additional 8 sharpener slots
+  - Type: GOLDEN_SHARPENER
+    Amount: 8 #Gold Weapon has additional 8 sharpener slots
     Chance: 1
   Lore:
     Template: attachable_weapons
 
 
-attachable_diamond_sword:
-  id: diamond_sword
+attachable_diamond_spear:
+  id: diamond_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: DIAMOND_SHARPENER
-    Amount: 5
+    Amount: 2
     Chance: 1
   Lore:
     Template: attachable_weapons
 
 
-attachable_netherite_sword:
-  id: netherite_sword
+attachable_netherite_spear:
+  id: netherite_spear
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_SWORD
+  - Type: SKIN_SPEAR
     Amount: 1
     Chance: 1
     MaxAmount: 1
   - Type: NETHERITE_SHARPENER
-    Amount: 5
+    Amount: 3
     Chance: 1
   Lore:
     Template: attachable_weapons

@@ -1,0 +1,42 @@
+SkinFrostAxe:
+  Material: PAPER
+  Display: '<white>Universal Fluid Tank: Liquid Nitrogen'
+  Options:
+    ItemModel: hbm:fluid_tank_nitrogen
+  Lore:
+  - <yellow><bold>Axe Skin:</bold> Frost Axe
+  - <white>
+  - <gray>Inflicts Freezing on hit</gray>
+  - <white>
+  - "<aqua>[Freezing]"
+  Augmentation:
+    Type: SKIN_AXE
+    Tooltip: '<white>Frost Axe<gray> (Inflict Freezing on hit)'
+    ReplaceItemModel: frostaxe
+    Conditions:
+    Stats:
+    Skills:
+    - freeze{ticks=140} @trigger ~onAttack
+
+SkinIcewhisper:
+  Material: PAPER
+  Display: '<white>Icewhisper'
+  Options:
+    ItemModel: snowball
+  Lore:
+  - <yellow><bold>Axe Skin:</bold> Icewhisper
+  - <white>
+  - <gray>Inflicts Freezing on hit, heals wielder based on the damage dealt</gray>
+  - <white>
+  - "<aqua>[Freezing]"
+  - "<gradient:#c10000:#ff8080>[Lifesteal]"
+  - "<white>  Heals wielder 10% of the damage dealt on attack"
+  Augmentation:
+    Type: SKIN_AXE
+    Tooltip: '<white>Icewhisper<gray> (Inflicts Freezing on hit, heals wielder based on the damage dealt)'
+    ReplaceItemModel: icewhisper
+    Conditions:
+    Stats:
+    Skills:
+    - freeze{ticks=140} @trigger ~onAttack
+    - stataura{stat=LIFESTEAL_CHANCE;value=1;type=ADD;aura=Icewhisper_lifesteal_buff;ticks=2} @self ~onTimer:1

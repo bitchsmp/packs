@@ -1,0 +1,72 @@
+unary_living_fire_orbital_projectile:
+  Skills:
+  - skill{skill=living_fire_projectile1} @self
+binary_living_fire_orbital_projectile:
+  Skills:
+  - skill{skill=living_fire_projectile1} @self
+  - skill{skill=living_fire_projectile9} @self
+quaternary_living_fire_orbital_projectile:
+  Skills:
+  - skill{skill=living_fire_projectile1} @self
+  - skill{skill=living_fire_projectile5} @self
+  - skill{skill=living_fire_projectile9} @self
+  - skill{skill=living_fire_projectile13} @self
+living_fire_orbital_projectile_Hit:
+  Skills:
+  - damage{a=1;sourceisorigin=true;damagecause=FIRE}
+  - ignite{ticks=100}
+living_fire_orbital_projectile_start:
+  Skills:
+  - modifyprojectile{trait=RADIUS;value=0.1;action=ADD;repeat=19;repeatinterval=3}
+living_fire_orbital_projectile_tick:
+  Skills:
+ # - particle{particle=small_flame} @origin
+
+living_fire_projectile1:
+  Skills:
+  - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_1} @self
+living_fire_projectile2:
+  Skills:
+  - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_2;startingPoint=2} @self
+living_fire_projectile3:
+  Skills:
+  - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_3;startingPoint=4} @self
+living_fire_projectile4:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_4;startingPoint=6} @self
+living_fire_projectile5:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_5;startingPoint=8} @self
+living_fire_projectile6:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_6;startingPoint=10} @self
+living_fire_projectile7:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_7;startingPoint=12} @self
+living_fire_projectile8:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_8;startingPoint=14} @self
+living_fire_projectile9:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_9;startingPoint=16} @self
+living_fire_projectile10:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_10;startingPoint=18} @self
+living_fire_projectile11:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_11;startingPoint=20} @self
+living_fire_projectile12:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_12;startingPoint=22} @self
+living_fire_projectile13:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_13;startingPoint=24} @self
+living_fire_projectile14:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_14;startingPoint=26} @self
+living_fire_projectile15:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_15;startingPoint=28} @self
+living_fire_projectile16:
+    Skills:
+    - orbital{bullettype=ITEM;material=fire_floor0_emissive;onHit=living_fire_orbital_projectile_Hit;onstartskill=living_fire_orbital_projectile_start;ontickskill=living_fire_orbital_projectile_tick;hr=0.35;vr=0.35;oy=1;points=32;radius=0.5;drawhitbox=false;interval=1;duration=128;charges=1;hnp=true;aura=living_fire_orbital_projectile_16;startingPoint=30} @self
