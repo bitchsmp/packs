@@ -1,3 +1,7 @@
+hakurei_gohei_skill2_collision_box_main_summon_removeAll:
+  Skills:
+  - remove @child
+  - sound{sound=block.respawn_anchor.deplete} @self
 hakurei_gohei_skill2_collision_box_summon:
   Skills:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=4;y=-3} ~onSpawn
