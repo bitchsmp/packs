@@ -16,16 +16,15 @@ hakurei_gohei:
   Skills:
 # Variable Skill System
   - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} @self ~onUse ?!varset{name=caster.hakureigohei}
-  - addVariable{value=1;name=caster.hakureigohei} ?varrange{name=caster.hakureigohei;value=<5} ~onUse @self ?crouching
-  - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} ?varrange{name=caster.hakureigohei;value=>4} ~onUse ?crouching
+  - addVariable{value=1;name=caster.hakureigohei} ?varrange{name=caster.hakureigohei;value=<4} ~onUse @self ?crouching
+  - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} ?varrange{name=caster.hakureigohei;value=>3} ~onUse ?crouching
   - skill{s=hakurei_gohei_skillChooseDisplay} ~onUse  @self ?crouching
 
 
   - skill{s=hakurei_gohei_skill1} @self ~onUse
-  - skill{s=hakurei_gohei_skill4} @self ~onUse
-  - skill{s=hakurei_gohei_skill2} @self ~onUse
   - skill{s=hakurei_gohei_skill3} @self ~onUse
-
+  - skill{s=hakurei_gohei_skill2} @self ~onUse
+  # - skill{s=hakurei_gohei_skill4} @self ~onUse
 
 # Leftclick
   - skill{s=hakurei_gohei_leftclick} @trigger ~onAttack

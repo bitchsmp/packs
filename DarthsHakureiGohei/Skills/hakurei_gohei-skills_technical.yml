@@ -408,3 +408,16 @@ hakurei_gohei_skill2_display:
   #bottom and top faces
   - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-5;yaw=0;pitch=0} @selfLocation
   - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-6;yaw=0;pitch=0} @selfLocation
+# hakurei_gohei_skill4_display_transformation:
+#   Skills:
+#   - displaytransformation{action=MULTIPLY;transformationtype=SCALE;value=1.05,1.05,1.05;repeat=5;repeatinterval=1}
+#   - displaytransformation{action=MULTIPLY;transformationtype=TRANSLATION;value=1.05,1.05,1.05;repeat=5;repeatinterval=1}
+#   - delay 6
+#   - displaytransformation{action=MULTIPLY;transformationtype=SCALE;value=1.3,1.3,1.3;repeat=4;repeatinterval=1}
+#   - displaytransformation{action=MULTIPLY;transformationtype=TRANSLATION;value=1.3,1.3,1.3;repeat=4;repeatinterval=1}
+#   - delay 4
+#   - displaytransformation{action=MULTIPLY;transformationtype=SCALE;value=1.1,1.1,1.1;repeat=5;repeatinterval=1}
+#   - displaytransformation{action=MULTIPLY;transformationtype=TRANSLATION;value=1.1,1.1,1.1;repeat=5;repeatinterval=1}
+#   - delay 6
+#   - displaytransformation{action=MULTIPLY;transformationtype=SCALE;value=1.01,1.01,1.01;repeat=2;repeatinterval=1}
+#   - displaytransformation{action=MULTIPLY;transformationtype=TRANSLATION;value=1.01,1.01,1.01;repeat=2;repeatinterval=1}

@@ -80,24 +80,6 @@ hakurei_gohei_skill1_projectile_hit:
 hakurei_gohei_skill1_projectile_hitMonster:
   Skills:
   - damage{amount=2;preventimmunity=true}
-#Skill 4
-hakurei_gohei_skill4: 
-  Cooldown: 3
-  OnCooldownSkill: hakurei_gohei_skill4_onCooldown
-  Conditions:
-  - isCrouching false
-  - varequals{name=caster.hakureigohei;value=4}
-  Skills:
- 
-  - effect:particlesphere{particle=REDDUST;color=#ffffff;amount=600;radius=10;delay=1} @self
-  - summon{type=hakurei_gohei_skill4_marker} @self
-#skill4 On cooldown
-hakurei_gohei_skill4_onCooldown: 
-  Cooldown: 1
-  Skills:
-  - randommessage{m="&cSkill on cooldown!";repeat=1} @self
-
-
 
 
 #Skill 2
@@ -195,3 +177,21 @@ hakurei_gohei_ShiftRightclick_effect:
   - polygon{db=0.25;y=0.5;x=2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
   - polygon{db=0.25;y=0.5;x=-2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
   - polygon{db=0.25;y=2.65;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+# #Skill 4
+# hakurei_gohei_skill4: 
+#   Cooldown: 3
+#   OnCooldownSkill: hakurei_gohei_skill4_onCooldown
+#   Conditions:
+#   - isCrouching false
+#   - varequals{name=caster.hakureigohei;value=4}
+#   Skills:
+ 
+# #  - effect:particlesphere{particle=REDDUST;color=#ffffff;amount=600;radius=10;delay=1} @self
+#   - summon{type=hakurei_gohei_skill4_marker;pitch=0;yaw=0} @selfLocation{y=1}
+#skill4 On cooldown
+# hakurei_gohei_skill4_onCooldown: 
+#   Cooldown: 1
+#   Skills:
+#   - randommessage{m="&cSkill on cooldown!";repeat=1} @self
+
+
