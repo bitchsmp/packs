@@ -72,7 +72,7 @@ attachable_golden_spear:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLD_SHARPENER
+  - Type: GOLDEN_SHARPENER
     Amount: 8 #Gold Weapon has additional 8 sharpener slots
     Chance: 1
   Lore:
