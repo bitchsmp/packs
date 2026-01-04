@@ -83,14 +83,14 @@ hakurei_gohei_skill1_projectile_hitMonster:
 
 #Skill 2
 hakurei_gohei_skill2: 
-  Cooldown: 3
+  Cooldown: 40
   Conditions:
   - isCrouching false
   - varequals{name=caster.hakureigohei;value=2}
   Skills:
   - summon{type=hakurei_gohei_skill2_marker} @self
 hakurei_gohei_skill3:
-  Cooldown: 5
+  Cooldown: 10
   Conditions:
   - isCrouching false
   - varequals{name=caster.hakureigohei;value=3}
