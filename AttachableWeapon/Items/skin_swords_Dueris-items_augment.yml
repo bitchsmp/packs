@@ -1,5 +1,5 @@
 SkinUnaryLivingFire:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: 'Special: <white>Living Flame'
   Options:
     ItemModel: minecraft:fire_floor0_emissive
@@ -18,7 +18,7 @@ SkinUnaryLivingFire:
     - skill{s=unary_living_fire_orbital_projectile} @self ~onTimer:64
 
 SkinBinaryLivingFire:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: 'Special: <white>Loving Flames'
   Options:
     ItemModel: minecraft:fire_floor0_emissive
@@ -36,7 +36,7 @@ SkinBinaryLivingFire:
     Skills:
     - skill{s=binary_living_fire_orbital_projectile} @self ~onTimer:64
 SkinQuaternaryLivingFire:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: 'Special: <white>Squad of Living Flames'
   Options:
     ItemModel: minecraft:fire_floor0_emissive
@@ -55,7 +55,7 @@ SkinQuaternaryLivingFire:
     - skill{s=quaternary_living_fire_orbital_projectile} @self ~onTimer:64
 
 SkinBreezer:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: "Special: <white>Wind Essence"
   Options:
     ItemModel: minecraft:wind_charge

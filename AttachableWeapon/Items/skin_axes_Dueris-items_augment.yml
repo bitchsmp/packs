@@ -1,5 +1,5 @@
 SkinFlamic:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: 'Special: <gold>Flamic Essence'
   Options:
     ItemModel: minecraft:fire_charge

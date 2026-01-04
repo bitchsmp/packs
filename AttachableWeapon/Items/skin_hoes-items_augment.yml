@@ -2,7 +2,7 @@
 
 #Template:
 # Skin:
-#   Material: PAPER
+#   Material: TURTLE_SCUTE
 #   Display: 'Special: <gold>Representative Item Name'
 #   Options:
 #     ItemModel: minecraft:
@@ -25,7 +25,7 @@
 #     Skills:
 
 SkinSculkScythe:
-  Material: PAPER
+  Material: TURTLE_SCUTE
   Display: 'Special: <white>Freaky Sculk'
   Options:
     ItemModel: minecraft:sculk_sensor
