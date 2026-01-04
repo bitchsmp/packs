@@ -21,7 +21,7 @@ attachable_weapons:
     - '{augments-each:STONE_SHARPENER}<augment.display>'
     - '{augments-each:COPPER_SHARPENER}<augment.display>'
     - '{augments-each:IRON_SHARPENER}<augment.display>'
-    - '{augments-each:GOLD_SHARPENER}<augment.display>'
+    - '{augments-each:GOLDEN_SHARPENER}<augment.display>'
     - '{augments-each:DIAMOND_SHARPENER}<augment.display>'
     - '{augments-each:NETHERITE_SHARPENER}<augment.display>'
     - '{augments-each:MACE_SHARPENER}<augment.display>'

@@ -64,7 +64,7 @@ attachable_iron_spear:
   Lore:
     Template: attachable_weapons
 
-attachable_gold_spear:
+attachable_golden_spear:
   id: golden_spear
   EquipSlot: HAND
   AugmentationSlots:

@@ -45,13 +45,13 @@ SharpenerIron:
     Conditions:
     Stats:
     - ATTACK_DAMAGE 1 ADDITIVE
-SharpenerGold:
+SharpenerGolden:
   Material: IRON_NUGGET
-  Display: '<yellow>Gold <gold>Sharpener'
+  Display: '<yellow>Golden <gold>Sharpener'
   Lore:
   - '<green>Add 1 Attack Damage to any gold weapons'
   Augmentation:
-    Type: GOLD_SHARPENER
+    Type: GOLDEN_SHARPENER
     Tooltip: 'Add 1 Attack Damage'
     Conditions:
     Stats:

@@ -109,9 +109,9 @@ IRON_SHARPENER:
     Filled: '✔'
     Invalid: ''
 
-GOLD_SHARPENER:
+GOLDEN_SHARPENER:
   Enabled: true
-  Display: 'Gold Sharpener'
+  Display: 'Golden Sharpener'
   Formatting:
     Empty: '<red><augment.icon> Not sharpened'
     Filled: '<green><augment.icon> Sharpened'

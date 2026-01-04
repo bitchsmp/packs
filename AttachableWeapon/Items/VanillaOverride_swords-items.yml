@@ -64,7 +64,7 @@ attachable_iron_sword:
   Lore:
     Template: attachable_weapons
 
-attachable_gold_sword:
+attachable_golden_sword:
   id: golden_sword
   EquipSlot: HAND
   AugmentationSlots:
@@ -72,7 +72,7 @@ attachable_gold_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLD_SHARPENER
+  - Type: GOLDEN_SHARPENER
     Amount: 10 #Gold Weapon has additional 8 sharpener slots
     Chance: 1
   Lore:
