@@ -8,7 +8,7 @@ hakurei_gohei_rightclick_marker:
    - remove{delay=24} @self ~onSpawn 
 
 
-hakurei_gohei_ShiftRightclick_marker:
+hakurei_gohei_skill2_marker:
   Type: marker
   Options:
   Skills:

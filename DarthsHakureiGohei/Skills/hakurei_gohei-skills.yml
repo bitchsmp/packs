@@ -101,36 +101,22 @@ hakurei_gohei_rightclick_onCooldown:
 
 
 #Skill 2
-hakurei_gohei_ShiftRightclick: 
-  OnCooldownSkill: hakurei_gohei_ShiftRightclick_onCooldown
+hakurei_gohei_skill2: 
+  OnCooldownSkill: hakurei_gohei_skill2_onCooldown
   Cooldown: 3
   Conditions:
   - isCrouching false
   - varequals{name=caster.hakureigohei;value=2}
   Skills:
-  - summon{type=hakurei_gohei_ShiftRightclick_marker} @self
+  - summon{type=hakurei_gohei_skill2_marker} @self
 
 
-hakurei_gohei_ShiftRightclick_onCooldown: 
+hakurei_gohei_skill2_onCooldown: 
   Cooldown: 1
   Conditions:
   Skills:
   - randommessage{m="&cSkill on cooldown!";repeat=1} @self
   
-
-# Skill 2 Polygon effect
-hakurei_gohei_ShiftRightclick_effect:
-  Skills:
-    # Effect
-  - polygon{db=0.25;y=-3.2;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
-  - polygon{db=0.25;y=1;x=4.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
-  - polygon{db=0.25;y=1;x=-4.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
-  - polygon{db=0.25;y=5.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
-  - polygon{db=0.25;y=-1.6;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
-  - polygon{db=0.25;y=0.5;x=2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
-  - polygon{db=0.25;y=0.5;x=-2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
-  - polygon{db=0.25;y=2.65;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
-
 
 hakurei_gohei_skill3:
   Cooldown: 2
@@ -195,3 +181,17 @@ hakurei_gohei_skill3_OrbitalBall_Hit:
 hakurei_gohei_skill3_OrbitalBall_start:
   Skills:
   - modifyprojectile{trait=RADIUS;value=0.25;action=ADD;repeat=12;repeatinterval=3}
+
+#Deprecated
+# Skill 2 Polygon effect
+hakurei_gohei_ShiftRightclick_effect:
+  Skills:
+    # Effect
+  - polygon{db=0.25;y=-3.2;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+  - polygon{db=0.25;y=1;x=4.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=1;x=-4.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=5.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+  - polygon{db=0.25;y=-1.6;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+  - polygon{db=0.25;y=0.5;x=2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=0.5;x=-2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+  - polygon{db=0.25;y=2.65;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
