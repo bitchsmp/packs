@@ -1,29 +1,3 @@
-#Each skin item is a representative item with a unique name(meaning not having the same as the weapon skin name) and item model&texture
-
-#Template:
-# Skin:
-#   Material: PAPER
-#   Display: 'Special: <gold>Representative Item Name'
-#   Options:
-#     ItemModel: minecraft:
-#   Lore:
-#   - <yellow><bold>Sword Skin:</bold> Skin Name
-#   - <white>
-#   - <gray>Description</gray>
-#   - <white>
-#   - "<light_purple>[Buff]"
-#   - "<white>  Buff Description"
-#   - "<red>[⚠Debuff]"
-#   - "<white>  Debuff Description"
-#   Augmentation:
-#     Type: SKIN_SWORD
-#     Tooltip: '<gold>Skin Name<gray> (Description)' #Rarity color + Name
-#     ReplaceItemModel: 
-#     ReplaceItemModelNamespace: minecraft
-#     Conditions:
-#     Skills:
-
-
 #  ███████████  ████                █████                                 ██████     ██████   ██████                ███                    █████     ███                    
 # ░░███░░░░░███░░███               ░░███                                 ███░░███   ░░██████ ██████                ░░░                    ░░███     ░░░                     
 #  ░███    ░███ ░███   ██████    ███████   ██████   █████      ██████   ░███ ░░░     ░███░█████░███   ██████       █████  ██████   █████  ███████   ████   ██████   ██████  
