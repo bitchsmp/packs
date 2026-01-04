@@ -394,7 +394,8 @@ hakurei_gohei_skill2_display:
   Skills:
   - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-1;yaw=0;pitch=0} @selfLocation
   - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-2;yaw=0;pitch=0} @selfLocation
-  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-1;yaw=90;pitch=0} @selfLocation
-  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-2;yaw=90;pitch=0} @selfLocation
-  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-3;yaw=0;pitch=0} @selfLocation
-  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-4;yaw=0;pitch=0} @selfLocation
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-3;yaw=90;pitch=0} @selfLocation
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-4;yaw=90;pitch=0} @selfLocation
+  #bottom and top faces
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-5;yaw=0;pitch=0} @selfLocation
+  - spawnMob{amount=1;onsurface=false;type=hakurei_gohei_skill2_display-6;yaw=0;pitch=0} @selfLocation

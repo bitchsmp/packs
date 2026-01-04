@@ -54,23 +54,23 @@ hakurei_gohei_skill2_display-1:
   Type: block_display
   DisplayOptions:
     Block: white_stained_glass
-    Scale: 9,9,1
-    Translation: -4.5,-4,-4.5
+    Scale: 8.95,8.95,0.95
+    Translation: -4.475,-3.975,-4.475
   Skills:
   - remove{delay=1000} @self ~onSpawn
 hakurei_gohei_skill2_display-2:
   Type: block_display
   DisplayOptions:
     Block: white_stained_glass
-    Scale: 9,9,1
-    Translation: -4.5,-4,3.5
+    Scale: 8.95,8.95,0.95
+    Translation: -4.475,-3.975,3.475
   Skills:
   - remove{delay=1000} @self ~onSpawn
 hakurei_gohei_skill2_display-3:
   Type: block_display
   DisplayOptions:
     Block: white_stained_glass
-    Scale: 9,1,9
+    Scale: 9,9,1
     Translation: -4.5,-4,-4.5
   Skills:
   - remove{delay=1000} @self ~onSpawn
@@ -78,7 +78,25 @@ hakurei_gohei_skill2_display-4:
   Type: block_display
   DisplayOptions:
     Block: white_stained_glass
-    Scale: 9,1,9
-    Translation: -4.5,4,-4.5
+    Scale: 9,9,1
+    Translation: -4.5,-4,3.5
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+
+
+hakurei_gohei_skill2_display-5:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 9.1,1.1,9.1
+    Translation: -4.55,-4.05,-4.55
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+hakurei_gohei_skill2_display-6:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 9.1,1.1,9.1
+    Translation: -4.55,4.05,-4.55
   Skills:
   - remove{delay=1000} @self ~onSpawn
