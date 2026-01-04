@@ -80,19 +80,19 @@ hakurei_gohei_skill1_projectile_hit:
 hakurei_gohei_skill1_projectile_hitMonster:
   Skills:
   - damage{amount=2;preventimmunity=true}
-#Skill 2
-hakurei_gohei_rightclick: 
+#Skill 4
+hakurei_gohei_skill4: 
   Cooldown: 3
-  OnCooldownSkill: hakurei_gohei_rightclick_onCooldown
+  OnCooldownSkill: hakurei_gohei_skill4_onCooldown
   Conditions:
   - isCrouching false
   - varequals{name=caster.hakureigohei;value=4}
   Skills:
  
   - effect:particlesphere{particle=REDDUST;color=#ffffff;amount=600;radius=10;delay=1} @self
-  - summon{type=hakurei_gohei_rightclick_marker} @self
-#Rightclick skill On cooldown
-hakurei_gohei_rightclick_onCooldown: 
+  - summon{type=hakurei_gohei_skill4_marker} @self
+#skill4 On cooldown
+hakurei_gohei_skill4_onCooldown: 
   Cooldown: 1
   Skills:
   - randommessage{m="&cSkill on cooldown!";repeat=1} @self
