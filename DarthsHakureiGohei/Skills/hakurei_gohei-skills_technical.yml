@@ -34,6 +34,7 @@ hakurei_gohei_skill2_collision_box_summon:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=4;y=3} ~onSpawn
 
   #side faces
+  - delay 1
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=3;y=-3} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=3;y=-2} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=3;y=-1} ~onSpawn
@@ -83,6 +84,7 @@ hakurei_gohei_skill2_collision_box_summon:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=-3;y=1} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=-3;y=2} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=-3;y=3} ~onSpawn
+  - delay 1
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=3;y=-3} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=3;y=-2} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=3;y=-1} ~onSpawn
@@ -146,6 +148,7 @@ hakurei_gohei_skill2_collision_box_summon:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=3;z=-4;y=1} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=3;z=-4;y=2} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=3;z=-4;y=3} ~onSpawn
+  - delay 1
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=2;z=4;y=-3} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=2;z=4;y=-2} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=2;z=4;y=-1} ~onSpawn
@@ -231,6 +234,7 @@ hakurei_gohei_skill2_collision_box_summon:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-3;z=-4;y=2} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-3;z=-4;y=3} ~onSpawn
   # bottom faces
+  - delay 1
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=4;y=-4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=3;y=-4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=2;y=-4} ~onSpawn
@@ -313,6 +317,7 @@ hakurei_gohei_skill2_collision_box_summon:
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=-3;y=-4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=-4;z=-4;y=-4} ~onSpawn
   #Top faces
+  - delay 1
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=4;y=4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=3;y=4} ~onSpawn
   - summon{type=hakurei_gohei_skill2_collision_box;onsurface=false} @selfLocation{x=4;z=2;y=4} ~onSpawn
