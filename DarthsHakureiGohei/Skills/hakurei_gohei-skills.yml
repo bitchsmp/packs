@@ -1,9 +1,8 @@
 hakurei_gohei_skillChooseDisplay:
   Skills:
-  - actionmessage{message="<caster.var.hakureigohei>"}
-  - message{message=<caster.var.hakureigohei>}
-
-
+  - actionmessage{message="Chosen spell:<aqua> Dream Sign - Amulet"} ?varequals{name=caster.hakureigohei;value=1}
+  - actionmessage{message="Chosen spell:<gold> Dream Sign - Barrier"} ?varequals{name=caster.hakureigohei;value=2}
+  - actionmessage{message="Chosen spell:<red> Fantasy Seal - Focused"} ?varequals{name=caster.hakureigohei;value=3}
 #Normal Attack
 hakurei_gohei_leftclick: 
   Conditions:
