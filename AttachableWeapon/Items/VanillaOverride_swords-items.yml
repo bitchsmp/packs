@@ -1,6 +1,7 @@
 # Rules:
 # Max Damage: x*1.2^3
 # x is base damage of the sword
+# always down rounding
 
 attachable_wooden_sword:
   id: wooden_sword

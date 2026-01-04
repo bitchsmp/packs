@@ -58,6 +58,16 @@ SKIN_CROSSBOW:
     Empty: '☆'
     Filled: '★'
     Invalid: ''
+SKIN_SPEAR:
+  Enabled: true
+  Display: 'Spear Skin'
+  Formatting:
+    Empty: '<augment.icon> Default <augment.type>'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
+  Icons:
+    Empty: '☆'
+    Filled: '★'
+    Invalid: ''
 WOODEN_SHARPENER:
   Enabled: true
   Display: 'Wooden Sharpener'
