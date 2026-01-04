@@ -138,6 +138,7 @@ hakurei_gohei_skill3:
   - isCrouching false
   - varequals{name=caster.hakureigohei;value=3}
   - enchantingLevel{level=>3} true
+  - HasItem{amount=>0;strict=true;types=paper}
   Skills:
   - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=32;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_tagProjectile_hit;drawhitbox=true;stopatentity=true;hr=1;vr=1;hnp=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 
