@@ -18,10 +18,7 @@ hakurei_gohei_leftclick:
   Skills:
     - effect:lightning 
     - damage{amount=20;ignoreArmor=true;ii=true;delay=2;ir=true}
-
-
 #Skill 1
-  
 hakurei_gohei_skill1:
   Cooldown: 3
   Conditions:
@@ -85,16 +82,17 @@ hakurei_gohei_skill1_projectile_hit:
 hakurei_gohei_skill1_projectile_hitMonster:
   Skills:
   - damage{amount=2;preventimmunity=true}
-
-
 #Skill 2
 hakurei_gohei_skill2: 
-  Cooldown: 40
+  Cooldown: 60
   Conditions:
   - isCrouching false
   - varequals{name=caster.hakureigohei;value=2}
+  - HasItem{amount=>5;strict=true;types=paper}
   Skills:
-  - summon{type=hakurei_gohei_skill2_marker} @self
+  - command{command="clear <caster.name> paper 6";asop=true}
+  - summon{type=hakurei_gohei_skill2_marker} @self 
+#Skill 3
 hakurei_gohei_skill3:
   Cooldown: 10
   Conditions:
