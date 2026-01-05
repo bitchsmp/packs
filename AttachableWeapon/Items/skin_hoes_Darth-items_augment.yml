@@ -19,7 +19,7 @@ SkinPurification_rod:
   - "<gray>      Fire bursts of amulets, dealing 2 damage to monsters, 1 damage to other mobs."
   - "<gray>      Requires atleast <bold>4 papers</bold> to cast properly. Cooldown: 3 seconds"
   - "<gold>    Dream Sign - Barrier"
-  - "<gray>      Build a protective barrier with 100HP that pushes all mobs away."
+  - "<gray>      Build a protective barrier with 100HP that pushes all mobs away. The barrier disappears after 25 seconds"
   - "<gray>      Requires atleast <bold>6 papers</bold> to cast. Cooldown: 60 seconds"
   - "<red>    Fantasy Seal - Focused"
   - "<gray>      Fire a burst of concentrated magic, each explodes with the power equivelent to a TNT"
