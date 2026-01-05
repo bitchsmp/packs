@@ -1,8 +1,14 @@
 hakurei_gohei_skillChooseDisplay:
   Skills:
-  - actionmessage{message="Chosen spell:<aqua> Dream Sign - Amulet"} ?varequals{name=caster.hakureigohei;value=1}
-  - actionmessage{message="Chosen spell:<gold> Dream Sign - Barrier"} ?varequals{name=caster.hakureigohei;value=2}
-  - actionmessage{message="Chosen spell:<red> Fantasy Seal - Focused"} ?varequals{name=caster.hakureigohei;value=3}
+  - actionmessage{message="<gray>Cooldown remaining:<aqua> <caster.skill.hakurei_gohei_skill1.cooldown>"} ?varequals{name=caster.hakureigohei;value=1} ?skillOnCooldown{skill=hakurei_gohei_skill1} ?!crouching
+  - actionmessage{message="<gray>Cooldown remaining:<gold> <caster.skill.hakurei_gohei_skill2.cooldown>"} ?varequals{name=caster.hakureigohei;value=2} ?skillOnCooldown{skill=hakurei_gohei_skill2} ?!crouching
+  - actionmessage{message="<gray>Cooldown remaining:<red> <caster.skill.hakurei_gohei_skill3.cooldown>"} ?varequals{name=caster.hakureigohei;value=3} ?skillOnCooldown{skill=hakurei_gohei_skill3} ?!crouching
+  - actionmessage{message="Spell<aqua> Ready"} ?varequals{name=caster.hakureigohei;value=1} ?!skillOnCooldown{skill=hakurei_gohei_skill1} ?!crouching
+  - actionmessage{message="Spell<gold> Ready"} ?varequals{name=caster.hakureigohei;value=2} ?!skillOnCooldown{skill=hakurei_gohei_skill2} ?!crouching
+  - actionmessage{message="Spell<red> Ready"} ?varequals{name=caster.hakureigohei;value=3} ?!skillOnCooldown{skill=hakurei_gohei_skill3} ?!crouching
+  - actionmessage{message="Chosen spell:<aqua> Dream Sign - Amulet"} ?varequals{name=caster.hakureigohei;value=1} ?crouching
+  - actionmessage{message="Chosen spell:<gold> Dream Sign - Barrier"} ?varequals{name=caster.hakureigohei;value=2} ?crouching
+  - actionmessage{message="Chosen spell:<red> Fantasy Seal - Focused"} ?varequals{name=caster.hakureigohei;value=3} ?crouching
 #Normal Attack
 hakurei_gohei_leftclick: 
   Conditions:

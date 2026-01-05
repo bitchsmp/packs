@@ -18,10 +18,9 @@ hakurei_gohei:
   - setvar{value=0;scope=caster;name=caster.hakureigohei;type=INTEGER} @self ~onUse ?!varset{name=caster.hakureigohei} ?crouching
   - addVariable{value=1;name=caster.hakureigohei} ?varrange{name=caster.hakureigohei;value=<4} ~onUse @self ?crouching
   - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} ?varrange{name=caster.hakureigohei;value=>3} ~onUse ?crouching
-  - skill{s=hakurei_gohei_skillChooseDisplay} ~onUse  @self
-  - actionmessage{message="<gray>Cooldown remaining:<aqua> <caster.skill.hakurei_gohei_skill1.cooldown>"} ~onUse @self ?varequals{name=caster.hakureigohei;value=1} ?skillOnCooldown{skill=hakurei_gohei_skill1}
-  - actionmessage{message="<gray>Cooldown remaining:<gold> <caster.skill.hakurei_gohei_skill2.cooldown>"} ~onUse @self ?varequals{name=caster.hakureigohei;value=2} ?skillOnCooldown{skill=hakurei_gohei_skill2}
-  - actionmessage{message="<gray>Cooldown remaining:<red> <caster.skill.hakurei_gohei_skill3.cooldown>"} ~onUse @self ?varequals{name=caster.hakureigohei;value=3} ?skillOnCooldown{skill=hakurei_gohei_skill3}
+
+
+  - skill{s=hakurei_gohei_skillChooseDisplay} ~onTimer:1  @self
 
   - skill{s=hakurei_gohei_skill1} @self ~onUse
   - skill{s=hakurei_gohei_skill3} @self ~onUse
