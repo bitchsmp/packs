@@ -1,0 +1,120 @@
+# hakurei_gohei_skill4_marker:
+#   Type: block_display
+#   DisplayOptions:
+#     Block: white_stained_glass
+#     Scale: 1,1,1
+#     Translation: -0.5,-0.5,-0.5
+#   Options:
+#   Skills:
+
+#   #  - effect:particlesphere{particle=reddust;amount=600;radius=10;delay=20} @Self ~onSpawn
+#   #  - damage{a=2;pi=true;repeat=6;repeatInterval=1;delay=20;pk=true;ii=true} @EIR{r=10;target=monster} ~onSpawn
+#   - skill{skill=hakurei_gohei_skill4_display_transformation} @self ~onSpawn
+#   - remove{delay=20} @self ~onSpawn 
+
+
+hakurei_gohei_skill2_marker:
+  Type: marker
+  Options:
+  Skills:
+  #function
+ # - throw{velocity=3;velocityY=1;repeat=39;repeatinterval=1} @EIR{r=5;ignore=owner;shape=CUBE} ~onspawn
+  - throw{velocity=20;velocityY=1} @EIR{r=5;ignore=owner;shape=CUBE} ~onspawn
+
+  #collision box creation
+  - summon{type=hakurei_gohei_skill2_collision_box_main;onsurface=false;delay=2} @selfLocation{} ~onSpawn
+  #remove
+  - sudoskill{delay=502;skill=hakurei_gohei_skill2_collision_box_main_summon_removeAll} @child ~onSpawn
+  - remove{delay=502} @child ~onSpawn
+  - remove{delay=503} @self ~onSpawn
+
+
+hakurei_gohei_skill2_collision_box_main:
+  Type: VEX
+  Health: 100
+  Options:
+    NoAI: true
+    Silent: true
+    Invisible: true
+    PreventOtherDrops: true
+    VisibleByDefault: false
+    Collidable: false
+    Color: WHITE
+  Skills:
+  - skill{skill=hakurei_gohei_skill2_collision_box_summon} ~onSpawn
+  - skill{skill=hakurei_gohei_skill2_display} ~onSpawn
+  - skill{skill=hakurei_gohei_skill2_collision_box_main_summon_removeAll} ~onDeath #Remove
+  - remove{delay=1000} @self ~onSpawnorload 
+hakurei_gohei_skill2_collision_box:
+  Type: Shulker
+  Options:
+    NoAI: true
+    Silent: true
+    Invisible: true
+    PreventOtherDrops: true
+    VisibleByDefault: true
+    PassthroughDamage: true
+    Color: WHITE
+  Skills:
+  - remove{delay=1000} @self ~onSpawnorload 
+
+hakurei_gohei_skill2_display-1:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 8.95,8.95,0.95
+    Translation: -4.475,-3.975,-4.475
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+hakurei_gohei_skill2_display-2:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 8.95,8.95,0.95
+    Translation: -4.475,-3.975,3.475
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+hakurei_gohei_skill2_display-3:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 9,9,1
+    Translation: -4.5,-4,-4.5
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+hakurei_gohei_skill2_display-4:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 9,9,1
+    Translation: -4.5,-4,3.5
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+
+
+hakurei_gohei_skill2_display-5:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 9.1,1.1,9.1
+    Translation: -4.55,-4.05,-4.55
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+hakurei_gohei_skill2_display-6:
+  Type: block_display
+  DisplayOptions:
+    Block: white_stained_glass
+    Scale: 9.1,1.1,9.1
+    Translation: -4.55,4.05,-4.55
+  Skills:
+  - remove{delay=1000} @self ~onSpawn
+
+hakurei_gohei_skill3_BallTargetMarker:
+  Type: Interaction
+  Options:
+    Width: 0.1
+    Height: 0.1
+    Responsive: false
+  Skills:
+  - remove{delay=100} @Self ~onSpawnorload 
+  - sudoskill{skill=hakurei_gohei_skill3_ball_projectile;setcasterastrigger=true;delay=1} @Owner{limit=1} ~onSpawnorload 

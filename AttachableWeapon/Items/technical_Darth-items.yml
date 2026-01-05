@@ -1,0 +1,10 @@
+amulet_danmaku-1:
+  Id: paper
+  Display: Amulet
+  Options:
+    ItemModel: touhou_little_maid:amulet_danmaku-1
+amulet_danmaku-13:
+  Id: paper
+  Display: Amulet
+  Options:
+    ItemModel: touhou_little_maid:amulet_danmaku-13
