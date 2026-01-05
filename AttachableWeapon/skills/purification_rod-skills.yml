@@ -14,10 +14,11 @@ hakurei_gohei_leftclick:
   Conditions:
   - itemrecharging false
   TargetConditions:
+  - mmType{types=hakurei_gohei_skill2_collision_box_main} false
   - isMonster true
   Skills:
-    - effect:lightning 
-    - damage{amount=20;ignoreArmor=true;ii=true;delay=2;ir=true}
+  - effect:lightning 
+  - damage{amount=20;ignoreArmor=true;ii=true;delay=2;ir=true}
 #Skill 1
 hakurei_gohei_skill1:
   Cooldown: 3
