@@ -17,7 +17,27 @@ SkinFlamic:
     ReplaceItemModel:
     Conditions:
     Skills:
-    - skill{s=flamic_projectile;cooldown=3} ~onSwing 
+    - skill{s=flamic_projectile;cooldown=3} ~onSwing
+SkinFlamity:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Firey Energy'
+  Options:
+    ItemModel: minecraft:fire_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Flamity
+  - <white>
+  - <gray>Fire an explosive fireball on swing</gray>
+  - <white>
+  - "<gold>[Fireball]"
+  - "<white>  Fire an explosive fireball on swing"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Flamity<gray> (Fire an explosive fireball on swing)'
+    ReplaceItemModel:
+    Conditions:
+    Skills:
+    - skill{s=flamity_projectile;cooldown=3} ~onSwing 
 SkinSoulFlamic:
   Material: TURTLE_SCUTE
   Display: 'Special: <white>Soul Flame Essence'

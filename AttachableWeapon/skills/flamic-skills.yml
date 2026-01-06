@@ -11,7 +11,19 @@ flamic_projectile_end:
 flamic_projectile_tick:
   Skills:
   - particle{particle=small_flame;speed=0.03;spread=0.01;count=3}
-
+#Flamity
+flamity_projectile:
+  Skills:
+  - projectile{bullettype=SMALLBLOCK;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;velocity=24;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamity_projectile_hit;onendskill=flamity_projectile_end;ontickskill=flamity_projectile_tick;drawhitbox=true;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+flamity_projectile_hit:
+  Skills:
+  - ignite{ticks=100}
+flamity_projectile_end:
+  Skills:
+  - explode{yield=1;blockdamage=false}
+flamity_projectile_tick:
+  Skills:
+  - particle{particle=small_flame;speed=0.03;spread=0;count=3}
 soul_flamic_projectile:
   Skills:
   - projectile{sfo=0.1;tickinterpolation=0;velocity=28;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=soul_flamic_projectile_hit;onendskill=soul_flamic_projectile_end;ontickskill=soul_flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
