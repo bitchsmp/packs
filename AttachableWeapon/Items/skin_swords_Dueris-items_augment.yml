@@ -1,6 +1,6 @@
 SkinFlamic:
   Material: TURTLE_SCUTE
-  Display: 'Special: <white>Flamic Essence'
+  Display: 'Special: <white>Flame Essence'
   Options:
     ItemModel: minecraft:fire_charge
     Glint: true
@@ -18,6 +18,26 @@ SkinFlamic:
     Conditions:
     Skills:
     - skill{s=flamic_projectile;cooldown=3} ~onSwing 
+SkinSoulFlamic:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Soul Flame Essence'
+  Options:
+    ItemModel: minecraft:fire_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold>Soul Flamic
+  - <white>
+  - <gray>Fire a flame gust on swing</gray>
+  - <white>
+  - "<light_purple>[Soul Flame gust]"
+  - "<white>  Fire a soul flame gust on swing"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Soul Flamic<gray> (Fire a soul flame gust on swing)'
+    ReplaceItemModel:
+    Conditions:
+    Skills:
+    - skill{s=soul_flamic_projectile;cooldown=3} ~onSwing 
   
 SkinBreezer:
   Material: TURTLE_SCUTE

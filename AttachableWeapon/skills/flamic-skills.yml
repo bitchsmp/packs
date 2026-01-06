@@ -11,3 +11,18 @@ flamic_projectile_end:
 flamic_projectile_tick:
   Skills:
   - particle{particle=small_flame;speed=0.03;spread=0.01;count=3}
+
+soul_flamic_projectile:
+  Skills:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=28;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=soul_flamic_projectile_hit;onendskill=soul_flamic_projectile_end;ontickskill=soul_flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+soul_flamic_projectile_hit:
+  Skills:
+  - damage{a=5}
+  - ignite{ticks=200}
+soul_flamic_projectile_end:
+  Skills:
+  - particle{particle=soulflame;speed=0.3;spread=0.02;count=24}
+  - particle{particle=soul;speed=0.05;spread=0.2;count=16}
+soul_flamic_projectile_tick:
+  Skills:
+  - particle{particle=soulflame;speed=0.03;spread=0.01;count=2}
