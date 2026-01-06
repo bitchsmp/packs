@@ -73,3 +73,23 @@ SkinBreezer:
     Conditions:
     Skills:
     - skill{s=breezer_wind_projectile;cooldown=3} @self ~onSwing
+SkinFlamic:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Flamic Essence'
+  Options:
+    ItemModel: minecraft:fire_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Flamic
+  - <white>
+  - <gray>Fire a flame gust on swing</gray>
+  - <white>
+  - "<light_purple>[Flame gust]"
+  - "<white>  Fire a flame gust on swing"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Flamic<gray> (Fire a flame gust on swing)'
+    ReplaceItemModel:
+    Conditions:
+    Skills:
+    - skill{s=flamic_projectile;cooldown=3} ~onSwing 
