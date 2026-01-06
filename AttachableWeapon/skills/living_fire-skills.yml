@@ -13,7 +13,7 @@ quaternary_living_fire_orbital_projectile:
   - skill{skill=living_fire_projectile13} @self
 living_fire_orbital_projectile_Hit:
   Skills:
-  - damage{a=1;sourceisorigin=true;damagecause=FIRE}
+  - damage{a=1;sourceisorigin=true}
   - ignite{ticks=100}
 living_fire_orbital_projectile_start:
   Skills:
