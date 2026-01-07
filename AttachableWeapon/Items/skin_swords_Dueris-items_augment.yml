@@ -38,6 +38,26 @@ SkinFlamity:
     Conditions:
     Skills:
     - skill{s=flamity_projectile;cooldown=3} ~onSwing 
+SkinFlamiclysm:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Artificial Sun'
+  Options:
+    ItemModel: minecraft:fire_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Flamiclysm
+  - <white>
+  - <gray>Fire a huge fireball on swing</gray>
+  - <white>
+  - "<gold>[You are my sunshine]"
+  - "<white>  Fire a huge fireball on swing"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Flamiclysm<gray> (Fire a huge fireball on swing)'
+    ReplaceItemModel:
+    Conditions:
+    Skills:
+    - skill{s=flamiclysm_projectile;cooldown=3} ~onSwing 
 SkinSoulFlamic:
   Material: TURTLE_SCUTE
   Display: 'Special: <white>Soul Flame Essence'
