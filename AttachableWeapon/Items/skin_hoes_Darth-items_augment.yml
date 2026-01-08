@@ -26,7 +26,7 @@ SkinPurification_rod:
   - "<gray>      Requires atleast <bold>1 papers and 40 experience points</bold> to cast. Cooldown: 10 seconds"
   Augmentation:
     Type: SKIN_HOE
-    Tooltip: '<gold>Hakurei Gohei<gradient:#FE0000:#FEFEFE> (Used for monster exterminating, very very powerful)</gradient>'
+    Tooltip: '<gold>Purification Rod<gradient:#FE0000:#FEFEFE> (Used for monster exterminating, very very powerful)</gradient>'
     ReplaceItemModel: touhou_little_maid:hakurei_gohei
     Conditions:
     Skills:
