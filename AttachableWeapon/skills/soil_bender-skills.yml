@@ -1,0 +1,32 @@
+soil_bender_throw:
+  Conditions:
+  Skills:
+  - skill{skill=soil_bender_throw_particle_4}
+  - skill{skill=soil_bender_throw_particle_3}
+  - skill{skill=soil_bender_throw_particle_2}
+  - skill{skill=soil_bender_throw_particle_1}
+  - skill{skill=soil_bender_throw_damage} @EIR{r=4.5}
+
+  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @self
+soil_bender_throw_particle_4:
+  Skills:
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=4;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=STONE;radius=4;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+soil_bender_throw_particle_3:
+  Skills:
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=3;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=STONE;radius=3;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+soil_bender_throw_particle_2:
+  Skills:
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=2;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=STONE;radius=2;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+soil_bender_throw_particle_1:
+  Skills:
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=1;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=STONE;radius=1;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+soil_bender_throw_damage:
+  TargetConditions:
+  - ydiff{difference=<1}
+  Skills:
+  - setNoDamageTicks{ticks=0}
+  - damage{amount=3}
