@@ -1,0 +1,8 @@
+attachable_crossbow:
+  id: crossbow
+  AugmentationSlots:
+  - Type: SKIN_CROSSBOW
+    Amount: 1
+    Chance: 1
+  Lore:
+    Template: attachable_weapons

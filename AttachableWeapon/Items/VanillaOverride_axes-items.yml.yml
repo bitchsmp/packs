@@ -1,107 +1,81 @@
-#Maxed Hoe damage = sword counterpart base damage
-
-
-attachable_wooden_hoe:
-  id: wooden_hoe
+attachable_wooden_axe:
+  id: wooden_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: WOODEN_SHARPENER
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
-    Description:
-    
 
 
-attachable_stone_hoe:
-  id: stone_hoe
+attachable_stone_axe:
+  id: stone_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: STONE_SHARPENER
-    Amount: 4
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
 
 
-attachable_copper_hoe:
-  id: copper_hoe
+attachable_copper_axe:
+  id: copper_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: COPPER_SHARPENER
-    Amount: 4
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
-attachable_iron_hoe:
-  id: iron_hoe
+attachable_iron_axe:
+  id: iron_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: IRON_SHARPENER
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
-attachable_gold_hoe:
-  id: golden_hoe
+attachable_golden_axe:
+  id: golden_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLD_SHARPENER
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
 
-attachable_diamond_hoe:
-  id: diamond_hoe
+attachable_diamond_axe:
+  id: diamond_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: DIAMOND_SHARPENER
-    Amount: 6
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
 
-attachable_netherite_hoe:
-  id: netherite_hoe
+attachable_netherite_axe:
+  id: netherite_axe
   EquipSlot: HAND
   AugmentationSlots:
-  - Type: SKIN_HOE
+  - Type: SKIN_AXE
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: NETHERITE_SHARPENER
-    Amount: 7
-    Chance: 1
   Lore:
     Template: attachable_weapons

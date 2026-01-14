@@ -1,0 +1,26 @@
+SkinAlternateCrossbow:
+  Material: TURTLE_SCUTE
+  Display: '<white>Alternate Mechanism'
+  Options:
+    ItemModel: paper
+  Lore:
+  - <yellow><bold>Crossbow Skin:</bold> B-Side
+  - <white>
+  - <gray>Turns shooted projectile into hitscans</gray>
+  - <white>
+  - "<aqua>[Hitscan]"
+  Augmentation:
+    Type: SKIN_CROSSBOW
+    Tooltip: '<yellow>Alternate<gray> (Turns shooted projectile into hitscans)'
+    ReplaceItemModel: dueris:alternate_crossbow
+    Conditions:
+    Stats:
+    Skills:
+    - skill{skill=alternate_crossbow_onShoot} ~onShoot @Self
+    - cancelEvent ~onShoot
+ 
+
+
+
+
+

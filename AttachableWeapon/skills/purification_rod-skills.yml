@@ -1,0 +1,195 @@
+hakurei_gohei_skillChooseDisplay:
+  Skills:
+  - actionmessage{message="<gray>Cooldown remaining:<aqua> <caster.skill.hakurei_gohei_skill1.cooldown>"} ?varequals{name=caster.hakureigohei;value=1} ?skillOnCooldown{skill=hakurei_gohei_skill1} ?!crouching
+  - actionmessage{message="<gray>Cooldown remaining:<gold> <caster.skill.hakurei_gohei_skill2.cooldown>"} ?varequals{name=caster.hakureigohei;value=2} ?skillOnCooldown{skill=hakurei_gohei_skill2} ?!crouching
+  - actionmessage{message="<gray>Cooldown remaining:<red> <caster.skill.hakurei_gohei_skill3.cooldown>"} ?varequals{name=caster.hakureigohei;value=3} ?skillOnCooldown{skill=hakurei_gohei_skill3} ?!crouching
+  - actionmessage{message="Spell<aqua> Ready"} ?varequals{name=caster.hakureigohei;value=1} ?!skillOnCooldown{skill=hakurei_gohei_skill1} ?!crouching
+  - actionmessage{message="Spell<gold> Ready"} ?varequals{name=caster.hakureigohei;value=2} ?!skillOnCooldown{skill=hakurei_gohei_skill2} ?!crouching
+  - actionmessage{message="Spell<red> Ready"} ?varequals{name=caster.hakureigohei;value=3} ?!skillOnCooldown{skill=hakurei_gohei_skill3} ?!crouching
+  - actionmessage{message="Chosen spell:<aqua> Dream Sign - Amulet"} ?varequals{name=caster.hakureigohei;value=1} ?crouching
+  - actionmessage{message="Chosen spell:<gold> Dream Sign - Barrier"} ?varequals{name=caster.hakureigohei;value=2} ?crouching
+  - actionmessage{message="Chosen spell:<red> Fantasy Seal - Focused"} ?varequals{name=caster.hakureigohei;value=3} ?crouching
+#Normal Attack
+hakurei_gohei_leftclick: 
+  Conditions:
+  - itemrecharging false
+  TargetConditions:
+  - mmType{types=hakurei_gohei_skill2_collision_box_main} false
+  - isMonster true
+  Skills:
+  - effect:lightning 
+  - damage{amount=20;ignoreArmor=true;ii=true;delay=2;ir=true}
+#Skill 1
+hakurei_gohei_skill1:
+  Cooldown: 3
+  Conditions:
+  - isCrouching false
+  - varequals{name=caster.hakureigohei;value=1}
+  Skills:
+  - skill{skill=hakurei_gohei_skill1_projectile_1} ?HasItem{amount=>0;strict=true;types=paper}
+  - swingarm{}
+  - delay 7
+  - skill{skill=hakurei_gohei_skill1_projectile_2} ?HasItem{amount=>0;strict=true;types=paper}
+  - swingarm{}
+  - delay 7
+  - skill{skill=hakurei_gohei_skill1_projectile_1} ?HasItem{amount=>0;strict=true;types=paper}
+  - swingarm{}
+  - delay 7
+  - skill{skill=hakurei_gohei_skill1_projectile_2} ?HasItem{amount=>0;strict=true;types=paper}
+  - swingarm{}
+hakurei_gohei_skill1_projectile_1:
+  Skills:
+  - command{command="clear <caster.name> paper 1";asop=true}
+  - consumehelddurability{amount=1}
+  - sound{sound=entity.blaze.shoot;pitch=2} @self
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=10;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=11;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=12;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=13;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=14;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=15;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=16;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=17;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=18;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=19;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=20;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=21;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=22;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=23;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-1;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+
+hakurei_gohei_skill1_projectile_2:
+  Skills:
+  - command{command="clear <caster.name> paper 1";asop=true}
+  - consumehelddurability{amount=1}
+  - sound{sound=entity.blaze.shoot;pitch=2} @self
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=10;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=11;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=12;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=13;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=14;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=15;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=16;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=17;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=18;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=19;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=20;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=21;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=22;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+  - projectile{syo=1.4;hnp=true;onhitskill=hakurei_gohei_skill1_projectile_hit;sfo=0;velocity=23;bulletscale=1,1,1;bulletyoffset=0;maxrange=32;bullettype=DISPLAY;bulletbrightness=15;bulletmaterial=amulet_danmaku-13;accuracy=1;drawhitbox=false;hr=0.2;vr=0.2;stopatblock=true;stopatentity=true} @forward{y=1.4}
+hakurei_gohei_skill1_projectile_hit:
+  TargetConditions:
+  - isMonster castinstead hakurei_gohei_skill1_projectile_hitMonster
+  Skills:
+  - damage{amount=1;preventimmunity=true;preventknockback=true}
+hakurei_gohei_skill1_projectile_hitMonster:
+  Skills:
+  - damage{amount=2;preventimmunity=true}
+#Skill 2
+hakurei_gohei_skill2: 
+  Cooldown: 60
+  Conditions:
+  - isCrouching false
+  - varequals{name=caster.hakureigohei;value=2}
+  - HasItem{amount=>5;strict=true;types=paper}
+  Skills:
+  - command{command="clear <caster.name> paper 6";asop=true}
+  - summon{type=hakurei_gohei_skill2_marker} @self
+  - consumehelddurability{amount=1}
+#Skill 3
+hakurei_gohei_skill3:
+  Cooldown: 10
+  Conditions:
+  - isCrouching false
+  - varequals{name=caster.hakureigohei;value=3}
+  - enchantingLevel{level=>3} true
+  - HasItem{amount=>0;strict=true;types=paper}
+  Skills:
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=32;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_tagProjectile_hit;drawhitbox=false;stopatentity=true;hr=1;vr=1;hnp=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+hakurei_gohei_skill3_tagProjectile_hit:
+  Skills:
+  - summon{amount=1;type=hakurei_gohei_skill3_BallTargetMarker;summonerisowner=true;onsurface=false}
+
+hakurei_gohei_skill3_ball_projectile:
+
+  Skills:
+  - command{command="clear <caster.name> paper 1";asop=true}
+  - command{command="xp add <caster.name> -40 points";asop=true}
+  - consumehelddurability{amount=1}
+  - swingarm{}
+
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=-135;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+  - delay 4
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=-90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+  - delay 4
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=-45;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+  - delay 4
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=0;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+  - delay 4
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=45;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+  - delay 4
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=90;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+  - delay 4
+  - missile{bullettype=DISPLAY;syo=4;bulletbrightness=15;verticaloffset=0.7;horizontaloffset=135;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;sfo=0;velocity=14;maxrange=64;intertia=8;poweraffectsvelocity=false;onendSkill=hakurei_gohei_skill3_ball_hit;ontickSkill=hakurei_gohei_skill_ball_tick;onStartskill=hakurei_gohei_skill3_ball_start;drawhitbox=false;stopatentity=true;hr=0.75;vr=0.75;hnp=true;stopatblock=true;deathdelay=1;hittargetonly=false} @Trigger
+
+hakurei_gohei_skill3_ball_hit:
+  Skills:
+  - explode{sourceisorigin=true;yield=4} @origin{y=0.2}
+hakurei_gohei_skill3_ball_start:
+  Skills:
+  - delay 7
+  - projectilevelocity{velocityx=0;velocityy=0.1;velocityz=0;mode=SET;repeatinterval=1;repeat=0}
+  - delay 1
+  - modifyprojectile{trait=VELOCITY;action=ADD;value=1;repeat=29;repeati=2}
+
+  
+#Unused, for future purpose
+# hakurei_gohei_skill3_OrbitalBall_projectile:
+  
+#   Skills:
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_1} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_2;startingPoint=8} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_3;startingPoint=16} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_4;startingPoint=24} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_5;startingPoint=32} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_6;startingPoint=40} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_7;startingPoint=48} @self
+#   - orbital{onHit=hakurei_gohei_skill3_OrbitalBall_Hit;bulletBrightness=15;onstartskill=hakurei_gohei_skill3_OrbitalBall_start;hr=0.5;oy=1;points=64;radius=0.5;drawhitbox=false;interval=1;duration=200;charges=1;hnp=true;bullettype=DISPLAY;maxduration=300;bulletmaterial=WHITE_STAINED_GLASS;bulletscale=2,2,2;translation=0,0.5,0;aura=hakurei_gohei_skill3_OrbitalBall_8;startingPoint=56} @self
+# hakurei_gohei_skill3_OrbitalBall_Hit:
+#   Skills:
+#   - damage{a=10;sourceisorigin=true}
+#   #- e:explode{}
+# hakurei_gohei_skill3_OrbitalBall_start:
+#   Skills:
+#   - modifyprojectile{trait=RADIUS;value=0.25;action=ADD;repeat=12;repeatinterval=3}
+
+#Deprecated
+# Skill 2 Polygon effect
+# hakurei_gohei_ShiftRightclick_effect:
+#   Skills:
+#     # Effect
+#   - polygon{db=0.25;y=-3.2;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+#   - polygon{db=0.25;y=1;x=4.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+#   - polygon{db=0.25;y=1;x=-4.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+#   - polygon{db=0.25;y=5.3;mpd=false;scale=6;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+#   - polygon{db=0.25;y=-1.6;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+#   - polygon{db=0.25;y=0.5;x=2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+#   - polygon{db=0.25;y=0.5;x=-2.15;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;rot=0,45,90} @Origin
+#   - polygon{db=0.25;y=2.65;mpd=false;scale=3;oS=[ - effect:particles{p=reddust} ];p=4;skip=0;duration=1;yaw=45} @Origin
+# #Skill 4
+# hakurei_gohei_skill4: 
+#   Cooldown: 3
+#   OnCooldownSkill: hakurei_gohei_skill4_onCooldown
+#   Conditions:
+#   - isCrouching false
+#   - varequals{name=caster.hakureigohei;value=4}
+#   Skills:
+ 
+# #  - effect:particlesphere{particle=REDDUST;color=#ffffff;amount=600;radius=10;delay=1} @self
+#   - summon{type=hakurei_gohei_skill4_marker;pitch=0;yaw=0} @selfLocation{y=1}
+#skill4 On cooldown
+# hakurei_gohei_skill4_onCooldown: 
+#   Cooldown: 1
+#   Skills:
+#   - randommessage{m="&cSkill on cooldown!";repeat=1} @self
+
+

@@ -2,7 +2,7 @@ SKIN_SWORD:
   Enabled: true
   Display: 'Sword Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -12,7 +12,7 @@ SKIN_HOE:
   Enabled: true
   Display: 'Hoe Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -22,7 +22,7 @@ SKIN_AXE:
   Enabled: true
   Display: 'Axe Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
@@ -32,92 +32,39 @@ SKIN_MACE:
   Enabled: true
   Display: 'Mace Skin'
   Formatting:
-    Empty: '<augment.icon> Default <augment.type>'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
     Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
     Empty: '☆'
     Filled: '★'
     Invalid: ''
-WOODEN_SHARPENER:
+SKIN_BOW:
   Enabled: true
-  Display: 'Wooden Sharpener'
+  Display: 'Bow Skin'
   Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
-    Empty: '✖'
-    Filled: '✔'
+    Empty: '☆'
+    Filled: '★'
     Invalid: ''
-STONE_SHARPENER:
+SKIN_CROSSBOW:
   Enabled: true
-  Display: 'Stone Sharpener'
+  Display: 'Crossbow Skin'
   Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
-    Empty: '✖'
-    Filled: '✔'
+    Empty: '☆'
+    Filled: '★'
     Invalid: ''
-COPPER_SHARPENER:
+SKIN_SPEAR:
   Enabled: true
-  Display: 'Copper Sharpener'
+  Display: 'Spear Skin'
   Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
+    Empty: '<augment.icon> <augment.type>: <gray>Default'
+    Filled: '<augment.icon> <augment.type>: <augment.tooltip>'
   Icons:
-    Empty: '✖'
-    Filled: '✔'
-    Invalid: ''
-IRON_SHARPENER:
-  Enabled: true
-  Display: 'Iron Sharpener'
-  Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
-  Icons:
-    Empty: '✖'
-    Filled: '✔'
-    Invalid: ''
-
-GOLD_SHARPENER:
-  Enabled: true
-  Display: 'Gold Sharpener'
-  Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
-  Icons:
-    Empty: '✖'
-    Filled: '✔'
-    Invalid: ''
-DIAMOND_SHARPENER:
-  Enabled: true
-  Display: 'Diamond Sharpener'
-  Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
-  Icons:
-    Empty: '✖'
-    Filled: '✔'
-    Invalid: ''
-NETHERITE_SHARPENER:
-  Enabled: true
-  Display: 'Netherite Sharpener'
-  Formatting:
-    Empty: '<red><augment.icon> Not sharpened'
-    Filled: '<green><augment.icon> Sharpened'
-#backup:     Filled: '<green><augment.icon> Sharpened: <augment.tooltip>'
-  Icons:
-    Empty: '✖'
-    Filled: '✔'
-    Invalid: ''
-
-MACE_SHARPENER:
-  Enabled: true
-  Display: 'Mace Condenser'
-  Formatting:
-    Empty: '<red><augment.icon> Not condensed'
-    Filled: '<green><augment.icon> Condensed'
-  Icons:
-    Empty: '✖'
-    Filled: '✔'
+    Empty: '☆'
+    Filled: '★'
     Invalid: ''

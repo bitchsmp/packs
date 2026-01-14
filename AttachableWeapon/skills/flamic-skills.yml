@@ -1,0 +1,88 @@
+flamic_projectile:
+  Skills:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamic_projectile_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+flamic_projectile_hit:
+  Skills:
+  - damage{a=1}
+  - ignite{ticks=100}
+flamic_projectile_end:
+  Skills:
+  - particle{particle=flame;speed=0.25;spread=0.01;count=20}
+flamic_projectile_tick:
+  Skills:
+  - particle{particle=small_flame;speed=0.03;spread=0.01;count=3}
+#Flamity
+flamity_projectile:
+  Skills:
+  - projectile{bullettype=SMALLBLOCK;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;velocity=24;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamity_projectile_hit;onendskill=flamity_projectile_end;ontickskill=flamity_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+flamity_projectile_hit:
+  Skills:
+  - ignite{ticks=100}
+flamity_projectile_end:
+  Skills:
+  - explode{yield=1;blockdamage=false}
+flamity_projectile_tick:
+  Skills:
+  - particle{particle=small_flame;speed=0.03;spread=0;count=3}
+#Flamiclysm
+flamiclysm_projectile:
+  Skills:
+  - projectile{bullettype=DISPLAY;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;bulletscale=1,1,1;velocity=36;gravity=1;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=;onendskill=flamiclysm_projectile_end;ontickskill=flamiclysm_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;bulletbrightness=15w} @Forward{yOffset=1.62}
+flamiclysm_projectile_end:
+  Skills:
+  - particlering{particle=small_flame;radius=10;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=9.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=9;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=8.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=8;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=7.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=7;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=6.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=6;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=5.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=4.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=4;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=3.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=3;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=2.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=2;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=1.5;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=1;points=32;amount=1} @origin{y=1}
+  - delay 2
+  - particlering{particle=small_flame;radius=0.5;points=16;amount=1} @origin{y=1}
+  - particle{particle=flame;speed=0.7;spread=0;count=128} @origin{y=1}
+  - explode{yield=3.5;blockdamage=false} @origin{y=1}
+soul_flamic_projectile:
+  Skills:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=28;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=soul_flamic_projectile_hit;onendskill=soul_flamic_projectile_end;ontickskill=soul_flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+
+soul_flamic_projectile_hit:
+  Skills:
+  - damage{a=5}
+  - ignite{ticks=200}
+soul_flamic_projectile_end:
+  Skills:
+  - particle{particle=soulflame;speed=0.3;spread=0.02;count=24}
+  - particle{particle=soul;speed=0.05;spread=0.2;count=16}
+soul_flamic_projectile_tick:
+  Skills:
+  - particle{particle=soulflame;speed=0.03;spread=0.01;count=2}

@@ -2,7 +2,7 @@ STOP_SIGN_WIND_BURST_0_1:
   Conditions:
   - hasEnchant{type=WIND_BURST} false 
   Skills:
-    - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
+  - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
 STOP_SIGN_WIND_BURST_1_1:
   Conditions:
   - hasEnchant{type=WIND_BURST;level=1}

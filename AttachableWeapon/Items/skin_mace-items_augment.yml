@@ -1,0 +1,108 @@
+SkinStopSign:
+  Material: TURTLE_SCUTE
+  Display: '<gold>Stop Sign'
+  Lore:
+  - <yellow><bold>Mace Skin</bold>
+  - <white>
+  - <gray>A subtle reference to that other game weapon, add a nice touch of satisfaction
+  - <white>
+  - "<red>[Hitstop]"
+  - '<white>  "Freezes" both you and the target when attacks'
+  - "<yellow>[Jackhammer]"
+  - "<white>  Deals bonus 99 explosion damage when velocity is high enough"
+  Augmentation:
+    Type: SKIN_MACE
+    Tooltip: '<gold>Stop Sign<gray> (A subtle reference to that other game weapon, add a nice touch of satisfaction)'
+    ReplaceItemModel: stop_sign
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+#Condition checks:
+    - setvariable{var=caster.stop_sign.is.falling;type=INTEGER;val=0;delay=2;scope=caster} @self ?directionalvelocity{y=>-0.4}  ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=INTEGER;val=1;scope=caster} @self ?directionalvelocity{y=<-0.4} ?directionalvelocity{y=>-0.6} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=INTEGER;val=2;scope=caster} @self ?directionalvelocity{y=<-0.6} ?directionalvelocity{y=>-0.8} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=INTEGER;val=3;scope=caster} @self ?directionalvelocity{y=<-0.8} ?directionalvelocity{y=>-1.2} ~onTimer:1
+    - setvariable{var=caster.stop_sign.is.falling;type=INTEGER;val=4;scope=caster} @self ?directionalvelocity{y=<-1.2} ~onTimer:1
+# 1: 0s hitstop
+# 2: 0.15s hitstop
+# 3: 0.2s hitstop
+# 4: 0.5s hitstop
+#on slam skills 1:
+
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=1;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_1} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+
+    - sound{sound=ultrakill:hammerimpact;volume=0.9} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+    - skill{s=STOP_SIGN_WIND_BURST_0_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+    - skill{s=STOP_SIGN_WIND_BURST_1_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+    - skill{s=STOP_SIGN_WIND_BURST_2_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+    - skill{s=STOP_SIGN_WIND_BURST_3_1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=1}
+#on slam skills 2:
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=2;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=2;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=6;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_2} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+
+    - sound{sound=ultrakill:hammerimpact;volume=1.0} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+    - skill{s=STOP_SIGN_WIND_BURST_0_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+    - skill{s=STOP_SIGN_WIND_BURST_1_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+    - skill{s=STOP_SIGN_WIND_BURST_2_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+    - skill{s=STOP_SIGN_WIND_BURST_3_2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=2}
+#on slam skills 3:
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=3;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=3;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=7;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_3} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+
+    - sound{sound=ultrakill:hammerimpact;volume=1.1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+    - skill{s=STOP_SIGN_WIND_BURST_0_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+    - skill{s=STOP_SIGN_WIND_BURST_1_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+    - skill{s=STOP_SIGN_WIND_BURST_2_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+    - skill{s=STOP_SIGN_WIND_BURST_3_3} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=3}
+#on slam skills 4:
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=9;repeati=1} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+    - velocity{m=set;forcesync=true;x=0;y=0;z=0;repeat=9;repeati=1} @target ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+
+    - aura{aura=STOP_SIGN_PREVENT_DAMAGE;ticks=13;CancelOnChangeWorld=true;cancelondeath=false;DoEndSkillOnTerminate=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+
+    - skill{s=STOP_SIGN_MARKED_FOR_DAMAGED_4} @trigger ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+
+    - potion{type=NIGHT_VISION;duration=10;hasparticles=false} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+    - sound{sound=ultrakill:hammerimpact;volume=1.2} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+    - skill{s=STOP_SIGN_WIND_BURST_0_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+    - skill{s=STOP_SIGN_WIND_BURST_1_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+    - skill{s=STOP_SIGN_WIND_BURST_2_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+    - skill{s=STOP_SIGN_WIND_BURST_3_4} @self ~onAttack ?varequals{name=caster.stop_sign.is.falling;val=4}
+
+#if entity killed by the slam attack before fx skills trigger:
+    - effect:firework{t=BALL;d=0;delay=3;f=true} ~onKill ?varequals{name=caster.stop_sign.is.falling;val=2}
+    - effect:firework{t=BALL_LARGE;d=0;delay=4;f=true;colors=#FFDF00;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val=3}
+    - effect:firework{t=BALL_LARGE;d=0;delay=10;f=true;colors=#FF5252;fadecolors=#FFFFFF} ~onKill ?varequals{name=caster.stop_sign.is.falling;val=4}
+# Prevent dying while freezed:
+    - cancelEvent{} ~onDamaged @self ?hasAura{aura=STOP_SIGN_PREVENT_DAMAGE}
+
+SkinMjolnir:
+  Material: TURTLE_SCUTE
+  Display: '<white>Mjolnir'
+  Lore:
+  - <yellow><bold>Mace Skin</bold>
+  - <white>
+  - <gray>Summons a lightning bolt upon attacking
+  - <white>
+  - "<aqua>[Zeus]"
+  - '<white>  Summons a 10 damage lightning bolt upon attacking'
+  Augmentation:
+    Type: SKIN_MACE
+    Tooltip: '<white>Mjolnir<gray> (Summons a lightning bolt upon attacking)'
+    ReplaceItemModel: mjolnir
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - lightning{damage=10;cooldown=1} ~onAttack @trigger

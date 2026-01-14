@@ -1,6 +1,7 @@
 # Rules:
 # Max Damage: x*1.2^3
 # x is base damage of the sword
+# always down rounding
 
 attachable_wooden_sword:
   id: wooden_sword
@@ -10,9 +11,6 @@ attachable_wooden_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: WOODEN_SHARPENER
-    Amount: 2
-    Chance: 1
   Lore:
     Template: attachable_weapons
     Description:
@@ -27,9 +25,6 @@ attachable_stone_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: STONE_SHARPENER
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -43,9 +38,6 @@ attachable_copper_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: COPPER_SHARPENER
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -57,13 +49,10 @@ attachable_iron_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: IRON_SHARPENER
-    Amount: 4
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
-attachable_gold_sword:
+attachable_golden_sword:
   id: golden_sword
   EquipSlot: HAND
   AugmentationSlots:
@@ -71,9 +60,6 @@ attachable_gold_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLD_SHARPENER
-    Amount: 10 #Gold Weapon has additional 8 sharpener slots
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -86,9 +72,6 @@ attachable_diamond_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: DIAMOND_SHARPENER
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -101,8 +84,5 @@ attachable_netherite_sword:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: NETHERITE_SHARPENER
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons

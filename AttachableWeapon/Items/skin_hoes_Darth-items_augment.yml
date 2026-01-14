@@ -1,0 +1,45 @@
+SkinPurification_rod:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <gold>Red Amulet'
+  Options:
+    ItemModel: touhou_little_maid:amulet_danmaku-1
+  Lore:
+  - <yellow><bold>Hoe Skin:</bold> Purification Rod
+  - <white>
+  - <gradient:#FE0000:#FEFEFE>Used for monster exterminating, very very powerful</gradient>
+  - <white>
+  - "<#FE0000>[Maiden Magic]"
+  - "<dark_gray><italic>  <LeftClick></italic></dark_gray>  "
+  - "<gray>    Deals 20 damage to monsters, but no damage to other mobs"
+  - "<white>"
+  - "<dark_gray><italic>  <RightClick></italic></dark_gray> Casts spell"
+  - "<dark_gray><italic>  <LeftShift+Rightclick></italic></dark_gray> Cycles through spells"
+  - <white>
+  - "<aqua>    Dream Sign - Amulet"
+  - "<gray>      Fire bursts of amulets, dealing 2 damage to monsters, 1 damage to other mobs."
+  - "<gray>      Requires atleast <bold>4 papers</bold> to cast properly. Cooldown: 3 seconds"
+  - "<gold>    Dream Sign - Barrier"
+  - "<gray>      Build a protective barrier with 100HP that pushes all mobs away. The barrier disappears after 25 seconds"
+  - "<gray>      Requires atleast <bold>6 papers</bold> to cast. Cooldown: 60 seconds"
+  - "<red>    Fantasy Seal - Focused"
+  - "<gray>      Fire a burst of concentrated magic, each explodes with the power equivelent to a TNT"
+  - "<gray>      Requires atleast <bold>1 papers and 40 experience points</bold> to cast. Cooldown: 10 seconds"
+  Augmentation:
+    Type: SKIN_HOE
+    Tooltip: '<gold>Purification Rod<gradient:#FE0000:#FEFEFE> (Used for monster exterminating, very very powerful)</gradient>'
+    ReplaceItemModel: touhou_little_maid:hakurei_gohei
+    Conditions:
+    Skills:
+  # Variable Skill System
+    - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} @self ~onUse ?!varset{name=caster.hakureigohei}
+    - addVariable{value=1;name=caster.hakureigohei} ?varrange{name=caster.hakureigohei;value=<4} ~onUse @self ?crouching
+    - setvar{value=1;scope=caster;name=caster.hakureigohei;type=INTEGER} ?varrange{name=caster.hakureigohei;value=>3} ~onUse ?crouching
+
+    - skill{s=hakurei_gohei_skillChooseDisplay} ~onTimer:1  @self
+    - skill{s=hakurei_gohei_skill1} @self ~onUse
+    - skill{s=hakurei_gohei_skill3} @self ~onUse
+    - skill{s=hakurei_gohei_skill2} @self ~onUse
+# Leftclick
+    - skill{s=hakurei_gohei_leftclick} @trigger ~onAttack
+    - cancelEvent ~onAttack
+  

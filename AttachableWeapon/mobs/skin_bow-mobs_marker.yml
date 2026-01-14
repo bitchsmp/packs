@@ -1,0 +1,12 @@
+GreatBow_marker:
+  Type: Interaction
+  Options:
+    Width: 1
+    Height: 1
+    Responsive: false
+    Despawn: NORMAL
+    SummonerIsOwner: true
+  Skills:
+  - teleport{unsafe=true} @ownerlocation{yoffset=32} ~onTimer:1
+  - remove{delay=25} @self ~onSpawn
+

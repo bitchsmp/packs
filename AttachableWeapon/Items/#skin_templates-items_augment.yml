@@ -1,0 +1,24 @@
+#Each skin item is a representative item with a unique name (meaning not having the same as the weapon skin name) and item model&texture
+#Template:
+
+
+# SkinName:
+#   Material: TURTLE_SCUTE
+#   Display: 'Special: <gold>Representative Item Name'
+#   Options:
+#     ItemModel: minecraft:representative_item
+#   Lore:
+#   - <yellow><bold>Sword Skin:</bold> Skin Name
+#   - <white>
+#   - <gray>Description</gray>
+#   - <white>
+#   - "<light_purple>[Buff]"
+#   - "<white>  Buff Description"
+#   - "<red>[⚠Debuff]"
+#   - "<white>  Debuff Description"
+#   Augmentation:
+#     Type: SKIN_SWORD
+#     Tooltip: '<gold>Skin Name<gray> (Description)' #Rarity color + Name
+#     ReplaceItemModel: minecraft:model #Can be left blank
+#     Conditions:
+#     Skills:
