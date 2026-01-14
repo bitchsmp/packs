@@ -9,9 +9,6 @@ attachable_wooden_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: WOODEN_SHARPENER
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
     Description:
@@ -26,9 +23,6 @@ attachable_stone_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: STONE_SHARPENER
-    Amount: 4
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -42,9 +36,6 @@ attachable_copper_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: COPPER_SHARPENER
-    Amount: 4
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -56,9 +47,6 @@ attachable_iron_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: IRON_SHARPENER
-    Amount: 5
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -70,9 +58,6 @@ attachable_golden_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: GOLDEN_SHARPENER
-    Amount: 3
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -85,9 +70,6 @@ attachable_diamond_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: DIAMOND_SHARPENER
-    Amount: 6
-    Chance: 1
   Lore:
     Template: attachable_weapons
 
@@ -100,8 +82,5 @@ attachable_netherite_hoe:
     Amount: 1
     Chance: 1
     MaxAmount: 1
-  - Type: NETHERITE_SHARPENER
-    Amount: 7
-    Chance: 1
   Lore:
     Template: attachable_weapons
