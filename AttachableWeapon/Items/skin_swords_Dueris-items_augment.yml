@@ -116,3 +116,23 @@ SkinBreezer:
     Conditions:
     Skills:
     - skill{s=breezer_wind_projectile;cooldown=3} @self ~onSwing
+
+SkinIcy:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Non-meltable Snowball'
+  Options:
+    ItemModel: minecraft:snowball
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Icy
+  - <white>
+  - "<gray><italic>A little bit cold, isn't it?</italic></gray>"
+  - <white>
+  - "<aqua>[Freezing]"
+  - <gray>  Inflicts Freezing on hit</gray>
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: "<white>Icy<gray> (<italic>A little bit cold, isn't it?</italic>)"
+    Conditions:
+    Skills:
+    - freeze{ticks=140} @trigger ~onAttack
