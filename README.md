@@ -15,7 +15,7 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
    
 
 
-2. MythicMobs & MythicCrucible
+2. MythicMobs & MythicCrucible Plugins
 
    - Plugins Offical Website: mythiccraft.io
 
@@ -27,11 +27,11 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
      - MythicCrucible: [2.4.0-20260110.014123-5](https://mvn.lumine.io/repository/maven/io/lumine/MythicCrucible/2.4.0-SNAPSHOT/MythicCrucible-2.4.0-20260110.014123-5.jar)
 
 
-3. LibsDisguise
+3. LibsDisguise Plugin
 
    - Current Version: Latest Stable Build
 
-   - Download Link: https://ci.lib.co.nz/job/LibsDisguises/
+   - Download Link: https://ci.lib.co.nz/job/LibsDisguises/lastStableBuild/artifact/target/LibsDisguises.jar
   
 
 ## Contributors:
