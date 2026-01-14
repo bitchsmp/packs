@@ -1,0 +1,7 @@
+Storm_nigger:
+  Id: iron_axe
+  Options:
+  Skills:
+  - skill{skill=Storm_nigger_dash;cooldown=2} @self ~onUse #sua lai cooldown sau
+  - stataura{stat=ATTACK_DAMAGE;type=ADDITIVE;value=100;ticks=2;forcesync=true} @self ~onTimer:1
+  - cancelEvent  ~onDamaged ?hasAura{aura=storm_nigger_nofalldamage}
