@@ -1,4 +1,0 @@
-marked_for_damaged:
-  Skills:
-  - damage{a=20;delay=20} @trigger
-  - removeaura{aura=marked_for_damaged;delay=21} @trigger
