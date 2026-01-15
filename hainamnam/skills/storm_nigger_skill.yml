@@ -1,8 +1,9 @@
 Storm_nigger_dash:
   Skills:
   - velocity{m=add;y=2.25}
+  - lightning @randomLocations{r=5} ~onTimer:100
   - delay 25
   - leap{velocity=2750} @forward{yoffset=1.62}
   - aura{aura=storm_nigger_nofalldamage;ticks=20}
   - delay 10
-  - lightning{damage=10} @EntitiesInRadius{r=10}
+  - lightning{damage=100} @EntitiesInRadius{r=1}
