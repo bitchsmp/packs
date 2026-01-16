@@ -20,22 +20,11 @@ rocket_launcher_hit_block_marker:
   - potion{type=SLOW_FALLING;duration=20} @EIR{r=2} ~onSpawn
   #remove
   - remove{delay=2} @self ~onSpawn
-
-
-
-
-
-
-
-
-
-
-  
 rocket_launcher_cannonball_hitbox:
   Type: interaction
   Options:
-    Height: 1.2
-    Width: 1.2
+    Height: 1.45
+    Width: 1.45
   Skills:
   - message{message=ouch} @AllInWorld{} ~onDamaged 
   - skill{s=rocket_launcher_cannonball_onAttacked} ~ondamaged
