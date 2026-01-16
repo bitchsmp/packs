@@ -1,15 +1,17 @@
 Storm_nigger_dash:
   Skills:
-  - aura{aura=storm_nigger_nofalldamage;ticks=60}
+  - aura{aura=storm_nigger_noFalldamage;ticks=160}
+  - aura{aura=storm_nigger_noLightningdamage;ticks=20;showbartimer=true}
   - effect:particles{particle=explosion;amount=10;hS=1;vS=1;speed=5} @self
-  - particletornado{p=red_dust;cp=largeexplode;mr=1;h=3;i=4;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2;yoffset=0;d=40;a=2000;color=#00a6ff} @self
+  - particletornado{p=red_dust;cp=largeexplode;mr=1;h=3;i=4;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2;yoffset=0;d=40;a=20;color=#00a6ff} @self
   - velocity{m=add;y=2.15}
-  - lightning @randomLocations{r=8} ~onTimer:100
+  - lightning @randomLocations{r=8}
   - delay 25
   - leap{velocity=2750} @forward{yoffset=1.62}
-  - delay 10
-  - lightning{damage=40;a=4} @EntitiesInRadius{r=2.5} ~onTimer:100
-# Storm_nigger_hit:
-#   Conditions:
-#   Skills:
-#   - lightning{damage=40;a=4} @EntitiesInRadius{r=2.5} ~onTimer:100
+  - aura{aura=storm_nigger_noLightningdamage;ticks=120;showbartimer=true}
+  - delay 5
+  - aura{aura=storm_nigger_onAir_casting;doendskillonterminate=true;ticks=100;showbartimer=true;onendskill=[
+    - lightning{damage=40} @EIR{radius=10;fallback=@selfLocation}
+    - delay 20
+    - removeaura{aura=storm_nigger_noLightningdamage}
+    ]}
