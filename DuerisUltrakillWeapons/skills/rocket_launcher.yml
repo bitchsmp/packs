@@ -121,7 +121,7 @@ rocket_launcher_cannonball_tick:
 
   - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_hitbox} 
   # ?hasaura{aura=rocket_launcher_cannonball_boosted} is the condition to check if the cannonball was punched
-  - setprojectiledirection @Forward{yOffset=1;forward=10} ?hasaura{aura=rocket_launcher_cannonball_boosted}
+  - setprojectiledirection @Forward{yOffset=1.62;forward=32} ?hasaura{aura=rocket_launcher_cannonball_boosted}
   - modifyprojectile{trait=VELOCITY;action=ADD;value=1} ?hasaura{aura=rocket_launcher_cannonball_boosted}
 
   - setVar{name=skill.cannonball_bounce;type=INTEGER;scope=skill;value=1} ?hasaura{aura=rocket_launcher_cannonball_boosted}
