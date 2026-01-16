@@ -96,9 +96,9 @@ rocket_launcher_cannonball_fire:
   Skills:
   - sound{sound=ultrakill:rocketfire5;volume=0.42;radius=16;pitch=0.8} @self
   - skill{s=rocket_launcher_cannonball_consume_iron}
-  - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160;ShowBarTimer=true;bartimerdisplay="Cannonball reloading..."} @self
+ # - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160;ShowBarTimer=true;bartimerdisplay="Cannonball reloading..."} @self
   - command{command="say Cannonball!";ascaster=true} @self ~onshoot
-  - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_marker;sio=true}
+  - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_dataStorage;sio=true}
   - setSkillCooldown{skill=rocket_launcher_leftclick;seconds=1;forcesync=true} @self
   - sound{sound=ultrakill:impacts_processed_179;volume=0.25;radius=16;delay=17} @self #Reload sound
 
