@@ -51,19 +51,23 @@ SkinNapalm_Claymore:
   Lore:
   - <yellow><bold>Sword Skin:</bold> Napalm Claymore
   - <white>
-  - <gray>Inflict UltraBurn on hit</gray>
+  - <gray>Inflicts UltraBurn on hit</gray>
   - <white>
   - "<dark_red>[UltraBurn]"
   - "<white>  Causes unextinguishable burning effect to the target"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<yellow>Napalm Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
+    Tooltip: '<yellow>Napalm Claymore<gray> (Inflicts <dark_red>UltraBurn</dark_red> on hit)'
     ReplaceItemModel: brimstone_claymore
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
     Skills:
-    - skill{s=UltraBurn} @trigger ~onAttack ?!itemRecharging{}
+    - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
+      - damage{a=0.5;preventknockback=true}
+      - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
+      - ignite{ticks=200}
+      ]} @trigger ~onAttack ?!itemRecharging{}
     - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
 
