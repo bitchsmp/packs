@@ -42,10 +42,6 @@ rocket_launcher_cannonball_marker:
     Marker: true
     summonerIsOwner: true
   Skills:
-  # - variableSet{value=0;type=INTEGER;scope=caster;var=caster.cannonball_bounce} @self ~onspawn
-  # - message{message=<caster.var.cannonball_bounce>} @everyone{}  ~onTimer:1
-  # - variableAdd{var=caster.cannonball_bounce;value=1;type=INTEGER;scope=caster} @self ~onSignal:bounce
   - message{message=bounce} @everyone ~onSignal:bounce
   - aura{aura=ROCKET_LAUNCHER_CANNONBALL_BOUNCED;ticks=150} ~onSignal:bounce @parent
-  #- signal{signal=bounced} @parent ~onSignal:bounce
   - remove{delay=2000} ~onSpawn

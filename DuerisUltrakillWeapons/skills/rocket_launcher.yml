@@ -118,7 +118,6 @@ rocket_launcher_cannonball_consume_netherite:
 rocket_launcher_cannonball_tick:
   Skills:
   - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_hitbox} 
-  - movevariable{from=caster.caster_name;to=target.caster_name} @Children
   # ?hasaura{aura=rocket_launcher_cannonball_boosted} is the condition to check if the cannonball was punched
   - setprojectiledirection @Forward{yOffset=1;forward=10} ?hasaura{aura=rocket_launcher_cannonball_boosted}
   - modifyprojectile{trait=VELOCITY;action=ADD;value=1} ?hasaura{aura=rocket_launcher_cannonball_boosted}
