@@ -136,3 +136,26 @@ SkinIcy:
     Conditions:
     Skills:
     - freeze{ticks=140} @trigger ~onAttack
+SkinGlacial:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Ball of the colds'
+  Options:
+    ItemModel: minecraft:snowball
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Glacial
+  - <white>
+  - "<gray><italic>Somewhat cold, isn't it?</italic></gray>"
+  - <white>
+  - "<aqua>[Bone-chilling]"
+  - <gray>  Inflicts Bone-chilling effect on hit, slows down the target.</gray>
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: "<white>Glacial<gray> (<italic>Somewhat cold, isn't it?</italic>)"
+    Conditions:
+    Skills:
+    - aura{aura=bone-chilling;ticks=200;ontickskill=[
+      - freeze{ticks=20}
+      - potion{type=SLOWNESS;duration=20;level=0}
+      ]} @trigger ~onAttack
+
