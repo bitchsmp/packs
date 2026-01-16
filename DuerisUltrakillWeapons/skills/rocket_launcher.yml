@@ -97,7 +97,7 @@ rocket_launcher_cannonball_fire:
   - sound{sound=ultrakill:rocketfire5;volume=0.42;radius=16;pitch=0.8} @self
   - skill{s=rocket_launcher_cannonball_consume_iron}
   - aura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN;ticks=160;ShowBarTimer=true;bartimerdisplay="Cannonball reloading..."} @self
-  - command{command="say Cannonball!";asOp=true;ascaster=true} @self ~onshoot
+  - command{command="say Cannonball!";ascaster=true} @self ~onshoot
   - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_marker;sio=true}
   - setSkillCooldown{skill=rocket_launcher_leftclick;seconds=1;forcesync=true} @self
   - sound{sound=ultrakill:impacts_processed_179;volume=0.25;radius=16;delay=17} @self #Reload sound
@@ -106,12 +106,12 @@ rocket_launcher_cannonball_consume_iron:
   Conditions:
   - hasitem{amount=>1;types=iron_block} orelsecast rocket_launcher_cannonball_consume_netherite
   Skills:
-  - command{command="clear @p iron_block 2";asOp=true} @self
+  - command{command="clear <caster.name> iron_block 2";asOp=true} @self
 rocket_launcher_cannonball_consume_netherite:
   Conditions:
   - hasitem{amount=>0;types=netherite_ingot} true
   Skills:
-  - command{command="clear @p netherite_ingot 1";asOp=true} @self
+  - command{command="clear <caster.name> netherite_ingot 1";asOp=true} @self
 
 
 
