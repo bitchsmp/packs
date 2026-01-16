@@ -126,7 +126,7 @@ SkinMoltenBlade:
   Options:
     ItemModel: hbm:blade_meteorite_hot
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Molten Blade
   - <white>
   - <gray><italic>Forged from a fallen star</gray>
   - <gray><italic>Sharper than most terrestrial blades</gray>
@@ -152,7 +152,7 @@ SkinMoltenSword:
   Options:
     ItemModel: hbm:ingot_meteorite_forged_hot
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Molten Sword
   - <white>
   - <gray>Forged from a fallen star</gray>
   - <white>
@@ -198,7 +198,7 @@ SkinHolyMoonlightSword:
   Material: TURTLE_SCUTE
   Display: '<aqua>Holy Moonlight Sword'
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Holy Moonlight Sword
   - <white>
   - <gray>Becomes powerful at night, even more powerful on full moons, up to 6 extra damage</gray>
   - <white>
@@ -230,7 +230,7 @@ SkinEpicSword:
   Options:
     ItemModel: terraria:item_422
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Epic Sword
   - <white>
   - "<yellow>[The Enlightment]"
   - <white>  20% chance to summon an anvil falling onto the target, dealing 120 damage
@@ -250,7 +250,7 @@ SkinAncient_royal_great_sword:
   Material: TURTLE_SCUTE
   Display: '<yellow>Ancient Royal Great Sword'
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Ancient Royal Great Sword
   - <white>
   - <gray>Disable up to 10 Armor points of the target</gray>
   - <white>
@@ -273,7 +273,7 @@ SkinTerrablade:
   Material: TURTLE_SCUTE
   Display: '<yellow>Terrablade'
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Terrablade
   - <white>
   - <gray>Terrarians love this thing</gray>
   - <white>
@@ -291,7 +291,7 @@ SkinMasamune:
   Material: TURTLE_SCUTE
   Display: "Masamune's Hand"
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Masamune
   - <white>
   - "<gray>Turn your sword into a long katana, forged by Masamune's own technique</gray>"
   - <white>
@@ -318,7 +318,7 @@ SkinSabre:
   Options:
     ItemModel: knowledge_book
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Sabre
   - <white>
   - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
   - <white>
