@@ -1,9 +1,15 @@
 Storm_nigger_dash:
   Skills:
-  - velocity{m=add;y=2.25}
-  - lightning @randomLocations{r=5} ~onTimer:100
+  - aura{aura=storm_nigger_nofalldamage;ticks=60}
+  - effect:particles{particle=explosion;amount=10;hS=1;vS=1;speed=5} @self
+  - particletornado{p=dragon_breath;cp=largeexplode;mr=1;h=3;i=4;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2;yoffset=0;d=40;a=200} @self
+  - velocity{m=add;y=2.15}
+  - lightning @randomLocations{r=8} ~onTimer:100
   - delay 25
   - leap{velocity=2750} @forward{yoffset=1.62}
-  - aura{aura=storm_nigger_nofalldamage;ticks=20}
   - delay 10
-  - lightning{damage=100} @EntitiesInRadius{r=1}
+  - lightning{damage=40;a=4} @EntitiesInRadius{r=2.5} ~onTimer:100
+# Storm_nigger_hit:
+#   Conditions:
+#   Skills:
+#   - lightning{damage=40;a=4} @EntitiesInRadius{r=2.5} ~onTimer:100

@@ -6,8 +6,6 @@ Storm_nigger:
   - 'Thanos slayer'
   Options:
   Skills:
-  - particles{particle=explosion;amount=1} @self ~onUse
   - cancelEvent  ~onDamaged ?hasAura{aura=storm_nigger_nofalldamage}
   - skill{skill=Storm_nigger_dash;cooldown=2} @self ~onUse #sua lai cooldown sau
   - stataura{stat=ATTACK_DAMAGE;type=ADDITIVE;value=100;ticks=2;forcesync=true} @self ~onTimer:1
-  # - particletornado{p=explosion;cp=largeexplode;mr=1;h=3;i=4;d=100;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2} @self ~onUse
