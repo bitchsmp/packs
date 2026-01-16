@@ -180,4 +180,8 @@ SkinBlizzard:
     - aura{aura=hypothermic;ticks=1200;interval=80;ontickskill=[
       - freeze{ticks=140}
       - damage{amount=1;damagecause=FREEZE}
+      - sudoskill{skill=[
+        - summon{type=blizzard_display;pitch=0;yaw=0} @selfLocation 
+      ]}
+      
       ]} @trigger ~onAttack
