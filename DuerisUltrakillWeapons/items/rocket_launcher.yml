@@ -12,6 +12,5 @@ rocket_launcher:
     - cancelevent ~onAttack   
     - cancelevent ~onShoot 
     - cancelEvent ~onUse ?hasAura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN} 
-    - cancelEvent ~onUse ?equipslot{slot=OFFHAND}
     - cancelEvent ~onUse ?!hasitem{amount=>0;types=ultrakill_cannonball}
     - actionmessage{message="&aCannonball Assembly Factory &fis required!"} ~onUse ?!hasitem{amount=>0;types=ultrakill_cannonball}

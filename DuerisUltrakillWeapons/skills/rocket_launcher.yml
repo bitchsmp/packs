@@ -70,6 +70,7 @@ rocket_launcher_rightclick:
   Conditions:
   - skillOnCooldown{skill=rocket_launcher_leftclick} false
   - hasAura{aura=ROCKET_LAUNCHER_CANNONBALL_COOLDOWN} false
+  - bowTension{force=1}
   - hasitem{amount=>0;types=ultrakill_cannonball} true
   - hasitem{amount=>1;types=iron_block} orelsecast rocket_launcher_rightclick_ConditionCheck
 
