@@ -2,7 +2,7 @@ Storm_nigger_dash:
   Skills:
   - aura{aura=storm_nigger_nofalldamage;ticks=60}
   - effect:particles{particle=explosion;amount=10;hS=1;vS=1;speed=5} @self
-  - particletornado{p=dragon_breath;cp=largeexplode;mr=1;h=3;i=4;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2;yoffset=0;d=40;a=200} @self
+  - particletornado{p=red_dust;cp=largeexplode;mr=1;h=3;i=4;rs=1;sh=1;cs=0;ca=0;chs=0.1;cvs=0.1;cps=1;cyo=2;yoffset=0;d=40;a=2000;color=#00a6ff} @self
   - velocity{m=add;y=2.15}
   - lightning @randomLocations{r=8} ~onTimer:100
   - delay 25
