@@ -41,4 +41,4 @@ Dueris: Lead Developer
 
 ## Former contributors:
 
-VuFelix: Main former developer of the "Hakurei Gohei Pack"; supporter.
+VuFelix: Former developer of the "Hakurei Gohei Pack"; supporter.
