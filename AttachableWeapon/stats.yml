@@ -101,7 +101,7 @@ DODGE_NEGATION:
   BaseValue: 0
 
 HEALTH:
-  Enabled: false
+  Enabled: true
   Display: 'Health'
   Formatting:
     Additive: '+<value> Health'
@@ -111,7 +111,7 @@ HEALTH:
   MinValue: 1
 
 HEALTH_REGENERATION:
-  Enabled: false
+  Enabled: true
   Display: 'Health Regeneration'
   Formatting:
     Additive: '+<value> Regeneration'
