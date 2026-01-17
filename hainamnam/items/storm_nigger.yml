@@ -11,6 +11,6 @@ Storm_nigger:
     - removeaura{aura=storm_nigger_noFalldamage;delay=1} @self
     ]} ~onDamaged ?hasAura{aura=storm_nigger_noFalldamage} ?DamageCause{damagecause=FALL}
   - cancelEvent ~onDamaged ?hasAura{aura=storm_nigger_noLightningdamage} ?DamageCause{damagecause=LIGHTNING}
-  - skill{skill=Storm_nigger_dash;cooldown=2} @self ~onUse #sua lai cooldown sau
-  - stataura{stat=ATTACK_DAMAGE;type=ADDITIVE;value=100;ticks=2;forcesync=true} @self ~onTimer:1
+  - skill{skill=Storm_nigger_dash;cooldown=30} @self ~onUse
+  - stataura{stat=ATTACK_DAMAGE;type=ADDITIVE;value=5;ticks=2;forcesync=true} @self ~onTimer:1
   - removeaura{aura=storm_nigger_onAir_casting} @self ~onTimer:1 ?onGround
