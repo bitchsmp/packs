@@ -47,13 +47,13 @@ SkinFlamiclysm:
   Lore:
   - <yellow><bold>Sword Skin:</bold> Flamiclysm
   - <white>
-  - <gray>Fire a huge fireball on swing</gray>
+  - <gray>Fire a huge fireball on right-click</gray>
   - <white>
   - "<gold>[You are my sunshine]"
-  - "<white>  Fire a huge fireball on swing"
+  - "<white>  Fire a huge fireball on right-click"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<white>Flamiclysm<gray> (Fire a huge fireball on swing)'
+    Tooltip: '<white>Flamiclysm<gray> (Fire a huge fireball on right-click)'
     ReplaceItemModel:
     Conditions:
     Skills:
