@@ -102,24 +102,28 @@ rocket_launcher_cannonball_onstart:
   - setSkillCooldown{skill=rocket_launcher_leftclick;seconds=1;forcesync=true} @self
   - sound{sound=ultrakill:impacts_processed_179;volume=0.25;radius=16;delay=17} @self #Reload sound
   - setVar{name=skill.cannonball_bounce;type=INTEGER;scope=skill;value=0}
+
 rocket_launcher_cannonball_consume_iron:
   Conditions:
   - hasitem{amount=>1;types=iron_block} orelsecast rocket_launcher_cannonball_consume_netherite
   Skills:
   - command{command="clear <caster.name> iron_block 2";asOp=true} @self
+  - setVar{name=skill.cannonball_ShotCostType;type=INTEGER;scope=skill;value=0} #0: Iron Block; 1: Netherite Ingot
 rocket_launcher_cannonball_consume_netherite:
   Conditions:
   - hasitem{amount=>0;types=netherite_ingot} true
   Skills:
   - command{command="clear <caster.name> netherite_ingot 1";asOp=true} @self
-
+  - setVar{name=skill.cannonball_ShotCostType;type=INTEGER;scope=skill;value=1} #0: Iron Block; 1: Netherite Ingot
 
 
 rocket_launcher_cannonball_tick:
   Skills:
   - message{message=bounce} @everyone ?varequals{value=1;name=skill.cannonball_bounce}
 
-  - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_hitbox} 
+  - summon{amount=1;onsurface=false;type=rocket_launcher_cannonball_hitbox;onsummonskill=[
+    - varMove{from=skill.cannonball_ShotCostType;to=target.cannonball_ShotCostType}
+    ]} 
   # ?hasaura{aura=rocket_launcher_cannonball_boosted} is the condition to check if the cannonball was punched
   - setprojectiledirection @Forward{yOffset=1.62;forward=32} ?hasaura{aura=rocket_launcher_cannonball_boosted}
   - modifyprojectile{trait=VELOCITY;action=ADD;value=1} ?hasaura{aura=rocket_launcher_cannonball_boosted}
@@ -162,4 +166,5 @@ rocket_launcher_cannonball_onAttacked:
   - aura{aura=rocket_launcher_cannonball_boosted;ticks=2;showbartimer=true} @trigger
   - effect:sound{sound=ultrakill:punch_projectile;volume=0.5;radius=16}
   - message{message=detected} @trigger
-
+  - command{command="give <trigger.name> iron_ingot 17";asop=true} ?varequals{value=0;name=target.cannonball_ShotCostType}
+  - command{command="give <trigger.name> netherite_scrap 4";asop=true} ?varequals{value=1;name=target.cannonball_ShotCostType}
