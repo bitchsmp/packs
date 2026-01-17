@@ -57,7 +57,7 @@ SkinFlamiclysm:
     ReplaceItemModel:
     Conditions:
     Skills:
-    - skill{s=flamiclysm_projectile;cooldown=3} ~onSwing 
+    - skill{s=flamiclysm_projectile;cooldown=3} ~onUse
 SkinSoulFlamic:
   Material: TURTLE_SCUTE
   Display: 'Special: <white>Soul Flame Essence'

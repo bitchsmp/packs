@@ -27,6 +27,7 @@ flamity_projectile_tick:
 #Flamiclysm
 flamiclysm_projectile:
   Skills:
+  - swingarm{}
   - projectile{bullettype=DISPLAY;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;bulletscale=1,1,1;velocity=36;gravity=1;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=;onendskill=flamiclysm_projectile_end;ontickskill=flamiclysm_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;bulletbrightness=15w} @Forward{yOffset=1.62}
 flamiclysm_projectile_end:
   Skills:
