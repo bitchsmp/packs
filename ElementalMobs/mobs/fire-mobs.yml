@@ -1,7 +1,8 @@
 FIRE_HAZARD:
   Type: blaze
+  Display: Fire Hazard
   Health: 40
   Options:
     PreventOtherDrops: true
   Drops:
-  - hot_element
+  - hot_element 1 0.5
