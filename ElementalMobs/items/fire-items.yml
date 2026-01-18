@@ -6,7 +6,7 @@ hot_element:
     ItemModel: fire_charge
   Lore:
   - "<white>"
-  - "<gray>Obtained from polar Fire Hazards"
+  - "<gray>Obtained from Fire Hazards"
   - "<gray>Used to craft basic elemental weapon skins"
 pyric_element:
   Id: TURTLE_SCUTE
