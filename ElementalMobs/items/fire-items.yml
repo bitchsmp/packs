@@ -6,6 +6,8 @@ hot_element:
     ItemModel: fire_charge
   Lore:
   - "<white>"
+  - "<gray><italic>Warmth radiates from it</italic>"
+  - "<white>"
   - "<gray>Obtained from Fire Hazards"
   - "<gray>Used to craft basic elemental weapon skins"
 pyric_element:
@@ -15,6 +17,8 @@ pyric_element:
     Glint: true
     ItemModel: fire_charge
   Lore:
+  - "<white>"
+  - "<gray><italic>Hot enough just to not burn you</italic>"
   - "<white>"
   - "<gray>Obtained from Elder Magmas"
   - "<gray>Used to craft intermediate elemental weapon skins"

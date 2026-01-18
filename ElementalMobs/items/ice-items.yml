@@ -6,6 +6,8 @@ cold_element:
     ItemModel: snowball
   Lore:
   - "<white>"
+  - "<gray><italic>Air around it feels cooler</italic>"
+  - "<white>"
   - "<gray>Obtained from polar Bears, strays"
   - "<gray>Used to craft basic elemental weapon skins"
 algid_element:
@@ -15,6 +17,8 @@ algid_element:
     Glint: true
     ItemModel: snowball
   Lore:
+  - "<white>"
+  - "<gray><italic>Don't hold it irresponsibly, it's very cold</italic>"
   - "<white>"
   - "<gray>Obtained from leader strays"
   - "<gray>Used to craft intermediate elemental weapon skins"
