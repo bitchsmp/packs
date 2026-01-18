@@ -1,0 +1,18 @@
+wakizashi_ghost:
+  Type: ALLAY
+  AIGoalSelectors:
+  - clear
+  Options:
+    Interactable: false
+    VisibleByDefault: false
+    FollowRange: 128
+    Tamed: true
+    FlyingSpeed: 0.15
+    Silent: true
+    Collidable: false
+
+  Skills:
+  - particle{particle=end_rod} ~onTimer:1 @selfLocation{yoffset=1}
+  - skill{s=[
+    - goto{speedModifier=0.8;spreadh=2.5;spreadv=1}
+    ]} ~onTimer:30 @owner

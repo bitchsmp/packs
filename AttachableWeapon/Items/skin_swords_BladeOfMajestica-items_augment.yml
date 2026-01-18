@@ -313,6 +313,26 @@ SkinMasamune:
     - modifyDamage{a=-0.2;modifier=ADDITIVE;sync=true} @self ~onAttack
     - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3.5}
     - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
+SkinWakizashi:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <yellow>Wakizashi'
+  Options:
+    ItemModel: minecraft:paper
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Wakizashi
+  - <white>
+  - <gray>Description</gray>
+  - <white>
+  - "<light_purple>[Buff]"
+  - "<white>  Buff Description"
+  - "<red>[⚠Debuff]"
+  - "<white>  Debuff Description"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Wakizashi<gray> (Description)'
+    ReplaceItemModel: minecraft:wakizashi
+    Skills:
+    - summon{type=wakizashi_ghost;summonerisowner=true} @self ~onUse
 SkinSabre:
   Material: TURTLE_SCUTE
   Display: 'Blade Style: Sabre'
