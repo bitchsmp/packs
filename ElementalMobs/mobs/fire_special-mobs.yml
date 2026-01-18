@@ -1,0 +1,24 @@
+ELDER_MAGMA:
+  Type: MAGMA_CUBE
+  Display: Elder Magma
+  Health: 40
+  Options:
+    Size: 7
+    PreventSlimeSplit: true
+    FollowRange: 64
+  Drops:
+  - hot_element 20 1
+  - pyric_element 1 1
+  Skills:
+  - skill{s=[
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true}
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true;horizontaloffset=30}
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true;horizontaloffset=330}
+      ]} @PIR{radius=36} ~onTimer:80
+  - skill{s=[
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true;horizontaloffset=15}
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true;horizontaloffset=345}
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true;horizontaloffset=45}
+    - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=2;maxrange=64;poweraffectsvelocity=false;onhitskill=elder_magma_flamic_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true;horizontaloffset=315}
+      ];delay=40} @PIR{radius=36;targetspectator=false;targetcreative=false} ~onTimer:80
+  - healpercent{multiplier=100%} @self ~onKillplayer 

@@ -1,0 +1,4 @@
+elder_magma_flamic_hit:
+  Skills:
+  - damage{amount=21}
+  - ignite{ticks=20}
