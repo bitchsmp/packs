@@ -1,0 +1,20 @@
+hot_element:
+  Id: TURTLE_SCUTE
+  Display: <gray>Hot Element
+  Options:
+    Glint: true
+    ItemModel: fire_charge
+  Lore:
+  - "<white>"
+  - "<gray>Obtained from polar Fire Hazards"
+  - "<gray>Used to craft basic elemental weapon skins"
+pyric_element:
+  Id: TURTLE_SCUTE
+  Display: <gold>Pyric <gray>Element
+  Options:
+    Glint: true
+    ItemModel: fire_charge
+  Lore:
+  - "<white>"
+  - "<gray>Obtained from Elder Magmas"
+  - "<gray>Used to craft intermediate elemental weapon skins"
