@@ -9,7 +9,6 @@ fire_hazard:
   Conditions:
   - outside
   - distancefromspawn{d=>128}
-  - night false
 polar_bear:
   Worlds: world
   Action: ADD

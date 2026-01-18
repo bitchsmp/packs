@@ -1,0 +1,12 @@
+wind_element:
+  Id: TURTLE_SCUTE
+  Display: <gray>Wind Element
+  Options:
+    Glint: true
+    ItemModel: wind_charge
+  Lore:
+  - "<white>"
+  - "<gray><italic>Like a portable fan!</italic>"
+  - "<white>"
+  - "<gray>Obtained from Breezes"
+  - "<gray>Used to craft basic elemental weapon skins"
