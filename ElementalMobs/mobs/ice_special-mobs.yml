@@ -1,0 +1,11 @@
+LEADER_STRAY:
+  Type: STRAY
+  Display: Leader Stray
+  Health: 100
+  Options:
+    PreventSunburn: true
+  Drops:
+  - cold_element 5 1
+  - algid_element 1 1
+  Skills:
+  - summon{amount=1;type=STRAY;noise=3;onsurface=true;chance=0.5} @self ~onDamaged 

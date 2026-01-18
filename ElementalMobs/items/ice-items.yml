@@ -1,0 +1,20 @@
+cold_element:
+  Id: TURTLE_SCUTE
+  Display: <gray>Cold Element
+  Options:
+    Glint: true
+    ItemModel: snowball
+  Lore:
+  - "<white>"
+  - "<gray>Obtained from polar Bears, strays"
+  - "<gray>Used to craft basic elemental weapon skins"
+algid_element:
+  Id: TURTLE_SCUTE
+  Display: <aqua>Algid <gray>Element
+  Options:
+    Glint: true
+    ItemModel: snowball
+  Lore:
+  - "<white>"
+  - "<gray>Obtained from leader strays"
+  - "<gray>Used to craft intermediate elemental weapon skins"

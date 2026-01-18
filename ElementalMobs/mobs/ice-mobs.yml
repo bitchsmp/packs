@@ -1,0 +1,12 @@
+POLAR_BEAR:
+  Health: 60
+  Damage: 9
+  Options:
+    MovementSpeed: 0.3
+  Drops:
+  - cold_element 1 1
+STRAY:
+  Health: 40
+  Drops:
+  - cold_element 1 1
+  Skills:
