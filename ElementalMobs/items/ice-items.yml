@@ -9,16 +9,34 @@ cold_element:
   - "<gray><italic>Air around it feels cooler</italic>"
   - "<white>"
   - "<gray>Obtained from polar Bears, strays"
-  - "<gray>Used to craft basic elemental weapon skins"
+  - "<green>Used to craft basic elemental weapon skins"
+  Recipes:
+    SHAPELESS:
+      Type: SHAPELESS
+      Amount: 9
+      Ingredients:
+      - packed_ice
+      - packed_ice
+      - packed_ice
+      - packed_ice
+      - experience_bottle
 algid_element:
   Id: TURTLE_SCUTE
   Display: <aqua>Algid <gray>Element
   Options:
     Glint: true
     ItemModel: snowball
+  Recipes:
+    SHAPELESS:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - cold_element | BLUE_ICE | cold_element
+      - cold_element | experience_bottle | cold_element
+      - cold_element | BLUE_ICE | cold_element
   Lore:
   - "<white>"
   - "<gray><italic>Don't hold it irresponsibly, it's very cold</italic>"
   - "<white>"
   - "<gray>Obtained from leader strays"
-  - "<gray>Used to craft intermediate elemental weapon skins"
+  - "<green>Used to craft intermediate elemental weapon skins"

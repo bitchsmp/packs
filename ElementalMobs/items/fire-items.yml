@@ -32,12 +32,12 @@ pyric_element:
       Type: SHAPED
       Amount: 1
       Ingredients:
-      - hot_element | hot_element | hot_element
-      - hot_element | blaze_rod | hot_element
-      - hot_element | hot_element | hot_element
+      - hot_element | SOUL_SAND | hot_element
+      - hot_element | BLAZE_ROD | hot_element
+      - hot_element | SOUL_SAND | hot_element
   Lore:
   - "<white>"
   - "<gray><italic>Hot enough just to not burn you</italic>"
   - "<white>"
   - "<gray>Obtained from Elder Magmas"
-  - "<gray>Used to craft intermediate elemental weapon skins"
+  - "<green>Used to craft intermediate elemental weapon skins"
