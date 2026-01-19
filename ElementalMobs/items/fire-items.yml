@@ -4,18 +4,37 @@ hot_element:
   Options:
     Glint: true
     ItemModel: fire_charge
+  Recipes:
+    SHAPELESS:
+      Type: SHAPELESS
+      Amount: 56
+      Ingredients:
+      - fire_charge
+      - fire_charge
+      - fire_charge
+      - fire_charge
+      - blaze_powder
+      - blaze_powder
   Lore:
   - "<white>"
   - "<gray><italic>Warmth radiates from it</italic>"
   - "<white>"
   - "<gray>Obtained from Fire Hazards"
-  - "<gray>Used to craft basic elemental weapon skins"
+  - "<green>Used to craft basic elemental weapon skins"
 pyric_element:
   Id: TURTLE_SCUTE
   Display: <gold>Pyric <gray>Element
   Options:
     Glint: true
     ItemModel: fire_charge
+  Recipes:
+    SHAPELESS:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - hot_element | hot_element | hot_element
+      - hot_element | blaze_rod | hot_element
+      - hot_element | hot_element | hot_element
   Lore:
   - "<white>"
   - "<gray><italic>Hot enough just to not burn you</italic>"
