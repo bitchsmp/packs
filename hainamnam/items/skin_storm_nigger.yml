@@ -1,0 +1,28 @@
+Skin_Storm_nigger:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <blue><bold>Storm Breaker'
+  Options:
+    ItemModel: minecraft:diamond
+    Glint: true
+  Lore:
+  - <yellow><bold>Axe Skin:</bold> Storm Breaker
+  - "Bring me Thanos"
+  - "God of thunder"
+  - "King of Asgard"
+  Augmentation:
+    Type: SKIN_AXE
+    Tooltip: "<blue><bold>Storm breaker<gray></bold> (Thor's strongest weapon)"
+    Lore:
+    - "Thor's strongest weapon"
+    - "Thanos slayer"
+    ReplaceItemModel: hainam:stormbreaker
+    Conditions:
+    Skills:
+    - skill{skill=[
+      - cancelEvent
+      - removeaura{aura=storm_nigger_noFalldamage;delay=1} @self
+      ]} ~onDamaged ?hasAura{aura=storm_nigger_noFalldamage} ?DamageCause{damagecause=FALL}
+    - cancelEvent ~onDamaged ?hasAura{aura=storm_nigger_noLightningdamage} ?DamageCause{damagecause=LIGHTNING}
+    - skill{skill=Storm_nigger_dash;cooldown=2} @self ~onUse
+    - stataura{stat=ATTACK_DAMAGE;type=ADDITIVE;value=100;ticks=2;forcesync=true} @self ~onTimer:1
+    - removeaura{aura=storm_nigger_onAir_casting} @self ~onTimer:1 ?onGround
