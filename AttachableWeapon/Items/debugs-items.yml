@@ -39,3 +39,10 @@ issue7_debug_rod:
   - damage{triggerskills=true;forcesync=true} @trigger ~onAttack
   - cancelEvent ~onAttack
 
+issue5_debug_rod:
+  Id: diamond_Sword
+  Display: 'Debug Rod'
+  Options:
+    PreventStacking: true
+  Skills:
+  - modifyDamage{a=0.5;modifier=ADD} ~onAttack
