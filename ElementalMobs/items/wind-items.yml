@@ -3,10 +3,18 @@ wind_element:
   Display: <gray>Wind Element
   Options:
     Glint: true
-    ItemModel: wind_charge
+    ItemModel: widn_charge
+  Recipes:
+    SHAPELESS:
+      Type: SHAPEDw
+      Amount: 1
+      Ingredients:
+      - WIND_CHARGE | AIR | WIND_CHARGE
+      - WIND_CHARGE | BREEZE_ROD | WIND_CHARGE
+      - WIND_CHARGE | AIR | WIND_CHARGE
   Lore:
   - "<white>"
   - "<gray><italic>Like a portable fan!</italic>"
   - "<white>"
   - "<gray>Obtained from Breezes"
-  - "<gray>Used to craft basic elemental weapon skins"
+  - "<green>Used to craft basic elemental weapon skins"
