@@ -1,0 +1,48 @@
+SkinSculkSword:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Elegant Sculk'
+  Options:
+    ItemModel: minecraft:calibrated_sculk_sensor
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Sculk Sword
+  - <white>
+  - <gray>Inflicts target with Darkness effect</gray>
+  - <white>
+  - "<gradient:#024050:#61c3cb>[Darkness]"
+  - "<white>  Inflicts target with Darkness effect for 7 seconds"
+  
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Sculk Sword<gray> (Inflicts target with Darkness effect)'
+    ReplaceItemModel: sculksword
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - potion{type=DARKNESS;duration=140} @trigger ~onAttack
+
+SkinSculkCleaver:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <yellow>Restful Sculk'
+  Options:
+    ItemModel: minecraft:sculk_shrieker
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Sculk Cleaver
+  - <white>
+  - "<gray>Inflicts target with Darkness effect, cast a mini sonic boom on swing</gray>"
+  - <white>
+  - "<gradient:#024050:#61c3cb>[Darkness]"
+  - "<white>  Inflicts target with Darkness effect for 5 seconds"
+  - <white>
+  - "<gradient:#61c3cb:#024050>[Sonic Boom]"
+  - "<white>  Cast a mini Sonic Boom on swing while not crouching, consuming XP, dealing 6 damage"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Sculk Cleaver<gray> (Inflicts target with Darkness effect, cast a mini sonic boom on swing)'
+    ReplaceItemModel: sculkcleaver
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - potion{type=DARKNESS;duration=100} @trigger ~onAttack
+    - skill{s=sculkcleaver_leftclick} @self ~onSwing
