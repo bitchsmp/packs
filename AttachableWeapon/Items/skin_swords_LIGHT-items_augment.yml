@@ -1,0 +1,50 @@
+SkinHolyMoonlightSword:
+  Material: TURTLE_SCUTE
+  Display: '<light_purple>Holy Moonlight Sword'
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Holy Moonlight Sword
+  - <white>
+  - <gray>Becomes powerful at night, even more powerful on full moons, up to 14 extra damage</gray>
+  - <white>
+  - "<light_purple>[Lunar Blessing]"
+  - <white>  At every night:</white> +2 Attack Damage
+  - <white>  During<red> not</red> new moon:</white> +4 Attack Damage
+  - <white>  During Full moon:</white> +8 Attack Damage
+
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<light_purple>Holy Moonlight Sword<gray> (Becomes powerful at night, even more powerful on full moons, up to 14 extra damage)'
+    ReplaceItemModel: holymoonlightsword
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_NIGHT_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?worldtime{time=13000to23000}
+    - effect:particles{particle=end_rod;count=3;offset=0.5;speed=0;yoffset=0.1} @self ~onTimer:20 ?worldtime{time=13000to23000}
+
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=4;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0123567_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0,1,2,3,5,6,7} ?worldtime{time=13000to23000}
+    - effect:particles{particle=end_rod;count=3;offset=0.4;speed=0;yoffset=0} @self ~onTimer:10 ?lunarPhase{phases=0,1,2,3,5,6,7} ?worldtime{time=13000to23000}
+
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=8;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
+    - effect:particles{particle=end_rod;count=3;offset=0;speed=0;yoffset=0;speed=0.1} @self ~onTimer:5 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
+
+SkinEpicSword:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <yellow>Holy Water'
+  Options:
+    ItemModel: terraria:item_422
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Epic Sword
+  - <white>
+  - "<yellow>[The Enlightment]"
+  - <white>  20% chance to summon an anvil falling onto the target, dealing 120 damage
+
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Epic Sword<gray> (20% chance summon an anvil falling onto the target, dealing 120 damage)'
+    ReplaceItemModel: epicsword
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Stats:
+    Skills:
+     - projectile{bulletType=BLOCK;material=ANVIL;syo=20;velocity=30;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=epicsword_on_anvil_hit;deathdelay=40;chance=0.20} @trigger ~onAttack
