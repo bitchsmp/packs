@@ -51,19 +51,23 @@ SkinNapalm_Claymore:
   Lore:
   - <yellow><bold>Sword Skin:</bold> Napalm Claymore
   - <white>
-  - <gray>Inflict UltraBurn on hit</gray>
+  - <gray>Inflicts UltraBurn on hit</gray>
   - <white>
   - "<dark_red>[UltraBurn]"
   - "<white>  Causes unextinguishable burning effect to the target"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<yellow>Napalm Claymore<gray> (Inflict <dark_red>UltraBurn</dark_red> on hit)'
+    Tooltip: '<yellow>Napalm Claymore<gray> (Inflicts <dark_red>UltraBurn</dark_red> on hit)'
     ReplaceItemModel: brimstone_claymore
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
     Skills:
-    - skill{s=UltraBurn} @trigger ~onAttack ?!itemRecharging{}
+    - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
+      - damage{a=0.5;preventknockback=true}
+      - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
+      - ignite{ticks=200}
+      ]} @trigger ~onAttack ?!itemRecharging{}
     - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
 
 
@@ -122,7 +126,7 @@ SkinMoltenBlade:
   Options:
     ItemModel: hbm:blade_meteorite_hot
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Molten Blade
   - <white>
   - <gray><italic>Forged from a fallen star</gray>
   - <gray><italic>Sharper than most terrestrial blades</gray>
@@ -148,7 +152,7 @@ SkinMoltenSword:
   Options:
     ItemModel: hbm:ingot_meteorite_forged_hot
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Molten Sword
   - <white>
   - <gray>Forged from a fallen star</gray>
   - <white>
@@ -192,32 +196,33 @@ SkinFrostBlade:
 
 SkinHolyMoonlightSword:
   Material: TURTLE_SCUTE
-  Display: '<aqua>Holy Moonlight Sword'
+  Display: '<light_purple>Holy Moonlight Sword'
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Holy Moonlight Sword
   - <white>
-  - <gray>Becomes powerful at night, even more powerful on full moons, up to 6 extra damage</gray>
+  - <gray>Becomes powerful at night, even more powerful on full moons, up to 14 extra damage</gray>
   - <white>
   - "<light_purple>[Lunar Blessing]"
-  - <white>  At night:</white> +1 Attack Damage
-  - <white>  During Full moon:</white> +6 Attack Damage
-  - <white>  During other moon phases except new moon:</white> +3 Attack Damage
+  - <white>  At every night:</white> +2 Attack Damage
+  - <white>  During<red> not</red> new moon:</white> +4 Attack Damage
+  - <white>  During Full moon:</white> +8 Attack Damage
+
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<aqua>Holy Moonlight Sword<gray> (Becomes powerful at night, even more powerful on full moons, up to 6 extra damage)'
+    Tooltip: '<light_purple>Holy Moonlight Sword<gray> (Becomes powerful at night, even more powerful on full moons, up to 14 extra damage)'
     ReplaceItemModel: holymoonlightsword
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Stats:
     Skills:
-    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=1;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_NIGHT_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?worldtime{time=13000to23000}
-    - effect:particles{particle=end_rod;count=5;offset=0.5;speed=0;yoffset=0.1} @self ~onTimer:20 ?worldtime{time=13000to23000}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_NIGHT_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?worldtime{time=13000to23000}
+    - effect:particles{particle=end_rod;count=3;offset=0.5;speed=0;yoffset=0.1} @self ~onTimer:20 ?worldtime{time=13000to23000}
 
-    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=2;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE1234567_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=1,2,3,4,5,6,7} ?worldtime{time=13000to23000}
-    - effect:particles{particle=end_rod;count=3;offset=0.4;speed=0;yoffset=0} @self ~onTimer:10 ?lunarPhase{phases=1,2,3,4,5,6,7} ?worldtime{time=13000to23000}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=4;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0123567_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0,1,2,3,5,6,7} ?worldtime{time=13000to23000}
+    - effect:particles{particle=end_rod;count=3;offset=0.4;speed=0;yoffset=0} @self ~onTimer:10 ?lunarPhase{phases=0,1,2,3,5,6,7} ?worldtime{time=13000to23000}
 
-    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=5;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
-    - effect:particles{particle=end_rod;count=5;offset=0.6;speed=0;yoffset=0} @self ~onTimer:5 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=8;type=ADDITIVE;aura=HOLYMOONLIGHTSWORD_MOONPHASE0_DAMAGE_BUFF;duration=5} @self ~onTimer:1 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
+    - effect:particles{particle=end_rod;count=3;offset=0;speed=0;yoffset=0;speed=0.1} @self ~onTimer:5 ?lunarPhase{phases=0} ?worldtime{time=13000to23000}
 
 
 SkinEpicSword:
@@ -226,7 +231,7 @@ SkinEpicSword:
   Options:
     ItemModel: terraria:item_422
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Epic Sword
   - <white>
   - "<yellow>[The Enlightment]"
   - <white>  20% chance to summon an anvil falling onto the target, dealing 120 damage
@@ -246,7 +251,7 @@ SkinAncient_royal_great_sword:
   Material: TURTLE_SCUTE
   Display: '<yellow>Ancient Royal Great Sword'
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Ancient Royal Great Sword
   - <white>
   - <gray>Disable up to 10 Armor points of the target</gray>
   - <white>
@@ -269,7 +274,7 @@ SkinTerrablade:
   Material: TURTLE_SCUTE
   Display: '<yellow>Terrablade'
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Terrablade
   - <white>
   - <gray>Terrarians love this thing</gray>
   - <white>
@@ -287,7 +292,7 @@ SkinMasamune:
   Material: TURTLE_SCUTE
   Display: "Masamune's Hand"
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Masamune
   - <white>
   - "<gray>Turn your sword into a long katana, forged by Masamune's own technique</gray>"
   - <white>
@@ -314,7 +319,7 @@ SkinSabre:
   Options:
     ItemModel: knowledge_book
   Lore:
-  - <yellow><bold>Sword Skin</bold>
+  - <yellow><bold>Sword Skin:</bold> Sabre
   - <white>
   - <gray>Deals up to 4 more damage when in plains biome and on horseback</gray>
   - <white>

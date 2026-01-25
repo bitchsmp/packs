@@ -4,7 +4,7 @@ SkinAlternateCrossbow:
   Options:
     ItemModel: paper
   Lore:
-  - <yellow><bold>Crossbow Skin:</bold> B-Side
+  - <yellow><bold>Crossbow Skin:</bold> Alternate Crossbow
   - <white>
   - <gray>Turns shooted projectile into hitscans</gray>
   - <white>

@@ -12,14 +12,16 @@ SkinSculkScythe:
   - "<gradient:#024050:#61c3cb>[Darkness]"
   - "<white>  Inflicts target with Darkness effect for 5 seconds"
   - "<yellow>[Scythe]"
+  - "<white>  +7 Attack Damage"
   - "<white>  Pulls the target upon hitting"
 
   Augmentation:
     Type: SKIN_HOE
-    Tooltip: '<white>Sculk Scythe<gray> (Inflicts target with Darkness effect)' #Rarity color + Name
+    Tooltip: '<white>Sculk Scythe<gray> (Inflicts target with Darkness effect)'
     ReplaceItemModel: sculkscythe
     ReplaceItemModelNamespace: minecraft
     Conditions:
     Skills:
+    - stataura{forcesync=true;stat=ATTACK_DAMAGE;val=7;type=ADDITIVE;aura=SculkScythe_attack_damage_buff;duration=2} @self ~onTimer:1
     - skill{s=scythes_pull} @trigger ~onAttack
     - potion{type=DARKNESS;duration=100} @trigger ~onAttack

@@ -19,15 +19,6 @@ debug_shoes:
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="3";scope=caster} @self ?directionalvelocity{y=<-0.8} ?directionalvelocity{y=>-1.2} ~onTimer:1
     - setvariable{var=caster.stop_sign.is.falling;type=STRING;val="4";scope=caster} @self ?directionalvelocity{y=<-1.2} ~onTimer:1
 
-debug_rod:
-  Id: stick
-  Display: 'Debug Rod'
-  Options:
-    PreventStacking: true
-  Skills:
-  - skill{s=marked_for_damaged} ~onAttack @trigger
-
-#  - damage{a=100} ~onAttack @target{sort=NEAREST;limit=1}
 
 
 power_gauge:
@@ -37,3 +28,21 @@ power_gauge:
     PreventStacking: true
   Skills:
   - actionmessage{message=<caster.damage>} ~onTimer:1 @self
+
+issue7_debug_rod:
+  Id: stick
+  Display: 'Debug Rod'
+  Options:
+    PreventStacking: true
+  Skills:
+  - ondamaged{ondamagedskill=debug_damage;ticks=2} @EIR{radius=10} ~onTimer:1
+  - damage{triggerskills=true;forcesync=true} @trigger ~onAttack
+  - cancelEvent ~onAttack
+
+issue5_debug_rod:
+  Id: diamond_Sword
+  Display: 'Debug Rod'
+  Options:
+    PreventStacking: true
+  Skills:
+  - modifyDamage{a=0.5;modifier=ADD} ~onAttack
