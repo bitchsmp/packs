@@ -1,0 +1,19 @@
+SkinBreezer:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Breezer
+  - <white>
+  - <gray>Fire a gust of wind upon swinging</gray>
+  - <white>
+  - "<white>[Gust]"
+  - "<white>  Fire a gust of wind upon swinging"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Breezer<gray> (Fire a gust of wind upon swinging)'
+    Conditions:
+    Skills:
+    - skill{s=breezer_wind_projectile;cooldown=3} @self ~onSwing

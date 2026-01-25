@@ -1,0 +1,37 @@
+SkinSoilbender:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Soil Essence'
+  Options:
+    ItemModel: minecraft:dirt
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Soil Bender
+  - <white>
+  - <gray>Creates a shockwave on the ground on swing</gray>
+  - <white>
+  - "<#926c4d>[Dirtwave]"
+  - "<white>  Creates a shockwave on the ground on swing that does 3 damage. Cooldown 2 seconds"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Soil Bender<gray> (Creates a shockwave on the ground on swing)'
+    Conditions:
+    Skills:
+    - skill{s=soil_bender_throw;cooldown=2} ~onSwing
+SkinTerrablade:
+  Material: TURTLE_SCUTE
+  Display: '<yellow>Terrablade'
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Terrablade
+  - <white>
+  - <gray>Terrarians love this thing</gray>
+  - <white>
+  - "<green>[Energy]"
+  - "<white>  Each swing fires a wave of energy"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<yellow>Terrablade<gray> (Terrarians love this thing)'
+    ReplaceItemModel: terrablade
+    ReplaceItemModelNamespace: minecraft
+    Conditions:
+    Skills:
+    - skill{s=terrablade_projectile_leftclick} ~onSwing 
