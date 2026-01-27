@@ -1,5 +1,6 @@
 alternate_crossbow_onShoot:
   Conditions:
+  - varrange{name=caster.alternate_crossbow_heat;value=>600} castinstead alternate_crossbow_projectile_overheat
   - bowTension{force=1}
   Skills:
     - skill{s=alternate_crossbow_shoot_noEnchant} ?!hasEnchant{type=piercing} ?!hasEnchant{type=multishot} 
