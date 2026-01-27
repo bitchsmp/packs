@@ -18,16 +18,21 @@ alternate_crossbow_shoot_recoil:
   # Cool
   - recoil{recoil=1;pitch=-7to-10;sprinting=1.5} @self ?varrange{name=caster.alternate_crossbow_heat;value=<301} ?varrange{name=caster.alternate_crossbow_heat;value=>20}
   # Luke-Warm
-  - recoil{recoil=1;sprinting=1.5;pitch=-7to-10} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
-  - recoil{recoil=1;sprinting=1.5;yaw=-5to5} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
+  - recoil{recoil=1;sprinting=1.5;pitch=-7to-10;yaw=-5to5} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
   # Warm
-  - recoil{recoil=1;sprinting=1.5;pitch=-14to-20} @self ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=<501}
-  - recoil{recoil=1;sprinting=1.5;yaw=-5to5} @self ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=<501}
+  - recoil{recoil=1;sprinting=1.5;pitch=-14to-20;yaw=-5to5} @self ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=<501}
   # Hot
-  - recoil{recoil=1;sprinting=1.5;pitch=-14to-20} @self ?varrange{name=caster.alternate_crossbow_heat;value=>500}
-  - recoil{recoil=1;sprinting=1.5;yaw=-20to20} @self ?varrange{name=caster.alternate_crossbow_heat;value=>500}
+  - recoil{recoil=1;sprinting=1.5;pitch=-14to-20;yaw=-20to20} @self ?varrange{name=caster.alternate_crossbow_heat;value=>500}
 alternate_crossbow_shoot_recoil_multishot:
   Skills:
+  # Cool
+  - recoil{recoil=1;pitch=-15to-22;sprinting=1.5} @self ?varrange{name=caster.alternate_crossbow_heat;value=<301} ?varrange{name=caster.alternate_crossbow_heat;value=>20}
+  # Luke-Warm
+  - recoil{recoil=1;sprinting=1.5;pitch=-15to-22;yaw=-10to10} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
+  # Warm
+  - recoil{recoil=1;sprinting=1.5;pitch=-22to-30;yaw=-10to10} @self ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=<501}
+  # Hot
+  - recoil{recoil=1;sprinting=1.5;pitch=-22to-30;yaw=-35to35} @self ?varrange{name=caster.alternate_crossbow_heat;value=>500}
 alternate_crossbow_shoot_multishot:
   Skills:
   - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
