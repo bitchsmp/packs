@@ -1,6 +1,6 @@
 flamic_projectile:
   Skills:
-  - projectile{sfo=0.1;tickinterpolation=0;velocity=20;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamic_projectile_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=0;velocity=24;gravity=0.1;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamic_projectile_hit;onendskill=flamic_projectile_end;ontickskill=flamic_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.35;vr=0.35;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
 flamic_projectile_hit:
   Skills:
   - damage{a=1}
@@ -14,13 +14,13 @@ flamic_projectile_tick:
 #Flamity
 flamity_projectile:
   Skills:
-  - projectile{bullettype=SMALLBLOCK;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;velocity=24;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamity_projectile_hit;onendskill=flamity_projectile_end;ontickskill=flamity_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+  - projectile{bullettype=SMALLBLOCK;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;velocity=16;gravity=1;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=flamity_projectile_hit;onendskill=flamity_projectile_end;ontickskill=flamity_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
 flamity_projectile_hit:
   Skills:
   - ignite{ticks=100}
 flamity_projectile_end:
   Skills:
-  - explode{yield=1;blockdamage=false}
+  - explode{yield=1.1;blockdamage=false}
 flamity_projectile_tick:
   Skills:
   - particle{particle=small_flame;speed=0.03;spread=0;count=3}
@@ -28,7 +28,7 @@ flamity_projectile_tick:
 flamiclysm_projectile:
   Skills:
   - swingarm{}
-  - projectile{bullettype=DISPLAY;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;bulletscale=1,1,1;velocity=24;gravity=1;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=;onendskill=flamiclysm_projectile_end;ontickskill=flamiclysm_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;bulletbrightness=15w} @Forward{yOffset=1.62}
+  - projectile{bullettype=DISPLAY;bulletmaterial=MAGMA_BLOCK;sfo=0.1;tickinterpolation=0;bulletscale=1,1,1;velocity=24;gravity=1;syo=1.62;maxrange=64;poweraffectsvelocity=false;onhitskill=;onendskill=flamiclysm_projectile_end;ontickskill=flamiclysm_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.5;vr=0.5;hnp=true;stopatblock=true;bulletbrightness=15} @Forward{yOffset=1.62}
 flamiclysm_projectile_end:
   Skills:
   - particlering{particle=small_flame;radius=10;points=32;amount=1} @origin{y=1}
