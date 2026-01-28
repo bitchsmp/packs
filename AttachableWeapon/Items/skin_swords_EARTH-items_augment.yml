@@ -10,13 +10,32 @@ SkinSoilbender:
   - <gray>Creates a shockwave on the ground on swing</gray>
   - <white>
   - "<#926c4d>[Dirtwave]"
-  - "<white>  Creates a shockwave on the ground on swing that does 3 damage. Cooldown 2 seconds"
+  - "<white>  Creates a shockwave on the ground on swing that does 3 damage. Cooldown 2s"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Soil Bender<gray> (Creates a shockwave on the ground on swing)'
     Conditions:
     Skills:
     - skill{s=soil_bender_throw;cooldown=2} ~onSwing
+SkinRockbender:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Rock Essence'
+  Options:
+    ItemModel: minecraft:cobblestone
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Rock Bender
+  - <white>
+  - <gray>Creates a shockwave on the ground on attack if the attack deals more than 5 damage</gray>
+  - <white>
+  - "<#926c4d>[Rockwave]"
+  - "<white>  Creates a shockwave on the ground on attack if the attack deals more than 5 damage. Cooldown 0.8s"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Rock Bender<gray> (Creates a shockwave on the ground on attack if the attack deals more than 5 damage)'
+    Conditions:
+    Skills:
+    - skill{s=soil_bender_throw;cooldown=0.8} @trigger ~onAttack ?DamageAmount{damageamount=>5}
 SkinTerrablade:
   Material: TURTLE_SCUTE
   Display: '<yellow>Terrablade'
