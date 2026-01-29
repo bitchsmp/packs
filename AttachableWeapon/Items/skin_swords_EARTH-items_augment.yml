@@ -35,7 +35,7 @@ SkinRockbender:
     Tooltip: '<white>Rock Bender<gray> (Creates a shockwave on the ground on attack if the attack deals more than 5 damage)'
     Conditions:
     Skills:
-    - skill{s=soil_bender_throw;cooldown=0.8} @trigger ~onAttack ?DamageAmount{damageamount=>5}
+    - skill{s=rock_bender_throw;cooldown=0.5} @trigger ~onAttack ?DamageAmount{damageamount=>5}
 SkinTerrablade:
   Material: TURTLE_SCUTE
   Display: '<yellow>Terrablade'
