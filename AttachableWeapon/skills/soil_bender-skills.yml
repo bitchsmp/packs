@@ -42,3 +42,27 @@ rock_bender_throw_damage:
   Skills:
   - setNoDamageTicks{ticks=0}
   - damage{amount=1}
+
+
+
+
+
+
+
+
+#Experimental
+soil_bender_2_projectile:
+  Skills:
+  - projectile{hnp=false;hp=false;stopatblock=false;stopatentity=false;drawhitbox=false;hr=1;vr=1;startyoffset=1.62;velocity=6;hugsurface=true;hugliquid=true;gravity=0;forwardoffset=2;interval=10;Duration=30;ontickskill=soil_bender_2_throw;MaxDropHeight=4} @Forward{y=1.62;lockpitch=true}
+soil_bender_2_throw:
+  Skills:
+  - skill{skill=soil_bender_throw_particle_2}
+  - skill{skill=soil_bender_throw_particle_1}
+  - skill{skill=soil_bender_2_throw_damage} @entitiesNearOrigin{radius=2.5}
+  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @origin
+soil_bender_2_throw_damage:
+  TargetConditions:
+  - ydiff{difference=<1}
+  Skills:
+  - setNoDamageTicks{ticks=0}
+  - damage{amount=1}
