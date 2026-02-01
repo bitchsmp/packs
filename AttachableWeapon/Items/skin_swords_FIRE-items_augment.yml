@@ -14,7 +14,7 @@ SkinFlamic:
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Flamic<gray> (Fire a flame gust on swing)'
-    ReplaceItemModel:
+    ReplaceItemModel: minecraft:sword_fire
     Conditions:
     Skills:
     - skill{s=flamic_projectile;cooldown=3} ~onSwing
@@ -34,7 +34,7 @@ SkinFlamity:
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Flamity<gray> (Fire an explosive fireball on swing)'
-    ReplaceItemModel:
+    ReplaceItemModel: minecraft:sword_fire
     Conditions:
     Skills:
     - skill{s=flamity_projectile;cooldown=3} ~onSwing 
@@ -54,7 +54,7 @@ SkinFlamiclysm:
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Flamiclysm<gray> (Fire a huge fireball on right-click)'
-    ReplaceItemModel:
+    ReplaceItemModel: minecraft:sword_fire
     Conditions:
     Skills:
     - skill{s=flamiclysm_projectile;cooldown=3} ~onUse #Intended cooldown: 5s
@@ -74,7 +74,7 @@ SkinSoulFlamic:
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: '<white>Soul Flamic<gray> (Fire a soul flame gust on swing)'
-    ReplaceItemModel:
+    ReplaceItemModel: minecraft:sword_soul_fire
     Conditions:
     Skills:
     - skill{s=soul_flamic_projectile;cooldown=3} ~onSwing
