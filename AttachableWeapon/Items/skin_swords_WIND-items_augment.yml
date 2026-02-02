@@ -16,7 +16,7 @@ SkinBreezer:
     Tooltip: '<white>Breezer<gray> (Fire a gust of wind upon swinging)'
     Conditions:
     Skills:
-    - skill{s=breezer_wind_projectile;cooldown=3} @self ~onSwing
+    - skill{s=breezer_projectile;cooldown=3} @self ~onSwing
 SkinGale:
   Material: TURTLE_SCUTE
   Display: "Special: <white>Wind Essence"
@@ -39,5 +39,5 @@ SkinGale:
       - particle{particle=small_gust;vspread=0.7;hspread=0.3;a=1;yoffset=0.5}
       ];onstartskill=[
       - particle{particle=gust;a=1;yoffset=1}
-      - sound{sound=entity.breeze.wind_burst;volume=0.5}
+      - sound{sound=entity.breeze.wind_burst;volume=0.8;pitch=0.8}
       ];cooldown=5} @self ~onUse

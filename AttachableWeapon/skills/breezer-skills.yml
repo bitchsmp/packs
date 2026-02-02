@@ -1,10 +1,10 @@
-breezer_wind_projectile:
+breezer_projectile:
   Skills:
-  - projectile{sfo=0.1;tickinterpolation=0;velocity=16;syo=1.62;maxrange=64;poweraffectsvelocity=false;onendskill=breezer_wind_projectile_end;ontickskill=breezer_wind_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
-breezer_wind_projectile_end:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=16;syo=1.62;maxrange=64;poweraffectsvelocity=false;onendskill=breezer_projectile_end;ontickskill=breezer_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+breezer_projectile_end:
   Skills:
-  - summon{onsurface=false;type=breezer_wind_projectile_marker}
+  - summon{onsurface=false;type=breezer_projectile_marker}
 
-breezer_wind_projectile_tick:
+breezer_projectile_tick:
   Skills:
   - particle{particle=cloud;speed=0.07;spread=0.1;count=4}

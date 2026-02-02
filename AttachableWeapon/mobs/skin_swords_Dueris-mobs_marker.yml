@@ -1,4 +1,4 @@
-breezer_wind_projectile_marker:
+breezer_projectile_marker:
   Type: marker
   Skills:
   - setVar{type=STRING;value="{Motion:[0d,-1d,0d]}";name=global.breezer_wind_charge_motion_down}
