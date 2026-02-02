@@ -141,7 +141,7 @@ LIFESTEAL_POWER:
   BaseValue: 0.1
 
 MOVEMENT_SPEED:
-  Enabled: false
+  Enabled: true
   Display: 'Movement Speed'
   Formatting:
     Additive: '+<value> Movement Speed'
@@ -298,7 +298,7 @@ SAFE_FALL_DISTANCE:
     BaseValue: 0
 
 SNEAKING_SPEED:
-    Enabled: false
+    Enabled: true
     Display: 'Sneaking Speed'
     Formatting:
         Additive: '+<value> Sneaking Speed'
@@ -429,7 +429,7 @@ FIRE_RESISTANCE:
   MinValue: 0
 
 SPEED:
-  Enabled: false
+  Enabled: true
   AlwaysActive: false
   Type: STATIC
   FormulaKey: 'SPD'
