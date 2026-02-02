@@ -1,0 +1,19 @@
+SkinGroundshaker:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Soil Essence 2'
+  Options:
+    ItemModel: minecraft:dirt
+    Glint: true
+  Lore:
+  - <yellow><bold>Axe Skin:</bold> Groundshaker
+  - <white>
+  - <gray>Creates a shockwave on the ground on swing</gray>
+  - <white>
+  - "<#926c4d>[Dirtwave]"
+  - "<white>  Creates a shockwave on the ground on swing that does 3 damage. Cooldown 2s"
+  Augmentation:
+    Type: SKIN_AXE
+    Tooltip: '<white>Grounshaker<gray> (Creates a shockwave on the ground on swing)'
+    Conditions:
+    Skills:
+    - skill{s=groundshaker_projectile;cooldown=1} ~onSwing @self
