@@ -4,6 +4,12 @@ breezer_projectile_marker:
   - setVar{type=STRING;value="{Motion:[0d,-1d,0d]}";name=global.breezer_wind_charge_motion_down}
   - command{command="summon minecraft:breeze_wind_charge ~ ~ ~ <global.var.breezer_wind_charge_motion_down>";asop=true;sourceisorigin=true;astarget=true} @self ~onSpawn
   - remove{delay=2} @self ~onSpawn
+squall_projectile_marker:
+  Type: marker
+  Skills:
+  - setVar{type=STRING;value="{Motion:[0d,-1d,0d]}";name=global.breezer_wind_charge_motion_down}
+  - command{command="summon minecraft:breeze_wind_charge ~ ~ ~ <global.var.breezer_wind_charge_motion_down>";asop=true;sourceisorigin=true;astarget=true;repeat=2} @self ~onSpawn
+  - remove{delay=2} @self ~onSpawn
 blizzard_display:
   Type: block_display
   DisplayOptions:
