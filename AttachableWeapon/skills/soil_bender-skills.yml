@@ -66,7 +66,11 @@ groundshaker_throw_damage:
 
 tremorcaller_projectile:
   Skills:
-  - projectile{hnp=false;hp=false;stopatblock=false;stopatentity=false;drawhitbox=true;hr=1;vr=1;startyoffset=1.62;velocity=6;hugsurface=true;hugliquid=true;gravity=0;forwardoffset=4;interval=1;Duration=14;onendskill=tremorcaller_throw;MaxDropHeight=4} @Forward{y=1.62;lockpitch=true}
+  - projectile{hnp=false;hp=false;stopatblock=false;stopatentity=false;drawhitbox=false;hr=1;vr=1;startyoffset=1.62;velocity=16;hugsurface=true;hugliquid=true;gravity=0;forwardoffset=0;interval=1;Duration=14;onendskill=tremorcaller_throw;MaxDropHeight=8;ontickskill=tremorcaller_tick} @Forward{y=1.62;lockpitch=true}
+
+tremorcaller_tick:
+  Skills:
+  - blockcrack{p=5} @BlocksNearOrigin{r=1}
 tremorcaller_throw:
   Skills:
   - skill{skill=soil_bender_throw_particle_4}
