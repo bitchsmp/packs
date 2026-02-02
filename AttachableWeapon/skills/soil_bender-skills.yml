@@ -62,3 +62,23 @@ groundshaker_throw_damage:
   Skills:
   - setNoDamageTicks{ticks=0}
   - damage{amount=1}
+
+
+tremorcaller_projectile:
+  Skills:
+  - projectile{hnp=false;hp=false;stopatblock=false;stopatentity=false;drawhitbox=true;hr=1;vr=1;startyoffset=1.62;velocity=6;hugsurface=true;hugliquid=true;gravity=0;forwardoffset=4;interval=1;Duration=14;onendskill=tremorcaller_throw;MaxDropHeight=4} @Forward{y=1.62;lockpitch=true}
+tremorcaller_throw:
+  Skills:
+  - skill{skill=soil_bender_throw_particle_4}
+  - skill{skill=soil_bender_throw_particle_3}
+  - skill{skill=soil_bender_throw_particle_2}
+  - skill{skill=soil_bender_throw_particle_1}
+  - skill{skill=tremorcaller_throw_damage} @entitiesNearOrigin{radius=4.5}
+  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @origin
+tremorcaller_throw_damage:
+  TargetConditions:
+  - ydiff{difference=<1}
+  Skills:
+  - setNoDamageTicks{ticks=0}
+  - damage{amount=5}
+  - velocity{velocityy=0.4;mode=ADD}
