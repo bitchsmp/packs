@@ -40,7 +40,7 @@ SkinGale:
       ];onstartskill=[
       - particle{particle=gust;a=1;yoffset=1}
       - sound{sound=entity.breeze.wind_burst;volume=0.8;pitch=0.8}
-      ];cooldown=5} @self ~onUse
+      ];cooldown=5;aura=gale_speed_buff} @self ~onUse
 
 SkinSquall:
   Material: TURTLE_SCUTE
