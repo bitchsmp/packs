@@ -77,10 +77,52 @@ SkinZephyr:
   - "<white>  Fires a wind charge downward when right-clicking"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: '<white>Zephyr<gray> (Fires a wind charge downward when right-clicking'
+    Tooltip: '<white>Zephyr<gray> (Fires a wind charge downward when right-clicking)'
     Conditions:
     Skills:
     - skill{cooldown=2;skill=[
       - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.zephyr_wind_charge_motion}
-      - command{command="summon minecraft:wind_charge ~ ~ ~ <global.var.zephyr_wind_charge_motion>";asop=true;sourceisorigin=true;astarget=true}
+      - command{command="summon minecraft:wind_charge <caster.l.x> <caster.l.y> <caster.l.z> <global.var.zephyr_wind_charge_motion>";asop=true;sourceisorigin=true}
+      - swingarm
+      ]} @self ~onUse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SkinVentose:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Ventose
+  - <white>
+  - <gray>Fires an extremely powerful wind charge downward when right-clicking</gray>
+  - <white>
+  - "<white>[Air is compressible]"
+  - "<white>  Fires an extremely powerful wind charge downward when right-clicking"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Ventose<gray> (Fires an extremely powerful downward when right-clicking)'
+    Conditions:
+    Skills:
+    - skill{cooldown=2;skill=[
+      - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.zephyr_wind_charge_motion}
+      - command{command="summon minecraft:wind_charge <caster.l.x> <caster.l.y> <caster.l.z> <global.var.zephyr_wind_charge_motion>";repeat=3;asop=true;sourceisorigin=true}
+      - swingarm
       ]} @self ~onUse
