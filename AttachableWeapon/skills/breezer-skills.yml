@@ -20,3 +20,17 @@ squall_projectile_end:
 squall_projectile_tick:
   Skills:
   - particle{particle=cloud;speed=0.15;spread=0.1;count=3}
+
+
+ventose_orbital_projectile:
+  Skills:
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart}
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart;startingPoint=16}
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart;startingPoint=8}
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart;startingPoint=24}
+ventose_orbital_projectile_onstart:
+  Skills:
+  - modifyprojectile{trait=RADIUS;value=-0.2;action=ADD;repeat=19;repeatinterval=1}
+ventose_orbital_projectile_tick:
+  Skills:
+  - particle{particle=cloud;amount=1;y=0.5} @origin
