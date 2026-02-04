@@ -23,8 +23,8 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
 
    - Direct Download Links:
 
-     - MythicMobs: [5.11.2-20260113.224127-15](https://mvn.lumine.io/repository/maven/io/lumine/Mythic-Dist/5.11.2-SNAPSHOT/Mythic-Dist-5.11.2-20260113.224127-15.jar)
-     - MythicCrucible: [2.4.0-20260117.031427-9](https://mvn.lumine.io/repository/maven/io/lumine/MythicCrucible/2.4.0-SNAPSHOT/MythicCrucible-2.4.0-20260117.031427-9.jar)
+     - MythicMobs: [5.11.2-20260204.105031-34](https://mvn.lumine.io/repository/maven/io/lumine/Mythic-Dist/5.11.2-SNAPSHOT/Mythic-Dist-5.11.2-20260204.105031-34.jar)
+     - MythicCrucible: [2.4.0-20260202.201210-20](https://mvn.lumine.io/repository/maven/io/lumine/MythicCrucible/2.4.0-SNAPSHOT/MythicCrucible-2.4.0-20260202.201210-20.jar)
 
 
 3. LibsDisguise Plugin
