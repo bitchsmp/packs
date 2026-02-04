@@ -29,17 +29,13 @@ SkinGlacial:
   - "<gray><italic>Somewhat cold, isn't it?</italic></gray>"
   - <white>
   - "<aqua>[Bone-chilling]"
-  - <gray>  Inflicts Bone-chilling effect on hit, slows down the target.</gray>
+  - "<gray>  Hitting target twice in a row(6 seconds window) inflicts Bone-chilling effect</gray>"
+  - "<gray>  75% chance to deal 4 extra damages to enemy with Bone-chilling effect"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: "<white>Glacial<gray> (<italic>Somewhat cold, isn't it?</italic>)"
-    Conditions:
     Skills:
-    - aura{aura=bone-chilling;ticks=200;ontickskill=[
-      - freeze{ticks=20}
-      - potion{type=SLOWNESS;duration=20;level=0}
-      ]} @trigger ~onAttack
-
+    - ondamaged{aura=bone-chilling;ticks=60;maxstacks=3;ondamagedskill=glacial_damage} @trigger ~onAttack
 SkinBlizzard:
   Material: TURTLE_SCUTE
   Display: 'Special: <white>Low-Entropy Frost Sphere'
@@ -65,4 +61,27 @@ SkinBlizzard:
         - summon{type=blizzard_display;pitch=0;yaw=0} @selfLocation 
       ]}
       
+      ]} @trigger ~onAttack
+#Experimental
+SkinExperimental:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Ball of the colds'
+  Options:
+    ItemModel: minecraft:snowball
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Glacial
+  - <white>
+  - "<gray><italic>Somewhat cold, isn't it?</italic></gray>"
+  - <white>
+  - "<aqua>[Bone-chilling]"
+  - <gray>  Inflicts Bone-chilling effect on hit, slows down the target.</gray>
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: "<white>Glacial<gray> (<italic>Somewhat cold, isn't it?</italic>)"
+    Conditions:
+    Skills:
+    - aura{aura=bone-chilling;ticks=200;ontickskill=[
+      - freeze{ticks=20}
+      - potion{type=SLOWNESS;duration=20;level=0}
       ]} @trigger ~onAttack
