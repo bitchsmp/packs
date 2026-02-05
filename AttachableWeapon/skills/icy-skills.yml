@@ -1,5 +1,5 @@
 glacial_damage:
   TargetConditions:
-  - hasAuraStacks{aura=bone-chilling;stacks=2} true
+  - hasAuraStacks{aura=bone-chilling;stacks=3} true
   Skills:
-  - damage{a=4;ignoreinvulnerability=true;chance=0.75} 
+  - damage{a=4;ignoreinvulnerability=true;chance=0.5} 
