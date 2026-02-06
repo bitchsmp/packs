@@ -60,7 +60,30 @@ SkinBlizzard:
       - sound{sound=entity.warden.sonic_charge;delay=40} ~onSpawnorLoad
       - potion{type=BLINDNESS;duration=100} @EIR{radius=16;targetself=true}
       ];cooldown=60} ~onUse
-    
+
+SkinArctic:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Non-meltable Snowball'
+  Options:
+    ItemModel: minecraft:snowball
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Arctic
+  - <white>
+  - "<gray><italic>A little bit cold, isn't it?</italic></gray>"
+  - <white>
+  - "<aqua>[Deep-freezing]"
+  - <gray>  Inflicts Deep-freezing on hit</gray>
+  - "<gray>  Deep-freezing effect deals 1 damage each 2 seconds and reduce movement speed</gray>"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: "<white>Arctic<gray> (<italic>A little bit cold, isn't it?</italic>)"
+    Conditions:
+    Skills:
+    - aura{aura=deep-freezing;ticks=300;interval=40;ontickskill=[
+      - freeze{ticks=140}
+      - damage{a=1;damagecause=FREEZE}
+      ]} @trigger ~onAttack
 #Experimental
 SkinExperimental:
   Material: TURTLE_SCUTE
