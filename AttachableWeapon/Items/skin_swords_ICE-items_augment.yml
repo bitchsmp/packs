@@ -56,13 +56,13 @@ SkinBlizzard:
     Conditions:
     Skills:
     - skill{s=[
-      - title{title="<red>Domain Expansion";subtitle="<yellow><caster.name>";fadein=10;duration=40;fadeout=0} @EIR{radius=36;targetself=true}
+      - title{title="<red>Domain Expansion";subtitle="<yellow><caster.name>";fadein=10;duration=40;fadeout=0} @EIR{radius=18;targetself=true}
       - potion{type=BLINDNESS;duration=100} @EIR{radius=16;targetself=true}
       - delay 40
       - sound{sound=entity.warden.sonic_charge}
       - delay 40
       - summon{type=blizzard_marker;a=1} @selfLocation
-      - title{title="<red>Low-Entropy";subtitle="<yellow><caster.name>";fadein=2;duration=30} @EIR{radius=36;targetself=true}
+      - title{title="<red>Low-Entropy";subtitle="<yellow><caster.name>";fadein=2;duration=30} @EIR{radius=18;targetself=true}
       ];cooldown=60} ~onUse
 
 SkinArctic:
