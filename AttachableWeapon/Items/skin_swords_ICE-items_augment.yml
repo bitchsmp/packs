@@ -30,7 +30,7 @@ SkinGlacial:
   - <white>
   - "<aqua>[Bone-chilling]"
   - "<gray>  Hitting target three times in a row(6 seconds window) inflicts Bone-chilling effect</gray>"
-  - "<gray>  75% chance to deal 4 extra damages to enemy with Bone-chilling effect"
+  - "<gray>  75% chance to deal 4 bonus damage to enemy with Bone-chilling effect"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: "<white>Glacial<gray> (<italic>Somewhat cold, isn't it?</italic>)"

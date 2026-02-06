@@ -3,3 +3,4 @@ glacial_damage:
   - hasAuraStacks{aura=bone-chilling;stacks=3} true
   Skills:
   - damage{a=4;ignoreinvulnerability=true;chance=0.5} 
+  - particle{particle=snowflake;a=10;speed=0.2;y=1}
