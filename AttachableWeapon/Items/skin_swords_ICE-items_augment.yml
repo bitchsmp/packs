@@ -29,13 +29,13 @@ SkinGlacial:
   - "<gray><italic>Somewhat cold, isn't it?</italic></gray>"
   - <white>
   - "<aqua>[Bone-chilling]"
-  - "<gray>  Hitting target three times in a row(6 seconds window) inflicts Bone-chilling effect</gray>"
-  - "<gray>  75% chance to deal 4 bonus damage to enemy with Bone-chilling effect"
+  - "<gray>  Hitting target three times in a row(4 seconds window) inflicts Bone-chilling effect</gray>"
+  - "<gray>  50% chance to deal 4 bonus damage to enemy with Bone-chilling effect"
   Augmentation:
     Type: SKIN_SWORD
     Tooltip: "<white>Glacial<gray> (<italic>Somewhat cold, isn't it?</italic>)"
     Skills:
-    - ondamaged{aura=bone-chilling;ticks=60;maxstacks=3;ondamagedskill=glacial_damage} @trigger ~onAttack
+    - ondamaged{aura=bone-chilling;ticks=80;maxstacks=3;ondamagedskill=glacial_damage} @trigger ~onAttack
 SkinBlizzard:
   Material: TURTLE_SCUTE
   Display: 'Special: <white>Low-Entropy Frost Sphere'

@@ -1,8 +1,9 @@
 glacial_damage:
   TargetConditions:
   - hasAuraStacks{aura=bone-chilling;stacks=3} true
+  - chance{chance=0.5}
   Skills:
-  - damage{a=4;ignoreinvulnerability=true;chance=0.5} 
+  - damage{a=4;ignoreinvulnerability=true} 
   - particle{particle=snowflake;a=10;speed=0.2;y=1}
 winter_bite_damage:
   TargetConditions:
