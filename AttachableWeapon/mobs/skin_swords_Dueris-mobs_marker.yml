@@ -41,26 +41,27 @@ permafrost_marker:
   Type: marker
   Skills:
   - particlesphere{radius=32;particle=snowflake;amount=5;points=64;spread=0.3} @self ~onTimer:1
+  - freeze{ticks=80} ~onTimer:1 @EIR{r=32;targetowner=false}
   - skill{s=[
-    - effect:blockmask{m=blue_ice;r=4}
+    - effect:blockmask{m=blue_ice;r=4;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=8}
+    - effect:blockmask{m=blue_ice;r=8;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=12}
+    - effect:blockmask{m=blue_ice;r=12;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=16}
+    - effect:blockmask{m=blue_ice;r=16;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=20}
+    - effect:blockmask{m=blue_ice;r=20;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=24}
+    - effect:blockmask{m=blue_ice;r=24;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=28}
+    - effect:blockmask{m=blue_ice;r=28;duration=900}
     - delay 1
-    - effect:blockmask{m=blue_ice;r=32}
+    - effect:blockmask{m=blue_ice;r=32;duration=900}
     ]} @self ~onSpawnorLoad
   
-  - blockUnmask{r=32;delay=900} @self ~onSpawnorLoad
+  - blockUnmask{r=32;delay=901} @self ~onSpawnorLoad
   - sound{sound=entity.warden.sonic_boom;pitch=1.5;radius=32} @self ~onSpawnorLoad
   - sound{sound=entity.ender_dragon.growl;pitch=0.5;radius=32} @self ~onSpawnorLoad
-  - freeze{ticks=80} ~onTimer:1 @EIR{r=16;targetowner=false}
-  - remove{delay=901} @self ~onSpawnorLoad
+
+  - remove{delay=902} @self ~onSpawnorLoad
