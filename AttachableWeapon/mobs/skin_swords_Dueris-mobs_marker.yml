@@ -14,7 +14,24 @@ blizzard_marker:
   Type: marker
   Skills:
   - particlesphere{radius=16;particle=snowflake;amount=5;points=64;spread=0.3} @self ~onTimer:1
-  - effect:blockmask{m=packed_ice;r=16} @self ~onSpawnorLoad
+  - skill{s=[
+    - effect:blockmask{m=packed_ice;r=2}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=4}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=6}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=8}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=10}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=12}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=14}
+    - delay 1
+    - effect:blockmask{m=packed_ice;r=16}
+    ]} @self ~onSpawnorLoad
+  
   - blockUnmask{r=16;delay=600} @self ~onSpawnorLoad
   - sound{sound=entity.warden.sonic_boom;pitch=1.5} @self ~onSpawnorLoad
   - sound{sound=entity.generic.explode;pitch=0.5} @self ~onSpawnorLoad
