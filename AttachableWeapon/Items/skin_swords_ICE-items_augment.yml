@@ -84,6 +84,25 @@ SkinArctic:
       - freeze{ticks=140}
       - damage{a=1;damagecause=FREEZE}
       ]} @trigger ~onAttack
+SkinWintry:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Ball of the colds'
+  Options:
+    ItemModel: minecraft:snowball
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Wintry
+  - <white>
+  - "<gray><italic>Somewhat cold, isn't it?</italic></gray>"
+  - <white>
+  - "<aqua>[Winter Bite]"
+  - "<gray>  Hitting target two times in a row(4 seconds window) inflicts Winter Bite effect</gray>"
+  - "<gray>  Deals 3 bonus damage to enemy with Winter Bite effect"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: "<white>Wintry<gray> (<italic>Somewhat cold, isn't it?</italic>)"
+    Skills:
+    - ondamaged{aura=winter_bite;ticks=80;maxstacks=2;ondamagedskill=winter_bite_damage} @trigger ~onAttack
 #Experimental
 SkinExperimental:
   Material: TURTLE_SCUTE

@@ -4,3 +4,9 @@ glacial_damage:
   Skills:
   - damage{a=4;ignoreinvulnerability=true;chance=0.5} 
   - particle{particle=snowflake;a=10;speed=0.2;y=1}
+winter_bite_damage:
+  TargetConditions:
+  - hasAuraStacks{aura=winter_bite;stacks=2} true
+  Skills:
+  - damage{a=3;ignoreinvulnerability=true} 
+  - particle{particle=snowflake;a=10;speed=0.3;y=1}
