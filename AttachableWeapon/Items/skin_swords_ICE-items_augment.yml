@@ -57,6 +57,7 @@ SkinBlizzard:
     Skills:
     - skill{s=[
       - summon{type=blizzard_marker;a=1;delay=80} @selfLocation
+      - sound{sound=entity.warden.sonic_charge;delay=40} ~onSpawnorLoad
       - potion{type=BLINDNESS;duration=100} @EIR{radius=16;targetself=true}
       ];cooldown=60} ~onUse
     

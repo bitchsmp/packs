@@ -13,7 +13,10 @@ squall_projectile_marker:
 blizzard_marker:
   Type: marker
   Skills:
+  - particlesphere{radius=16;particle=snowflake;amount=5;points=64;spread=0.3} @self ~onTimer:1
   - effect:blockmask{m=packed_ice;r=16} @self ~onSpawnorLoad
   - blockUnmask{r=16;delay=600} @self ~onSpawnorLoad
+  - sound{sound=entity.warden.sonic_boom;pitch=1.5} @self ~onSpawnorLoad
+  - sound{sound=entity.generic.explode;pitch=0.5} @self ~onSpawnorLoad
   - freeze{ticks=40} ~onTimer:1 @EIR{r=16;targetowner=false}
   - remove{delay=601} @self ~onSpawnorLoad
