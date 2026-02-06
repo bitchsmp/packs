@@ -37,3 +37,30 @@ blizzard_marker:
   - sound{sound=entity.generic.explode;pitch=0.5} @self ~onSpawnorLoad
   - freeze{ticks=40} ~onTimer:1 @EIR{r=16;targetowner=false}
   - remove{delay=601} @self ~onSpawnorLoad
+permafrost_marker:
+  Type: marker
+  Skills:
+  - particlesphere{radius=32;particle=snowflake;amount=5;points=64;spread=0.3} @self ~onTimer:1
+  - skill{s=[
+    - effect:blockmask{m=blue_ice;r=4}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=8}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=12}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=16}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=20}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=24}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=28}
+    - delay 1
+    - effect:blockmask{m=blue_ice;r=32}
+    ]} @self ~onSpawnorLoad
+  
+  - blockUnmask{r=32;delay=900} @self ~onSpawnorLoad
+  - sound{sound=entity.warden.sonic_boom;pitch=1.5;radius=32} @self ~onSpawnorLoad
+  - sound{sound=entity.ender_dragon.growl;pitch=0.5;radius=32} @self ~onSpawnorLoad
+  - freeze{ticks=80} ~onTimer:1 @EIR{r=16;targetowner=false}
+  - remove{delay=901} @self ~onSpawnorLoad

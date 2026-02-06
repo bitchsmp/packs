@@ -103,26 +103,30 @@ SkinWintry:
     Tooltip: "<white>Wintry<gray> (<italic>Somewhat cold, isn't it?</italic>)"
     Skills:
     - ondamaged{aura=winter_bite;ticks=80;maxstacks=2;ondamagedskill=winter_bite_damage} @trigger ~onAttack
-#Experimental
-SkinExperimental:
+SkinPermafrost:
   Material: TURTLE_SCUTE
-  Display: 'Special: <white>Ball of the colds'
+  Display: 'Special: <white>Low-Entropy Frost Sphere'
   Options:
     ItemModel: minecraft:snowball
     Glint: true
   Lore:
-  - <yellow><bold>Sword Skin:</bold> Glacial
+  - <yellow><bold>Sword Skin:</bold> Permafrost
   - <white>
-  - "<gray><italic>Somewhat cold, isn't it?</italic></gray>"
+  - "<gray><italic>Cold like a <bold>blizzard</bold></italic></gray>"
   - <white>
-  - "<aqua>[Bone-chilling]"
-  - <gray>  Inflicts Bone-chilling effect on hit, slows down the target.</gray>
+  - "<aqua>[Permafrost Domain]"
+  - "<gray>  Right-clicking creates a Permafrost domain with a radius of 32 blocks. 120 seconds cooldown</gray>"
+  - "<gray>  Any entites in the domain would experience extreme cold, reducing their movement speed</gray>"
   Augmentation:
     Type: SKIN_SWORD
-    Tooltip: "<white>Glacial<gray> (<italic>Somewhat cold, isn't it?</italic>)"
+    Tooltip: "<white>Permafrost<gray> (<italic>Cold like a <bold>blizzard</bold></italic>)"
     Conditions:
     Skills:
-    - aura{aura=bone-chilling;ticks=200;ontickskill=[
-      - freeze{ticks=20}
-      - potion{type=SLOWNESS;duration=20;level=0}
-      ]} @trigger ~onAttack
+    - skill{s=[
+      - sound{sound=entity.warden.sonic_charge;radius=32}
+      - potion{type=BLINDNESS;duration=60} @EIR{radius=32;targetself=true}
+      - delay 40
+      - summon{type=permafrost_marker;a=1} @selfLocation
+      - particle{particle=snowflake;amount=40;speed=0.6}
+      - particle{particle=end_rod;amount=40;speed=0.7}
+      ];cooldown=120} ~onUse
