@@ -19,10 +19,7 @@ soil_bender_throw_particle_1:
   Skills:
   - particlering{particle=Dust_Pillar;material=DIRT;radius=1;points=32;amount=2;hS=1;vS=0}
 soil_bender_throw_damage:
-  TargetConditions:
-  - ydiff{difference=<1}
   Skills:
-  - setNoDamageTicks{ticks=0}
   - damage{amount=3}
 rock_bender_throw:
   Skills:
