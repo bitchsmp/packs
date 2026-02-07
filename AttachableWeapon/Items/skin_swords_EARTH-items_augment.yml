@@ -36,6 +36,41 @@ SkinRockshielder:
     Conditions:
     Skills:
     - skill{s=rock_shielder;cooldown=0.5} @self ~onUse
+SkinStonemancer:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Rock Essence'
+  Options:
+    ItemModel: minecraft:cobblestone
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Stonemancer
+  - <white>
+  - <gray>Creates a shockwave on the ground on attack if the attack deals more than 5 damage</gray>
+  - <white>
+  - "<#926c4d>[Arise, my silicons!]"
+  - "<white>  Creates a shockwave on the ground on attack if the attack deals more than 5 damage. Cooldown 0.8s"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Stonemancer<gray> (Creates a shockwave on the ground on attack if the attack deals more than 5 damage)'
+    Conditions:
+    Skills:
+    - skill{s=stonemancer;cooldown=0.5} @self ~onUse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 SkinTerrablade:
   Material: TURTLE_SCUTE
   Display: '<yellow>Terrablade'

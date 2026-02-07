@@ -49,6 +49,10 @@ rock_shielder_removeOne:
         ]}
       ]}
     ]}
+stonemancer:
+  Skills:
+  - summon{amount=1;onsurface=true;type=stonemancer_minion_grass;r=4;chance=0.5} @self
+  - summon{amount=3;onsurface=true;type=stonemancer_minion_stone;r=4} @self
 #Experimental
 groundshaker_projectile:
   Skills:

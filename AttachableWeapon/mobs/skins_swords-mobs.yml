@@ -1,0 +1,22 @@
+stonemancer_minion_grass:
+  Type: Wolf
+  Options:
+    Silent: true
+    MovementSpeed: 0.3
+  Damage: 4
+  Health: 20
+  Display: Minion Grass Block
+  Disguise: falling_block grass_block
+  Skills:
+  - remove{delay=1200} @self ~onSpawnorload 
+stonemancer_minion_stone:
+  Type: Wolf
+  Options:
+    Silent: true
+    MovementSpeed: 0.3
+  Damage: 1
+  Health: 40
+  Display: Minion Stone Block
+  Disguise: falling_block stone
+  Skills:
+  - remove{delay=1200} @self ~onSpawnorload 
