@@ -21,28 +21,34 @@ soil_bender_throw_particle_1:
 soil_bender_throw_damage:
   Skills:
   - damage{amount=3}
-rock_bender_throw:
+rock_shielder:
   Skills:
-  - skill{skill=soil_bender_throw_particle_4}
-  - skill{skill=soil_bender_throw_particle_3}
-  - skill{skill=soil_bender_throw_particle_2}
-  - skill{skill=soil_bender_throw_particle_1}
-  - skill{skill=rock_bender_throw_damage} @EIR{r=4.5}
-  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @self
-rock_bender_throw_damage:
-  TargetConditions:
-  - ydiff{difference=<1}
+  - ondamaged{ondamagedskill=rock_shielder_removeOne;ticks=400} @self
+  - delay 0
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=8;aura=rock_shielder_1_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+  
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=24;aura=rock_shielder_2_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+  
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=40;aura=rock_shielder_3_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+  
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=56;aura=rock_shielder_4_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+rock_shielder_break_sound:
   Skills:
-  - setNoDamageTicks{ticks=0}
-  - damage{amount=1}
-
-
-
-
-
-
-
-
+  - sound{sound=entity.item.break} @self
+  - sound{sound=block.stone.break} @self
+rock_shielder_effect:
+  Skills:
+  - potion{type=RESISTANCE;level=0;duration=20}
+rock_shielder_removeOne:
+  Skills:
+  - removeaura{aura=rock_shielder_4_main} @self ?hasAura{aura=rock_shielder_4_main;onfailskill=[
+    - removeaura{aura=rock_shielder_3_main} @self ?hasAura{aura=rock_shielder_3_main;onfailskill=[
+      - removeaura{aura=rock_shielder_2_main} @self ?hasAura{aura=rock_shielder_2_main;onfailskill=[
+          - removeaura{aura=rock_shielder_1_main} @self ?hasAura{aura=rock_shielder_1_main;onfailskill=[
+          ]}
+        ]}
+      ]}
+    ]}
 #Experimental
 groundshaker_projectile:
   Skills:
