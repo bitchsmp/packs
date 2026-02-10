@@ -36,3 +36,27 @@ SkinTremorcaller:
     Conditions:
     Skills:
     - skill{s=tremorcaller_projectile;cooldown=1} ~onSwing @self
+SkinSoilshaper:
+  Material: TURTLE_SCUTE
+  Display: 'Special: <white>Soil Essence 3'
+  Options:
+    ItemModel: minecraft:dirt
+    Glint: true
+  Lore:
+  - <yellow><bold>Axe Skin:</bold> Soilshaper
+  - <white>
+  - <gray>Creates a shockwave on the ground on swing</gray>
+  - <white>
+  - "<#926c4d>[Dirtwave]"
+  - "<white>  Creates a shockwave on the ground on swing that does 3 damage. Cooldown 2s"
+  Augmentation:
+    Type: SKIN_AXE
+    Tooltip: '<white>Soilshaper<gray> (Creates a shockwave on the ground on swing)'
+    Conditions:
+    Skills:
+    - skill{s=soilshaper_projectile;cooldown=1} ~onUse @self
+    - skill{s=[
+      - setVar{name=caster.soilshaper_hold;value=false;type=BOOLEAN} @self
+      - delay 2
+      - setVar{name=caster.soilshaper_hold;value=true;type=BOOLEAN} @self
+      ];cooldown=1} ~onSwing @self

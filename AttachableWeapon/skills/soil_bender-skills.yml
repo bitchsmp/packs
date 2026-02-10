@@ -93,3 +93,29 @@ tremorcaller_throw_damage:
   - setNoDamageTicks{ticks=0}
   - damage{amount=5}
   - velocity{velocityy=0.4;mode=ADD}
+soilshaper_projectile:
+  Skills:
+  - projectile{bullettype=BLOCK;bulletmaterial=DIRT;startyoffset=1.62;hnp=true;hp=true;horizontalradius=0.5;verticalradius=0.5;velocity=16;sfo=5;ontickskill=soilshaper_projectile_hold;maxduration=100;stopatblock=false;gravity=1;onhitskill=soilshaper_projectile_hit;onendskill=soilshaper_projectile_end;onhitblockskill=soilshaper_projectile_hitblock;stopatentity=false} @forward{yoffset=1.62}
+soilshaper_projectile_hold:
+  Skills:
+  - setprojectiledirection @forward{forward=5;yoffset=1.62} ?!varequals{value=true;name=skill.soilshaper_thrown} ?!varequals{name=caster.soilshaper_hold;value=false;onfailskill=[
+    - setprojectiledirection @forward{forward=32;yoffset=1.62}
+    - modifyprojectile{trait=VELOCITY;action=ADD;value=1}
+    - setVar{value=true;name=caster.soilshaper_hold} @self
+    - setvar{value=true;name=skill.soilshaper_thrown;type=BOOLEAN}
+    ]}
+soilshaper_projectile_hit:
+  Conditions:
+  - varequals{name=skill.soilshaper_thrown;value=true}
+  Skills:
+  - damage{amount=3}
+  - endproj
+soilshaper_projectile_end:
+  Skills:
+  - sound{sound=block.gravel.break;sourceisorigin=true}
+  - particle{particle=block_dust;material=dirt;amount=10;spread=0.5}
+soilshaper_projectile_hitblock:
+  Conditions:
+  - varequals{name=skill.soilshaper_thrown;value=true}
+  Skills:
+  - endproj
