@@ -1,0 +1,11 @@
+
+blizzard_display:
+  Type: block_display
+  DisplayOptions:
+    Block: ice
+    Scale: 1,2,1
+    Translation: -0.5,-1.81,-0.5
+  Skills:
+  - remove{delay=82} @self ~onSpawnorload 
+  - mounttarget @owner ~onSpawnorload 
+  - mounttarget @owner ~onTimer:1

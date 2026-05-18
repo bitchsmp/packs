@@ -1,0 +1,13 @@
+infinite_gust:
+  Id: wind_charge
+  Display: "<yellow>Infinite Gust"
+  Lore:
+  - ""
+  - "<gray>Summon a breeze wind charge at the leg and launches downward"
+  - "<gray>Wind charge velocity is constant and absolute"
+  Options:
+    Glint: true
+    StackSize: 1
+  Skills:
+  - cancelEvent ~onUse
+  - skill{s=infinite_gust} @self ~onUse
