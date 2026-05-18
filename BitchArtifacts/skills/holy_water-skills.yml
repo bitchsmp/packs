@@ -1,0 +1,19 @@
+holy_water_projectile:
+  Skills:
+  - projectile{bulletType=BLOCK;material=AIR;syo=1.62;velocity=20;sfo=0;hnp=true;hr=0.7;vr=0.7;onhitskill=holy_water_onhit;onhitblockskill=holy_water_onhit;drawhitbox=false;gravity=1;ontickskill=holy_water_ontick} @forward{yoffset=1.62}
+  - consumeuseddurability{amount=1}
+  - swingarm{}
+holy_water_ontick:
+  Skills:
+  - effect:particle{particle=water_splash;spread=0.3}
+holy_water_onhit:
+  Skills:
+  - projectile{bulletType=BLOCK;material=ANVIL;syo=20;velocity=30;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=holy_water_on_anvil_hit;onhitblockskill=holy_water_on_anvil_hitblock;deathdelay=100;hitself=true}
+holy_water_on_anvil_hit:
+  Skills:
+  - damage{amount=120}
+  - sound{sound=block.anvil.land}
+holy_water_on_anvil_hitblock:
+  Skills:
+
+  - sound{sound=block.anvil.land;pitch=0.6}

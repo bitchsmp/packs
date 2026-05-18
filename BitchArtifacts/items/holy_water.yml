@@ -1,0 +1,17 @@
+holy_water:
+  Id: wooden_hoe
+  Display: "<yellow>Holy Water"
+  Lore:
+  - ""
+  - '<gray>Throws water to "purify" the target'
+  - '<gray>The "purify" act is summoning an anvil that falls onto the target, dealing 120 damage'
+  Options:
+    HideFlags: true
+    Glint: false
+    StackSize: 1
+    ItemModel: terraria:item_422
+    MaxDurability: 32
+    
+  Skills:
+  - cancelEvent ~onUse
+  - skill{s=holy_water_projectile} @self ~onUse

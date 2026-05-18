@@ -1,4 +1,0 @@
-epicsword_on_anvil_hit:
-  Skills:
-  - damage{amount=120}
-  - sound{sound=block.anvil.land}
