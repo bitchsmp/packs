@@ -11,7 +11,10 @@ holy_water:
     StackSize: 1
     ItemModel: terraria:item_422
     MaxDurability: 32
-    
+  UseCooldown:
+    CooldownGroup: minecraft:holy_water
+    CooldownSeconds: 0.5
+
   Skills:
   - cancelEvent ~onUse
   - skill{s=holy_water_projectile} @self ~onUse

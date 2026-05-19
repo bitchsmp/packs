@@ -20,7 +20,7 @@ living_fire_orbital_projectile_start:
   - modifyprojectile{trait=RADIUS;value=0.1;action=ADD;repeat=19;repeatinterval=3}
 living_fire_orbital_projectile_tick:
   Skills:
- # - particle{particle=small_flame} @origin
+  - particle{particle=small_flame} @origin
 
 living_fire_projectile1:
   Skills:
