@@ -1,0 +1,20 @@
+tome_of_darkness_blind:
+  Skills:
+  - consumeuseddurability{forcesync=true}
+  - command{command="effect give <skill.var.input> minecraft:darkness 60 0 false";asop=true;ascaster=true}
+  # - sudoskill{skill=[
+  #   - aura{ticks=2000;interval=60;ontickskill=tome_of_darkness_heartbeat} @self
+  #   ]} @everyone{targetself=true}
+
+  - message{message="<#61c3cb>Inflicted darkness to <skill.var.input>"}
+
+tome_of_darkness_main:
+  Skills:
+  - onChat{onChat=tome_of_darkness_blind;d=3;showbartimer=true;aura=tome_of_darkness_cursing;ontickskill=[
+    - actionmessage{message="<yellow>Type the playername in the chat to inflict darkness. No one can see your message"}
+    ];onendskill=[
+    - actionmessage{message="<red>Infliction period ended. Hold the item to continue"}
+    ];forcesync=true}
+# tome_of_darkness_heartbeat:
+#   Skills:
+#   - command{command="execute at @ run playsound minecraft:entity.warden.heartbeat master <skill.var.input> ~ ~ ~ ";asop=true} @self

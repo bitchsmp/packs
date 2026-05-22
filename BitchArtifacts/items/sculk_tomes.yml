@@ -1,0 +1,16 @@
+tome_of_darkness:
+  Material: ECHO_SHARD
+  Display: '<white>Tome of Darkness'
+  Options:
+    StackSize: 1
+    ItemModel: minecraft:written_book
+    Glint: true
+    MaxDurability: 32
+  Lore:
+  - <white>
+  - <gray>Inflicts target with <#61c3cb>Darkness<gray> effect for 60 seconds by writing their name in the chat</gray>
+  - <gray>No one can see that chat message</gray>
+  - <white>
+  - <white>> Can be repaired with Echo Shard</white>
+  Skills:
+  - skill{s=tome_of_darkness_main} @self ~onTimer:1

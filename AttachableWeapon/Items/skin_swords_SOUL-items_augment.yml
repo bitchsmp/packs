@@ -1,25 +1,3 @@
-SkinSculkSword:
-  Material: TURTLE_SCUTE
-  Display: 'Special: <white>Elegant Sculk'
-  Options:
-    ItemModel: minecraft:calibrated_sculk_sensor
-    Glint: true
-  Lore:
-  - <yellow><bold>Sword Skin:</bold> Sculk Sword
-  - <white>
-  - <gray>Inflicts target with Darkness effect</gray>
-  - <white>
-  - "<gradient:#024050:#61c3cb>[Darkness]"
-  - "<white>  Inflicts target with Darkness effect for 7 seconds"
-  
-  Augmentation:
-    Type: SKIN_SWORD
-    Tooltip: '<white>Sculk Sword<gray> (Inflicts target with Darkness effect)'
-    ReplaceItemModel: sculksword
-    ReplaceItemModelNamespace: minecraft
-    Conditions:
-    Skills:
-    - potion{type=DARKNESS;duration=140} @trigger ~onAttack
 
 SkinSculkCleaver:
   Material: TURTLE_SCUTE
