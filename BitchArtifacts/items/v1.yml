@@ -1,0 +1,14 @@
+v1:
+  Id: paper
+  Display: "<gold>V1"
+  Consumable:
+    ConsumeSeconds: 2
+  Lore:
+  - "<dark_red>MANKIND IS DEAD"
+  - "<dark_red>BLOOD IS FUEL<blue> (1:00)"
+  - "<dark_red>HELL IS FULL"
+  Options:
+    StackSize: 4
+  Skills:
+  - stataura{stat=LIFESTEAL_CHANCE;value=1;type=ADD;aura=v1_lifesteal_chance;ticks=1200} @self ~onConsume
+  - stataura{stat=LIFESTEAL_POWER;value=0.4;type=ADD;aura=v1_lifesteal_power;ticks=1200;showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL"} @self ~onConsume
