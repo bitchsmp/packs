@@ -1,0 +1,19 @@
+royal_wax:
+  Material: TURTLE_SCUTE
+  Display: 'Royal Wax'
+  Options:
+    ItemModel: minecraft:candle
+  Lore:
+  - "<#ffedac>Regenerative Wax<blue> (5:00)"
+  - <white>
+  - "<dark_purple>When Applied:"
+  - "<blue>Dealing damage grants you Regeneration II"
+  - "<blue>Dealing over 10 damage grants you Regeneration III"
+
+  Skills:
+  - onattack{onattackskill=[
+    - potion{type=REGENERATION;level=1;duration=100} @self ~onAttack 
+    - potion{type=REGENERATION;level=2;duration=100} @self ?DamageAmount{damageamount=>10}
+    ];ticks=6000;showbartimer=true;bartimerdisplay="Super Effect:<#ffedac> Regenerative Waxed";aura=regenerative_wax;bartimercolor=WHITE} ~onConsume @self
+  Consumable:
+    ConsumeSeconds: 2
