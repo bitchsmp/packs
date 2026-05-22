@@ -1,0 +1,60 @@
+heart_piece:
+  Id: paper
+  Display: "Heart Piece"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:heart_piece
+    FireResistant: true
+  Lore:
+  - "Right-click: <light_purple>+5.0 Health"
+  - "<gray>Infinite Usage"
+  Skills:
+  - stataura{stat=HEALTH;value=5;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onUse
+heart_container:
+  Id: paper
+  Display: "Heart Container"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:heart_container
+    FireResistant: true
+  Lore:
+  - "Right-click: <light_purple>+20.0 Health"
+  - "<gray>Infinite Usage"
+  Skills:
+  - stataura{stat=HEALTH;value=20;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onUse
+heart_booster:
+  Id: paper
+  Display: "Heart Booster"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:heart_booster
+    FireResistant: true
+  Lore:
+  - "Right-click: <light_purple>+40.0 Health"
+  - "<gray>Infinite Usage"
+  Skills:
+  - stataura{stat=HEALTH;value=40;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onUse
+black_diamond:
+  Id: paper
+  Display: "Black Diamond"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:black_diamond
+    FireResistant: true
+  Lore:
+  - "Right-click: <light_purple>+40.0 Health"
+  - "<gray>Infinite Usage"
+  Skills:
+  - stataura{stat=HEALTH;value=40;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onUse
+heart_of_darkness:
+  Id: paper
+  Display: "Heart of Darkness"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:heart_fab
+    FireResistant: true
+  Lore:
+  - "Right-click: <light_purple>+60.0 Health"
+  - "<gray>Infinite Usage"
+  Skills:
+  - stataura{stat=HEALTH;value=60;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onUse
