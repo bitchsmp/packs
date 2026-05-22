@@ -1,0 +1,16 @@
+methamphetamine:
+  Id: sugar
+  Display: "Military-Grade Methamphetamine"
+  Lore:
+  - "<white>"
+  - "<light_purple>Boost your morale and efficiency. Has no practical side-effect"
+  Options:
+    StackSize: 16
+  Consumable:
+    ConsumeSeconds: 2
+    Animation: EAT
+    ConsumeEffects:
+    - potion{type=nausea;d=100}
+    - potion{type=absorption;d=1200}
+    - potion{type=strength;d=1200}
+    - potion{type=speed;d=1200}
