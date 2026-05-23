@@ -10,5 +10,7 @@ v1:
   Options:
     StackSize: 4
   Skills:
-  - stataura{stat=LIFESTEAL_CHANCE;value=1;type=ADD;aura=v1_lifesteal_chance;ticks=1200} @self ~onConsume
-  - stataura{stat=LIFESTEAL_POWER;value=0.4;type=ADD;aura=v1_lifesteal_power;ticks=1200;showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL"} @self ~onConsume
+  - aura{components=[
+    - stat{stat=LIFESTEAL_CHANCE;value=1;type=ADD}
+    - stat{stat=LIFESTEAL_POWER;value=0.4;type=ADD}
+    ];showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL";aura=v1;ticks=1200} @self ~onConsume

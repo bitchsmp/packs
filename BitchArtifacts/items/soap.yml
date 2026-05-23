@@ -1,0 +1,32 @@
+toxic_soapy_water:
+  Id: paper
+  Display: "Toxic Soapy Water"
+  Consumable:
+    Animation: DRINK
+    Sound: item.honey_bottle.drink
+    ConsumeSeconds: 3
+  Options:
+    StackSize: 1
+    FireResistant: true
+    ItemModel: hbm:bathwater
+  Skills:
+  - ondamaged{aura=toxic;ondamagedskill=[
+    - potion{type=POISON;duration=100;level=1} @trigger
+    ];ticks=2147483647;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onConsume
+
+toxic_soapy_water_horse:
+  Id: paper
+  Display: "Toxic Soapy Water (Horse Scented)"
+  Consumable:
+    Animation: DRINK
+    Sound: item.honey_bottle.drink
+    ConsumeSeconds: 3
+  Options:
+    StackSize: 1
+    FireResistant: true
+    ItemModel: hbm:bathwater_mk2
+  Skills:
+  - ondamaged{aura=toxic;ondamagedskill=[
+    - potion{type=WITHER;duration=100;level=1} @trigger
+    ];ticks=2147483647;showbartimer=true;bartimerdisplay="Super Effect:<green> Radioactive";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onConsume
+
