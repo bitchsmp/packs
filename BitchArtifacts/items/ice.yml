@@ -1,0 +1,39 @@
+liquid_nitrogen_tank:
+  Id: turtle_scute
+  Display: "Liquid Nitrogen Tank (1000mB)"
+  UseCooldown:
+    CooldownGroup: nitrogen
+  Options:
+    ItemModel: hbm:fluid_tank_nitrogen
+  Lore:
+  - "Right-click: Cause a pressure explosion. Freezes everyone in a 16 blocks radius except you"
+  Skills:
+  - skill{s=[
+    - consumeuseditem{}
+    - swingarm{}
+    - sound{sound=entity.splash_potion.throw;pitch=0.5}
+    - setItemGroupCooldown{key=nitrogen;ticks=100}
+    - delay 40
+    - summon{type=liquid_nitrogen_tank_marker;a=1} @selfLocation
+    ]} ~onUse ?!itemGroupOnCooldown{group=nitrogen} @self
+
+liquid_nitrogen_barrel:
+  Id: turtle_scute
+  Display: "Liquid Nitrogen Barrel (16000mB)"
+  UseCooldown:
+    CooldownGroup: nitrogen
+  Options:
+    ItemModel: hbm:fluid_barrel_nitrogen
+  Lore:
+  - "Right-click: Cause a large pressure explosion. Freezes everyone in a 16 blocks radius except you"
+  Skills:
+
+  - skill{s=[
+    - consumeuseditem{}
+    - swingarm{}
+    - sound{sound=entity.splash_potion.throw;pitch=0.5}
+    - setItemGroupCooldown{key=nitrogen;ticks=100}
+    - sound{sound=entity.warden.sonic_charge;radius=32}
+    - delay 40
+    - summon{type=liquid_nitrogen_barrel_marker;a=1} @selfLocation
+    ]} ~onUse ?!itemGroupOnCooldown{group=nitrogen} @self
