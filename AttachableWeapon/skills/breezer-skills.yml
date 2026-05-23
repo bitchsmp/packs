@@ -1,0 +1,36 @@
+breezer_projectile:
+  Skills:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=16;syo=1.62;maxrange=64;poweraffectsvelocity=false;onendskill=breezer_projectile_end;ontickskill=breezer_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+breezer_projectile_end:
+  Skills:
+  - summon{onsurface=false;type=breezer_projectile_marker}
+
+breezer_projectile_tick:
+  Skills:
+  - particle{particle=cloud;speed=0.07;spread=0.1;count=4}
+
+squall_projectile:
+  Skills:
+  - projectile{sfo=0.1;tickinterpolation=0;velocity=8;syo=1.62;maxrange=64;poweraffectsvelocity=false;onendskill=squall_projectile_end;ontickskill=squall_projectile_tick;drawhitbox=false;stopatentity=true;hr=0.3;vr=0.3;hnp=true;stopatblock=true} @Forward{yOffset=1.62}
+
+squall_projectile_end:
+  Skills:
+  - summon{onsurface=false;type=squall_projectile_marker}
+
+squall_projectile_tick:
+  Skills:
+  - particle{particle=cloud;speed=0.15;spread=0.1;count=3}
+
+
+ventose_orbital_projectile:
+  Skills:
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart}
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart;startingPoint=16}
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart;startingPoint=8}
+  - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart;startingPoint=24}
+ventose_orbital_projectile_onstart:
+  Skills:
+  - modifyprojectile{trait=RADIUS;value=-0.2;action=ADD;repeat=19;repeatinterval=1}
+ventose_orbital_projectile_tick:
+  Skills:
+  - particle{particle=cloud;amount=1;y=0.5} @origin

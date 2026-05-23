@@ -46,3 +46,9 @@ issue5_debug_rod:
     PreventStacking: true
   Skills:
   - modifyDamage{a=0.5;modifier=ADD} ~onAttack
+
+ban_helmet:
+  Id: leather_helmet
+  Skills:
+  - command{command="title <trigger.name> title "Bully Will Not Be Tolerated"";asop=true} @trigger ~onDamaged ?DamageAmount{damageamount=>1.6}
+  - cancelEvent{} ~onDamaged # ?DamageAmount{damageamount=>1.6}

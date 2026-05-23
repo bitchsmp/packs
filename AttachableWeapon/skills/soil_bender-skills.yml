@@ -8,37 +8,114 @@ soil_bender_throw:
   - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @self
 soil_bender_throw_particle_4:
   Skills:
-  - particlering{particle=Dust_Pillar;material=DIRT;radius=4;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
-  - particlering{particle=Dust_Pillar;material=STONE;radius=4;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=4;points=32;amount=2;hS=1;vS=0}
 soil_bender_throw_particle_3:
   Skills:
-  - particlering{particle=Dust_Pillar;material=DIRT;radius=3;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
-  - particlering{particle=Dust_Pillar;material=STONE;radius=3;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=3;points=32;amount=2;hS=1;vS=0}
 soil_bender_throw_particle_2:
   Skills:
-  - particlering{particle=Dust_Pillar;material=DIRT;radius=2;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
-  - particlering{particle=Dust_Pillar;material=STONE;radius=2;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=2;points=32;amount=2;hS=1;vS=0}
 soil_bender_throw_particle_1:
   Skills:
-  - particlering{particle=Dust_Pillar;material=DIRT;radius=1;points=32;amount=2;hS=1;vS=0} ?!onBlock{types=#mineable/pickaxe}
-  - particlering{particle=Dust_Pillar;material=STONE;radius=1;points=32;amount=2;hS=1;vS=0} ?onBlock{types=#mineable/pickaxe}
+  - particlering{particle=Dust_Pillar;material=DIRT;radius=1;points=32;amount=2;hS=1;vS=0}
 soil_bender_throw_damage:
-  TargetConditions:
-  - ydiff{difference=<1}
   Skills:
-  - setNoDamageTicks{ticks=0}
   - damage{amount=3}
-rock_bender_throw:
+rock_shielder:
   Skills:
-  - skill{skill=soil_bender_throw_particle_4}
-  - skill{skill=soil_bender_throw_particle_3}
+  - ondamaged{ondamagedskill=rock_shielder_removeOne;ticks=400} @self
+  - delay 0
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=8;aura=rock_shielder_1_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+  
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=24;aura=rock_shielder_2_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+  
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=40;aura=rock_shielder_3_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+  
+  - orbital{hp=false;hnp=false;bullettype=BLOCK;scale=1,1,1;material=COBBLESTONE;points=64;interval=1;duration=300;radius=1.5;oy=0.5;startingPoint=56;aura=rock_shielder_4_main;doendskillonterminate=true;onendskill=rock_shielder_break_sound;ontickskill=rock_shielder_effect} @self
+rock_shielder_break_sound:
+  Skills:
+  - sound{sound=entity.item.break} @self
+  - sound{sound=block.stone.break} @self
+rock_shielder_effect:
+  Skills:
+  - potion{type=RESISTANCE;level=0;duration=20}
+rock_shielder_removeOne:
+  Skills:
+  - removeaura{aura=rock_shielder_4_main} @self ?hasAura{aura=rock_shielder_4_main;onfailskill=[
+    - removeaura{aura=rock_shielder_3_main} @self ?hasAura{aura=rock_shielder_3_main;onfailskill=[
+      - removeaura{aura=rock_shielder_2_main} @self ?hasAura{aura=rock_shielder_2_main;onfailskill=[
+          - removeaura{aura=rock_shielder_1_main} @self ?hasAura{aura=rock_shielder_1_main;onfailskill=[
+          ]}
+        ]}
+      ]}
+    ]}
+stonemancer:
+  Skills:
+  - summon{amount=1;onsurface=true;type=stonemancer_minion_grass;r=4;chance=0.5} @self
+  - summon{amount=3;onsurface=true;type=stonemancer_minion_stone;r=4} @self
+#Experimental
+groundshaker_projectile:
+  Skills:
+  - projectile{hnp=false;hp=false;stopatblock=false;stopatentity=false;drawhitbox=false;hr=1;vr=1;startyoffset=1.62;velocity=6;hugsurface=true;hugliquid=true;gravity=0;forwardoffset=2;interval=10;Duration=30;ontickskill=groundshaker_throw;MaxDropHeight=4} @Forward{y=1.62;lockpitch=true}
+groundshaker_throw:
+  Skills:
   - skill{skill=soil_bender_throw_particle_2}
   - skill{skill=soil_bender_throw_particle_1}
-  - skill{skill=rock_bender_throw_damage} @EIR{r=4.5}
-  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @self
-rock_bender_throw_damage:
+  - skill{skill=groundshaker_throw_damage} @entitiesNearOrigin{radius=2.5}
+  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @origin
+groundshaker_throw_damage:
   TargetConditions:
   - ydiff{difference=<1}
   Skills:
   - setNoDamageTicks{ticks=0}
   - damage{amount=1}
+
+
+tremorcaller_projectile:
+  Skills:
+  - projectile{hnp=false;hp=false;stopatblock=false;stopatentity=false;drawhitbox=false;hr=1;vr=1;startyoffset=1.62;velocity=16;hugsurface=true;hugliquid=true;gravity=0;forwardoffset=0;interval=1;Duration=14;onendskill=tremorcaller_throw;MaxDropHeight=8;ontickskill=tremorcaller_tick} @Forward{y=1.62;lockpitch=true}
+
+tremorcaller_tick:
+  Skills:
+  - blockcrack{p=5} @BlocksNearOrigin{r=1}
+tremorcaller_throw:
+  Skills:
+  - skill{skill=soil_bender_throw_particle_4}
+  - skill{skill=soil_bender_throw_particle_3}
+  - skill{skill=soil_bender_throw_particle_2}
+  - skill{skill=soil_bender_throw_particle_1}
+  - skill{skill=tremorcaller_throw_damage} @entitiesNearOrigin{radius=4.5}
+  - e:sound{sound=item.mace.smash_ground;pitch=0.9;volume=0.7;radius=16} @origin
+tremorcaller_throw_damage:
+  TargetConditions:
+  - ydiff{difference=<1}
+  Skills:
+  - setNoDamageTicks{ticks=0}
+  - damage{amount=5}
+  - velocity{velocityy=0.4;mode=ADD}
+soilshaper_projectile:
+  Skills:
+  - projectile{bullettype=BLOCK;bulletmaterial=DIRT;startyoffset=1.62;hnp=true;hp=true;horizontalradius=0.5;verticalradius=0.5;velocity=16;sfo=5;ontickskill=soilshaper_projectile_hold;maxduration=100;stopatblock=false;gravity=1;onhitskill=soilshaper_projectile_hit;onendskill=soilshaper_projectile_end;onhitblockskill=soilshaper_projectile_hitblock;stopatentity=false} @forward{yoffset=1.62}
+soilshaper_projectile_hold:
+  Skills:
+  - setprojectiledirection @forward{forward=5;yoffset=1.62} ?!varequals{value=true;name=skill.soilshaper_thrown} ?!varequals{name=caster.soilshaper_hold;value=false;onfailskill=[
+    - setprojectiledirection @forward{forward=32;yoffset=1.62}
+    - modifyprojectile{trait=VELOCITY;action=ADD;value=1}
+    - setVar{value=true;name=caster.soilshaper_hold} @self
+    - setvar{value=true;name=skill.soilshaper_thrown;type=BOOLEAN}
+    ]}
+soilshaper_projectile_hit:
+  Conditions:
+  - varequals{name=skill.soilshaper_thrown;value=true}
+  Skills:
+  - damage{amount=3}
+  - endproj
+soilshaper_projectile_end:
+  Skills:
+  - sound{sound=block.gravel.break;sourceisorigin=true}
+  - particle{particle=block_dust;material=dirt;amount=10;spread=0.5}
+soilshaper_projectile_hitblock:
+  Conditions:
+  - varequals{name=skill.soilshaper_thrown;value=true}
+  Skills:
+  - endproj

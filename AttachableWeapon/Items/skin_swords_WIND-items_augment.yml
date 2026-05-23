@@ -16,4 +16,119 @@ SkinBreezer:
     Tooltip: '<white>Breezer<gray> (Fire a gust of wind upon swinging)'
     Conditions:
     Skills:
-    - skill{s=breezer_wind_projectile;cooldown=3} @self ~onSwing
+    - skill{s=breezer_projectile;cooldown=3} @self ~onSwing
+SkinGale:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Gale
+  - <white>
+  - <gray>Grants you faster movement speed</gray>
+  - <white>
+  - "<white>[Booster Gale]"
+  - "<white>  Grants you faster movement speed on right-click"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Gale<gray> (Grants you faster movement speed)'
+    Conditions:
+    Skills:
+    - stataura{forcesync=true;stat=MOVEMENT_SPEED;type=ADDITIVE;value=0.1;duration=60;interval=2;ontickskill=[
+      - particle{particle=small_gust;vspread=0.7;hspread=0.3;a=1;yoffset=0.5}
+      ];onstartskill=[
+      - particle{particle=gust;a=1;yoffset=1}
+      - sound{sound=entity.breeze.wind_burst;volume=0.8;pitch=0.8}
+      ];cooldown=5;aura=gale_speed_buff} @self ~onUse
+
+SkinSquall:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Squall
+  - <white>
+  - <gray>Fires a powerful wind when left-clicking</gray>
+  - <white>
+  - "<white>[Wind Blast]"
+  - "<white>  Fires a powerful wind when left-clicking"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Squall<gray> (Fires a powerful wind when left-clicking)'
+    Conditions:
+    Skills:
+    - skill{s=squall_projectile;cooldown=3} @self ~onSwing
+
+SkinZephyr:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Zephyr
+  - <white>
+  - <gray>Fires a wind charge downward when right-clicking</gray>
+  - <white>
+  - "<white>[Wind Charge]"
+  - "<white>  Fires a wind charge downward when right-clicking"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Zephyr<gray> (Fires a wind charge downward when right-clicking)'
+    Conditions:
+    Skills:
+    - skill{cooldown=2;skill=[
+      - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.zephyr_wind_charge_motion}
+      - command{command="summon minecraft:wind_charge <caster.l.x> <caster.l.y> <caster.l.z> <global.var.zephyr_wind_charge_motion>";asop=true;sourceisorigin=true}
+      - swingarm
+      ]} @self ~onUse
+SkinAeolian:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Aeolian
+  - <white>
+  - <gray>Grants you faster movement speed</gray>
+  - <white>
+  - "<white>[Aeolian Current]"
+  - "<white>  Grants you faster movement speed"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Aeolian<gray> (Grants you faster movement speed)'
+    Conditions:
+    Skills:
+    - stataura{forcesync=true;stat=MOVEMENT_SPEED;type=ADDITIVE;value=0.07;duration=40;interval=2;ontickskill=[
+      - particle{particle=small_gust;vspread=0.7;hspread=0.3;a=1;yoffset=0.5}
+      ];aura=aeolian_speed_buff} @self ~onTimer:1
+
+SkinVentose:
+  Material: TURTLE_SCUTE
+  Display: "Special: <white>Wind Essence"
+  Options:
+    ItemModel: minecraft:wind_charge
+    Glint: true
+  Lore:
+  - <yellow><bold>Sword Skin:</bold> Ventose
+  - <white>
+  - <gray>Fires an extremely powerful wind charge downward when right-clicking</gray>
+  - <white>
+  - "<white>[Air is compressible]"
+  - "<white>  Fires an extremely powerful wind charge downward when right-clicking"
+  Augmentation:
+    Type: SKIN_SWORD
+    Tooltip: '<white>Ventose<gray> (Fires an extremely powerful downward when right-clicking)'
+    Conditions:
+    Skills:
+    - skill{cooldown=10;skill=[
+      - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.zephyr_wind_charge_motion}
+      - swingarm
+      - skill{s=ventose_orbital_projectile}
+      - delay 20
+      - command{command="summon minecraft:wind_charge <caster.l.x> <caster.l.y> <caster.l.z> <global.var.zephyr_wind_charge_motion>";repeat=3;asop=true;sourceisorigin=true}
+      ]} @self ~onUse
