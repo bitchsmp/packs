@@ -29,10 +29,10 @@ gale:
   - <gray>Right-click: Grants you faster movement speed</gray>
   - <white>
   Skills:
-  - swingarm{} ~onUse ?!itemGroupOnCooldown{group=gale} false
-  - swingOffhand ~onRightclick ?!itemGroupOnCooldown{group=gale} false
-  - skill{s=gale} @self ~onUse ?!itemGroupOnCooldown{group=gale} false
-  - skill{s=gale} @self ~onRightclick ?!itemGroupOnCooldown{group=gale} false
+  - swingarm{} ~onUse ?!itemGroupOnCooldown{group=gale}
+  - swingOffhand ~onRightclick ?!itemGroupOnCooldown{group=gale}
+  - skill{s=gale} @self ~onUse ?!itemGroupOnCooldown{group=gale}
+  - skill{s=gale} @self ~onRightclick ?!itemGroupOnCooldown{group=gale} 
 ultra_wind_charge:
   Id: wind_charge
   Display: "<yellow>Ultra Wind Charge"
@@ -48,3 +48,18 @@ ultra_wind_charge:
   - cancelEvent ~onRightclick
   - skill{skill=ultra_wind_charge} @self ~onUse
   - skill{skill=ultra_wind_charge} @self ~onRightclick
+ventose:
+  Id: wind_charge
+  Display: "<yellow>Ventose"
+  Lore:
+  - ""
+  - "<gray>Summons a powerful wind charge at the leg and launches downward"
+  - "<gray>Wind charge velocity is constant and absolute"
+  Options:
+    Glint: true
+    StackSize: 1
+  Skills:
+  - cancelEvent ~onUse
+  - cancelEvent ~onRightclick
+  - skill{skill=ventose} @self ~onUse
+  - skill{skill=ventose} @self ~onRightclick 
