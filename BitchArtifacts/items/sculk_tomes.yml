@@ -14,3 +14,19 @@ tome_of_darkness:
   - <white>> Can be repaired with Echo Shard</white>
   Skills:
   - skill{s=tome_of_darkness_main} @self ~onTimer:1
+tome_of_must_have_been_the_wind:
+  Material: ECHO_SHARD
+  Display: '<white>Tome of<italic> must have been the wind'
+  Options:
+    StackSize: 1
+    ItemModel: minecraft:written_book
+    Glint: true
+    MaxDurability: 32
+  Lore:
+  - <white>
+  - "<gray>Right-click: Cast a mini <gradient:#61c3cb:#024050>sonic boom<gray> on swing</gray>"
+  - <white>> Can be repaired with Echo Shard</white>
+  Skills:
+  - skill{s=tome_of_must_have_been_the_wind_leftclick} @self ~onUse
+
+  - skill{s=tome_of_must_have_been_the_wind_leftclick} @self ~onRightclick
