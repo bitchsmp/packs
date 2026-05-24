@@ -1,7 +1,0 @@
-infinite_gust:
-  Conditions:
-  - materialIsOnCooldown{material=wind_charge} false
-  Skills:
-  - setVar{type=STRING;value="{Motion:[0d,-1d,0d]}";name=global.infinite_gust_wind_charge_motion_down} 
-  - command{command="summon minecraft:breeze_wind_charge ~ ~ ~ <global.var.infinite_gust_wind_charge_motion_down>";asop=true;sourceisorigin=true;astarget=true} @self ~onSpawn
-  - setMaterialCooldown{material=wind_charge;cooldown=5} @self
