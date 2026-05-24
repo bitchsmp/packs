@@ -20,43 +20,12 @@ rocket_launcher_hit_block_marker:
   - potion{type=SLOW_FALLING;duration=20} @EIR{r=2} ~onSpawn
   #remove
   - remove{delay=2} @self ~onSpawn
-
-
-
-
-
-
-
-
-
-
-  
 rocket_launcher_cannonball_hitbox:
   Type: interaction
   Options:
-    Height: 1.2
-    Width: 1.2
+    Height: 1.45
+    Width: 1.45
   Skills:
   - message{message=ouch} @AllInWorld{} ~onDamaged 
   - skill{s=rocket_launcher_cannonball_onAttacked} ~ondamaged
   - remove{delay=2} @self ~onspawn
-
-rocket_launcher_cannonball_marker:
-  Type: INTERACTION
-  Options:
-    VisibleByDefault: false
-    Invisible: true
-    NoGravity: true
-    PreventLeashing: true
-    Silent: true
-    CanMove: false
-    Marker: true
-    summonerIsOwner: true
-  Skills:
-  # - variableSet{value=0;type=INTEGER;scope=caster;var=caster.cannonball_bounce} @self ~onspawn
-  # - message{message=<caster.var.cannonball_bounce>} @everyone{}  ~onTimer:1
-  # - variableAdd{var=caster.cannonball_bounce;value=1;type=INTEGER;scope=caster} @self ~onSignal:bounce
-  - message{message=bounce} @everyone ~onSignal:bounce
-  - aura{aura=ROCKET_LAUNCHER_CANNONBALL_BOUNCED;ticks=150} ~onSignal:bounce @parent
-  #- signal{signal=bounced} @parent ~onSignal:bounce
-  - remove{delay=2000} ~onSpawn
