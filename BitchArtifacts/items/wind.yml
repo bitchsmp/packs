@@ -11,3 +11,28 @@ infinite_gust:
   Skills:
   - cancelEvent ~onUse
   - skill{s=infinite_gust} @self ~onUse
+gale:
+  Material: turtle_scute
+  Display: "Gale"
+  UseCooldown:
+    CooldownGroup: gale
+  Options:
+    ItemModel: minecraft:breeze
+    Glint: true
+  Lore:
+  - <white>
+  - <gray>Right-click: Grants you faster movement speed</gray>
+  - <white>
+  Skills:
+  - skill{s=[
+    - aura{forcesync=true;duration=60;interval=2;ontickskill=[
+      - particle{particle=small_gust;vspread=0.7;hspread=0.3;a=1;yoffset=0.5}
+      ];onstartskill=[
+      - particle{particle=gust;a=1;yoffset=1}
+      - sound{sound=entity.breeze.wind_burst;volume=0.8;pitch=0.8}
+      ];aura=gale_speed_buff;components=[
+      - stat{stat=MOVEMENT_SPEED;type=ADDITIVE;value=0.1}
+      ]}
+    - setItemGroupCooldown{key=gale}
+    - swingarm{}
+    ]} @self ~onUse ?!itemGroupOnCooldown{group=gale}
