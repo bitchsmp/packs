@@ -1,11 +1,11 @@
 STOP_SIGN_WIND_BURST_0_1:
   Conditions:
-  - hasEnchant{type=WIND_BURST} false 
+  - varequals{name=caster.stop_sign;value=1}
   Skills:
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
 STOP_SIGN_WIND_BURST_1_1:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=1}
+  - varequals{name=caster.stop_sign;value=2}
   Skills:
   - velocity{m=add;x=0;y=1.2;z=0}
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
@@ -13,7 +13,7 @@ STOP_SIGN_WIND_BURST_1_1:
 
 STOP_SIGN_WIND_BURST_2_1:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=2}
+  - varequals{name=caster.stop_sign;value=3}
   Skills:
   - velocity{m=add;x=0;y=1.6;z=0}
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
@@ -21,19 +21,19 @@ STOP_SIGN_WIND_BURST_2_1:
 
 STOP_SIGN_WIND_BURST_3_1:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=3}
+  - varequals{name=caster.stop_sign;value=4}
   Skills:
   - velocity{m=add;x=0;y=2;z=0}
   - skill{s=STOP_SIGN_SLAM_FX_1;delay=0} @self
 #
 STOP_SIGN_WIND_BURST_0_2:
   Conditions:
-  - hasEnchant{type=WIND_BURST} false 
+  - varequals{name=caster.stop_sign;value=1}
   Skills:
     - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
 STOP_SIGN_WIND_BURST_1_2:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=1}
+  - varequals{name=caster.stop_sign;value=2}
   Skills:
   - velocity{m=add;x=0;y=1.2;z=0;delay=3}
   - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
@@ -41,7 +41,7 @@ STOP_SIGN_WIND_BURST_1_2:
 
 STOP_SIGN_WIND_BURST_2_2:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=2}
+  - varequals{name=caster.stop_sign;value=3}
   Skills:
   - velocity{m=add;x=0;y=1.6;z=0;delay=3}
   - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
@@ -49,19 +49,19 @@ STOP_SIGN_WIND_BURST_2_2:
 
 STOP_SIGN_WIND_BURST_3_2:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=3}
+  - varequals{name=caster.stop_sign;value=4}
   Skills:
   - velocity{m=add;x=0;y=2;z=0;delay=3}
   - skill{s=STOP_SIGN_SLAM_FX_2;delay=3} @self
 #
 STOP_SIGN_WIND_BURST_0_3:
   Conditions:
-  - hasEnchant{type=WIND_BURST} false 
+  - varequals{name=caster.stop_sign;value=1}
   Skills:
     - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
 STOP_SIGN_WIND_BURST_1_3:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=1}
+  - varequals{name=caster.stop_sign;value=2}
   Skills:
   - velocity{m=add;x=0;y=1.2;z=0;delay=4}
   - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
@@ -70,7 +70,7 @@ STOP_SIGN_WIND_BURST_1_3:
 
 STOP_SIGN_WIND_BURST_2_3:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=2}
+  - varequals{name=caster.stop_sign;value=3}
   Skills:
   - velocity{m=add;x=0;y=1.6;z=0;delay=4}
   - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
@@ -78,19 +78,19 @@ STOP_SIGN_WIND_BURST_2_3:
 
 STOP_SIGN_WIND_BURST_3_3:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=3}
+  - varequals{name=caster.stop_sign;value=4}
   Skills:
   - velocity{m=add;x=0;y=2;z=0;delay=4}
   - skill{s=STOP_SIGN_SLAM_FX_3;delay=4} @self
 #
 STOP_SIGN_WIND_BURST_0_4:
   Conditions:
-  - hasEnchant{type=WIND_BURST} false 
+  - varequals{name=caster.stop_sign;value=1} 
   Skills:
     - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
 STOP_SIGN_WIND_BURST_1_4:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=1}
+  - varequals{name=caster.stop_sign;value=2}
   Skills:
   - velocity{m=add;x=0;y=1.2;z=0;delay=10}
   - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
@@ -98,7 +98,7 @@ STOP_SIGN_WIND_BURST_1_4:
 
 STOP_SIGN_WIND_BURST_2_4:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=2}
+  - varequals{name=caster.stop_sign;value=3}
   Skills:
   - velocity{m=add;x=0;y=1.6;z=0;delay=10}
   - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
@@ -106,7 +106,7 @@ STOP_SIGN_WIND_BURST_2_4:
 
 STOP_SIGN_WIND_BURST_3_4:
   Conditions:
-  - hasEnchant{type=WIND_BURST;level=3}
+  - varequals{name=caster.stop_sign;value=4}
   Skills:
   - velocity{m=add;x=0;y=2;z=0;delay=10}
   - skill{s=STOP_SIGN_SLAM_FX_4;delay=10} @self
