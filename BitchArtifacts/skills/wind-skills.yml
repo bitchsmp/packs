@@ -1,0 +1,27 @@
+infinite_gust:
+  Conditions:
+  - materialIsOnCooldown{material=wind_charge} false
+  Skills:
+  - setVar{type=STRING;value="{Motion:[0d,-1d,0d]}";name=global.infinite_gust_wind_charge_motion_down} 
+  - command{command="summon minecraft:breeze_wind_charge ~ ~ ~ <global.var.infinite_gust_wind_charge_motion_down>";asop=true;sourceisorigin=true;astarget=true} @self
+  - setMaterialCooldown{material=wind_charge;cooldown=5}
+ultra_wind_charge:
+  Conditions:
+  - materialIsOnCooldown{material=wind_charge} false
+  Skills:
+  - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.ultra_wind_charge_motion}
+  - command{command="summon minecraft:wind_charge ~ ~ ~ <global.var.ultra_wind_charge_motion>";asop=true;sourceisorigin=true;astarget=true}
+  - setMaterialCooldown{material=wind_charge;cooldown=4}
+gale:
+  Conditions:
+  Skills:
+  - aura{forcesync=true;duration=60;interval=2;ontickskill=[
+    - particle{particle=small_gust;vspread=0.7;hspread=0.3;a=1;yoffset=0.5}
+    ];onstartskill=[
+    - particle{particle=gust;a=1;yoffset=1}
+    - sound{sound=entity.breeze.wind_burst;volume=0.8;pitch=0.8}
+    ];aura=gale_speed_buff;components=[
+    - stat{stat=MOVEMENT_SPEED;type=ADDITIVE;value=0.1}
+    ]}
+  - setItemGroupCooldown{key=gale;ticks=100}
+  - consumeuseddurability{amount=1}
