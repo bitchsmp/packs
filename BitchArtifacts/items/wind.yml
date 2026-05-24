@@ -29,10 +29,10 @@ gale:
   - <gray>Right-click: Grants you faster movement speed</gray>
   - <white>
   Skills:
-  - skill{s=gale} @self ~onUse ?!itemGroupOnCooldown{group=gale} false
-  - skill{s=gale} @self ~onRightclick ?!itemGroupOnCooldown{group=gale} false
   - swingarm{} ~onUse ?!itemGroupOnCooldown{group=gale} false
   - swingOffhand ~onRightclick ?!itemGroupOnCooldown{group=gale} false
+  - skill{s=gale} @self ~onUse ?!itemGroupOnCooldown{group=gale} false
+  - skill{s=gale} @self ~onRightclick ?!itemGroupOnCooldown{group=gale} false
 ultra_wind_charge:
   Id: wind_charge
   Display: "<yellow>Ultra Wind Charge"
