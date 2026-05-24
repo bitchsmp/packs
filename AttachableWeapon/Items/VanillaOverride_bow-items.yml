@@ -1,8 +1,0 @@
-attachable_bow:
-  id: bow
-  AugmentationSlots:
-  - Type: SKIN_BOW
-    Amount: 1
-    Chance: 1
-  Lore:
-    Template: attachable_weapons
