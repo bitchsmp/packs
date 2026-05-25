@@ -1,0 +1,28 @@
+yaba_desperation:
+  Skills:
+  - cancelEvent
+  - consumeuseditem
+  - feed{amount=20}
+  - heal
+  - potion{type=INVISIBILITY;duration=100;hasparticles=false}
+  - potion{type=RESISTANCE;duration=100;hasparticles=false;level=4}
+  - potion{type=WEAKNESS;duration=100;hasparticles=false;level=255}
+  - command{asop=true;command="vanish enable <caster.name>"}
+  - title{title="<light_purple>Desperation Phase";subtitle="<light_purple>You have 60 seconds of pure adrenaline";fadein=20;fadeout=20;duration=60}
+  - delay 100
+
+  - command{asop=true;command="vanish disable <caster.name>"}
+  - e:lightning{localized=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 0.6 1";asOp=true;at=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 0.7 1";asOp=true;at=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 0.8 1";asOp=true;at=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 0.9 1";asOp=true;at=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 1.0 1";asOp=true;at=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 1.2 1";asOp=true;at=true}
+  - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 1.4 1";asOp=true;at=true}
+  - command{c="particle minecraft:explosion_emitter";asOp=true;at=true}
+  - command{c="particle minecraft:end_rod ~ ~ ~ 0 0 0 0.4 200 force";asOp=true;at=true}
+  - potion{type=STRENGTH;duration=1200;level=0}
+  - potion{type=SPEED;duration=1200;level=0}
+  - potion{type=RESISTANCE;duration=1200;level=0}
+  - potion{type=GLOWING;duration=1200;level=0}

@@ -14,3 +14,16 @@ methamphetamine:
     - potion{type=absorption;d=1200}
     - potion{type=strength;d=1200}
     - potion{type=speed;d=1200}
+
+
+yaba:
+  Id: sugar
+  Display: "Disposed Yaba"
+  Lore:
+  - "<white>"
+  - "<light_purple>Always keep this in one of your hand. It can save you in the most desperate moment"
+  - "<light_purple>Can survive /kill"
+  Options:
+    StackSize: 1
+  Skills:
+  - skill{skill=yaba_desperation} @self ~onDeath 
