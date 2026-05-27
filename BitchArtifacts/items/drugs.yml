@@ -3,17 +3,19 @@ methamphetamine:
   Display: "Military-Grade Methamphetamine"
   Lore:
   - "<white>"
-  - "<light_purple>Boost your morale and efficiency. Has no practical side-effect"
+  - "<light_purple>Boost your morale and efficiency. Has no severe side-effects"
   Options:
-    StackSize: 16
+    StackSize: 1
   Consumable:
     ConsumeSeconds: 2
     Animation: EAT
     ConsumeEffects:
-    - potion{type=nausea;d=100}
-    - potion{type=absorption;d=1200}
-    - potion{type=strength;d=1200}
-    - potion{type=speed;d=1200}
+    - potion{type=NAUSEA;duration=100;level=9;chance=0.7}
+    - potion{type=BLINDNESS;duration=60;level=0;chance=0.3}
+  PotionEffects:
+  - SPEED 1200 0
+  - STRENGTH 1200 0
+  - ABSORPTION 1200 0
 
 
 yaba:
