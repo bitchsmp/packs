@@ -38,3 +38,27 @@ brimstone_claymore_diamond:
       - air | diamond | air
       - air | diamond | air
       - diamond | brimstone_claymore | diamond
+
+creation_splitter:
+  Material: netherite_sword
+  Display: '<red>Creation Splitter'
+  Options:
+    ItemModel: minecraft:creationsplitter
+  EquipSlot: hand
+  Lore:
+  - <gray>Strip your target armor</gray>
+  - <white>
+  - "<light_purple>Attacks reduce 20 armor point of the target; effect lasts for 10 seconds"
+  - "<red>⚠Missing a swing disables the weapon for 2 seconds"
+
+  Skills:
+  - stataura{forcesync=true;stat=ARMOR;val=-20;type=ADDITIVE;aura=CREATIONSPLITTER_ARMOR_STRIPPER;duration=200;delay=1} @trigger ~onAttack ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+  - aura{aura=CREATIONSPLITTER_ATTACK_SUCCESS;ticks=2} @self ~onAttack
+  - aura{aura=CREATIONSPLITTER_ATTACK_FAILED;delay=1;ticks=40;onstartskill=CREATIONSPLITTER_ATTACK_FAILED_FX;ontickskill=CREATIONSPLITTER_ATTACK_FAILED_FX_TICK} @self ~onSwing ?!hasAura{aura=CREATIONSPLITTER_ATTACK_SUCCESS} ?!hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+  - aura{aura=CREATIONSPLITTER_ATTACK_DISABLE;ticks=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED}
+
+  - aura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY;ticks=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_FAILED_END2TICK_EARLY}
+  - cancelEvent ~onSwing ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE}
+  - cancelEvent ~onAttack ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE}
+  - potion{type=HASTE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
+  - potion{type=MINING_FATIGUE;level=99;hasparticles=false;hasicon=false;overwrite=true;duration=2} @self ~onTimer:1 ?hasAura{aura=CREATIONSPLITTER_ATTACK_DISABLE_END2TICK_EARLY}
