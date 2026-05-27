@@ -1,0 +1,40 @@
+brimstone_claymore:
+# Original name from Blade of Majestica rspack: Brimstone_Claymore
+  Material: iron_sword
+  Display: 'Brimstone Claymore'
+  Options:
+    ItemModel: minecraft:brimstone_claymore
+  Lore:
+  - "<gray>Causes an extra unextinguishable and unblockable burning effect to the target"
+  - "<gray>To increase damage, upgrade to<aqua> Diamond</aqua> using <white>Crafting Table"
+  Skills:
+  - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
+    - damage{a=0.5;preventknockback=true}
+    - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
+    - ignite{ticks=200}
+    ]} @trigger ~onAttack ?!itemRecharging{}
+  - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
+
+brimstone_claymore_diamond:
+  Id: diamond_sword
+  Display: 'Brimstone Claymore'
+  Options:
+    ItemModel: minecraft:brimstone_claymore
+  Lore:
+  - "<gray>Causes an extra unextinguishable and unblockable burning effect to the target"
+  - "<gray>To increase damage, upgrade to</gray><gradient:#31292a:#837f7f> Netherite<gray> using <white>Smithing Table</white> and<yellow> Netherite Upgrade"
+  Skills:
+  - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
+    - damage{a=0.5;preventknockback=true}
+    - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
+    - ignite{ticks=200}
+    ]} @trigger ~onAttack ?!itemRecharging{}
+  - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
+  Recipes:
+    SHAPED:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | diamond | air
+      - air | diamond | air
+      - diamond | brimstone_claymore | diamond
