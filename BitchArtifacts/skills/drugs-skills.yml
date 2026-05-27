@@ -3,6 +3,7 @@ yaba_desperation:
   - console{message="<caster.name> used Yaba"}
   - cancelEvent
   - consumeuseditem
+  - tagadd{tag=smptweaks_bypass}
   - feed{amount=20}
   - heal
   - potion{type=INVISIBILITY;duration=100;hasparticles=false}
