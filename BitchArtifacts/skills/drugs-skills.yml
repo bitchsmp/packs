@@ -1,5 +1,6 @@
 yaba_desperation:
   Skills:
+  - console{message="<caster.name> used Yaba"}
   - cancelEvent
   - consumeuseditem
   - feed{amount=20}
@@ -22,7 +23,8 @@ yaba_desperation:
   - command{c="playsound minecraft:block.respawn_anchor.deplete master @a[distance=..50] ~ ~ ~ 2 1.4 1";asOp=true;at=true}
   - command{c="particle minecraft:explosion_emitter";asOp=true;at=true}
   - command{c="particle minecraft:end_rod ~ ~ ~ 0 0 0 0.4 200 force";asOp=true;at=true}
-  - potion{type=STRENGTH;duration=1200;level=0}
-  - potion{type=SPEED;duration=1200;level=0}
-  - potion{type=RESISTANCE;duration=1200;level=0}
+  - potion{type=STRENGTH;duration=1200;level=1}
+  - potion{type=SPEED;duration=1200;level=1}
+  - potion{type=RESISTANCE;duration=1200;level=1}
   - potion{type=GLOWING;duration=1200;level=0}
+  - potion{type=FIRE_RESISTANCE;duration=1200;level=0}

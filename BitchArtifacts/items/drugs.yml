@@ -21,9 +21,10 @@ yaba:
   Display: "Disposed Yaba"
   Lore:
   - "<white>"
-  - "<light_purple>Always keep this in one of your hand. It can save you in the most desperate moment"
-  - "<light_purple>Can survive /kill"
+  - "<light_purple>Always keep this in one of your hand. It can save you in the most desperate moment."
+  - "<light_purple>Can make you survive /kill"
   Options:
     StackSize: 1
+    ItemModel: dueris:yaba
   Skills:
   - skill{skill=yaba_desperation} @self ~onDeath 
