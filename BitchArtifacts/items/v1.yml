@@ -9,6 +9,7 @@ v1:
   - "<dark_red>HELL IS FULL"
   Options:
     StackSize: 4
+    ItemModel: hbm:v1
   Skills:
   - aura{components=[
     - stat{stat=LIFESTEAL_CHANCE;value=1;type=ADD}
