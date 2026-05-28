@@ -1,3 +1,18 @@
+terrablade:
+  Material: diamond_sword
+  Display: '<yellow>Terrablade'
+  Options:
+    ItemModel: minecraft:terrablade
+  Lore:
+  - "<gray>Each swing fires a wave of energy"
+  - <gray><italic>Terrarians love this thing</gray>
+
+  Skills:
+  - skill{s=terrablade_projectile_leftclick} ~onSwing 
+
+
+
+
 brimstone_claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
   Material: iron_sword
