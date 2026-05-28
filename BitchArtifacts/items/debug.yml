@@ -1,4 +1,4 @@
-debug:
-  Id: stick
-  Skills:
-  - potion{type=ABSORPTION} @self ~onTimer:1
+# debug:
+#   Id: stick
+#   Skills:
+#   - potion{type=ABSORPTION} @self ~onTimer:1
