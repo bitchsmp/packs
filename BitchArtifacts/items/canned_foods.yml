@@ -70,10 +70,30 @@ canned_ass:
   - "<gray>100% quality donkey meat!*"
   Options:
     ItemModel: hbm:canned_ass
-
-# Canned Pepperoni Pizza
-# A crime against humanity.
-# Astronaut Food Tube
+canned_pizza:
+  Id: paper
+  Display: Canned Pepperoni Pizza
+  Food:
+    Nutrition: 5
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>A crime against humanity."
+  Options:
+    ItemModel: hbm:canned_ass
+canned_tube:
+  Id: paper
+  Display: Astronaut Food Tube
+  Food:
+    Nutrition: 4
+    Saturation: 5
+  Consumable:
+    Animation: EAT
+  Lore:
+  Options:
+    ItemModel: hbm:canned_tube
+# 
 # Canned Tomato Soup
 # Who wants some thick red paste?
 # Canned Asbestos
