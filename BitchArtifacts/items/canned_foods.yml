@@ -2,8 +2,8 @@ canned_beef:
   Id: paper
   Display: Canned Beef
   Food:
-    Nutrition: 4
-    Saturation: 6
+    Nutrition: 8
+    Saturation: 10
   Consumable:
     Animation: EAT
   Lore:
@@ -14,8 +14,8 @@ canned_tuna:
   Id: paper
   Display: Canned Tuna
   Food:
-    Nutrition: 2
-    Saturation: 5
+    Nutrition: 4
+    Saturation: 8
   Consumable:
     Animation: EAT
   Lore:
@@ -26,7 +26,7 @@ canned_mystery:
   Id: paper
   Display: Canned Mystery Meat
   Food:
-    Nutrition: 4
+    Nutrition: 8
     Saturation: 6
   Consumable:
     Animation: EAT
@@ -38,7 +38,7 @@ canned_cheese:
   Id: paper
   Display: Canned Melted Cheese
   Food:
-    Nutrition: 4
+    Nutrition: 6
     Saturation: 7
   Consumable:
     Animation: EAT
@@ -50,7 +50,7 @@ canned_milk:
   Id: paper
   Display: Canned Evaporated Milk
   Food:
-    Nutrition: 3
+    Nutrition: 5
     Saturation: 6
   Consumable:
     Animation: EAT
@@ -62,7 +62,7 @@ canned_ass:
   Id: paper
   Display: Canned Ass
   Food:
-    Nutrition: 4
+    Nutrition: 7
     Saturation: 4
   Consumable:
     Animation: EAT
@@ -74,7 +74,7 @@ canned_pizza:
   Id: paper
   Display: Canned Pepperoni Pizza
   Food:
-    Nutrition: 5
+    Nutrition: 7
     Saturation: 6
   Consumable:
     Animation: EAT
@@ -86,16 +86,29 @@ canned_tube:
   Id: paper
   Display: Astronaut Food Tube
   Food:
-    Nutrition: 4
-    Saturation: 5
+    Nutrition: 8
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
   Options:
     ItemModel: hbm:canned_tube
+canned_tomato:
+  Id: paper
+  Display: Canned Tomato Soup
+  Food:
+    Nutrition: 6
+    Saturation: 4
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Who wants some thick red paste?"
+  Lore:
+  Options:
+    ItemModel: hbm:canned_tomato
+
 # 
-# Canned Tomato Soup
-# Who wants some thick red paste?
+# 
 # Canned Asbestos
 # TASTE the asbestosis!
 # Canned Black Hole
