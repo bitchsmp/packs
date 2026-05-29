@@ -34,10 +34,30 @@ canned_mystery:
   - "<gray>What's inside? Only one way to find out!"
   Options:
     ItemModel: hbm:canned_mystery
-# Canned Melted Cheese
-# Is it cheese? Is it rubber cement? Who knows, who cares.
-# Canned Evaporated Milk
-# Milk 2: More solid than ever before!
+canned_cheese:
+  Id: paper
+  Display: Canned Melted Cheese
+  Food:
+    Nutrition: 4
+    Saturation: 7
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Is it cheese? Is it rubber cement? Who knows, who cares."
+  Options:
+    ItemModel: hbm:canned_cheese
+canned_milk:
+  Id: paper
+  Display: Canned Evaporated Milk
+  Food:
+    Nutrition: 3
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Milk 2: More solid than ever before!"
+  Options:
+    ItemModel: hbm:canned_milk
 # Canned Ass
 # 100% quality donkey meat!*
 # Canned Pepperoni Pizza
