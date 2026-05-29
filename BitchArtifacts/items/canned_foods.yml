@@ -1,0 +1,78 @@
+canned_beef:
+  Id: paper
+  Display: Canned Beef
+  Food:
+    Nutrition: 4
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>A few centuries ago, a cow died for this."
+  Options:
+    ItemModel: hbm:canned_beef
+canned_tuna:
+  Id: paper
+  Display: Canned Tuna
+  Food:
+    Nutrition: 2
+    Saturation: 5
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>I can't tell if that's actually tuna or dried cement."
+  Options:
+    ItemModel: hbm:canned_tuna
+canned_mystery:
+  Id: paper
+  Display: Canned Mystery Meat
+  Food:
+    Nutrition: 4
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>What's inside? Only one way to find out!"
+  Options:
+    ItemModel: hbm:canned_mystery
+# Canned Melted Cheese
+# Is it cheese? Is it rubber cement? Who knows, who cares.
+# Canned Evaporated Milk
+# Milk 2: More solid than ever before!
+# Canned Ass
+# 100% quality donkey meat!*
+# Canned Pepperoni Pizza
+# A crime against humanity.
+# Astronaut Food Tube
+# Canned Tomato Soup
+# Who wants some thick red paste?
+# Canned Asbestos
+# TASTE the asbestosis!
+# Canned Black Hole
+# Made from actual singularities. No, really.
+# Canned Hotdogs
+# Not to be confused with cool cats.
+# Leftover Conserve
+# ur 2 slow
+# Canned Yogurt
+# Probably spoiled, but whatever.
+# Canned "Mushroom Stew"
+# Canned Chinese Food
+# In China, Chinese food is just called food
+# Canned Engine Oil
+# It makes motors go, so why not humans?
+# Canned Fist
+# ow
+# Canned Fried Chicken
+# Even the can is deep fried!
+# Canned Napalm
+# I love the smell of old memes in the morning!
+# Canned Diesel
+# I'm slowly running out of jokes for these.
+# Canned Kerosene
+# Just imagine a witty line here.
+# Canned Recursion
+# Canned Recursion
+# Canned Pine Bark Jerky
+# Extra cronchy!
+# Canned Spam
+# The three-and-a-half-minute sketch is set in the fictional Green Midget Cafe in Bromley.$An argument develops between the waitress, who recites a menu in which nearly$every dish contains Spam, and Mrs. Bun, who does not like Spam. She asks for a$dish without Spam, much to the amazement of her Spam-loving husband. The waitress$responds to this request with disgust. Mr. Bun offers to take her Spam instead,$and asks for a dish containing a lot of Spam and baked beans. The waitress says$no since they are out of baked beans; when Mr. Bun asks for a substitution of Spam,$the waitress again responds with disgust. At several points, a group of Vikings in$the restaurant interrupts conversation by loudly singing about Spam.$The irate waitress orders them to shut up, but they resume singing more loudly.$A Hungarian tourist comes to the counter, trying to order by using a wholly$inaccurate Hungarian/English phrasebook (a reference to a previous sketch).$He is rapidly escorted away by a police constable. The sketch abruptly cuts to a$historian in a television studio talking about the origin of the Vikings in the café.$As he goes on, he begins to increasingly insert the word "Spam" into every$sentence, and the backdrop is raised to reveal the restaurant set behind.$The historian joins the Vikings in their song, and Mr. and Mrs. Bun are lifted by$wires out of the scene while the singing continues. In the original televised performance,$the closing credits begin to scroll with the singing still audible in the background.
