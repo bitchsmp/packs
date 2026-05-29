@@ -106,11 +106,19 @@ canned_tomato:
   Lore:
   Options:
     ItemModel: hbm:canned_tomato
-
-# 
-# 
-# Canned Asbestos
-# TASTE the asbestosis!
+canned_asbestos:
+  Id: paper
+  Display: Canned Asbestos
+  Food:
+    Nutrition: 8
+    Saturation: 8
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>TASTE the asbestosis!"
+  Lore:
+  Options:
+    ItemModel: hbm:canned_asbestos
 # Canned Black Hole
 # Made from actual singularities. No, really.
 # Canned Hotdogs
