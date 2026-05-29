@@ -2,11 +2,10 @@ spider_milk:
   Id: paper
   Display: "Spider Milk"
   Lore:
-  - "Remove all persistent Super Effects"
+  - "Remove all Super Effects"
   Consumable:
     Animation: DRINK
     Sound: entity.generic.drink
-    ConsumeSeconds: 2
     HasParticles: false
 
 
@@ -16,3 +15,4 @@ spider_milk:
     ItemModel: hbm:spider_milk
   Skills:
   - removeaura{aura=toxic} @self ~onConsume
+  - removeaura{aura=v1} @self ~onConsume

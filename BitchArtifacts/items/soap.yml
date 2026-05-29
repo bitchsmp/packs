@@ -9,10 +9,15 @@ toxic_soapy_water:
     StackSize: 1
     FireResistant: true
     ItemModel: hbm:bathwater
+  Lore:
+  - "<blue>Toxic (8:00)"
+  - "<white>"
+  - "<dark_purple>When Applied:"
+  - "<light_purple>Inflicts poison on the attacker"
   Skills:
   - ondamaged{aura=toxic;ondamagedskill=[
     - potion{type=POISON;duration=100;level=1} @trigger
-    ];ticks=2147483647;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onConsume
+    ];ticks=9600;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
 
 toxic_soapy_water_horse:
   Id: paper
@@ -25,8 +30,13 @@ toxic_soapy_water_horse:
     StackSize: 1
     FireResistant: true
     ItemModel: hbm:bathwater_mk2
+  Lore:
+  - "<blue>Radioactive (8:00)"
+  - "<white>"
+  - "<dark_purple>When Applied:"
+  - "<green>Inflicts wither on the attacker"
   Skills:
   - ondamaged{aura=toxic;ondamagedskill=[
     - potion{type=WITHER;duration=100;level=1} @trigger
-    ];ticks=2147483647;showbartimer=true;bartimerdisplay="Super Effect:<green> Radioactive";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onConsume
+    ];ticks=9600;showbartimer=true;bartimerdisplay="Super Effect:<green> Radioactive";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
 
