@@ -58,8 +58,19 @@ canned_milk:
   - "<gray>Milk 2: More solid than ever before!"
   Options:
     ItemModel: hbm:canned_milk
-# Canned Ass
-# 100% quality donkey meat!*
+canned_ass:
+  Id: paper
+  Display: Canned Ass
+  Food:
+    Nutrition: 4
+    Saturation: 4
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>100% quality donkey meat!*"
+  Options:
+    ItemModel: hbm:canned_ass
+
 # Canned Pepperoni Pizza
 # A crime against humanity.
 # Astronaut Food Tube
