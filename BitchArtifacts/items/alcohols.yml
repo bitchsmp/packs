@@ -27,6 +27,7 @@ bottle_of_scrumpy:
     - cancelEvent{}
     - consumeuseditem{}
     - sound{sound=entity.splash_potion.break}
+    - tagadd{tag=smptweaks_bypass}
     ]} @self ~onDeath 
 
 whiskey:
@@ -48,4 +49,5 @@ whiskey:
     - cancelEvent{}
     - consumeuseddurability{amount=1}
     - sound{sound=entity.splash_potion.break}
+    - tagadd{tag=smptweaks_bypass}
     ]} @self ~onDeath 

@@ -1,6 +1,7 @@
 holy_water:
-  Id: wooden_hoe
+  Id: paper
   Display: "<yellow>Holy Water"
+  EquipSlot: MAINHAND
   Lore:
   - ""
   - '<gray>Throws water to "purify" the target'
@@ -11,6 +12,7 @@ holy_water:
     StackSize: 1
     ItemModel: terraria:item_422
     MaxDurability: 32
+    Repairable: false
   UseCooldown:
     CooldownGroup: minecraft:holy_water
     CooldownSeconds: 0.5
@@ -18,3 +20,4 @@ holy_water:
   Skills:
   - cancelEvent ~onUse
   - skill{s=holy_water_projectile} @self ~onUse
+
