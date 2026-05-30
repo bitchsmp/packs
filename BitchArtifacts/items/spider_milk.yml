@@ -16,4 +16,5 @@ spider_milk:
   Skills:
   - removeaura{aura=toxic} @self ~onConsume
   - removeaura{aura=v1} @self ~onConsume
+  - removeaura{aura=shield_infused} @self ~onConsume
   UseRemainder: glass_bottle
