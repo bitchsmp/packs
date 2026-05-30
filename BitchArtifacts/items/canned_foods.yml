@@ -90,7 +90,6 @@ canned_tube:
     Saturation: 9
   Consumable:
     Animation: EAT
-  Lore:
   Options:
     ItemModel: hbm:canned_tube
 canned_tomato:
@@ -103,7 +102,6 @@ canned_tomato:
     Animation: EAT
   Lore:
   - "<gray>Who wants some thick red paste?"
-  Lore:
   Options:
     ItemModel: hbm:canned_tomato
 canned_asbestos:
@@ -116,7 +114,6 @@ canned_asbestos:
     Animation: EAT
   Lore:
   - "<gray>TASTE the asbestosis!"
-  Lore:
   Options:
     ItemModel: hbm:canned_asbestos
 canned_black_hole:
@@ -129,7 +126,6 @@ canned_black_hole:
     Animation: EAT
   Lore:
   - "<gray>Made from actual singularities. No, really."
-  Lore:
   Options:
     ItemModel: hbm:canned_bhole
 cabbed_hotdogs:
@@ -142,7 +138,6 @@ cabbed_hotdogs:
     Animation: EAT
   Lore:
   - "<gray>Not to be confused with cool cats."
-  Lore:
   Options:
     ItemModel: hbm:canned_hotdogs
 canned_leftover:
@@ -155,11 +150,32 @@ canned_leftover:
     Animation: EAT
   Lore:
   - "<gray>ur 2 slow"
+  Options:
+    ItemModel: hbm:canned_leftover
 
-
-# Canned Yogurt
-# Probably spoiled, but whatever.
-# Canned "Mushroom Stew"
+canned_yogurt:
+  Id: Canned Yogurt
+  Food:
+    Nutrition: 5
+    Saturation: 4
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Probably spoiled, but whatever."
+  Options:
+    ItemModel: hbm:canned_yogurt
+canned_mushroom_stew:
+  Id: Canned "Mushroom Stew"
+  Food:
+    Nutrition: 3
+    Saturation: 12
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>..."
+  Options:
+    ItemModel: hbm:canned_stew
+# 
 # Canned Chinese Food
 # In China, Chinese food is just called food
 # Canned Engine Oil
