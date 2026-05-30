@@ -3,7 +3,7 @@ canned_beef:
   Display: Canned Beef
   Food:
     Nutrition: 8
-    Saturation: 10
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
@@ -14,7 +14,7 @@ canned_tuna:
   Id: paper
   Display: Canned Tuna
   Food:
-    Nutrition: 4
+    Nutrition: 6
     Saturation: 8
   Consumable:
     Animation: EAT
@@ -27,7 +27,7 @@ canned_mystery:
   Display: Canned Mystery Meat
   Food:
     Nutrition: 8
-    Saturation: 6
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -39,7 +39,7 @@ canned_cheese:
   Display: Canned Melted Cheese
   Food:
     Nutrition: 6
-    Saturation: 7
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
@@ -50,7 +50,7 @@ canned_milk:
   Id: paper
   Display: Canned Evaporated Milk
   Food:
-    Nutrition: 5
+    Nutrition: 6
     Saturation: 6
   Consumable:
     Animation: EAT
@@ -62,8 +62,8 @@ canned_ass:
   Id: paper
   Display: Canned Ass
   Food:
-    Nutrition: 7
-    Saturation: 4
+    Nutrition: 14
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -74,20 +74,20 @@ canned_pizza:
   Id: paper
   Display: Canned Pepperoni Pizza
   Food:
-    Nutrition: 7
-    Saturation: 6
+    Nutrition: 10
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
   - "<gray>A crime against humanity."
   Options:
-    ItemModel: hbm:canned_ass
+    ItemModel: hbm:canned_pizza
 canned_tube:
   Id: paper
   Display: Astronaut Food Tube
   Food:
-    Nutrition: 8
-    Saturation: 9
+    Nutrition: 12
+    Saturation: 14
   Consumable:
     Animation: EAT
   Options:
@@ -97,7 +97,7 @@ canned_tomato:
   Display: Canned Tomato Soup
   Food:
     Nutrition: 6
-    Saturation: 4
+    Saturation: 6
   Consumable:
     Animation: EAT
   Lore:
@@ -121,7 +121,7 @@ canned_black_hole:
   Display: Canned Black Hole
   Food:
     Nutrition: 6
-    Saturation: 12
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -133,7 +133,7 @@ cabbed_hotdogs:
   Display: Canned Hotdogs
   Food:
     Nutrition:7
-    Saturation: 7
+    Saturation: 11
   Consumable:
     Animation: EAT
   Lore:
@@ -144,8 +144,8 @@ canned_leftover:
   Id: paper
   Display: Leftover Conserve
   Food:
-    Nutrition: 4
-    Saturation: 5
+    Nutrition: 6
+    Saturation: 7
   Consumable:
     Animation: EAT
   Lore:
@@ -178,8 +178,8 @@ canned_mushroom_stew:
 canned_chinese_food:
   Id: Canned Chinese Food
   Food:
-    Nutrition: 7
-    Saturation: 8
+    Nutrition: 8
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -190,19 +190,19 @@ canned_chinese_food:
 canned_engine_oil:
   Id: Canned Engine Oil
   Food:
-    Nutrition: 5
-    Saturation: 5
+    Nutrition: 8
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
   - "<gray>It makes motors go, so why not humans?"
   Options:
-    ItemModel: hbm:canned_chinese
+    ItemModel: hbm:canned_oil
 
 canned_fist:
   Id: Canned Fist
   Food:
-    Nutrition: 8
+    Nutrition: 9
     Saturation: 8
   Consumable:
     Animation: EAT
@@ -213,8 +213,8 @@ canned_fist:
 canned_fried_chicken:
   Id: Canned Fried Chicken
   Food:
-    Nutrition: 6
-    Saturation: 8
+    Nutrition: 8
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
@@ -224,8 +224,8 @@ canned_fried_chicken:
 canned_napalm:
   Id: Canned Napalm
   Food:
-    Nutrition: 5
-    Saturation: 6
+    Nutrition: 7
+    Saturation: 8
   Consumable:
     Animation: EAT
   Lore:
@@ -235,8 +235,8 @@ canned_napalm:
 canned_diesel:
   Id: Canned Diesel
   Food:
-    Nutrition: 6
-    Saturation: 4
+    Nutrition: 9
+    Saturation: 8
   Consumable:
     Animation: EAT
   Lore:
@@ -247,8 +247,8 @@ canned_diesel:
 canned_kerosene:
   Id: Canned Kerosene
   Food:
-    Nutrition: 4
-    Saturation: 6
+    Nutrition: 8
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
@@ -259,8 +259,8 @@ canned_kerosene:
 canned_recursion:
   Id: Canned Recursion
   Food:
-    Nutrition: 7
-    Saturation: 7
+    Nutrition: 10
+    Saturation: 10
   Consumable:
     Animation: EAT
   Lore:
@@ -271,8 +271,8 @@ canned_recursion:
 canned_bark:
   Id: Canned Pine Bark Jerky
   Food:
-    Nutrition: 6
-    Saturation: 6
+    Nutrition: 9
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
@@ -283,8 +283,8 @@ canned_bark:
 canned_spam:
   Id: Canned Spam
   Food:
-    Nutrition: 8
-    Saturation: 9
+    Nutrition: 15
+    Saturation: 18
   Consumable:
     Animation: EAT
   Lore:
