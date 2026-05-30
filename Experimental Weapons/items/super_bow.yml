@@ -1,7 +1,7 @@
-super_bow:
-  id: bow
-  display: <red>Super Bow</red>
-  Options:
-  ArrowDamage: 100
-  Skills:
-  - shoot{type=SNOWBALL;damage=1;onhitskill=super_bow_left_click_explode;onendskill=super_bow_left_click_explode;startyoffset=1} ~onSwing 
+# super_bow:
+#   id: bow
+#   display: <red>Super Bow</red>
+#   Options:
+#   ArrowDamage: 100
+#   Skills:
+#   - shoot{type=SNOWBALL;damage=1;onhitskill=super_bow_left_click_explode;onendskill=super_bow_left_click_explode;startyoffset=1} ~onSwing 

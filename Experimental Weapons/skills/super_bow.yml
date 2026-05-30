@@ -1,4 +1,4 @@
-super_bow_left_click_explode:
-  Conditions:
-  Skills:
-  - explode{yield=2}
+# super_bow_left_click_explode:
+#   Conditions:
+#   Skills:
+#   - explode{yield=2}

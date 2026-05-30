@@ -1,77 +1,77 @@
-trying_to_parry:
-  Skills:
-  - actionmessage{m="Trying To Parry"} @self
+# trying_to_parry:
+#   Skills:
+#   - actionmessage{m="Trying To Parry"} @self
 
-parry_start:
-  Conditions:
-  - materialCooldown{material=iron_sword} false
-  Skills:
-  - Aura{auraName=parry;onTickskill=parry_ready;interval=1;duration=2147483647;doendskillonterminate=false;onendskill=parry_stop} @self
-  - Aura{auraName=invulnerable;doendskillonterminate=false;duration=2147483647} @self
+# parry_start:
+#   Conditions:
+#   - materialCooldown{material=iron_sword} false
+#   Skills:
+#   - Aura{auraName=parry;onTickskill=parry_ready;interval=1;duration=2147483647;doendskillonterminate=false;onendskill=parry_stop} @self
+#   - Aura{auraName=invulnerable;doendskillonterminate=false;duration=2147483647} @self
 
-parry_ready:
-  Skills:
-  - actionmessage{m="Parrying"} @self
-
-
-
-
-parry:
-  Conditions:
-  - hasAura{aura=parry} true
-  - hasAura{aura=invulnerable} true
-  TargetConditions:
-  - fieldOfView{angle=90}
-  Skills:
-  - removeaura{aura=trying_to_parry;delay=0} @self
-  - removeaura{aura=parry;delay=1} @self
-  - removeaura{aura=invulnerable;delay=1} @self
-  - sound{sound=block.anvil.land} @self
-  - armAnimation{} @self
-  - cancelEvent{} @self
-  - skill{skill=parry_fx} @self
-  - potion{type=STRENGTH;duration=40;level=1} @self
-  - recoil{r=1;pitch=-10to10;yaw=-20to20} @trigger
-  #
-  - cancelEvent{} @self ~onAttack
-  - consumeuseddurability{a=10} @self 
-  - actionmessage{m=" ";delay=1} @self
-  - setmaterialcooldown{m=iron_sword;d=40} @self
-  - stopusingitem @self
-parry_miss:
-  Skills:
-  - removeaura{aura=trying_to_parry}
-  - setmaterialcooldown{m=iron_sword;d=120} @self
-  - stopusingitem @self
-  - actionmessage{m=" ";delay=1} @self
-  - actionmessage{m="Parry missed!";delay=2} @self
-
-trying_to_parry_ended:
-  Skills:
-  - actionmessage{m="Post-Parry attempt ended"} @self
-parry_stop:
-  Skills:
-  - actionmessage{m=" ";delay=0} @self
-
-parry_fx:
-
-  Conditions:
-  Skills:
+# parry_ready:
+#   Skills:
+#   - actionmessage{m="Parrying"} @self
 
 
 
 
+# parry:
+#   Conditions:
+#   - hasAura{aura=parry} true
+#   - hasAura{aura=invulnerable} true
+#   TargetConditions:
+#   - fieldOfView{angle=90}
+#   Skills:
+#   - removeaura{aura=trying_to_parry;delay=0} @self
+#   - removeaura{aura=parry;delay=1} @self
+#   - removeaura{aura=invulnerable;delay=1} @self
+#   - sound{sound=block.anvil.land} @self
+#   - armAnimation{} @self
+#   - cancelEvent{} @self
+#   - skill{skill=parry_fx} @self
+#   - potion{type=STRENGTH;duration=40;level=1} @self
+#   - recoil{r=1;pitch=-10to10;yaw=-20to20} @trigger
+#   #
+#   - cancelEvent{} @self ~onAttack
+#   - consumeuseddurability{a=10} @self 
+#   - actionmessage{m=" ";delay=1} @self
+#   - setmaterialcooldown{m=iron_sword;d=40} @self
+#   - stopusingitem @self
+# parry_miss:
+#   Skills:
+#   - removeaura{aura=trying_to_parry}
+#   - setmaterialcooldown{m=iron_sword;d=120} @self
+#   - stopusingitem @self
+#   - actionmessage{m=" ";delay=1} @self
+#   - actionmessage{m="Parry missed!";delay=2} @self
 
-right_clicking_not_using:
-  Skills:
- # - message{message="[debug] i am rightclicking and not using!"} @self
+# trying_to_parry_ended:
+#   Skills:
+#   - actionmessage{m="Post-Parry attempt ended"} @self
+# parry_stop:
+#   Skills:
+#   - actionmessage{m=" ";delay=0} @self
 
-artillery_explosion:
-  Skills:
-  - effect:explosion{}
-holding_right_click:
-  Skills:
-  - message{message="[debug] i am using!"} @self
+# parry_fx:
+
+#   Conditions:
+#   Skills:
+
+
+
+
+
+# right_clicking_not_using:
+#   Skills:
+#  # - message{message="[debug] i am rightclicking and not using!"} @self
+
+# artillery_explosion:
+#   Skills:
+#   - effect:explosion{}
+# holding_right_click:
+#   Skills:
+#   - message{message="[debug] i am using!"} @self
 
 
 
