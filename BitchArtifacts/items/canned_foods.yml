@@ -221,17 +221,91 @@ canned_fried_chicken:
   - "<gray>Even the can is deep fried!"
   Options:
     ItemModel: hbm:canned_fried
-# 
-# 
-# Canned Napalm
-# I love the smell of old memes in the morning!
-# Canned Diesel
-# I'm slowly running out of jokes for these.
-# Canned Kerosene
-# Just imagine a witty line here.
-# Canned Recursion
-# Canned Recursion
-# Canned Pine Bark Jerky
-# Extra cronchy!
-# Canned Spam
-# The three-and-a-half-minute sketch is set in the fictional Green Midget Cafe in Bromley.$An argument develops between the waitress, who recites a menu in which nearly$every dish contains Spam, and Mrs. Bun, who does not like Spam. She asks for a$dish without Spam, much to the amazement of her Spam-loving husband. The waitress$responds to this request with disgust. Mr. Bun offers to take her Spam instead,$and asks for a dish containing a lot of Spam and baked beans. The waitress says$no since they are out of baked beans; when Mr. Bun asks for a substitution of Spam,$the waitress again responds with disgust. At several points, a group of Vikings in$the restaurant interrupts conversation by loudly singing about Spam.$The irate waitress orders them to shut up, but they resume singing more loudly.$A Hungarian tourist comes to the counter, trying to order by using a wholly$inaccurate Hungarian/English phrasebook (a reference to a previous sketch).$He is rapidly escorted away by a police constable. The sketch abruptly cuts to a$historian in a television studio talking about the origin of the Vikings in the café.$As he goes on, he begins to increasingly insert the word "Spam" into every$sentence, and the backdrop is raised to reveal the restaurant set behind.$The historian joins the Vikings in their song, and Mr. and Mrs. Bun are lifted by$wires out of the scene while the singing continues. In the original televised performance,$the closing credits begin to scroll with the singing still audible in the background.
+canned_napalm:
+  Id: Canned Napalm
+  Food:
+    Nutrition: 5
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>I love the smell of old memes in the morning!"
+  Options:
+    ItemModel: hbm:canned_napalm
+canned_diesel:
+  Id: Canned Diesel
+  Food:
+    Nutrition: 6
+    Saturation: 4
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>I'm slowly running out of jokes for these."
+  Options:
+    ItemModel: hbm:canned_diesel
+
+canned_kerosene:
+  Id: Canned Kerosene
+  Food:
+    Nutrition: 4
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Just imagine a witty line here."
+  Options:
+    ItemModel: hbm:canned_kerosene
+
+canned_recursion:
+  Id: Canned Recursion
+  Food:
+    Nutrition: 7
+    Saturation: 7
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Canned Recursion"
+  Options:
+    ItemModel: hbm:canned_recursion
+
+canned_bark:
+  Id: Canned Pine Bark Jerky
+  Food:
+    Nutrition: 6
+    Saturation: 6
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Extra cronchy!"
+  Options:
+    ItemModel: hbm:canned_bark
+
+canned_spam:
+  Id: Canned Spam
+  Food:
+    Nutrition: 8
+    Saturation: 9
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>The three-and-a-half-minute sketch is set in the fictional Green Midget Cafe in Bromley."
+  - "<gray>An argument develops between the waitress, who recites a menu in which nearly"
+  - "<gray>every dish contains Spam, and Mrs. Bun, who does not like Spam. She asks for a"
+  - "<gray>dish without Spam, much to the amazement of her Spam-loving husband. The waitress"
+  - "<gray>responds to this request with disgust. Mr. Bun offers to take her Spam instead,"
+  - "<gray>and asks for a dish containing a lot of Spam and baked beans. The waitress says"
+  - "<gray>no since they are out of baked beans; when Mr. Bun asks for a substitution of Spam,"
+  - "<gray>the waitress again responds with disgust. At several points, a group of Vikings in"
+  - "<gray>the restaurant interrupts conversation by loudly singing about Spam."
+  - "<gray>The irate waitress orders them to shut up, but they resume singing more loudly."
+  - "<gray>A Hungarian tourist comes to the counter, trying to order by using a wholly"
+  - "<gray>inaccurate Hungarian/English phrasebook (a reference to a previous sketch)."
+  - "<gray>He is rapidly escorted away by a police constable. The sketch abruptly cuts to a"
+  - "<gray>historian in a television studio talking about the origin of the Vikings in the café."
+  - '<gray>As he goes on, he begins to increasingly insert the word "Spam" into every'
+  - "<gray>sentence, and the backdrop is raised to reveal the restaurant set behind."
+  - "<gray>The historian joins the Vikings in their song, and Mr. and Mrs. Bun are lifted by"
+  - "<gray>wires out of the scene while the singing continues. In the original televised performance,"
+  - "<gray>the closing credits begin to scroll with the singing still audible in the background."
+  Options:
+    ItemModel: hbm:canned_spam
