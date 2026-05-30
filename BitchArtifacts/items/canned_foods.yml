@@ -140,7 +140,7 @@ canned_hotdogs:
   - "<gray>Not to be confused with cool cats."
   Options:
     ItemModel: hbm:canned_hotdogs
-canned_leftover:
+canned_leftovers:
   Id: paper
   Display: Leftover Conserve
   Food:
@@ -151,7 +151,7 @@ canned_leftover:
   Lore:
   - "<gray>ur 2 slow"
   Options:
-    ItemModel: hbm:canned_leftover
+    ItemModel: hbm:canned_leftovers
 
 canned_yogurt:
   Id: paper
