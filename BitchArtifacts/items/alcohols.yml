@@ -1,10 +1,37 @@
-# Bottle of Scrumpy
-# <gold>But how did you survive?
-# <red>I was drunk.
-# <white>
-# <gold>1 revives left
+bottle_of_scrumpy:
+  Id: paper
+  Display: "Bottle of Scrumpy"
+  Lore:
+  - "<gold>But how did you survive?"
+  - "<white>"
+  - "<red>I was drunk."
+  - "<white>"
+  - "<gold>1 revive. Use like a<yellow> Totem of Undying"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:scrumpy
+  Skills:
+  - skill{skill=[
+    - cancelEvent{}
+    - consumeuseditem{}
+    - sound{sound=entity.splash_potion.break}
+    ]} @self ~onDeath 
 
-# Wild Pegasus Dry Whiskey
-# <dark_gray>Explosive<red> Reactive<dark_gray> Plot<red> Armor
-# <white>
-# <gold>3 revives left
+whiskey:
+  Id: paper
+  Display: "Whiskey"
+  Lore:
+  - "<dark_gray>Explosive<red> Reactive<dark_gray> Plot<red> Armor"
+  - "<white>"
+  - "<gold>3 revives. Use like a<yellow> Totem of Undying"
+  Options:
+    MaxDurability: 3
+    StackSize: 1
+    ItemModel: hbm:wild_p
+    Repairable: false
+  Skills:
+  - skill{skill=[
+    - cancelEvent{}
+    - consumeuseddurability{amount=1}
+    - sound{sound=entity.splash_potion.break}
+    ]} @self ~onDeath 
