@@ -1,28 +1,28 @@
-SkinGreatbow:
-  Material: TURTLE_SCUTE
-  Display: '<yellow>Greatbow'
-  Options:
-    ItemModel: paper
-  Lore:
-  - <yellow><bold>Bow Skin:</bold> Greatbow
-  - <white>
-  - <gray>Diddy bow</gray>
-  - <white>
-  - "<aqua>[Big daddy]"
-  Augmentation:
-    Type: SKIN_BOW
-    Tooltip: '<yellow>Greatbow<gray> (Diddy bow)'
-    ReplaceItemModel: nixx:greatbow
-    Conditions:
-    Stats:
-    Skills:
-    # Rightclick-related functions
-    - summon{type=GreatBow_marker;onSurface=false} ~onTimer:20 @selfLocation{yoffset=32}
-    - skill{skill=greatbow_Checkcondition} @children ~onTimer:1
-    - consumeuseddurability{a=1} ~onShoot ?hasAura{aura=looking_up_60degree}
-    - skill{s=greatbow_arrow_rain} ~onShoot @self ?hasAura{aura=looking_up_60degree}
-    - removeaura{aura=looking_up_60degree;delay=1} ~onShoot @self
-    - cancelEvent ~onShoot ?hasAura{aura=looking_up_60degree}
+# SkinGreatbow:
+#   Material: TURTLE_SCUTE
+#   Display: '<yellow>Greatbow'
+#   Options:
+#     ItemModel: paper
+#   Lore:
+#   - <yellow><bold>Bow Skin:</bold> Greatbow
+#   - <white>
+#   - <gray>Diddy bow</gray>
+#   - <white>
+#   - "<aqua>[Big daddy]"
+#   Augmentation:
+#     Type: SKIN_BOW
+#     Tooltip: '<yellow>Greatbow<gray> (Diddy bow)'
+#     ReplaceItemModel: nixx:greatbow
+#     Conditions:
+#     Stats:
+#     Skills:
+#     # Rightclick-related functions
+#     - summon{type=GreatBow_marker;onSurface=false} ~onTimer:20 @selfLocation{yoffset=32}
+#     - skill{skill=greatbow_Checkcondition} @children ~onTimer:1
+#     - consumeuseddurability{a=1} ~onShoot ?hasAura{aura=looking_up_60degree}
+#     - skill{s=greatbow_arrow_rain} ~onShoot @self ?hasAura{aura=looking_up_60degree}
+#     - removeaura{aura=looking_up_60degree;delay=1} ~onShoot @self
+#     - cancelEvent ~onShoot ?hasAura{aura=looking_up_60degree}
  
 
 
