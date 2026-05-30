@@ -1,5 +1,5 @@
-debug_quirky:
-  Id: stick
-  Skills:
-  - aura{aura=regeneration;interval=1;ticks=2;ontickskill=regeneration} @self ~onUse 
-  - message{message=executed} @self ~onUse 
+# debug_quirky:
+#   Id: stick
+#   Skills:
+#   - aura{aura=regeneration;interval=1;ticks=2;ontickskill=regeneration} @self ~onUse 
+#   - message{message=executed} @self ~onUse 

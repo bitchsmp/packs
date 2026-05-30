@@ -1,80 +1,80 @@
-LT5Stacked:
-  Type: zombie
-  Damage: 1
-  Display: Stacked LT5
-  Options:
-    MovementSpeed: 0.33
-    PreventSunburn: true
-    PreventConversion: true
-    PreventRandomEquipment: true
-    PreventOtherDrops: true
-    HealOnReload: true
-  Equipment:
-  - DIAMOND_HELMET{enchants=PROTECTION_ENVIRONMENTAL:4,WATER_WORKER:1,OXYGEN:3,MENDING:1} HEAD
-  - DIAMOND_CHESTPLATE{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} CHEST
-  - DIAMOND_LEGGINGS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} LEGS
-  - DIAMOND_BOOTS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1,PROTECTION_FALL:4,DEPTH_STRIDER:3} FEET
-  - LT5Stacked_sword MAINHAND
-  AIGoalSelectors:
-  - clear
-  - meleeattack
-  - randomstroll
-  AITargetSelectors:
-  - clear
-  - players
-  Disguise: player setCustomName "Stacked LT5"
-  Skills:
-  - skill{skill=LT5Stacked_eat} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<25%} @self
-  - equip{item=LT5Stacked_sword MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5Stacked}
-  - cancelEvent  ~onAttack ?hasAura{aura=LT5Stacked}
-LT5:
-  Type: zombie
-  Damage: 1
-  Display: LT5
-  Options:
-    MovementSpeed: 0.3
-    PreventSunburn: true
-    PreventConversion: true
-    PreventRandomEquipment: true
-    PreventOtherDrops: true
-    HealOnReload: true
-  Equipment:
-  - DIAMOND_HELMET HEAD
-  - DIAMOND_CHESTPLATE CHEST
-  - DIAMOND_LEGGINGS LEGS
-  - DIAMOND_BOOTS FEET
-  - DIAMOND_SWORD MAINHAND
-  AIGoalSelectors:
-  - clear
-  - meleeattack
-  - randomstroll
-  AITargetSelectors:
-  - clear
-  - players
-  Disguise: player setCustomName "LT5"
-  Skills:
-  - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
-  - equip{item=DIAMOND_SWORD MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
-  - cancelEvent ~onAttack ?hasAura{aura=LT5}
+# LT5Stacked:
+#   Type: zombie
+#   Damage: 1
+#   Display: Stacked LT5
+#   Options:
+#     MovementSpeed: 0.33
+#     PreventSunburn: true
+#     PreventConversion: true
+#     PreventRandomEquipment: true
+#     PreventOtherDrops: true
+#     HealOnReload: true
+#   Equipment:
+#   - DIAMOND_HELMET{enchants=PROTECTION_ENVIRONMENTAL:4,WATER_WORKER:1,OXYGEN:3,MENDING:1} HEAD
+#   - DIAMOND_CHESTPLATE{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} CHEST
+#   - DIAMOND_LEGGINGS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1} LEGS
+#   - DIAMOND_BOOTS{enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1,PROTECTION_FALL:4,DEPTH_STRIDER:3} FEET
+#   - LT5Stacked_sword MAINHAND
+#   AIGoalSelectors:
+#   - clear
+#   - meleeattack
+#   - randomstroll
+#   AITargetSelectors:
+#   - clear
+#   - players
+#   Disguise: player setCustomName "Stacked LT5"
+#   Skills:
+#   - skill{skill=LT5Stacked_eat} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<25%} @self
+#   - equip{item=LT5Stacked_sword MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5Stacked}
+#   - cancelEvent  ~onAttack ?hasAura{aura=LT5Stacked}
+# LT5:
+#   Type: zombie
+#   Damage: 1
+#   Display: LT5
+#   Options:
+#     MovementSpeed: 0.3
+#     PreventSunburn: true
+#     PreventConversion: true
+#     PreventRandomEquipment: true
+#     PreventOtherDrops: true
+#     HealOnReload: true
+#   Equipment:
+#   - DIAMOND_HELMET HEAD
+#   - DIAMOND_CHESTPLATE CHEST
+#   - DIAMOND_LEGGINGS LEGS
+#   - DIAMOND_BOOTS FEET
+#   - DIAMOND_SWORD MAINHAND
+#   AIGoalSelectors:
+#   - clear
+#   - meleeattack
+#   - randomstroll
+#   AITargetSelectors:
+#   - clear
+#   - players
+#   Disguise: player setCustomName "LT5"
+#   Skills:
+#   - skill{skill=LT5_eat;cooldown=10} ~onDamaged ~onTimer:20 ?healthpercent{includeabsorption=true;percent=<50%} @self
+#   - equip{item=DIAMOND_SWORD MAINHAND;delay=5} ~onTimer:20 ?!hasAura{aura=LT5}
+#   - cancelEvent ~onAttack ?hasAura{aura=LT5}
 
-LT5Naked:
-  Type: zombie
-  Damage: 1
-  Display: Naked LT5
-  Options:
-    MovementSpeed: 0.3
-    PreventSunburn: true
-    PreventConversion: true
-    PreventRandomEquipment: true
-    PreventOtherDrops: true
-    HealOnReload: true
-  Equipment:
-  AIGoalSelectors:
-  - clear
-  - meleeattack
-  - randomstroll
-  AITargetSelectors:
-  - clear
-  - players
-  Disguise: player setCustomName "Naked LT5"
-  Skills:
+# LT5Naked:
+#   Type: zombie
+#   Damage: 1
+#   Display: Naked LT5
+#   Options:
+#     MovementSpeed: 0.3
+#     PreventSunburn: true
+#     PreventConversion: true
+#     PreventRandomEquipment: true
+#     PreventOtherDrops: true
+#     HealOnReload: true
+#   Equipment:
+#   AIGoalSelectors:
+#   - clear
+#   - meleeattack
+#   - randomstroll
+#   AITargetSelectors:
+#   - clear
+#   - players
+#   Disguise: player setCustomName "Naked LT5"
+#   Skills:
