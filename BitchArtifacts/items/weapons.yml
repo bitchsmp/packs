@@ -10,9 +10,6 @@ terrablade:
   Skills:
   - skill{s=terrablade_projectile_leftclick} ~onSwing 
 
-
-
-
 brimstone_claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
   Material: iron_sword
@@ -53,6 +50,19 @@ brimstone_claymore_diamond:
       - air | diamond | air
       - air | diamond | air
       - diamond | brimstone_claymore | diamond
+icewhisper:
+  Material: diamond_axe
+  Display: '<white>Icewhisper'
+  EquipSlot: HAND
+  Stats:
+  - LIFESTEAL_CHANCE 1.0 ADDITIVE
+  Options:
+    ItemModel: minecraft:icewhisper
+
+  Lore:
+  - "<gray>Inflicts Freezing on hit, heals wielder 10% of the damage dealt</gray>"
+  Skills:
+  - freeze{ticks=140} @trigger ~onAttack
 alternate_crossbow:
   Material: crossbow
   Display: '<white>Alternate Crossbow'
