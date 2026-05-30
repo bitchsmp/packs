@@ -119,12 +119,44 @@ canned_asbestos:
   Lore:
   Options:
     ItemModel: hbm:canned_asbestos
-# Canned Black Hole
-# Made from actual singularities. No, really.
-# Canned Hotdogs
-# Not to be confused with cool cats.
-# Leftover Conserve
-# ur 2 slow
+canned_black_hole:
+  Id: paper
+  Display: Canned Black Hole
+  Food:
+    Nutrition: 6
+    Saturation: 12
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Made from actual singularities. No, really."
+  Lore:
+  Options:
+    ItemModel: hbm:canned_bhole
+cabbed_hotdogs:
+  Id: paper
+  Display: Canned Hotdogs
+  Food:
+    Nutrition:7
+    Saturation: 7
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Not to be confused with cool cats."
+  Lore:
+  Options:
+    ItemModel: hbm:canned_hotdogs
+canned_leftover:
+  Id: paper
+  Display: Leftover Conserve
+  Food:
+    Nutrition: 4
+    Saturation: 5
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>ur 2 slow"
+
+
 # Canned Yogurt
 # Probably spoiled, but whatever.
 # Canned "Mushroom Stew"
