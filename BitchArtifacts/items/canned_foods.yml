@@ -128,7 +128,7 @@ canned_black_hole:
   - "<gray>Made from actual singularities. No, really."
   Options:
     ItemModel: hbm:canned_bhole
-cabbed_hotdogs:
+canned_hotdogs:
   Id: paper
   Display: Canned Hotdogs
   Food:
