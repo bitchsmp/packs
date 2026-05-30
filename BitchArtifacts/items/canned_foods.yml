@@ -175,15 +175,54 @@ canned_mushroom_stew:
   - "<gray>..."
   Options:
     ItemModel: hbm:canned_stew
+canned_chinese_food:
+  Id: Canned Chinese Food
+  Food:
+    Nutrition: 7
+    Saturation: 8
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>In China, Chinese food is just called food"
+  Options:
+    ItemModel: hbm:canned_chinese
+
+canned_engine_oil:
+  Id: Canned Engine Oil
+  Food:
+    Nutrition: 5
+    Saturation: 5
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>It makes motors go, so why not humans?"
+  Options:
+    ItemModel: hbm:canned_chinese
+
+canned_fist:
+  Id: Canned Fist
+  Food:
+    Nutrition: 8
+    Saturation: 8
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>ow"
+  Options:
+    ItemModel: hbm:canned_fist
+canned_fried_chicken:
+  Id: Canned Fried Chicken
+  Food:
+    Nutrition: 6
+    Saturation: 8
+  Consumable:
+    Animation: EAT
+  Lore:
+  - "<gray>Even the can is deep fried!"
+  Options:
+    ItemModel: hbm:canned_fried
 # 
-# Canned Chinese Food
-# In China, Chinese food is just called food
-# Canned Engine Oil
-# It makes motors go, so why not humans?
-# Canned Fist
-# ow
-# Canned Fried Chicken
-# Even the can is deep fried!
+# 
 # Canned Napalm
 # I love the smell of old memes in the morning!
 # Canned Diesel
