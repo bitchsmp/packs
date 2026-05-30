@@ -132,7 +132,7 @@ cabbed_hotdogs:
   Id: paper
   Display: Canned Hotdogs
   Food:
-    Nutrition:7
+    Nutrition: 7
     Saturation: 11
   Consumable:
     Animation: EAT
@@ -154,7 +154,8 @@ canned_leftover:
     ItemModel: hbm:canned_leftover
 
 canned_yogurt:
-  Id: Canned Yogurt
+  Id: paper
+  Display: Canned Yogurt
   Food:
     Nutrition: 5
     Saturation: 4
@@ -165,7 +166,8 @@ canned_yogurt:
   Options:
     ItemModel: hbm:canned_yogurt
 canned_mushroom_stew:
-  Id: Canned "Mushroom Stew"
+  Id: paper
+  Display: Canned "Mushroom Stew"
   Food:
     Nutrition: 3
     Saturation: 12
@@ -176,7 +178,8 @@ canned_mushroom_stew:
   Options:
     ItemModel: hbm:canned_stew
 canned_chinese_food:
-  Id: Canned Chinese Food
+  Id: paper
+  Display: Canned Chinese Food
   Food:
     Nutrition: 8
     Saturation: 14
@@ -188,7 +191,8 @@ canned_chinese_food:
     ItemModel: hbm:canned_chinese
 
 canned_engine_oil:
-  Id: Canned Engine Oil
+  Id: paper
+  Display: Canned Engine Oil
   Food:
     Nutrition: 8
     Saturation: 12
@@ -200,7 +204,8 @@ canned_engine_oil:
     ItemModel: hbm:canned_oil
 
 canned_fist:
-  Id: Canned Fist
+  Id: paper
+  Display: Canned Fist
   Food:
     Nutrition: 9
     Saturation: 8
@@ -211,7 +216,8 @@ canned_fist:
   Options:
     ItemModel: hbm:canned_fist
 canned_fried_chicken:
-  Id: Canned Fried Chicken
+  Id: paper
+  Display: Canned Fried Chicken
   Food:
     Nutrition: 8
     Saturation: 9
@@ -222,7 +228,8 @@ canned_fried_chicken:
   Options:
     ItemModel: hbm:canned_fried
 canned_napalm:
-  Id: Canned Napalm
+  Id: paper
+  Display: Canned Napalm
   Food:
     Nutrition: 7
     Saturation: 8
@@ -233,7 +240,8 @@ canned_napalm:
   Options:
     ItemModel: hbm:canned_napalm
 canned_diesel:
-  Id: Canned Diesel
+  Id: paper
+  Display: Canned Diesel
   Food:
     Nutrition: 9
     Saturation: 8
@@ -245,7 +253,8 @@ canned_diesel:
     ItemModel: hbm:canned_diesel
 
 canned_kerosene:
-  Id: Canned Kerosene
+  Id: paper
+  Display: Canned Kerosene
   Food:
     Nutrition: 8
     Saturation: 9
@@ -257,7 +266,8 @@ canned_kerosene:
     ItemModel: hbm:canned_kerosene
 
 canned_recursion:
-  Id: Canned Recursion
+  Id: paper
+  Display: Canned Recursion
   Food:
     Nutrition: 10
     Saturation: 10
@@ -269,7 +279,8 @@ canned_recursion:
     ItemModel: hbm:canned_recursion
 
 canned_bark:
-  Id: Canned Pine Bark Jerky
+  Id: paper
+  Display: Canned Pine Bark Jerky
   Food:
     Nutrition: 9
     Saturation: 9
@@ -281,7 +292,8 @@ canned_bark:
     ItemModel: hbm:canned_bark
 
 canned_spam:
-  Id: Canned Spam
+  Id: paper
+  Display: Canned Spam
   Food:
     Nutrition: 15
     Saturation: 18
