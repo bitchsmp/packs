@@ -1,12 +1,24 @@
+ ███████████            ████                                          █████
+░░███░░░░░███          ░░███                                         ░░███ 
+ ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+ ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+ ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+ ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+ █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+░░░░░   ░░░░░  ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░░░ 
+                                                                           
+                                                                           
+                                                                          
 bottle_of_scrumpy:
   Id: paper
   Display: "Bottle of Scrumpy"
   Lore:
   - "<gold>But how did you survive?"
-  - "<white>"
   - "<red>I was drunk."
   - "<white>"
-  - "<gold>1 revive. Use like a<yellow> Totem of Undying"
+  - "<gold>1 revive."
+  - "<white>" 
+  - "<gray>Use like Totem of Undying"
   Options:
     StackSize: 1
     ItemModel: hbm:scrumpy
@@ -23,7 +35,9 @@ whiskey:
   Lore:
   - "<dark_gray>Explosive<red> Reactive<dark_gray> Plot<red> Armor"
   - "<white>"
-  - "<gold>3 revives. Use like a<yellow> Totem of Undying"
+  - "<gold>3 revives."
+  - "<white>"
+  - "<gray>Use like Totem of Undying"
   Options:
     MaxDurability: 3
     StackSize: 1
