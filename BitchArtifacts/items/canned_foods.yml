@@ -90,6 +90,8 @@ canned_tube:
     Saturation: 14
   Consumable:
     Animation: EAT
+  Lore:
+  - "<gray>Tasty mush."
   Options:
     ItemModel: hbm:canned_tube
 canned_tomato:
