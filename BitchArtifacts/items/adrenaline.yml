@@ -1,0 +1,15 @@
+adrenaline_bottle:
+  Id: potion
+  Display: Bottle of Adrenaline
+  Options:
+    Color: 0,255,123
+    Glint: true
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+  PotionEffects:
+  - STRENGTH 1200 2
+  Skills:
+  - e:lightning{localized=true} @self ~onConsume
+  - sound{sound=calamitymod:adrenalineactivate} @self ~onConsume
