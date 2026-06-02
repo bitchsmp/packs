@@ -1,0 +1,29 @@
+
+coffee:
+  Id: paper
+  Display: Coffee
+  Potion:
+    Effects:
+    - speed{duration=1200;level=2}
+  Consumable:
+    Sound: entity.generic.drink
+    Animation: DRINK
+    HasParticles: false
+  Options:
+    ItemModel: hbm:coffee
+    StackSize: 1
+  UseRemainder: empty_mug
+  Recipes:
+    SHAPED:
+      Type: SHAPELESS
+      Amount: 1
+      Ingredients:
+      - empty_mug
+      - sugar
+      - potion
+      - coffee
+empty_mug:
+  Id: paper
+  Display: Empty Mug
+  Options:
+    ItemModel: hbm:mug_empty

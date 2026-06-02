@@ -24,8 +24,6 @@ pudding:
   - '<gray>What if the world was made of pudding?'
   Options:
     ItemModel: hbm:pudding
-
-
 strawberry_ice_cream:
   Id: paper
   Display: Strawberry Ice Cream
@@ -34,15 +32,16 @@ strawberry_ice_cream:
     Saturation: 8
   Consumable:
     Animation: EAT
-  PotionEffects:
-  - REGENERATION 400 2
+  Potion:
+    Effects:
+    - regeneration{duration=400;level=2}
   Options:
     ItemModel: hbm:ice_cream_s
 minmus_mint_ice_cream:
   Id: paper
   Display: "Minmus Mint Ice Cream"
   Food:
-    Nutrition: 10
+    Nutrition: 20
     Saturation: 20
   Consumable:
     Animation: EAT
@@ -75,98 +74,3 @@ ptsd_medication:
     - potion{type=hunger;d=60;level=255}
   Options:
     ItemModel: hbm:med_ptsd_new
-
-
-
-coffee:
-  Id: paper
-  Display: Coffee
-  PotionEffects:
-  - SPEED 1200 2
-  Consumable:
-    Sound: entity.generic.drink
-    Animation: DRINK
-    HasParticles: false
-
-  Options:
-    ItemModel: hbm:coffee
-    StackSize: 1
-  UseRemainder: empty_mug
-  Recipes:
-    SHAPED:
-      Type: SHAPELESS
-      Amount: 1
-      Ingredients:
-      - empty_mug
-      - sugar
-      - potion
-      - coffee
-empty_mug:
-  Id: paper
-  Display: Empty Mug
-  Options:
-    ItemModel: hbm:mug_empty
-nuka_cola:
-  Id: paper
-  Display: Bottle of Nuka Cola
-  Options:
-    ItemModel: hbm:bottle_nuka
-    StackSize: 1
-  Lore:
-  - "<gray>Contains about 210 kcal and 1500mSv."
-  Consumable:
-    Sound: entity.generic.drink
-    Animation: DRINK
-    HasParticles: false
-  PotionEffects:
-  - SPEED 600 1
-  - HASTE 600 1
-  UseRemainder: empty_bomb-shaped_bottle
-  Recipes:
-    SHAPED:
-      Type: SHAPELESS
-      Amount: 1
-      Ingredients:
-      - empty_bomb-shaped_bottle
-      - sugar
-      - coal
-      - potion
-nuka_cherry:
-  Id: paper
-  Display: Bottle of Nuka Cherry
-  Options:
-    ItemModel: hbm:bottle_cherry
-    StackSize: 1
-  Lore:
-  - "<gray>Now with severe radiation poisoning in every seventh bottle!"
-  Consumable:
-    Sound: entity.generic.drink
-    Animation: DRINK
-    HasParticles: false
-  PotionEffects:
-  - SPEED 600 0
-  - JUMP_BOOST 600 2
-  UseRemainder: empty_bomb-shaped_bottle
-  Recipes:
-    SHAPED:
-      Type: SHAPELESS
-      Amount: 1
-      Ingredients:
-      - empty_bomb-shaped_bottle
-      - sugar
-      - redstone
-      - potion
-
-empty_bomb-shaped_bottle:
-  Display: Empty Bomb-Shaped Bottle
-  Id: paper
-  Options:
-    ItemModel: hbm:bottle_empty
-  Recipes:
-    SHAPED:
-      Type: SHAPED
-      Amount: 6
-      Ingredients:
-      - air | glass_pane | air
-      - glass_pane | air | glass_pane
-      - glass_pane | glass_pane | glass_pane

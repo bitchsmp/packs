@@ -1,0 +1,69 @@
+
+
+
+nuka_cola:
+  Id: paper
+  Display: Bottle of Nuka Cola
+  Options:
+    ItemModel: hbm:bottle_nuka
+    StackSize: 1
+  Lore:
+  - "<gray>Contains about 210 kcal and 1500mSv."
+  Consumable:
+    Sound: entity.generic.drink
+    Animation: DRINK
+    HasParticles: false
+  Potion:
+    Effects:
+    - speed{duration=600;level=1}
+    - haste{duration=600;level=1}
+  UseRemainder: empty_bomb-shaped_bottle
+  Recipes:
+    SHAPED:
+      Type: SHAPELESS
+      Amount: 1
+      Ingredients:
+      - empty_bomb-shaped_bottle
+      - sugar
+      - coal
+      - potion
+nuka_cherry:
+  Id: paper
+  Display: Bottle of Nuka Cherry
+  Options:
+    ItemModel: hbm:bottle_cherry
+    StackSize: 1
+  Lore:
+  - "<gray>Now with severe radiation poisoning in every seventh bottle!"
+  Consumable:
+    Sound: entity.generic.drink
+    Animation: DRINK
+    HasParticles: false
+  Potion:
+    Effects:
+    - speed{duration=600;level=0}
+    - jump_boost{duration=600;level=2}
+  UseRemainder: empty_bomb-shaped_bottle
+  Recipes:
+    SHAPED:
+      Type: SHAPELESS
+      Amount: 1
+      Ingredients:
+      - empty_bomb-shaped_bottle
+      - sugar
+      - redstone
+      - potion
+
+empty_bomb-shaped_bottle:
+  Display: Empty Bomb-Shaped Bottle
+  Id: paper
+  Options:
+    ItemModel: hbm:bottle_empty
+  Recipes:
+    SHAPED:
+      Type: SHAPED
+      Amount: 6
+      Ingredients:
+      - air | glass_pane | air
+      - glass_pane | air | glass_pane
+      - glass_pane | glass_pane | glass_pane
