@@ -3,7 +3,7 @@ canned_beef:
   Display: Canned Beef
   Food:
     Nutrition: 8
-    Saturation: 14
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -15,7 +15,7 @@ canned_tuna:
   Display: Canned Tuna
   Food:
     Nutrition: 6
-    Saturation: 12
+    Saturation: 15
   Consumable:
     Animation: EAT
   Lore:
@@ -27,7 +27,7 @@ canned_mystery:
   Display: Canned Mystery Meat
   Food:
     Nutrition: 8
-    Saturation: 16
+    Saturation: 18
   Consumable:
     Animation: EAT
   Lore:
@@ -39,7 +39,7 @@ canned_cheese:
   Display: Canned Melted Cheese
   Food:
     Nutrition: 6
-    Saturation: 9
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -51,7 +51,7 @@ canned_milk:
   Display: Canned Evaporated Milk
   Food:
     Nutrition: 6
-    Saturation: 6
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
@@ -63,7 +63,7 @@ canned_ass:
   Display: Canned Ass
   Food:
     Nutrition: 12
-    Saturation: 14
+    Saturation: 17
   Consumable:
     Animation: EAT
   Lore:
@@ -75,7 +75,7 @@ canned_pizza:
   Display: Canned Pepperoni Pizza
   Food:
     Nutrition: 12
-    Saturation: 9
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -87,7 +87,7 @@ canned_tube:
   Display: Astronaut Food Tube
   Food:
     Nutrition: 12
-    Saturation: 14
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -99,7 +99,7 @@ canned_tomato:
   Display: Canned Tomato Soup
   Food:
     Nutrition: 6
-    Saturation: 6
+    Saturation: 8
   Consumable:
     Animation: EAT
   Lore:
@@ -111,7 +111,7 @@ canned_asbestos:
   Display: Canned Asbestos
   Food:
     Nutrition: 8
-    Saturation: 8
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
@@ -135,7 +135,7 @@ canned_hotdogs:
   Display: Canned Hotdogs
   Food:
     Nutrition: 7
-    Saturation: 14
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -147,7 +147,7 @@ canned_leftovers:
   Display: Leftover Conserve
   Food:
     Nutrition: 6
-    Saturation: 7
+    Saturation: 9
   Consumable:
     Animation: EAT
   Lore:
@@ -160,7 +160,7 @@ canned_yogurt:
   Display: Canned Yogurt
   Food:
     Nutrition: 5
-    Saturation: 4
+    Saturation: 6
   Consumable:
     Animation: EAT
   Lore:
@@ -172,7 +172,7 @@ canned_mushroom_stew:
   Display: Canned "Mushroom Stew"
   Food:
     Nutrition: 3
-    Saturation: 17
+    Saturation: 20
   Consumable:
     Animation: EAT
   Lore:
@@ -209,7 +209,7 @@ canned_fist:
   Id: paper
   Display: Canned Fist
   Food:
-    Nutrition: 14
+    Nutrition: 16
     Saturation: 10
   Consumable:
     Animation: EAT
