@@ -8,9 +8,26 @@ adrenaline_bottle:
     Animation: DRINK
     HasParticles: false
     Sound: entity.generic.drink
-  PotionEffects:
-  - STRENGTH 1200 2
+  Potion:
+    Effects:
+    - strength{duration=1200;level=2;ambient=false;icon=true;particles=true}
   Skills:
   - e:lightning{localized=true} @self ~onConsume
   - sound{sound=calamitymod:adrenalineactivate} @self ~onConsume
   - sound{sound=calamitymod:fulladrenaline} @self ~onHold
+rage_bottle:
+  Id: potion
+  Display: Bottle of Rage
+  Options:
+    Color: 255,0,72
+    Glint: true
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+  Potion:
+    Effects:
+    - strength{duration=2400;level=1;ambient=false;icon=true;particles=true}
+  Skills:
+  - sound{sound=calamitymod:rageactivate} @self ~onConsume
+  - sound{sound=calamitymod:fullrage} @self ~onHold
