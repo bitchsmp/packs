@@ -12,11 +12,11 @@ methamphetamine:
     ConsumeEffects:
     - potion{type=NAUSEA;duration=100;level=9;chance=0.7}
     - potion{type=BLINDNESS;duration=60;level=0;chance=0.3}
-  PotionEffects:
-  - SPEED 1200 0
-  - STRENGTH 1200 0
-  - ABSORPTION 1200 0
-
+  Potion:
+    Effects:
+    - strength{duration=1200;level=0;ambient=false;icon=true;particles=true}
+    - speed{duration=1200;level=0;ambient=false;icon=true;particles=true}
+    - absorption{duration=1200;level=0;ambient=false;icon=true;particles=true}
 
 yaba:
   Id: sugar
