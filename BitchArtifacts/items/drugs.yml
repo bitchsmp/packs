@@ -25,6 +25,8 @@ yaba:
   - "<white>"
   - "<light_purple>Always keep this in one of your hand. It can save you in the most desperate moment."
   - "<light_purple>Can make you survive /kill"
+  - "<white>" 
+  - "<gray>Use like Totem of Undying"
   Options:
     StackSize: 1
     ItemModel: dueris:yaba
