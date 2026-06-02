@@ -3,7 +3,7 @@ canned_beef:
   Display: Canned Beef
   Food:
     Nutrition: 8
-    Saturation: 12
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -15,7 +15,7 @@ canned_tuna:
   Display: Canned Tuna
   Food:
     Nutrition: 6
-    Saturation: 8
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
@@ -27,7 +27,7 @@ canned_mystery:
   Display: Canned Mystery Meat
   Food:
     Nutrition: 8
-    Saturation: 14
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -62,8 +62,8 @@ canned_ass:
   Id: paper
   Display: Canned Ass
   Food:
-    Nutrition: 14
-    Saturation: 16
+    Nutrition: 12
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -74,7 +74,7 @@ canned_pizza:
   Id: paper
   Display: Canned Pepperoni Pizza
   Food:
-    Nutrition: 10
+    Nutrition: 12
     Saturation: 9
   Consumable:
     Animation: EAT
@@ -123,7 +123,7 @@ canned_black_hole:
   Display: Canned Black Hole
   Food:
     Nutrition: 6
-    Saturation: 16
+    Saturation:20
   Consumable:
     Animation: EAT
   Lore:
@@ -135,7 +135,7 @@ canned_hotdogs:
   Display: Canned Hotdogs
   Food:
     Nutrition: 7
-    Saturation: 11
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -172,7 +172,7 @@ canned_mushroom_stew:
   Display: Canned "Mushroom Stew"
   Food:
     Nutrition: 3
-    Saturation: 12
+    Saturation: 17
   Consumable:
     Animation: EAT
   Lore:
@@ -183,8 +183,8 @@ canned_chinese_food:
   Id: paper
   Display: Canned Chinese Food
   Food:
-    Nutrition: 8
-    Saturation: 14
+    Nutrition: 10
+    Saturation: 17
   Consumable:
     Animation: EAT
   Lore:
@@ -196,8 +196,8 @@ canned_engine_oil:
   Id: paper
   Display: Canned Engine Oil
   Food:
-    Nutrition: 8
-    Saturation: 12
+    Nutrition: 12
+    Saturation: 15
   Consumable:
     Animation: EAT
   Lore:
@@ -209,8 +209,8 @@ canned_fist:
   Id: paper
   Display: Canned Fist
   Food:
-    Nutrition: 9
-    Saturation: 8
+    Nutrition: 14
+    Saturation: 10
   Consumable:
     Animation: EAT
   Lore:
@@ -221,8 +221,8 @@ canned_fried_chicken:
   Id: paper
   Display: Canned Fried Chicken
   Food:
-    Nutrition: 8
-    Saturation: 9
+    Nutrition: 10
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -233,8 +233,8 @@ canned_napalm:
   Id: paper
   Display: Canned Napalm
   Food:
-    Nutrition: 7
-    Saturation: 8
+    Nutrition: 15
+    Saturation: 15
   Consumable:
     Animation: EAT
   Lore:
@@ -245,8 +245,8 @@ canned_diesel:
   Id: paper
   Display: Canned Diesel
   Food:
-    Nutrition: 9
-    Saturation: 8
+    Nutrition: 16
+    Saturation: 14
   Consumable:
     Animation: EAT
   Lore:
@@ -258,8 +258,8 @@ canned_kerosene:
   Id: paper
   Display: Canned Kerosene
   Food:
-    Nutrition: 8
-    Saturation: 9
+    Nutrition: 14
+    Saturation: 16
   Consumable:
     Animation: EAT
   Lore:
@@ -271,8 +271,8 @@ canned_recursion:
   Id: paper
   Display: Canned Recursion
   Food:
-    Nutrition: 10
-    Saturation: 10
+    Nutrition: 12
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
@@ -284,8 +284,8 @@ canned_bark:
   Id: paper
   Display: Canned Pine Bark Jerky
   Food:
-    Nutrition: 9
-    Saturation: 9
+    Nutrition: 14
+    Saturation: 12
   Consumable:
     Animation: EAT
   Lore:
@@ -298,7 +298,7 @@ canned_spam:
   Display: Canned Spam
   Food:
     Nutrition: 15
-    Saturation: 18
+    Saturation: 20
   Consumable:
     Animation: EAT
   Lore:
