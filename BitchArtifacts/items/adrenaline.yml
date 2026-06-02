@@ -13,3 +13,4 @@ adrenaline_bottle:
   Skills:
   - e:lightning{localized=true} @self ~onConsume
   - sound{sound=calamitymod:adrenalineactivate} @self ~onConsume
+  - sound{sound=calamitymod:fulladrenaline} @self ~onHold
