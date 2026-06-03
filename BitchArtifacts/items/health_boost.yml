@@ -22,7 +22,10 @@ heart_piece:
   - "<dark_purple>When Applied:"
   - "<light_purple>+2.0 Health"
   Skills:
-  - stataura{stat=HEALTH;value=2;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onUse
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+    - stat{stat=HEALTH;value=2;type=ADD}
+    ]} @self ~onUse
+  - sound{sound=minecraft:ui.button.click;pitch=1} @self ~onUse
 heart_container:
   Id: paper
   Display: "Heart Container"
@@ -36,7 +39,10 @@ heart_container:
   - "<dark_purple>When Applied:"
   - "<light_purple>+5.0 Health"
   Skills:
-  - stataura{stat=HEALTH;value=5;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onUse
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+    - stat{stat=HEALTH;value=5;type=ADD}
+    ]} @self ~onUse
+  - sound{sound=minecraft:ui.button.click;pitch=1.1} @self ~onUse
 heart_booster:
   Id: paper
   Display: "Heart Booster"
@@ -50,7 +56,10 @@ heart_booster:
   - "<dark_purple>When Applied:"
   - "<light_purple>+8.0 Health"
   Skills:
-  - stataura{stat=HEALTH;value=8;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onUse
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+    - stat{stat=HEALTH;value=8;type=ADD}
+    ]} @self ~onUse
+  - sound{sound=minecraft:ui.button.click;pitch=1.2} @self ~onUse
 black_diamond:
   Id: paper
   Display: "Black Diamond"
@@ -64,7 +73,10 @@ black_diamond:
   - "<dark_purple>When Applied:"
   - "<light_purple>+8.0 Health"
   Skills:
-  - stataura{stat=HEALTH;value=8;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onUse
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+    - stat{stat=HEALTH;value=8;type=ADD}
+    ]} @self ~onUse
+  - sound{sound=minecraft:ui.button.click;pitch=1.2} @self ~onUse
 heart_of_darkness:
   Id: paper
   Display: "Heart of Darkness"
@@ -78,4 +90,7 @@ heart_of_darkness:
   - "<dark_purple>When Applied:"
   - "<light_purple>+10.0 Health"
   Skills:
-  - stataura{stat=HEALTH;value=10;type=ADD;aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onUse
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+    - stat{stat=HEALTH;value=10;type=ADD}
+    ]} @self ~onUse
+  - sound{sound=minecraft:ui.button.click;pitch=1.35} @self ~onUse
