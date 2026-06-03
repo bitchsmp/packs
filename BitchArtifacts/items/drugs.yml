@@ -11,8 +11,8 @@ methamphetamine:
     ConsumeSeconds: 2
     Animation: EAT
     ConsumeEffects:
-    - potion{type=NAUSEA;duration=100;level=9;chance=0.7}
-    - potion{type=BLINDNESS;duration=60;level=0;chance=0.3}
+    - potion{type=NAUSEA;duration=300;level=9;chance=0.8}
+    - potion{type=BLINDNESS;duration=100;level=0;chance=0.5}
   Potion:
     Effects:
     - strength{duration=1200;level=0;ambient=false;icon=true;particles=true}
