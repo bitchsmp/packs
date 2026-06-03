@@ -6,6 +6,7 @@ methamphetamine:
   - "<light_purple>Boost your morale and efficiency. Has no severe side-effects"
   Options:
     StackSize: 1
+    ItemModel: dueris:methamphetamine
   Consumable:
     ConsumeSeconds: 2
     Animation: EAT
