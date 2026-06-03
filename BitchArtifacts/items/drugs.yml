@@ -1,3 +1,20 @@
+cocaine:
+  Id: sugar
+  Display: "Cocaine"
+  Lore:
+  - "<white>"
+  - "<light_purple>The only thing in my head is five grams of cocaine,"
+  - "<light_purple>fly away alone. To the edge of oblivion."
+  - "<light_purple>I have thoughts in my head, when will all this end."
+  - "<light_purple>Whenever I'm not alone, because a white eel will fly in."
+  Options:
+    StackSize: 1
+    ItemModel: minecraft:sugar
+  Consumable:
+    Animation: EAT
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=1800;level=0;chance=1}
+    - potion{type=BLINDNESS;duration=900;level=0;chance=0.7}
 methamphetamine:
   Id: sugar
   Display: "Military-Grade Methamphetamine"
@@ -8,7 +25,6 @@ methamphetamine:
     StackSize: 1
     ItemModel: dueris:methamphetamine
   Consumable:
-    ConsumeSeconds: 2
     Animation: EAT
     ConsumeEffects:
     - potion{type=NAUSEA;duration=300;level=9;chance=0.8}
