@@ -13,15 +13,15 @@ coffee:
     ItemModel: hbm:coffee
     StackSize: 1
   UseRemainder: empty_mug
-  Recipes:
-    SHAPED:
-      Type: SHAPELESS
-      Amount: 1
-      Ingredients:
-      - empty_mug
-      - sugar
-      - potion
-      - coffee
+  # Recipes:
+  #   SHAPED:
+  #     Type: SHAPELESS
+  #     Amount: 1
+  #     Ingredients:
+  #     - empty_mug
+  #     - sugar
+  #     - potion
+  #     - cocoa_beans
 empty_mug:
   Id: paper
   Display: Empty Mug
