@@ -33,9 +33,9 @@ gale:
   - swingOffhand ~onRightclick ?!itemGroupOnCooldown{group=gale}
   - skill{s=gale} @self ~onUse ?!itemGroupOnCooldown{group=gale}
   - skill{s=gale} @self ~onRightclick ?!itemGroupOnCooldown{group=gale} 
-ultra_wind_charge:
+wind_in_a_bottle:
   Id: wind_charge
-  Display: "<yellow>Ultra Wind Charge"
+  Display: "<yellow>Wind in a Bottle"
   Lore:
   - ""
   - "<gray>Summons a wind charge at the leg and launches downward"
@@ -43,14 +43,15 @@ ultra_wind_charge:
   Options:
     Glint: true
     StackSize: 1
+    ItemModel: wind_bottle:wind_bottle
   Skills:
   - cancelEvent ~onUse
   - cancelEvent ~onRightclick
-  - skill{skill=ultra_wind_charge} @self ~onUse
-  - skill{skill=ultra_wind_charge} @self ~onRightclick
-ventose:
+  - skill{skill=wind_in_a_bottle} @self ~onUse
+  - skill{skill=wind_in_a_bottle} @self ~onRightclick
+ventose_staff:
   Id: wind_charge
-  Display: "<yellow>Ventose"
+  Display: "<yellow>Staff of Ventose"
   Lore:
   - ""
   - "<gray>Summons a powerful wind charge at the leg and launches downward"
@@ -58,6 +59,7 @@ ventose:
   Options:
     Glint: true
     StackSize: 1
+    ItemModel: realariesxd:wind_charge
   Skills:
   - cancelEvent ~onUse
   - cancelEvent ~onRightclick

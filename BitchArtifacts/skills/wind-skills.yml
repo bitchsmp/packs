@@ -5,12 +5,12 @@ infinite_gust:
   - setVar{type=STRING;value="{Motion:[0d,-1d,0d]}";name=global.infinite_gust_wind_charge_motion_down} 
   - command{command="summon minecraft:breeze_wind_charge ~ ~ ~ <global.var.infinite_gust_wind_charge_motion_down>";asop=true;sourceisorigin=true;astarget=true} @self
   - setMaterialCooldown{material=wind_charge;duration=60}
-ultra_wind_charge:
+wind_in_a_bottle:
   Conditions:
   - materialIsOnCooldown{material=wind_charge} false
   Skills:
-  - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.ultra_wind_charge_motion}
-  - command{command="summon minecraft:wind_charge ~ ~ ~ <global.var.ultra_wind_charge_motion>";asop=true;sourceisorigin=true;astarget=true}
+  - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.wind_in_a_bottle_motion}
+  - command{command="summon minecraft:wind_charge ~ ~ ~ <global.var.wind_in_a_bottle_motion>";asop=true;sourceisorigin=true;astarget=true}
   - setMaterialCooldown{material=wind_charge;duration=80}
 gale:
   Conditions:
