@@ -59,7 +59,7 @@ ipecac_syrup:
   Consumable:
     Animation: EAT
     ConsumeEffects:
-    - potion{type=hunger;d=60;level=255}
+    - potion{type=hunger;d=120;level=255}
   Options:
     ItemModel: hbm:med_ipecac_new
 ptsd_medication:
@@ -71,6 +71,6 @@ ptsd_medication:
   Consumable:
     Animation: EAT
     ConsumeEffects:
-    - potion{type=hunger;d=60;level=255}
+    - potion{type=hunger;d=120;level=255}
   Options:
     ItemModel: hbm:med_ptsd_new
