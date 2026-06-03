@@ -10,6 +10,9 @@ yaba_desperation:
   - potion{type=WEAKNESS;duration=100;hasparticles=false;level=255}
   - command{asop=true;command="vanish enable <caster.name>"}
   - title{title="<light_purple>Desperation Phase";subtitle="<light_purple>You have 60 seconds of pure adrenaline";fadein=20;fadeout=20;duration=60}
+  
+  - title{title="";subtitle="<light_purple>Remembering the melancholy of human existence";fadein=15;fadeout=5;duration=30} @PIR{radius=256;targetself=false}
+  - title{title="";subtitle="<light_purple>Even ghosts stray from the path of righteousness";fadein=10;fadeout=10;duration=30;delay=50} @PIR{radius=256;targetself=false}
   - feed{amount=20;saturation=20;overfeed=true;delay=1} @self
   - delay 100
 
