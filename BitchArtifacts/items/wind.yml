@@ -28,6 +28,7 @@ gale:
     ItemModel: minecraft:breeze_rod
     Glint: true
     StackSize: 1
+    Repairable: false
   Lore:
   - "<gray>Right-click:"
   - "<gray>Grants you faster movement speed</gray>"
@@ -63,6 +64,7 @@ ventose_staff:
   Lore:
   - "<gray>Right-click:"
   - "<gray>Summons a powerful wind charge at the leg and launches downward"
+  - "<gray>Consumes 3 wind charges per use"
   - "<gray>Wind charge velocity is constant and absolute"
 
   Options:
