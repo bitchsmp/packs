@@ -1,7 +1,7 @@
 terrablade_projectile_leftclick:
   Cooldown: 0.1
   Skills:
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62}
     - skill{skill=terrablade_projectile_1}
     - skill{skill=terrablade_projectile_2}
     - skill{skill=terrablade_projectile_3}
@@ -15,24 +15,24 @@ terrablade_projectile_1:
   Cooldown: 0.2
   Conditions:
   Skills:
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=0.5}
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-0.5}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=0.5}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-0.5}
 
 terrablade_projectile_2:
   Cooldown: 0.3
   Skills:
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=1}
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-1}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=1}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-1}
 terrablade_projectile_3:
   Cooldown: 0.4
   Skills:
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=1.5}
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-1.5}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=1.5}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-1.5}
 terrablade_projectile_4:
   Cooldown: 0.5
   Skills:
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=2}
-    - projectile{bulletType=DISPLAY;material=AIR;sfo=0.5;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-2}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=2}
+    - projectile{bulletType=DISPLAY;material=AIR;sfo=0;velocity=16;syo=1.62;onhitskill=terrablade_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.1;vr=0.1;hnp=true;bulletscale=1,1,1;bulletBrightnessSky=15;bulletBrightness=15;ontickskill=terrablade_projectile_tick} @Forward{yOffset=1.62;sideoffset=-2}
     - sound{sound=terraria:item_60}
 terrablade_projectile_hit:
   Skills:

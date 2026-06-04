@@ -3,6 +3,8 @@ terrablade:
   Display: '<yellow>Terrablade'
   Options:
     ItemModel: minecraft:terrablade
+  
+  EquipSlot: HAND
   Lore:
   - "<gray>Each swing fires a wave of energy"
   - <gray><italic>Terrarians love this thing</gray>
