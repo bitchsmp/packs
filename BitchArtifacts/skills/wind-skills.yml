@@ -27,10 +27,10 @@ gale:
   - consumeuseddurability{amount=1}
 ventose:
   Conditions:
-  - HasItem{amount=>1;strict=true;types=wind_charge} orelsecast ventose_no_wind_charge
+  - HasItem{amount=>2;strict=true;types=wind_charge} orelsecast ventose_no_wind_charge
   - itemGroupOnCooldown{group=ventose} false
   Skills:
-  - command{command="clear <caster.name> minecraft:wind_charge[minecraft:max_stack_size=64] 2";asop=true;ascaster=true}
+  - command{command="clear <caster.name> minecraft:wind_charge[minecraft:max_stack_size=64] 3";asop=true;ascaster=true}
   - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.ventose_wind_charge_motion}
   - skill{s=ventose_orbital_projectile}
   - setItemGroupCooldown{key=minecraft:ventose;ticks=100}

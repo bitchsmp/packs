@@ -13,9 +13,10 @@ infinite_gust:
     Repairable: false
     Unbreakable: true
     HideFlags: true
+    ItemModel: wind_charge
   Skills:
   - cancelEvent ~onFish
-  - skill{s=infinite_gust} @sel ~onFish
+  - skill{s=infinite_gust} @self ~onFish
 
 gale:
   Material: fishing_rod
