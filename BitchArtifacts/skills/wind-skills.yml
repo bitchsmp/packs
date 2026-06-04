@@ -27,14 +27,18 @@ gale:
   - consumeuseddurability{amount=1}
 ventose:
   Conditions:
-  - materialIsOnCooldown{material=wind_charge} false
+  - HasItem{amount=>1;strict=true;types=wind_charge} orelsecast ventose_no_wind_charge
+  - itemGroupOnCooldown{group=ventose} false
   Skills:
+  - command{command="clear <caster.name> minecraft:wind_charge[minecraft:max_stack_size=64] 2";asop=true;ascaster=true}
   - setVar{type=STRING;value="{Motion:[0d,-1.488936d,0d]}";name=global.ventose_wind_charge_motion}
-  - swingarm
   - skill{s=ventose_orbital_projectile}
-  - setMaterialCooldown{material=wind_charge;duration=100}
+  - setItemGroupCooldown{key=minecraft:ventose;ticks=100}
   - delay 20
   - command{command="summon minecraft:wind_charge <caster.l.x> <caster.l.y> <caster.l.z> <global.var.ventose_wind_charge_motion>";repeat=3;asop=true;sourceisorigin=true}
+ventose_no_wind_charge:
+  Skills:
+  - actionmessage{message="<red>You've ran out of wind charges"}
 ventose_orbital_projectile:
   Skills:
   - orbital{radius=4;ticks=20;hitnonplayers=false;hitplayers=false;points=32;ontickskill=ventose_orbital_projectile_tick;onstartskill=ventose_orbital_projectile_onstart}

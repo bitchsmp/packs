@@ -1,20 +1,24 @@
 infinite_gust:
-  Id: wind_charge
+  UseCooldown:
+    CooldownGroup: wind_charge
+  Id: fishing_rod
   Display: "<yellow>Infinite Gust"
   Lore:
-  - ""
-  - "<gray>Summon a breeze wind charge at the leg and launches downward"
+  - "<gray>Right-click:"
+  - "<gray>Summons a breeze wind charge at the leg and launches downward"
   - "<gray>Wind charge velocity is constant and absolute"
   Options:
     Glint: true
     StackSize: 1
+    Repairable: false
+    Unbreakable: true
+    HideFlags: true
   Skills:
-  - cancelEvent ~onUse
-  - cancelEvent ~onRightclick 
-  - skill{s=infinite_gust} @self ~onUse
-  - skill{s=infinite_gust} @self ~onRightclick 
+  - cancelEvent ~onFish
+  - skill{s=infinite_gust} @sel ~onFish
+
 gale:
-  Material: breeze_rod
+  Material: fishing_rod
   Display: "Gale"
   UseCooldown:
     CooldownGroup: gale
@@ -23,45 +27,49 @@ gale:
     ItemModel: minecraft:breeze_rod
     Glint: true
     StackSize: 1
-
   Lore:
-  - <white>
-  - <gray>Right-click: Grants you faster movement speed</gray>
-  - <white>
+  - "<gray>Right-click:"
+  - "<gray>Grants you faster movement speed</gray>"
   Skills:
-  - swingarm{} ~onUse ?!itemGroupOnCooldown{group=gale}
-  - swingOffhand ~onRightclick ?!itemGroupOnCooldown{group=gale}
-  - skill{s=gale} @self ~onUse ?!itemGroupOnCooldown{group=gale}
-  - skill{s=gale} @self ~onRightclick ?!itemGroupOnCooldown{group=gale} 
+  - cancelEvent ~onFish
+  - skill{s=gale} @self ~onFish ?!itemGroupOnCooldown{group=gale}
 wind_in_a_bottle:
-  Id: wind_charge
+  UseCooldown:
+    CooldownGroup: wind_charge
+  Id: fishing_rod
   Display: "<yellow>Wind in a Bottle"
   Lore:
-  - ""
+  - <white>
+  - "<gray>Right-click:"
   - "<gray>Summons a wind charge at the leg and launches downward"
   - "<gray>Wind charge velocity is constant and absolute"
   Options:
     Glint: true
     StackSize: 1
     ItemModel: wind_bottle:wind_bottle
+    Repairable: false
+    Unbreakable: true
+    HideFlags: true
   Skills:
-  - cancelEvent ~onUse
-  - cancelEvent ~onRightclick
-  - skill{skill=wind_in_a_bottle} @self ~onUse
-  - skill{skill=wind_in_a_bottle} @self ~onRightclick
+  - cancelEvent ~onFish
+  - skill{skill=wind_in_a_bottle} @self ~onFish
 ventose_staff:
-  Id: wind_charge
+  Id: fishing_rod
+  UseCooldown:
+    CooldownGroup: ventose
+    CooldownSeconds: 1
   Display: "<yellow>Staff of Ventose"
   Lore:
-  - ""
+  - "<gray>Right-click:"
   - "<gray>Summons a powerful wind charge at the leg and launches downward"
   - "<gray>Wind charge velocity is constant and absolute"
+
   Options:
-    Glint: true
     StackSize: 1
     ItemModel: realariesxd:wind_charge
+    Repairable: false
+    Unbreakable: true
+    HideFlags: true
   Skills:
-  - cancelEvent ~onUse
-  - cancelEvent ~onRightclick
-  - skill{skill=ventose} @self ~onUse
-  - skill{skill=ventose} @self ~onRightclick 
+  - cancelEvent ~onFish
+  - skill{skill=ventose} @self ~onFish
