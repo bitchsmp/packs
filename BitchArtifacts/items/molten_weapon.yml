@@ -1,0 +1,34 @@
+meteorite_blade:
+  Material: TURTLE_SCUTE
+  Display: '<white>Meteorite Blade'
+  Options:
+    ItemModel: hbm:blade_meteorite_hot
+forged_meteorite_ingot:
+  Material: TURTLE_SCUTE
+  Display: '<white>Forged Meteorite Ingot'
+  Options:
+    ItemModel: hbm:ingot_meteorite_forged_hot
+meteorite_ingot:
+  Material: TURTLE_SCUTE
+  Display: '<white>Meteorite Ingot'
+  Options:
+    ItemModel: hbm:ingot_meteorite_hot
+molten_blade:
+  Material: netherite_sword
+  Display: '<white>Molten Blade'
+  Options:
+    ItemModel: minecraft:moltenblade
+    MaxDurability: 676936
+  Lore:
+  - <gray><italic>Forged from a fallen star</gray>
+  - <gray><italic>Sharper than most terrestrial blades</gray>
+  
+molten_sword:
+  Material: netherite_sword
+  Display: '<white>Molten Sword'
+  Options:
+    ItemModel: minecraft:moltensword
+    MaxDurability: 676936
+  Lore:
+  - <gray><italic>Forged from a fallen star</gray>
+  - <gray><italic>Sharper than most terrestrial blades</gray>
