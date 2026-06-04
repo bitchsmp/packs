@@ -1,7 +1,6 @@
 holy_water:
-  Id: paper
+  Id: fishing_rod
   Display: "<yellow>Holy Water"
-  EquipSlot: MAINHAND
   Lore:
   - ""
   - '<gray>Throws water to "purify" the target'
@@ -18,6 +17,6 @@ holy_water:
     CooldownSeconds: 0.5
 
   Skills:
-  - cancelEvent ~onUse
-  - skill{s=holy_water_projectile} @self ~onUse
+  - cancelEvent ~onFish
+  - skill{s=holy_water_projectile} @self ~onFish
 
