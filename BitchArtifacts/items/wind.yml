@@ -1,3 +1,13 @@
+#  ███████████            ████                                          █████
+# ░░███░░░░░███          ░░███                                         ░░███ 
+#  ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+#  ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+#  ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+#  ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+#  █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+# ░░░░░   ░░░░░  ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░░░ 
+                                                                           
+                              
 infinite_gust:
   UseCooldown:
     CooldownGroup: wind_charge
@@ -34,7 +44,7 @@ gale:
   - "<gray>Grants you faster movement speed</gray>"
   Skills:
   - cancelEvent ~onFish
-  - skill{s=gale} @self ~onFish ?!itemGroupOnCooldown{group=gale}
+  - skill{s=gale} @self ~onFish
 wind_in_a_bottle:
   UseCooldown:
     CooldownGroup: wind_charge
