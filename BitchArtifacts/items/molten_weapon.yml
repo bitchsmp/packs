@@ -3,6 +3,20 @@ meteorite_powder:
   Display: '<white>Meteorite Powder'
   Options:
     ItemModel: hbm:powder_meteorite
+  Lore:
+  - "<gray>Put this in a Blast Furnace or something."
+  Recipes:
+    SHAPELESS:
+      Type: SHAPELESS
+      Amount: 1
+      Ingredients:
+      - netherite_scrap
+      - gold_ingot
+      - ghast_tear
+      - nether_star
+      - blaze_powder
+
+
 meteorite_ingot:
   Material: TURTLE_SCUTE
   Display: '<white>Meteorite Ingot'
@@ -10,6 +24,12 @@ meteorite_ingot:
     ItemModel: hbm:ingot_meteorite
   Lore:
   - "<gray>Put this in a Blast Furnace or something."
+  Recipes:
+    BLASTING:
+      Type: BLASTING
+      Amount: 1
+      CookingTime: 400
+      Ingredient: meteorite_powder
 forged_meteorite_ingot:
   Material: TURTLE_SCUTE
   Display: '<white>Forged Meteorite Ingot'
