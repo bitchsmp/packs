@@ -82,20 +82,44 @@ meteorite_blade_hot:
 
 molten_blade:
   Material: netherite_sword
-  Display: '<white>Molten Blade'
+  Display: '<yellow>Molten Blade'
+  EquipSlot: MAINHAND
   Options:
     ItemModel: minecraft:moltenblade
     MaxDurability: 676936
   Lore:
   - <gray><italic>Forged from a fallen star</gray>
   - <gray><italic>Sharper than most terrestrial blades</gray>
-  
+  - "<white>"
+  - "<gray>Right-click: Activates Adrenaline, granting the wielder Strength III for 60 seconds."
+  - "<gray>Cooldown: 120 Seconds"
+
+  Skills:
+  - e:lightning{localized=true} @self ~onUse ?!hasAura{aura=molten_blade_adrenaline_cooldown}
+  - potion{type=STRENGTH;duration=1200;level=2;ambient=false;icon=true;particles=true} @self ~onUse ?!hasAura{aura=molten_blade_adrenaline_cooldown}
+  - sound{sound=calamitymod:adrenalineactivate} @self ~onUse ?!hasAura{aura=molten_blade_adrenaline_cooldown}
+  - aura{aura=molten_blade_adrenaline_cooldown;ticks=2400;bartimerdisplay="<green>Adrenaline Cooldown";bartimercolor=GREEN;bartimerstyle=SOLID;cancelondeath=true;cancelonquit=true;showbartimer=true;onendskill=[
+    - sound{sound=calamitymod:fulladrenaline} @self
+    ]} @self ~onUse ?!hasAura{aura=molten_blade_adrenaline_cooldown}
+  - sound{sound=calamitymod:fulladrenaline} @self ~onHold ?!hasAura{aura=molten_blade_adrenaline_cooldown}
+
 molten_sword:
   Material: netherite_sword
-  Display: '<white>Molten Sword'
+  Display: '<yellow>Molten Sword'
+  EquipSlot: MAINHAND
   Options:
     ItemModel: minecraft:moltensword
     MaxDurability: 676936
   Lore:
   - <gray><italic>Forged from a fallen star</gray>
   - <gray><italic>Sharper than most terrestrial blades</gray>
+  - "<white>"
+  - "<gray>Right-click: Activates Rage, granting the wielder Strength II for 120 seconds."
+  - "<gray>Cooldown: 140 Seconds"
+  Skills:
+  - potion{type=STRENGTH;duration=2400;level=1;ambient=false;icon=true;particles=true} @self ~onUse ?!hasAura{aura=molten_sword_rage_cooldown}
+  - sound{sound=calamitymod:rageactivate} @self ~onUse ?!hasAura{aura=molten_sword_rage_cooldown}
+  - aura{aura=molten_sword_rage_cooldown;ticks=2400;bartimerdisplay="<red>Rage Cooldown";bartimercolor=RED;bartimerstyle=SOLID;cancelondeath=true;cancelonquit=true;showbartimer=true;onendskill=[
+    - sound{sound=calamitymod:fullrage} @self
+    ]} @self ~onUse ?!hasAura{aura=molten_sword_rage_cooldown}
+  - sound{sound=calamitymod:fullrage} @self ~onHold ?!hasAura{aura=molten_sword_rage_cooldown}
