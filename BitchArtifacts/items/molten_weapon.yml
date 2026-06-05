@@ -1,18 +1,65 @@
-meteorite_blade:
+meteorite_powder:
   Material: TURTLE_SCUTE
-  Display: '<white>Meteorite Blade'
+  Display: '<white>Meteorite Powder'
   Options:
-    ItemModel: hbm:blade_meteorite_hot
-forged_meteorite_ingot:
-  Material: TURTLE_SCUTE
-  Display: '<white>Forged Meteorite Ingot'
-  Options:
-    ItemModel: hbm:ingot_meteorite_forged_hot
+    ItemModel: hbm:powder_meteorite
 meteorite_ingot:
   Material: TURTLE_SCUTE
   Display: '<white>Meteorite Ingot'
   Options:
+    ItemModel: hbm:ingot_meteorite
+  Lore:
+  - "<gray>Put this in a Blast Furnace or something."
+forged_meteorite_ingot:
+  Material: TURTLE_SCUTE
+  Display: '<white>Forged Meteorite Ingot'
+  Options:
+    ItemModel: hbm:ingot_meteorite_forged
+  Lore:
+  - "<gray>Put this in a Blast Furnace or something."
+meteorite_blade:
+  Material: TURTLE_SCUTE
+  Display: '<white>Meteorite Blade'
+  Options:
+    ItemModel: hbm:blade_meteorite
+  Lore:
+  - "<gray>Put this in a Blast Furnace or something."
+meteorite_ingot_hot:
+  Material: TURTLE_SCUTE
+  Display: '<white>Meteorite Ingot'
+  Options:
     ItemModel: hbm:ingot_meteorite_hot
+  Recipes:
+    BLASTING:
+      Type: BLASTING
+      Amount: 1
+      CookingTime: 2000
+      Ingredient: meteorite_ingot
+
+forged_meteorite_ingot_hot:
+  Material: TURTLE_SCUTE
+  Display: '<white>Forged Meteorite Ingot'
+  Options:
+    ItemModel: hbm:ingot_meteorite_forged_hot
+  Recipes:
+    BLASTING:
+      Type: BLASTING
+      Amount: 1
+      CookingTime: 2000
+      Ingredient: forged_meteorite_ingot
+
+meteorite_blade_hot:
+  Material: TURTLE_SCUTE
+  Display: '<white>Meteorite Blade'
+  Options:
+    ItemModel: hbm:blade_meteorite_hot
+  Recipes:
+    BLASTING:
+      Type: BLASTING
+      Amount: 1
+      CookingTime: 2000
+      Ingredient: meteorite_blade
+
 molten_blade:
   Material: netherite_sword
   Display: '<white>Molten Blade'
