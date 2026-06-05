@@ -1,0 +1,26 @@
+tea:
+  Id: paper
+  Display: Tea
+  Potion:
+    Effects:
+    - resistance{duration=1200;level=0}
+    - instant_health{duration=0;level=0}
+  Consumable:
+    Sound: entity.generic.drink
+    Animation: DRINK
+    HasParticles: false
+  Options:
+    ItemModel: hbm:teacup_full
+    StackSize: 1
+  UseRemainder: teacup
+
+teacup:
+  Id: paper
+  Display: Teacup
+  Options:
+    ItemModel: hbm:teacup
+tea_leaf:
+  Id: paper
+  Display: Tea Leaf
+  Options:
+    ItemModel: hbm:tea_leaf
