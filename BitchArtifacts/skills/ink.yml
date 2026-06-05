@@ -7,6 +7,7 @@ ink_hit:
   - hasAura{aura=inked} false
   Skills:
   - title{title="";duration=100;fadein=20;fadeout=100}
+  - potion{type=BLINDNESS;duration=100;delay=20}
   - aura{aura=inked;ticks=120}
 ink_tick:
   Skills:
