@@ -45,11 +45,12 @@ stop_sign:
 # 2: 0.15s hitstop
 # 3: 0.2s hitstop
 # 4: 0.5s hitstop
-  - setvar{value=1;scope=caster;name=caster.stop_sign;type=INTEGER} @self ~onUse ?!varset{name=caster.stop_sign}
-  - setvar{value=1;scope=caster;name=caster.stop_sign;type=INTEGER} @self ~onHold ?!varset{name=caster.stop_sign}
-  - addVariable{value=1;name=caster.stop_sign} ?varrange{name=caster.stop_sign;value=<5} ~onUse @self 
-  - setvar{value=1;scope=caster;name=caster.stop_sign;type=INTEGER} ?varrange{name=caster.stop_sign;value=>4} ~onUse
-  - actionmessage{message="Current Bounce Mode:<white> <caster.var.stop_sign>"}  ~onUse
+  - setvar{value=1;scope=caster;name=caster.stop_sign;type=INTEGER} @self ~onUse ?!varset{name=caster.stop_sign} ?iscrouching 
+  - setvar{value=1;scope=caster;name=caster.stop_sign;type=INTEGER} @self ~onHold ?!varset{name=caster.stop_sign} ?iscrouching 
+  - addVariable{value=1;name=caster.stop_sign} ?varrange{name=caster.stop_sign;value=<5} ~onUse @self  ?iscrouching 
+  - setvar{value=1;scope=caster;name=caster.stop_sign;type=INTEGER} ?varrange{name=caster.stop_sign;value=>4} ~onUse ?iscrouching 
+  - actionmessage{message="Current Bounce Height:<white> <caster.var.stop_sign>"}  ~onUse ?iscrouching{}
+  - sound{sound=ui.button.click}  ~onUse ?iscrouching 
 
 #on slam skills 1:
 
