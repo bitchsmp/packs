@@ -1,0 +1,13 @@
+ink_shoot:
+  Skills:
+  - sound{sound=entity.squid.squirt}
+  - projectile{sfo=0;tickinterpolation=0;velocity=24;syo=1.62;maxrange=32;poweraffectsvelocity=false;onhitskill=ink_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=ink_tick;stopatblock=true;deathdelay=0;gravity=1;hitself=false} @Forward{yOffset=1.62}
+ink_hit:
+  TargetConditions:
+  - hasAura{aura=inked} false
+  Skills:
+  - title{title="";duration=100;fadein=20;fadeout=100}
+  - aura{aura=inked;ticks=120}
+ink_tick:
+  Skills:
+  - particle{particle=squid_ink;amount=5;speed=0.05;spread=0.5} @origin

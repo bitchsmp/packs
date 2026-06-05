@@ -1,0 +1,17 @@
+ink_bottle:
+  Id: potion
+  Display: Bottle of Ink
+  Options:
+    Color: 0,0,0
+    Glint: false
+    ItemModel: hbm:ink
+    HideFlags: true
+  Lore:
+  - "<gray>Drink the ink and spit it to others' face, effectively blinding them!"
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+  Skills:
+  - skill{s=ink_shoot;repeat=10;repeatinterval=1;delay=10} ~onConsume @self
+
