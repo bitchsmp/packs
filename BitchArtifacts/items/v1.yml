@@ -13,7 +13,7 @@ v1:
   Skills:
   - aura{components=[
     - stat{stat=LIFESTEAL_CHANCE;value=1;type=ADD}
-    - stat{stat=LIFESTEAL_POWER;value=0.4;type=ADD}
+    - stat{stat=LIFESTEAL_POWER;value=0.9;type=ADD}
     - onattack{onattackskill=[
       - particle{particle=block;material=redstone_block;yoffset=1.2;speed=0.02;vspread=0.5;hspread=0.2;amount=40} @trigger
       ]}
