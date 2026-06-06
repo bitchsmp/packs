@@ -9,7 +9,7 @@ v1:
   - "<dark_red>HELL IS FULL"
   - "<white>"
   - "<dark_purple>When Applied:"
-  - "<gray>Heals you 50% of the amount of raw damage dealt"
+  - "<gray>Heals you 50% of the raw damage dealt"
   Options:
     StackSize: 1
     ItemModel: hbm:v1
