@@ -1,6 +1,6 @@
 teacup:
   Id: paper
-  Display: Cup of Tea
+  Display: "Cup of Tea"
   Potion:
     Effects:
     - resistance{duration=600;level=0}
@@ -12,15 +12,15 @@ teacup:
   Options:
     ItemModel: hbm:teacup_full
     StackSize: 1
-  UseRemainder: teacup
+  UseRemainder: empty_teacup
 
 empty_teacup:
   Id: paper
-  Display: Empty Teacup
+  Display: "Empty Teacup"
   Options:
     ItemModel: hbm:teacup
 tea_leaf:
   Id: paper
-  Display: Tea Leaf
+  Display: "Tea Leaf"
   Options:
     ItemModel: hbm:tea_leaf
