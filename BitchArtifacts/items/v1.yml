@@ -7,16 +7,19 @@ v1:
   - "<dark_red>MANKIND IS DEAD"
   - "<dark_red>BLOOD IS FUEL<blue> (1:00)"
   - "<dark_red>HELL IS FULL"
+  - "<white>"
+  - "<dark_purple>When Applied:"
+  - "<gray>Heals you 50% of the amount of raw damage dealt"
   Options:
     StackSize: 1
     ItemModel: hbm:v1
   Skills:
   - aura{components=[
     - stat{stat=LIFESTEAL_CHANCE;value=1;type=ADD}
-    - stat{stat=LIFESTEAL_POWER;value=0.9;type=ADD}
+    - stat{stat=LIFESTEAL_POWER;value=0.4;type=ADD}
     - onattack{onattackskill=[
       - particle{particle=block;material=redstone_block;yoffset=1.2;speed=0.02;vspread=0.5;hspread=0.2;amount=40} @trigger
       ]}
-    ];showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL";aura=v1;ticks=1200} @self ~onConsume
+    ];showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL";aura=v1;ticks=1200;cancelonquit=false} @self ~onConsume
 
 
