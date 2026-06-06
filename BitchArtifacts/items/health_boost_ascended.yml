@@ -1,0 +1,19 @@
+
+heart_of_darkness_ascended:
+  Id: paper
+  Display: "<gold>Ascended Heart of Darkness"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:heart_fab
+    FireResistant: true
+    Glint: true
+  Lore:
+  - "<gray>Infinite Usage"
+  - "<white>"
+  - "<dark_purple>When Applied:"
+  - "<light_purple>+20.0 Health"
+  Skills:
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+    - stat{stat=HEALTH;value=20;type=ADD}
+    ]} @self ~onUse
+  - sound{sound=minecraft:ui.button.click;pitch=1.5} @self ~onUse

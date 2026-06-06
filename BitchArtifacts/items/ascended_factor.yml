@@ -1,0 +1,11 @@
+
+ascended_factor:
+  Id: paper
+  Display: "<gold>Ascended Factor"
+  Options:
+    StackSize: 1
+    ItemModel: dueris:corrupted_item
+    FireResistant: true
+  Lore:
+  - "<gray><italic>The factor of <obfuscated>envy</obfuscated>, manifested into existence."
+  - "<gray><italic>The texture isn't corrupted. Your mind just cannot comprehends it."
