@@ -33,7 +33,7 @@ toxic_soapy_water_horse:
     FireResistant: true
     ItemModel: hbm:bathwater_mk2
   Lore:
-  - "<blue>Radioactive (8:00)"
+  - "<blue>Toxic II (8:00)"
   - "<white>"
   - "<dark_purple>When Applied:"
   - "<green>Inflicts wither on the attacker"
