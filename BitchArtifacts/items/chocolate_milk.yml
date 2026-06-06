@@ -10,6 +10,7 @@ chocolate_milk:
   - "<gray>Totally not made from nitroglycerine."
   Options:
     ItemModel: hbm:chocolate_milk
+    StackSize: 1
   Skills:
   - explode{blockdamage=false;fire=false;yield=7;delay=1} @selfLocation ~onConsume 
   - damage{amount=99;damagecause=ENTITY_EXPLOSION;delay=1} @self ~onConsume 
