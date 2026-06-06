@@ -15,9 +15,11 @@ toxic_soapy_water:
   - "<dark_purple>When Applied:"
   - "<light_purple>Inflicts poison on the attacker"
   Skills:
-  - ondamaged{aura=toxic;ondamagedskill=[
-    - potion{type=POISON;duration=100;level=1} @trigger
-    ];ticks=9600;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
+  - aura{components=[
+    - ondamaged{ondamagedskill=[
+      - potion{type=POISON;duration=100;level=1} @trigger
+      ]}
+    ];ticks=9600;aura=toxic;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic I";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
 
 toxic_soapy_water_horse:
   Id: paper
@@ -36,7 +38,8 @@ toxic_soapy_water_horse:
   - "<dark_purple>When Applied:"
   - "<green>Inflicts wither on the attacker"
   Skills:
-  - ondamaged{aura=toxic;ondamagedskill=[
-    - potion{type=WITHER;duration=100;level=1} @trigger
-    ];ticks=9600;showbartimer=true;bartimerdisplay="Super Effect:<green> Radioactive";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
-
+  - aura{components=[
+    - ondamaged{ondamagedskill=[
+      - potion{type=WITHER;duration=100;level=1} @trigger
+      ]}
+    ];ticks=9600;aura=toxic;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic II";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
