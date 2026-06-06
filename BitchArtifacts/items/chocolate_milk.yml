@@ -23,6 +23,8 @@ chocolate_milk:
   Skills:
   - explode{blockdamage=false;fire=false;yield=7;delay=1} @selfLocation ~onConsume 
   - damage{amount=99;damagecause=ENTITY_EXPLOSION;delay=1} @self ~onConsume 
+  - particle{particle=smoke_large;amount=50;speed=0.3} @self ~onConsume 
+  - particle{particle=campfire_signal_smoke;amount=50;speed=0.2} @self ~onConsume 
 
 
 # delay=1 because delay=0 will cause the item to not be consumed before the player drops the item dies of the skill mechanic 
