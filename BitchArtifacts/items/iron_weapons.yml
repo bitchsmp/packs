@@ -19,3 +19,32 @@ sabre:
   - aura{forcesync=true;aura=sabre_mount_buff;duration=2;component=[
     - stat{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE}
     ]} @self ~onTimer:1 ?mounted
+
+katana:
+  Material: IRON_SWORD
+  Display: '<yellow>Katana'
+  Options:
+    ItemModel: minecraft:katana
+  Lore:
+  - "<gray>Right-click: Lunges forward</gray>"
+  EquipSlot: MAINHAND
+  Skills:
+  - skill{s=[
+    - sound{sound=item.spear.lunge_3}
+    - lunge{velocity=2;velocityY=0} @forward{forward=16}
+    - swingarm{}
+    ];cooldown=3} @Self ~onUse
+wakizashi:
+  Material: IRON_SWORD
+  Display: '<yellow>Wakizashi'
+  Options:
+    ItemModel: minecraft:wakizashi
+  Lore:
+  - "<gray>Right-click: Lunges backward</gray>"
+  EquipSlot: MAINHAND
+  Skills:
+  - skill{s=[
+    - sound{sound=item.spear.lunge_3}
+    - lunge{velocity=2.36;velocityY=0} @forward{forward=-16}
+    - swingarm{}
+    ];cooldown=3} @Self ~onUse
