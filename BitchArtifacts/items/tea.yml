@@ -24,3 +24,11 @@ tea_leaf:
   Display: "Tea Leaf"
   Options:
     ItemModel: hbm:tea_leaf
+  Lore:
+  - "<gray>Made from drying Ferns on a Campfire"
+  Recipes:
+    CAMPFIRE:
+      Type: CAMPFIRE
+      Amount: 1
+      CookingTime: 200
+      Ingredient: FERN
