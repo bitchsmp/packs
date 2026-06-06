@@ -1,0 +1,21 @@
+sabre:
+  Material: IRON_SWORD
+  Display: '<yellow>Sabre'
+  Options:
+    ItemModel: minecraft:sabre
+  Lore:
+  - "<gray><italic>Grassland Domination</gray>"
+  - <white>
+  - "<gray>When in Plains biome:"
+  - "<blue>+2 Attack Damage"
+  - "<white>"
+  - "<gray>When on mounts:"
+  - "<blue>+2 Attack Damage"
+  EquipSlot: MAINHAND
+  Skills:
+  - aura{forcesync=true;aura=sabre_plain_buff;duration=2;component=[
+    - stat{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE}
+    ]} @self ~onTimer:1 ?biome{biome=plains}
+  - aura{forcesync=true;aura=sabre_mount_buff;duration=2;component=[
+    - stat{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE}
+    ]} @self ~onTimer:1 ?mounted
