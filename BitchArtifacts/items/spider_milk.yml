@@ -1,8 +1,17 @@
+#  ███████████            ████                                          █████
+# ░░███░░░░░███          ░░███                                         ░░███ 
+#  ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+#  ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+#  ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+#  ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+#  █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+# ░░░░░   ░░░░░  ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░░░ 
+               
 spider_milk:
   Id: paper
   Display: "Spider Milk"
   Lore:
-  - "Remove all Super Effects"
+  - "<gray>Remove all Super Effects"
   Consumable:
     Animation: DRINK
     Sound: entity.generic.drink
@@ -18,3 +27,13 @@ spider_milk:
   - removeaura{aura=v1} @self ~onConsume
   - removeaura{aura=shield_infused} @self ~onConsume
   UseRemainder: glass_bottle
+  Recipes:
+    SHAPELESS:
+      Type: SHAPELESS
+      Amount: 1
+      IngredientsLeftover:
+      - bucket
+      Ingredients:
+      - milk_bucket
+      - glass_bottle
+      - fermented_spider_eye
