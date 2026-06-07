@@ -1,0 +1,27 @@
+#  ███████████            ████                                          █████
+# ░░███░░░░░███          ░░███                                         ░░███ 
+#  ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+#  ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+#  ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+#  ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+#  █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+# ░░░░░   ░░░░░  ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░░░ 
+                       
+enchanted_half_golden_apple:
+  Id: paper
+  Display: "<aqua>Enchanted Half Golden Apple"
+  Food:
+    Nutrition: 4
+    Saturation: 9.6
+    CanAlwaysEat: true
+  Consumable:
+    Animation: EAT
+    ConsumeEffects:
+    - potion{type=regeneration;d=200;level=1}
+    - potion{type=resistance;d=3000;level=1}
+    - potion{type=fire_resistance;d=3000;level=1}
+    - potion{type=absorption;d=2400;level=1}
+  Options:
+    ItemModel: dueris:half_golden_apple
+    Glint: true
+  Rarity: rare
