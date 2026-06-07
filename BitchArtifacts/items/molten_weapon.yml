@@ -8,13 +8,14 @@ meteorite_powder:
   Recipes:
     SHAPELESS:
       Type: SHAPELESS
-      Amount: 1
+      Amount: 2
       Ingredients:
       - netherite_scrap
       - gold_ingot
       - ghast_tear
       - nether_star
       - blaze_powder
+      - meteorite_powder
 
 
 meteorite_ingot:
