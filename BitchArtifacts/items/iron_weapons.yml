@@ -3,6 +3,9 @@ sabre:
   Display: '<yellow>Sabre'
   Options:
     ItemModel: minecraft:sabre
+    FireResistant: true
+    Unbreakable: true
+
   Lore:
   - "<gray><italic>Grassland Domination</gray>"
   - <white>
@@ -25,6 +28,9 @@ katana:
   Display: '<yellow>Katana'
   Options:
     ItemModel: minecraft:katana
+    FireResistant: true
+    Unbreakable: true
+
   Lore:
   - "<gray>Right-click: Lunges forward</gray>"
   EquipSlot: MAINHAND
@@ -39,6 +45,8 @@ wakizashi:
   Display: '<yellow>Wakizashi'
   Options:
     ItemModel: minecraft:wakizashi
+    FireResistant: true
+    Unbreakable: true
   Lore:
   - "<gray>Right-click: Lunges backward</gray>"
   EquipSlot: MAINHAND
