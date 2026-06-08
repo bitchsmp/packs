@@ -1,3 +1,12 @@
+#  ███████████            ████                                          █████
+# ░░███░░░░░███          ░░███                                         ░░███ 
+#  ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+#  ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+#  ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+#  ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+#  █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+# ░░░░░   ░░░░░  ░░░░░░  ░░░░░  ░░░░░░   ░░░░░░░░ ░░░░░░   ░░░░░░   ░░░░░░░░ 
+                                         
 toxic_soapy_water:
   Id: paper
   Display: "Toxic Soapy Water"
@@ -13,7 +22,7 @@ toxic_soapy_water:
   - "<blue>Toxic (8:00)"
   - "<white>"
   - "<dark_purple>When Applied:"
-  - "<light_purple>Inflicts poison on the attacker"
+  - "<light_purple>Inflicts Poison on the attacker"
   Skills:
   - aura{components=[
     - ondamaged{ondamagedskill=[
@@ -36,7 +45,7 @@ toxic_soapy_water_horse:
   - "<blue>Toxic II (8:00)"
   - "<white>"
   - "<dark_purple>When Applied:"
-  - "<green>Inflicts wither on the attacker"
+  - "<green>Inflicts Wither on the attacker"
   Skills:
   - aura{components=[
     - ondamaged{ondamagedskill=[
