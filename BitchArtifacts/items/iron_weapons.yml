@@ -68,3 +68,21 @@ wakizashi:
     - swingarm{}
     ];cooldown=3} @Self ~onUse
 # /give @p minecraft:iron_sword[minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 5.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.0d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "wakizashi"}}, minecraft:custom_name={italic: 0b, text: "Wakizashi", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:wakizashi", minecraft:lore=[{italic: 0b, text: "Right-click: Lunges backward", color: "gray"}], minecraft:unbreakable={}]
+longsword:
+  Material: IRON_SWORD
+  Display: '<yellow>Longsword'
+  Attributes:
+    MainHand:
+      ATTACK_DAMAGE: 6 ADD
+      ATTACK_SPEED: -2.4 ADD
+  Options:
+    ItemModel: minecraft:longsword
+    FireResistant: true
+    Unbreakable: true
+  Lore:
+  - "<gray>Makes targets' hitbox bigger"
+  EquipSlot: MAINHAND
+  Skills:
+  AttackRange:
+    HitboxMargin: 0.36
+# /give @p minecraft:iron_sword[minecraft:attack_range={hitbox_margin: 0.36f}, minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 6.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.4d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "longsword"}}, minecraft:custom_name={italic: 0b, text: "Longsword", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:longsword", minecraft:lore=[{italic: 0b, text: "Makes targets' hitbox bigger", color: "gray"}], minecraft:unbreakable={}]
