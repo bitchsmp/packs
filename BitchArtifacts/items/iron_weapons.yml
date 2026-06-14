@@ -80,7 +80,7 @@ longsword:
     FireResistant: true
     Unbreakable: true
   Lore:
-  - "<gray>Makes targets' hitbox bigger"
+  - "<gray>Makes targets' hitbox bigger."
   EquipSlot: MAINHAND
   Skills:
   AttackRange:
@@ -90,9 +90,6 @@ masamune:
   Material: IRON_SWORD
   Display: '<yellow>Masamune'
   Attributes:
-    MainHand:
-      ATTACK_DAMAGE: 5 ADD
-      ATTACK_SPEED: -2.4 ADD
   Options:
     ItemModel: minecraft:masamune
     FireResistant: true
