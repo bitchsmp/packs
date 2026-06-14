@@ -24,30 +24,3 @@
 #     - stataura{forcesync=true;stat=ARMOR;val=-1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ARMOR_DEPLETION;duration=40;maxstacks=10} @trigger ~onAttack
 #     - stataura{forcesync=true;stat=ATTACK_SPEED;val=-0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_REDUCTION;duration=40;maxstacks=10} @self ~onSwing
 #     - stataura{forcesync=true;stat=ATTACK_SPEED;val=0.1;type=ADDITIVE;aura=ANCIENT_ROYAL_GREAT_SWORD_ATTACK_SPEED_ADDITION;duration=40;maxstacks=10} @self ~onattack
-
-
-# SkinMasamune:
-#   Material: TURTLE_SCUTE
-#   Display: "Masamune's Hand"
-#   Lore:
-#   - <yellow><bold>Sword Skin:</bold> Masamune
-#   - <white>
-#   - "<gray>Turn your sword into a long katana, forged by Masamune's own technique</gray>"
-#   - <white>
-#   - "<green>[Looooong]"
-#   - <white>  +3 Entity Interaction Range
-#   - "<red>[⚠Too Long!!]"
-#   - "<white>  80% reduction attack damage, counting modifiers"
-#   - "<white>  Each attack to targets that are within 3.5 blocks deals further quarter the damage due to the law of the lever"
-#   Augmentation:
-#     Type: SKIN_SWORD
-#     Tooltip: "<white>Masamune<gray> (Turn your sword into a long katana, forged by Masamune's own technique)"
-#     ReplaceItemModel: masamune
-#     ReplaceItemModelNamespace: minecraft
-#     Conditions:
-#     Stats:
-#     Skills:
-#     - stataura{forcesync=true;stat=ENTITY_INTERACTION_RANGE;val=3;type=ADDITIVE;aura=MASAMUNE_RANGE_BUFF;duration=2} @self ~onTimer:1 
-#     - modifyDamage{a=-0.2;modifier=ADDITIVE;sync=true} @self ~onAttack
-#     - sound{sound=minecraft:block.anvil.land;pitch=2;volume=0.2;radius=16} @self ~onAttack ?~distance{distance=<3.5}
-#     - modifyDamage{a=-0.75;modifier=ADDITIVE;sync=true} @self ~onAttack ?~distance{distance=<3.5} 
