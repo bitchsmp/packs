@@ -128,3 +128,11 @@ brimstone_claymore:
     - ignite{ticks=200}
     ]} @trigger ~onAttack ?!itemRecharging{}
   - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
+
+###
+weapon_steel_ingot:
+  Id: paper
+  Display: "<yellow>Weapon Steel Ingot"
+  Options:
+    ItemModel: hbm:ingot_gunsteel
+    FireResistant: true
