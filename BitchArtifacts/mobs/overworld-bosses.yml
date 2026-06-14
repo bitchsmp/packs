@@ -1,0 +1,108 @@
+
+
+ZombieCommanderHussar:
+  Type: ZOMBIE
+  Display: '&6Zombie Hussar Commander'
+  Health: 360
+  Faction: zombie_hussar
+  Damage: 5
+  Attributes:
+
+  Skills:
+  - remove @child ~onDeath
+  - attribute{attribute=STEP_HEIGHT;amount=69;} @self ~onSpawnorload
+  - heal{amount=100;overheal=false} @self ~onKillplayer
+ # - heal{amount=1;overheal=false} @self ~onTimer:40 ?!incombat
+  - skill{skill=DashAttack} ~onCombat @target 0.2
+  - skill{skill=SummonZombie} ~onCombat @selfLocation <50% 0.01
+  - skill{skill=DashAttack} ~onTimer:20 @target 0.2
+  - skill{skill=SummonZombie} ~onTimer:20 @selfLocation <50% 0.01
+  Equipment:
+  - NETHERITE_HELMET HEAD
+  - NETHERITE_BOOTS FEET
+  - sabre MAINHAND
+  Drops:
+  - sabre 1 1
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 16
+    PreventOtherDrops: true
+    FollowRange: 64
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    Despawn: NEVER
+    PreventSunburn: true
+    PreventTransformation: true
+    Glowing: true
+  BossBar:
+    Enabled: true
+    Title: "&6Zombie Hussar Commander"
+    Range: 64
+    Color: GREEN
+    Style: SEGMENTED_6
+    CreateFog: true
+    DarkenSky: true
+
+ZombieHussarMinion:
+  Type: ZOMBIE
+  Mount: ZombieHussarHorse
+  Display: '&2Zombie Hussar'
+  Health: 10
+  Faction: zombie_hussar
+
+  Equipment:
+  - DIAMOND_HELMET HEAD
+  - IRON_SPEAR MAINHAND
+  Damage: 2
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.287
+    PreventOtherDrops: true
+    FollowRange: 64
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventTransformation: true
+  Skills:
+  - remove @child ~onDeath
+  - mounttarget @child ~onTimer:1 ?!mounted{}
+ZombieHussarHorse:
+  Type: ZOMBIE_HORSE
+  Health: 10
+  Faction: zombie_hussar
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.287
+    PreventOtherDrops: true
+    FollowRange: 64
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventTransformation: true
+    #
+    PassthroughDamage: true
+  Skills:
+  - remove @self ~onTimer:1 ?!isParentAlive
+# #
+# # A staticy sheep that blasts everything near it
+# # with lightning bolts! It also takes no damage
+# # from lightning and half damage from fire.
+# #
+# StaticallyChargedSheep:
+#   Type: SHEEP
+#   Display: '&aStatically Charged Sheep'
+#   Health: 100
+#   Damage: 2
+#   Options:
+#     MovementSpeed: 0.3
+#   DamageModifiers:
+#   - LIGHTNING 0
+#   - FIRE 0.5
+#   Skills:
+#   - lightning @LivingInRadius{r=10} ~onTimer:100
+

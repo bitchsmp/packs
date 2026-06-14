@@ -1,0 +1,29 @@
+
+DashAttack:
+  Cooldown: 8
+  Conditions:
+  - targetwithin{d=25}
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=64}
+  - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby}
+  - delay 15
+  - teleport @target
+  - delay 5
+  - damage{amount=16;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+
+#
+# Summons 2 skeletons every second for 3 seconds.
+#
+SummonZombie:
+  Cooldown: 15
+  Skills:
+  - message{m="<caster.name><&co> Arise, my minions!"} @PlayersInRadius{r=64}
+  - delay 20
+  - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self
+  - delay 20
+  - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self
+  - delay 20
+  - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self
+
