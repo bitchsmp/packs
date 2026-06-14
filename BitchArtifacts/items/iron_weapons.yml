@@ -28,6 +28,9 @@ sabre:
 katana:
   Material: IRON_SWORD
   Display: '<yellow>Katana'
+  UseCooldown:
+    CooldownGroup: katana
+    CooldownSeconds: 3
   Attributes:
     MainHand:
       ATTACK_DAMAGE: 6 ADD
@@ -45,11 +48,15 @@ katana:
     - sound{sound=item.spear.lunge_3}
     - lunge{velocity=2;velocityY=0} @forward{forward=16}
     - swingarm{}
-    ];cooldown=3} @Self ~onUse
+    - setItemGroupCooldown{key=katana;ticks=60}
+    ]} @Self ~onUse ?!itemGroupOnCooldown{group=katana}
 # /give @p minecraft:iron_sword[minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 6.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.4d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "katana"}}, minecraft:custom_name={italic: 0b, text: "Katana", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:katana", minecraft:lore=[{italic: 0b, text: "Right-click: Lunges forward", color: "gray"}], minecraft:unbreakable={}]
 wakizashi:
   Material: IRON_SWORD
   Display: '<yellow>Wakizashi'
+  UseCooldown:
+    CooldownGroup: wakizashi
+    CooldownSeconds: 3
   Attributes:
     MainHand:
       ATTACK_DAMAGE: 5 ADD
@@ -66,7 +73,8 @@ wakizashi:
     - sound{sound=item.spear.lunge_3}
     - lunge{velocity=2.36;velocityY=0} @forward{forward=-16}
     - swingarm{}
-    ];cooldown=3} @Self ~onUse
+    - setItemGroupCooldown{key=wakizashi;ticks=60}
+    ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi}
 # /give @p minecraft:iron_sword[minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 5.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.0d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "wakizashi"}}, minecraft:custom_name={italic: 0b, text: "Wakizashi", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:wakizashi", minecraft:lore=[{italic: 0b, text: "Right-click: Lunges backward", color: "gray"}], minecraft:unbreakable={}]
 longsword:
   Material: IRON_SWORD
