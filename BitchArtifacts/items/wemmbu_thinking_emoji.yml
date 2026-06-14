@@ -1,0 +1,42 @@
+music_disc_wemmbu_thinking_emoji_rival:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:rival
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
+
+# other variants
+music_disc_wemmbu_thinking_emoji_above_the_law:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:above_the_law
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
+music_disc_wemmbu_thinking_emoji_playing_with_fire_live_violin_ver:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:playing_with_fire_live_violin_ver
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
+
+# additional variants requested
+music_disc_wemmbu_thinking_emoji_rival_vs_jadenman:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:rival_vs_jadenman
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
+
+music_disc_wemmbu_thinking_emoji_rival_ice:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:rival_ice
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
+
+music_disc_wemmbu_thinking_emoji_preparation_for_war:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:preparation_for_war
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
+
+music_disc_wemmbu_thinking_emoji_wemmbu_thinking_emoji:
+  Id: music_disc_otherside
+  JukeboxPlayable: azali:wemmbu_thinking_emoji
+  Options:
+    ItemModel: azali:music_disc_wemmbu_thinking_emoji
