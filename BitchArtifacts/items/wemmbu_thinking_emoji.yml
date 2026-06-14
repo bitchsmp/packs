@@ -101,7 +101,7 @@ music_disc_wemmbu_thinking_emoji_rival_ice:
       Amount: 1
       Ingredients:
       - air | air | air
-      - air | music_disc_wemmbu_thinking_emoji_playing_with_fire_rival_vs_jadenman | iron_nugget
+      - air | music_disc_wemmbu_thinking_emoji_rival_vs_jadenman | iron_nugget
       - air | air | air
     SHAPED_2:
       Type: SHAPED
