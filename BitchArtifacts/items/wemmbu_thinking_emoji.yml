@@ -1,42 +1,149 @@
 music_disc_wemmbu_thinking_emoji_rival:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:rival
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
-
+  Recipes:
+    SHAPED_1:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - air | music_disc_wemmbu_thinking_emoji_playing_with_fire_live_violin_ver | iron_nugget
+      - air | air | air
+    SHAPED_2:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - iron_nugget | music_disc_wemmbu_thinking_emoji_rival_vs_jadenman | air
+      - air | air | air
 # other variants
+
+
+
+
+
+
+
+
+
+
+
 music_disc_wemmbu_thinking_emoji_above_the_law:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:above_the_law
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
+  Recipes:
+    SHAPED_2:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - iron_nugget | music_disc_wemmbu_thinking_emoji_playing_with_fire_live_violin_ver | air
+      - air | air | air
 music_disc_wemmbu_thinking_emoji_playing_with_fire_live_violin_ver:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:playing_with_fire_live_violin_ver
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
+  Recipes:
+    SHAPED_1:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - air | music_disc_wemmbu_thinking_emoji_above_the_law | iron_nugget
+      - air | air | air
+    SHAPED_2:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - iron_nugget | music_disc_wemmbu_thinking_emoji_rival | air
+      - air | air | air
 
-# additional variants requested
 music_disc_wemmbu_thinking_emoji_rival_vs_jadenman:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:rival_vs_jadenman
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
+  Recipes:
+    SHAPED_1:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - air | music_disc_wemmbu_thinking_emoji_rival | iron_nugget
+      - air | air | air
+    SHAPED_2:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - iron_nugget | music_disc_wemmbu_thinking_emoji_rival_ice | air
+      - air | air | air
 
 music_disc_wemmbu_thinking_emoji_rival_ice:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:rival_ice
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
+  Recipes:
+    SHAPED_1:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - air | music_disc_wemmbu_thinking_emoji_playing_with_fire_rival_vs_jadenman | iron_nugget
+      - air | air | air
+    SHAPED_2:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - iron_nugget | music_disc_wemmbu_thinking_emoji_preparation_for_war | air
+      - air | air | air
 
 music_disc_wemmbu_thinking_emoji_preparation_for_war:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:preparation_for_war
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
+  Recipes:
+    SHAPED_1:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - air | music_disc_wemmbu_thinking_emoji_rival_ice | iron_nugget
+      - air | air | air
+    SHAPED_2:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - iron_nugget | music_disc_wemmbu_thinking_emoji_wemmbu_thinking_emoji | air
+      - air | air | air
 
 music_disc_wemmbu_thinking_emoji_wemmbu_thinking_emoji:
   Id: music_disc_otherside
+  Display: "<light_purple>Music Disc"
   JukeboxPlayable: azali:wemmbu_thinking_emoji
   Options:
     ItemModel: azali:music_disc_wemmbu_thinking_emoji
+  Recipes:
+    SHAPED_1:
+      Type: SHAPED
+      Amount: 1
+      Ingredients:
+      - air | air | air
+      - air | music_disc_wemmbu_thinking_emoji_preparation_for_war | iron_nugget
+      - air | air | air
