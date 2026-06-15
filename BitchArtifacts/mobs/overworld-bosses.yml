@@ -9,6 +9,7 @@ ZombieCommanderHussar:
 
   Skills:
   - remove @child ~onDeath
+  - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload 
   - skill{skill=[
     - modifyDamage{amount=-0.67;action=ADDITIVE_MULTIPLIER}
     - delay 40

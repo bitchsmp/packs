@@ -7,8 +7,11 @@ DashAttack:
   - setskillcd{skill=DashAttack;seconds=2} ?biome{biome=plains}
   - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=64}
   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby}
+  - particle{particle=soul_fire_flame;yoffset=3} @selfLocation
   - delay 15
-  - teleport @target
+  - sudoskill{target=@self;skill=[
+    - teleportto{target=@forward{forward=1;yoffset=1}}
+    ]} @target
   - delay 5
   - damage{amount=40;ignorearmor=true} @PlayersInRadius{r=5}
   - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
