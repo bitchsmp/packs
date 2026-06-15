@@ -8,7 +8,8 @@ DashAttack:
   - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=64}
   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby}
   - particle{particle=soul_fire_flame;yoffset=3} @selfLocation
-  - delay 15
+  - delay 8
+  - delay 8 ?healthpercent{percent=<50%}
   - sudoskill{target=@self;skill=[
     - teleportto{target=@forward{forward=1;yoffset=1}}
     ]} @target
@@ -27,10 +28,13 @@ SummonZombie:
   - message{m="<caster.name><&co> Arise, my minions!"} @PlayersInRadius{r=64}
   - delay 20
   - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self
+  - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self ?biome{biome=plains}
   - delay 20
   - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self
+  - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self ?biome{biome=plains}
   - delay 20
   - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self
+  - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self ?biome{biome=plains}
   - delay 20
   - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self ?playerInRadius{amount=>1;radius=64}
   - delay 20

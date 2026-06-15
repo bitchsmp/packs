@@ -11,15 +11,14 @@ ZombieCommanderHussar:
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload 
   - skill{skill=[
-    - modifyDamage{amount=-0.67;action=ADDITIVE_MULTIPLIER}
+    - modifyDamage{amount=-0.87;action=ADDITIVE_MULTIPLIER}
     - delay 40
     - skill{skill=DashAttack}
-
     ]} ~onDamaged ?DamageAmount{damageamount=>99}
   #
   - skill{skill=[
     - modifyDamage{amount=-0.911;action=ADDITIVE_MULTIPLIER}
-    - delay 40
+    - delay 35
     - skill{skill=DashAttack}
     ]} ~onDamaged ?DamageAmount{damageamount=>199}
   
@@ -28,6 +27,8 @@ ZombieCommanderHussar:
   - remove @child ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
 
   - particle{particle=egg_crack;amount=3;hspread=0.5;vspread=1;yoffset=1} @self ~onTimer:20 ?biome{biome=plains}
+  #
+  - skill{skill=SummonZombie;cooldown=30} ~onDamaged @selfLocation <50%
   #
   - skill{skill=DashAttack} ~onCombat @target 0.2
   - skill{skill=SummonZombie} ~onCombat @selfLocation <50% 0.01
@@ -91,6 +92,7 @@ ZombieHussarMinion:
     PreventTransformation: true
   Skills:
   - remove @child ~onDeath
+  - remove{delay=400} @self ~onSpawnorload 
   - mounttarget @child ~onTimer:1 ?!mounted{}
 ZombieHussarHorse:
   Type: ZOMBIE_HORSE
