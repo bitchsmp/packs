@@ -6,15 +6,34 @@ ZombieCommanderHussar:
   Health: 360
   Faction: zombie_hussar
   Damage: 5
-  Attributes:
 
   Skills:
   - remove @child ~onDeath
-  - attribute{attribute=STEP_HEIGHT;amount=69;} @self ~onSpawnorload
-  - heal{amount=100;overheal=false} @self ~onKillplayer
- # - heal{amount=1;overheal=false} @self ~onTimer:40 ?!incombat
+  - skill{skill=[
+    - modifyDamage{amount=-0.67;action=ADDITIVE_MULTIPLIER}
+    - delay 40
+    - skill{skill=DashAttack}
+
+    ]} ~onDamaged ?DamageAmount{damageamount=>99}
+  #
+  - skill{skill=[
+    - modifyDamage{amount=-0.911;action=ADDITIVE_MULTIPLIER}
+    - delay 40
+    - skill{skill=DashAttack}
+    ]} ~onDamaged ?DamageAmount{damageamount=>199}
+  
+  - attribute{attribute=STEP_HEIGHT;amount=69} @self ~onSpawnorload
+  - heal{amount=100;overheal=false} @self ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
+  - remove @child ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
+
+  - particle{particle=egg_crack;amount=3;hspread=0.5;vspread=1;yoffset=1} @self ~onTimer:20 ?biome{biome=plains}
+  #
   - skill{skill=DashAttack} ~onCombat @target 0.2
   - skill{skill=SummonZombie} ~onCombat @selfLocation <50% 0.01
+  #
+  - skill{skill=DashAttack} ~onDamaged @target 0.8 ?DamageAmount{damageamount=>50}
+  - skill{skill=SummonZombie} ~onDamaged @selfLocation <50% 0.3 ?DamageAmount{damageamount=>50}
+  #
   - skill{skill=DashAttack} ~onTimer:20 @target 0.2
   - skill{skill=SummonZombie} ~onTimer:20 @selfLocation <50% 0.01
   Equipment:
@@ -26,7 +45,7 @@ ZombieCommanderHussar:
 
   Options:
     AlwaysShowName: true
-    MovementSpeed: 0.3
+    MovementSpeed: 0.31
     MaxCombatDistance: 16
     PreventOtherDrops: true
     FollowRange: 64
@@ -37,6 +56,7 @@ ZombieCommanderHussar:
     PreventSunburn: true
     PreventTransformation: true
     Glowing: true
+    DigOutOfGround: true
   BossBar:
     Enabled: true
     Title: "&6Zombie Hussar Commander"
@@ -56,10 +76,10 @@ ZombieHussarMinion:
   Equipment:
   - DIAMOND_HELMET HEAD
   - IRON_SPEAR MAINHAND
-  Damage: 2
+  Damage: 5
   Options:
     AlwaysShowName: true
-    MovementSpeed: 0.287
+    MovementSpeed: 0.295
     PreventOtherDrops: true
     FollowRange: 64
     PreventRandomEquipment: true
@@ -76,7 +96,7 @@ ZombieHussarHorse:
   Faction: zombie_hussar
   Options:
     AlwaysShowName: true
-    MovementSpeed: 0.287
+    MovementSpeed: 0.295
     PreventOtherDrops: true
     FollowRange: 64
     PreventRandomEquipment: true
