@@ -10,17 +10,17 @@ sabre:
   - "<gray><italic>Grassland Domination</gray>"
   - <white>
   - "<gray>When in Plains biome:"
-  - "<blue>+2 Attack Damage"
+  - "<blue>+3 Attack Damage"
   - "<white>"
   - "<gray>When on mounts:"
-  - "<blue>+2 Attack Damage"
+  - "<blue>+3 Attack Damage"
   EquipSlot: MAINHAND
   Skills:
   - aura{forcesync=true;aura=sabre_plain_buff;duration=2;component=[
-    - stat{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE}
+    - stat{stat=ATTACK_DAMAGE;val=3;type=ADDITIVE}
     ]} @self ~onTimer:1 ?biome{biome=plains}
   - aura{forcesync=true;aura=sabre_mount_buff;duration=2;component=[
-    - stat{stat=ATTACK_DAMAGE;val=2;type=ADDITIVE}
+    - stat{stat=ATTACK_DAMAGE;val=3;type=ADDITIVE}
     ]} @self ~onTimer:1 ?mounted
   - particle{particle=egg_crack;amount=3;hspread=0.5;vspread=1;yoffset=1} @self ~onTimer:20 ?biome{biome=plains}
   - particle{particle=egg_crack;amount=3;hspread=0.5;vspread=1;yo=1} @self ~onTimer:20 ?mounted
