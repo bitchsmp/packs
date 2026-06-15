@@ -94,40 +94,7 @@ longsword:
   AttackRange:
     HitboxMargin: 0.36
 # /give @p minecraft:iron_sword[minecraft:attack_range={hitbox_margin: 0.36f}, minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 6.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.4d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "longsword"}}, minecraft:custom_name={italic: 0b, text: "Longsword", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:longsword", minecraft:lore=[{italic: 0b, text: "Makes targets' hitbox bigger", color: "gray"}], minecraft:unbreakable={}]
-masamune:
-  Material: IRON_SWORD
-  Display: '<yellow>Masamune'
-  Attributes:
-  Options:
-    ItemModel: minecraft:masamune
-    FireResistant: true
-    Unbreakable: true
-  Lore:
-  - "<gray>It's long, perhaps too long!"
-  EquipSlot: MAINHAND
-  Skills:
-  AttackRange:
-    Min: 2.0
-    Max: 4.5
-brimstone_claymore:
-# Original name from Blade of Majestica rspack: Brimstone_Claymore
-  Material: iron_sword
-  Display: 'Brimstone Claymore'
-  Options:
-    ItemModel: minecraft:brimstone_claymore
-    FireResistant: true
-    Unbreakable: true
-  Lore:
-  - "<gray>Causes an extra unextinguishable and unblockable burning effect to the target"
-  - "<white>"
-  - "<gray>To increase damage, upgrade to<aqua> Diamond</aqua> using <white>Crafting Table"
-  Skills:
-  - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
-    - damage{a=0.5;preventknockback=true}
-    - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
-    - ignite{ticks=200}
-    ]} @trigger ~onAttack ?!itemRecharging{}
-  - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
+
 
 ###
 weapon_steel_ingot:
