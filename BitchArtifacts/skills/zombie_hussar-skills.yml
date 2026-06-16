@@ -14,9 +14,9 @@ DashAttack:
     - teleportto{target=@forward{forward=1;yoffset=1}}
     ]} @target
   - delay 5
-  - damage{amount=40;ignorearmor=true} @PlayersInRadius{r=5} ?healthpercent{percent=>50%}
-  - damage{amount=32;ignorearmor=true} @PlayersInRadius{r=5} ?healthpercent{percent=<50%}
-  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - damage{amount=40;ignorearmor=true} @EIR{r=6;targetsamefaction=false} ?healthpercent{percent=>50%}
+  - damage{amount=32;ignorearmor=true} @EIR{r=6;targetsamefaction=false} ?healthpercent{percent=<50%}
+  - throw{velocity=10;velocityY=5} @EIR{r=6;targetsamefaction=false}
   - effect:explosion @Self
 
 

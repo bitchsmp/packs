@@ -26,25 +26,30 @@ ZombieCommanderHussar:
   - heal{amount=100;overheal=false} @self ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
   - remove @child ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
 
-  - particle{particle=egg_crack;amount=3;hspread=0.5;vspread=1;yoffset=1} @self ~onTimer:20 ?biome{biome=plains}
+  - particle{particle=egg_crack;amount=6;hspread=0.5;vspread=1;yoffset=1} @self ~onTimer:20 ?biome{biome=plains}
   #
   - skill{skill=SummonZombie;cooldown=30} ~onDamaged @selfLocation <50%
   #
   - skill{skill=DashAttack} ~onCombat @target 0.2
   - skill{skill=SummonZombie} ~onCombat @selfLocation <50% 0.01
   #
-  - skill{skill=DashAttack} ~onDamaged @target 0.8 ?DamageAmount{damageamount=>50}
-  - skill{skill=SummonZombie} ~onDamaged @selfLocation <50% 0.3 ?DamageAmount{damageamount=>50}
+  - skill{skill=DashAttack} ~onDamaged @target 0.8 ?DamageAmount{damageamount=>36}
+  - skill{skill=SummonZombie} ~onDamaged @selfLocation <50% 0.3 ?DamageAmount{damageamount=>36}
   #
-  - skill{skill=DashAttack} ~onTimer:20 @target 0.2
+  - skill{skill=DashAttack} ~onTimer:20 @target 0.1
+  - skill{skill=DashAttack} ~onTimer:20 @target 0.25 ?biome{biome=plains}
   - skill{skill=SummonZombie} ~onTimer:20 @selfLocation <50% 0.01
+  - message{message="<bold><aqua>TIP:</bold><green> Bring more than 1 shield!"} @trigger ~onKillplayer 
+  - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's number of minions scales with the number of players in its 64 blocks radius"} @trigger ~onKillplayer ?playerInRadius{amount=>1;radius=64}
+  - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's "natural habitat" is Plains biome"} @trigger ~onKillplayer ?biome{biome=plains}
+  - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's armor is more effective against high damage attacks"} @trigger ~onKillplayer ?!biome{biome=plains}
   Equipment:
   - NETHERITE_HELMET HEAD
   - NETHERITE_BOOTS FEET
   - sabre MAINHAND
   Drops:
   - sabre 1 1
-  - weapon_steel_ingot 1 1
+  - weapon_steel_ingot 2 1
 
   Options:
     AlwaysShowName: true
