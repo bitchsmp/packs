@@ -43,6 +43,7 @@ ZombieCommanderHussar:
   - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's number of minions scales with the number of players in its 64 blocks radius"} @trigger ~onKillplayer ?playerInRadius{amount=>1;radius=64}
   - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's "natural habitat" is Plains biome"} @trigger ~onKillplayer ?biome{biome=plains}
   - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's armor is more effective against high damage attacks"} @trigger ~onKillplayer ?!biome{biome=plains}
+  - message{m="<bold><gold>Zombie Hussar Commander has been defeated"} @server ~onDeath 
   Equipment:
   - NETHERITE_HELMET HEAD
   - NETHERITE_BOOTS FEET
@@ -50,6 +51,13 @@ ZombieCommanderHussar:
   Drops:
   - sabre 1 1
   - weapon_steel_ingot 2 1
+  - sabre_blueprints 1 1
+  - ENCHANTED_GOLDEN_APPLE 2 1
+  - IRON_INGOT 5 1
+  - IRON_INGOT 4 0.9
+  - IRON_INGOT 3 0.8
+  - IRON_INGOT 2 0.7
+  - IRON_INGOT 1 0.6
 
   Options:
     AlwaysShowName: true
