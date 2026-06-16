@@ -114,3 +114,28 @@ weapon_steel_ingot:
   Options:
     ItemModel: hbm:ingot_gunsteel
     FireResistant: true
+
+sabre_blueprints:
+  Id: paper
+  Display: "<yellow>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Sabre"
+katana_blueprints:
+  Id: paper
+  Display: "<yellow>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Katana"
+wakizashi_blueprints:
+  Id: paper
+  Display: "<yellow>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Wakizashi"
