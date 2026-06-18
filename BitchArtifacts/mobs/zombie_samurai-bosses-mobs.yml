@@ -1,0 +1,77 @@
+
+
+ZombieSamurai:
+  Type: ZOMBIE
+  Display: '&6Zombie Samurai'
+  Health: 500
+  Faction: zombie_samurai
+  Damage: 5
+
+  Skills:
+  - remove @child ~onDeath
+  - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
+  - skill{s=samurai_dash} @target ~onCombat 0.2
+  - skill{s=samurai_dash} @target ~onTimer:20 0.2
+  
+  - message{m="<bold><gold>Zombie Samurai has been defeated"} @server ~onDeath 
+  Equipment:
+  - NETHERITE_HELMET HEAD
+  - NETHERITE_CHESTPLATE CHEST
+  - NETHERITE_LEGGINGS LEGS
+  - NETHERITE_BOOTS FEET
+  - katana MAINHAND
+  - wakizashi OFFHAND
+  Drops:
+  - katana 1 1
+  - wakizashi 1 1
+  - weapon_steel_ingot 2 1
+  - katana_blueprints 1 1
+  - wakizashi_blueprints 1 1
+  - ENCHANTED_GOLDEN_APPLE 5 1
+
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.27
+    MaxCombatDistance: 16
+    PreventOtherDrops: true
+    FollowRange: 64
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    Despawn: NEVER
+    PreventSunburn: true
+    PreventTransformation: true
+    Glowing: true
+    DigOutOfGround: true
+  BossBar:
+    Enabled: true
+    Title: "&6Zombie Samurai"
+    Range: 64
+    Color: GOLD
+    Style: SEGMENTED_6
+
+ZombieSamuraiDashMarkers:
+  Type: ARMOR_STAND
+  Display: '&6Zombie Samurai'
+  Faction: zombie_samurai
+  Options:
+    VisibleByDefault: false
+  #
+    NoAI: true
+    Silent: true
+    CanMove: false
+    Marker: true
+    HasGravity: false
+    Invincible: true
+    Interactable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventTransformation: true
+  Skills:
+  - remove{delay=21} @self ~onSpawnorload
+  - particle{particle=end_rod;yoffset=1;a=20;speed=0.1;delay=16} @self ~onSpawnorload
+  - sound{sound=entity.generic.explode;pitch=1.67;volume=0.35;delay=16}  @self ~onSpawnorload
+  - damage{amount=40;delay=16;ignoreshield=true} @EIR{radius=1.5;targetsamefaction=false} ~onSpawnorload

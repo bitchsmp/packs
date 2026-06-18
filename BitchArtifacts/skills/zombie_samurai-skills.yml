@@ -1,0 +1,22 @@
+samurai_dash:
+  Cooldown: 3
+  Conditions:
+  - targetwithin{d=25}
+  Skills:
+  - stun{stopai=true;gravity=false;ticks=4} @self
+  - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby} @selfLocation
+  - delay 5
+  - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=true
+    ;onendskill=[
+    - teleportto{target=@origin{yoffset=1}} @self
+    - stun{stopai=true;gravity=false;ticks=20} @self
+    - particle{particle=end_rod;yoffset=1;a=1}
+    - summon{a=1;type=ZombieSamuraiDashMarkers}
+    ];ontickskill=[
+    - particle{particle=end_rod;yoffset=1;a=1}
+    - summon{a=1;type=ZombieSamuraiDashMarkers}
+    ]} @target
+
+
+
+
