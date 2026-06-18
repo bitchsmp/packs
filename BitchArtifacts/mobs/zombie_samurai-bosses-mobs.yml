@@ -5,7 +5,7 @@ ZombieSamurai:
   Display: '&6Zombie Samurai'
   Health: 500
   Faction: zombie_samurai
-  Damage: 5
+  Damage: 2
 
   Skills:
   - remove @child ~onDeath
@@ -15,7 +15,11 @@ ZombieSamurai:
   # - skill{s=samurai_dash_wakizashi} ~onCombat 0.4
   # - skill{s=samurai_dash} @target ~onTimer:20 0.2
   #Second phase
-  - skill{skill=samurai_dashhell} ~onCombat
+  # - skill{skill=samurai_dashhell} ~onCombat
+  - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
+  - skill{s=samurai_mace} @target ~onTimer:60
+  - skill{s=samurai_mace} @target ~onSignal:go
+
 
   
   - message{m="<bold><gold>Zombie Samurai has been defeated"} @server ~onDeath 
@@ -87,7 +91,7 @@ ZombieSamuraiDashMarkersQuiet:
   - Skills
   Skills:
   - remove{delay=26} @self ~onSpawnorload
-  - particle{particle=end_rod;yoffset=1;a=5;speed=0.075;delay=21} @self ~onSpawnorload
+  - particle{particle=end_rod;yoffset=1;a=2;speed=1;delay=21} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
   - sound{sound=entity.generic.explode;pitch=1.67;volume=0.05;delay=21}  @self ~onSpawnorload
-  - damage{amount=40;delay=21;ignoreshield=true} @EIR{radius=1.25;targetsamefaction=false} ~onSpawnorload
+  - damage{amount=40;delay=21;ignoreshield=true} @EIR{radius=1;targetsamefaction=false} ~onSpawnorload

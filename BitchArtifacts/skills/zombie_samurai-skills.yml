@@ -26,6 +26,48 @@ samurai_dash_wakizashi:
   Skills:
   - sound{sound=minecraft:item.spear.lunge_3} @self
   - teleport @forward{f=-6;yoffset=1}
+samurai_mace:
+  Cooldown: 3
+  Conditions:
+  - targetWithin{distance=45}
+  Skills:
+  - sound{sound=entity.wind_charge.throw;pitch=0.5}
+  - delay 1
+  - particle{particle=gust_emitter_small;a=1} @selfLocation 
+  - sound{sound=entity.wind_charge.wind_burst;pitch=0.75}
+  - velocity{velocityy=1.5;mode=ADD} @self
+  - delay 20
+  - sound{sound=minecraft:item.spear.lunge_3} @self
+  - leap{velocity=100} @targetLocation{yoffset=10}
+  - delay 5
+  - aura{aura=smash;ontickskill=samurai_smash;ticks=100;interval=1} @self
+  - skill{s=samurai_mace_lunge} @self
+  - delay 5
+  - skill{s=samurai_mace_lunge} @self
+samurai_mace_lunge:
+  Conditions:
+  - targetWithin{distance=24} true
+  - targetWithin{distance=11} false
+  Skills:
+  - sound{sound=minecraft:item.spear.lunge_3} @self
+  - leap{velocity=150} @targetLocation{yoffset=10}
+  - aura{aura=smash;ontickskill=samurai_smash;ticks=100;interval=1} @self
+samurai_smash:
+  Conditions:
+  - directionalvelocity{y=<0} orelsecast samurai_smash_removeaura
+  Skills:
+  - message{message=aura} @PlayersInWorld{}
+  - skill{skill=[
+    - shieldbreak{forcesync=true} @PIR{radius=4.5;limit=1}
+    - removeaura{aura=smash} @self
+    - delay 2
+    - damage{a=20} @PIR{radius=4.5;limit=1}
+    - sound{sound=item.mace.smash_ground_heavy}
+    ]} ?playerInRadius{radius=4.5;amount=>0}
+samurai_smash_removeaura:
+  Skills:
+  - removeaura{aura=smash} ?directionalvelocity{y=0}
+  - removeaura{aura=smash} ?directionalvelocity{y=>0}
 
 samurai_dashhell:
   Cooldown: 1
