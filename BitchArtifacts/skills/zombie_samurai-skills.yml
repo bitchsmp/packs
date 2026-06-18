@@ -27,26 +27,397 @@ samurai_dash_wakizashi:
   - sound{sound=minecraft:item.spear.lunge_3} @self
   - teleport @forward{f=-6;yoffset=1}
 
-# samurai_dashhell:
-#   Cooldown: 10
-#   Conditions:
-#   - targetwithin{d=32}
-#   Skills:
-#   - stun{stopai=true;gravity=false;ticks=4} @self
-#   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby} @selfLocation
-#   - delay 5
-#   - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=true
-#     ;onendskill=[
-#     - teleportto{target=@origin{yoffset=1}} @self
-#     - stun{stopai=true;gravity=false;ticks=20} @self
-#     - particle{particle=end_rod;yoffset=1;a=1}
-#     - summon{a=1;type=ZombieSamuraiDashMarkers}
-#     ];ontickskill=[
-#     - particle{particle=end_rod;yoffset=1;a=1}
-#     - summon{a=1;type=ZombieSamuraiDashMarkers}
-#     ]} @target
-
-
-
-
+samurai_dashhell:
+  Cooldown: 1
+  Conditions:
+  - targetwithin{d=48}
+  Skills:
+  - skill{skill=samurai_dashhell_x;chance=0.4}
+  - skill{skill=samurai_dashhell_y}
+  - skill{skill=samurai_dashhell_z;chance=0.4}
+  - skill{skill=samurai_dashhell_xz1;chance=0.4}
+  - skill{skill=samurai_dashhell_xz2;chance=0.4}
+samurai_dashhell_x:
+  Skills:
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=10}
+  #
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10;y=10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0;y=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=10;y=10}
+samurai_dashhell_xz1:
+  Skills:
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10;z=-10;y=10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9.5;z=-9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9;z=-9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8.5;z=-8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8;z=-8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7.5;z=-7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7;z=-7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6.5;z=-6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6;z=-6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5.5;z=-5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5;z=-5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4.5;z=-4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4;z=-4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3.5;z=-3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3;z=-3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2.5;z=-2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2;z=-2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1.5;z=-1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1;z=-1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-0.5;z=-0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0;z=0;y=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0.5;z=0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1;z=1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1.5;z=1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2;z=2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2.5;z=2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3;z=3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3.5;z=3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4;z=4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4.5;z=4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5;z=5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5.5;z=5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6;z=6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6.5;z=6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7;z=7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7.5;z=7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8;z=8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8.5;z=8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9;z=9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9.5;z=9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=10;z=10;y=10}
+  #
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10;z=-10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9.5;z=-9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9;z=-9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8.5;z=-8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8;z=-8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7.5;z=-7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7;z=-7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6.5;z=-6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6;z=-6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5.5;z=-5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5;z=-5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4.5;z=-4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4;z=-4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3.5;z=-3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3;z=-3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2.5;z=-2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2;z=-2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1.5;z=-1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1;z=-1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-0.5;z=-0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0;z=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0.5;z=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1;z=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1.5;z=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2;z=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2.5;z=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3;z=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3.5;z=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4;z=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4.5;z=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5;z=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5.5;z=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6;z=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6.5;z=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7;z=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7.5;z=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8;z=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8.5;z=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9;z=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9.5;z=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=10;z=10}
+samurai_dashhell_xz2:
+  Skills:
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10;z=10;y=10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9.5;z=9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9;z=9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8.5;z=8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8;z=8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7.5;z=7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7;z=7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6.5;z=6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6;z=6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5.5;z=5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5;z=5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4.5;z=4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4;z=4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3.5;z=3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3;z=3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2.5;z=2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2;z=2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1.5;z=1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1;z=1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-0.5;z=0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0;z=0;y=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0.5;z=-0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1;z=-1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1.5;z=-1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2;z=-2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2.5;z=-2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3;z=-3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3.5;z=-3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4;z=-4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4.5;z=-4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5;z=-5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5.5;z=-5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6;z=-6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6.5;z=-6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7;z=-7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7.5;z=-7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8;z=-8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8.5;z=-8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9;z=-9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9.5;z=-9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=10;z=-10;y=10}
+  # 
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10;z=10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9.5;z=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-9;z=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8.5;z=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-8;z=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7.5;z=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-7;z=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6.5;z=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-6;z=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5.5;z=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-5;z=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4.5;z=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-4;z=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3.5;z=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-3;z=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2.5;z=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-2;z=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1.5;z=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-1;z=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-0.5;z=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0;z=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=0.5;z=-0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1;z=-1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=1.5;z=-1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2;z=-2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=2.5;z=-2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3;z=-3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=3.5;z=-3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4;z=-4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=4.5;z=-4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5;z=-5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=5.5;z=-5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6;z=-6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=6.5;z=-6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7;z=-7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=7.5;z=-7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8;z=-8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=8.5;z=-8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9;z=-9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=9.5;z=-9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=10;z=-10}
+samurai_dashhell_z:
+  Skills:
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=10}
+#
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=-0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=0;y=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=0.5;y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=1;y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=1.5;y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=2;y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=2.5;y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=3;y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=3.5;y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=4;y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=4.5;y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=5;y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=5.5;y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=6;y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=6.5;y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=7;y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=7.5;y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=8;y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=8.5;y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=9;y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=9.5;y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{z=10;y=10}
+samurai_dashhell_y:
+  Skills:
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-10}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=-0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=0}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=0.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=1}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=1.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=2}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=2.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=3}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=3.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=4}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=4.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=5.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=6}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=6.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=7}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=7.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=8}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=8.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=9}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=9.5}
+  - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{y=10}
 

@@ -11,10 +11,11 @@ ZombieSamurai:
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
   #First phase
-  - skill{s=samurai_dash} @target ~onCombat 0.5
-  - skill{s=samurai_dash_wakizashi} ~onCombat 0.4
-  - skill{s=samurai_dash} @target ~onTimer:20 0.2
+  # - skill{s=samurai_dash} @target ~onCombat 0.5
+  # - skill{s=samurai_dash_wakizashi} ~onCombat 0.4
+  # - skill{s=samurai_dash} @target ~onTimer:20 0.2
   #Second phase
+  - skill{skill=samurai_dashhell} ~onCombat
 
   
   - message{m="<bold><gold>Zombie Samurai has been defeated"} @server ~onDeath 
@@ -77,5 +78,16 @@ ZombieSamuraiDashMarkers:
   Skills:
   - remove{delay=21} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=20;speed=0.1;delay=16} @self ~onSpawnorload
+  - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
   - sound{sound=entity.generic.explode;pitch=1.67;volume=0.35;delay=16}  @self ~onSpawnorload
   - damage{amount=40;delay=16;ignoreshield=true} @EIR{radius=1.5;targetsamefaction=false} ~onSpawnorload
+ZombieSamuraiDashMarkersQuiet:
+  Template: ZombieSamuraiDashMarkers
+  Exclude:
+  - Skills
+  Skills:
+  - remove{delay=26} @self ~onSpawnorload
+  - particle{particle=end_rod;yoffset=1;a=5;speed=0.075;delay=21} @self ~onSpawnorload
+  - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
+  - sound{sound=entity.generic.explode;pitch=1.67;volume=0.05;delay=21}  @self ~onSpawnorload
+  - damage{amount=40;delay=21;ignoreshield=true} @EIR{radius=1.25;targetsamefaction=false} ~onSpawnorload
