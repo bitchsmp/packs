@@ -10,8 +10,12 @@ ZombieSamurai:
   Skills:
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
-  - skill{s=samurai_dash} @target ~onCombat 0.2
+  #First phase
+  - skill{s=samurai_dash} @target ~onCombat 0.5
+  - skill{s=samurai_dash_wakizashi} ~onCombat 0.4
   - skill{s=samurai_dash} @target ~onTimer:20 0.2
+  #Second phase
+
   
   - message{m="<bold><gold>Zombie Samurai has been defeated"} @server ~onDeath 
   Equipment:

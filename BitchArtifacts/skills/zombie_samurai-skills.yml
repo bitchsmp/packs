@@ -1,5 +1,5 @@
 samurai_dash:
-  Cooldown: 3
+  Cooldown: 4
   Conditions:
   - targetwithin{d=25}
   Skills:
@@ -8,7 +8,9 @@ samurai_dash:
   - delay 5
   - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=true
     ;onendskill=[
+    - sound{sound=minecraft:item.spear.lunge_3} @self
     - teleportto{target=@origin{yoffset=1}} @self
+
     - stun{stopai=true;gravity=false;ticks=20} @self
     - particle{particle=end_rod;yoffset=1;a=1}
     - summon{a=1;type=ZombieSamuraiDashMarkers}
@@ -16,6 +18,34 @@ samurai_dash:
     - particle{particle=end_rod;yoffset=1;a=1}
     - summon{a=1;type=ZombieSamuraiDashMarkers}
     ]} @target
+samurai_dash_wakizashi:
+  Cooldown: 1
+  Conditions:
+  - skillOnCooldown{skill=samurai_dash}
+  - targetwithin{d=25} true
+  Skills:
+  - sound{sound=minecraft:item.spear.lunge_3} @self
+  - teleport @forward{f=-6;yoffset=1}
+
+# samurai_dashhell:
+#   Cooldown: 10
+#   Conditions:
+#   - targetwithin{d=32}
+#   Skills:
+#   - stun{stopai=true;gravity=false;ticks=4} @self
+#   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby} @selfLocation
+#   - delay 5
+#   - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=true
+#     ;onendskill=[
+#     - teleportto{target=@origin{yoffset=1}} @self
+#     - stun{stopai=true;gravity=false;ticks=20} @self
+#     - particle{particle=end_rod;yoffset=1;a=1}
+#     - summon{a=1;type=ZombieSamuraiDashMarkers}
+#     ];ontickskill=[
+#     - particle{particle=end_rod;yoffset=1;a=1}
+#     - summon{a=1;type=ZombieSamuraiDashMarkers}
+#     ]} @target
+
 
 
 
