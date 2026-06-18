@@ -3,22 +3,27 @@
 ZombieSamurai:
   Type: ZOMBIE
   Display: '&6Zombie Samurai'
-  Health: 500
+  Health: 200
   Faction: zombie_samurai
   Damage: 2
 
   Skills:
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
+  - equip{items=mace HAND} @self ~onTimer:1 ?hasaura{aura=smash} 
+  - equip{items=katana OFFHAND} @self ~onTimer:1 ?hasaura{aura=smash} 
+ # - heal{amount=50} @self ~onAttack
   #First phase
-  # - skill{s=samurai_dash} @target ~onCombat 0.5
-  # - skill{s=samurai_dash_wakizashi} ~onCombat 0.4
-  # - skill{s=samurai_dash} @target ~onTimer:20 0.2
+  - skill{s=samurai_dash} @target ~onCombat 0.5 >50%
+  - skill{s=samurai_dash_wakizashi} ~onCombat 0.4 >50%
+  - skill{s=samurai_dash} @target ~onTimer:20 0.2 >50%
   #Second phase
-  # - skill{skill=samurai_dashhell} ~onCombat
-  - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
-  - skill{s=samurai_mace} @target ~onTimer:60
+  # - skill{skill=samurai_dashhell} ~
+  - skill{s=samurai_mace} @target ~onTimer:60 <50%
+ # - skill{s=samurai_dashhell_ez} @pir{radius=50} ~onTimer:40 <50%
   - skill{s=samurai_mace} @target ~onSignal:go
+  - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
+
 
 
   
@@ -81,7 +86,7 @@ ZombieSamuraiDashMarkers:
     PreventTransformation: true
   Skills:
   - remove{delay=21} @self ~onSpawnorload
-  - particle{particle=end_rod;yoffset=1;a=20;speed=0.1;delay=16} @self ~onSpawnorload
+  - particle{particle=end_rod;yoffset=1;a=15;speed=1;delay=16} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
   - sound{sound=entity.generic.explode;pitch=1.67;volume=0.35;delay=16}  @self ~onSpawnorload
   - damage{amount=40;delay=16;ignoreshield=true} @EIR{radius=1.5;targetsamefaction=false} ~onSpawnorload
@@ -94,4 +99,4 @@ ZombieSamuraiDashMarkersQuiet:
   - particle{particle=end_rod;yoffset=1;a=2;speed=1;delay=21} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
   - sound{sound=entity.generic.explode;pitch=1.67;volume=0.05;delay=21}  @self ~onSpawnorload
-  - damage{amount=40;delay=21;ignoreshield=true} @EIR{radius=1;targetsamefaction=false} ~onSpawnorload
+  - damage{amount=40;delay=21;ignoreshield=true} @EIR{radius=0.95;targetsamefaction=false} ~onSpawnorload
