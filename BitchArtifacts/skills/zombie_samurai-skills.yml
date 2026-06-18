@@ -45,8 +45,8 @@ samurai_mace:
   #
   - delay 5
   - skill{s=samurai_mace_lunge} @self
-  - delay 5
-  - skill{s=samurai_mace_lunge} @self
+  - delay 5 >25%
+  - skill{s=samurai_mace_lunge} @self >25%
 
 samurai_mace_lunge:
   Conditions:
@@ -69,7 +69,7 @@ samurai_smash:
     - shieldbreak{forcesync=true} @PIR{radius=4.5;limit=1}
     - removeaura{aura=smash} @self
     - delay 2
-    - damage{a=20} @PIR{radius=4.5;limit=1}
+    - damage{a=20;triggerskills=true} @PIR{radius=4.5;limit=1}
     - sound{sound=item.mace.smash_ground_heavy}
     ]} ?playerInRadius{radius=4.5;amount=>0}
 samurai_smash_removeaura:

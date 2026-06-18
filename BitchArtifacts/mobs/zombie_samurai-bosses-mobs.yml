@@ -5,16 +5,28 @@ ZombieSamurai:
   Display: '&6Zombie Samurai'
   Health: 200
   Faction: zombie_samurai
-  Damage: 2
+  Damage: 1
 
   Skills:
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
+  - skill{skill=[
+    - modifyDamage{amount=-0.87;action=ADDITIVE_MULTIPLIER}
+    - delay 40
+    - skill{s=samurai_dashhell}
+    ]} ~onDamaged ?DamageAmount{damageamount=>99}
+  - skill{skill=[
+    - modifyDamage{amount=-0.911;action=ADDITIVE_MULTIPLIER}
+    - delay 35
+    - skill{s=samurai_dashhell}
+    ]} ~onDamaged ?DamageAmount{damageamount=>199}
+  - attribute{attribute=STEP_HEIGHT;amount=69} @self ~onSpawnorload
+  - heal{amount=25;overheal=false} @self ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
   - equip{items=katana HAND} @self ~onTimer:20 >50%
   - equip{items=wakizashi HAND} @self ~onTimer:20 >50%
-  - equip{items=mace HAND} @self ~onTimer:1 ?hasaura{aura=smash} <50%
-  - equip{items=katana OFFHAND} @self ~onTimer:1 ?hasaura{aura=smash} <50%
-  - heal{amount=50} @self ~onAttack
+  - equip{items=katana HAND} @self ~onTimer:1 ?hasaura{aura=smash} <50%
+  - equip{items=mace OFFHAND} @self ~onTimer:1 ?hasaura{aura=smash} <50%
+  - heal{amount=20} @self ~onAttack
   #First phase
   - skill{s=samurai_dash} @target ~onCombat 0.5 >50%
   - skill{s=samurai_dash_wakizashi} ~onCombat 0.4 >50%
@@ -25,7 +37,8 @@ ZombieSamurai:
   - skill{s=samurai_dashhell_ez} @pir{radius=50} ~onTimer:40 <25%
   - skill{s=samurai_mace} @target ~onSignal:go
   - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
-
+  - command{command="execute as <trigger.name> run function dueris:wakizashi"} @trigger{limit=1;target=player} ~onDeath
+  - command{command="execute as <trigger.name> run function dueris:katana"} @trigger{limit=1;target=player} ~onDeath
 
 
   
@@ -38,8 +51,6 @@ ZombieSamurai:
   - katana MAINHAND
   - wakizashi OFFHAND
   Drops:
-  - katana 1 1
-  - wakizashi 1 1
   - weapon_steel_ingot 2 1
   - katana_blueprints 1 1
   - wakizashi_blueprints 1 1
@@ -48,7 +59,7 @@ ZombieSamurai:
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.27
-    MaxCombatDistance: 16
+    MaxCombatDistance: 32
     PreventOtherDrops: true
     FollowRange: 64
     PreventRandomEquipment: true
@@ -87,18 +98,20 @@ ZombieSamuraiDashMarkers:
     PreventSunburn: true
     PreventTransformation: true
   Skills:
+  - heal{a=20} @parent ~onHit
   - remove{delay=21} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=15;speed=1;delay=16} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
   - sound{sound=entity.generic.explode;pitch=1.67;volume=0.35;delay=16}  @self ~onSpawnorload
-  - damage{amount=40;delay=16;ignoreshield=true} @EIR{radius=1.5;targetsamefaction=false} ~onSpawnorload
+  - damage{amount=40;delay=16;ignoreshield=true;triggerskills=true} @EIR{radius=1.5;targetsamefaction=false} ~onSpawnorload
 ZombieSamuraiDashMarkersQuiet:
   Template: ZombieSamuraiDashMarkers
   Exclude:
   - Skills
   Skills:
+  - heal{a=20} @parent ~onHit
   - remove{delay=26} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=2;speed=1;delay=21} @self ~onSpawnorload
   - particle{particle=end_rod;yoffset=1;a=1} @self ~onSpawnorload
   - sound{sound=entity.generic.explode;pitch=1.67;volume=0.05;delay=21}  @self ~onSpawnorload
-  - damage{amount=40;delay=21;ignoreshield=true} @EIR{radius=0.95;targetsamefaction=false} ~onSpawnorload
+  - damage{amount=40;delay=21;ignoreshield=true;triggerskills=true} @EIR{radius=0.95;targetsamefaction=false} ~onSpawnorload
