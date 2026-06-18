@@ -52,7 +52,8 @@ ZombieCommanderHussar:
   - sabre 1 1
   - weapon_steel_ingot 2 1
   - sabre_blueprints 1 1
-  - ENCHANTED_GOLDEN_APPLE 2 1
+  - longsword_blueprints 1 1
+  - ENCHANTED_GOLDEN_APPLE 5 1
   - IRON_INGOT 5 1
   - IRON_INGOT 4 0.9
   - IRON_INGOT 3 0.8
