@@ -3,7 +3,7 @@ samurai_dash:
   Conditions:
   - targetwithin{d=25}
   Skills:
-  - skill{skill=samurai_dashhell}
+  - skill{skill=samurai_dashhell} <75%
   - stun{stopai=true;gravity=false;ticks=4} @self
   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby} @selfLocation
   - delay 5

@@ -10,9 +10,11 @@ ZombieSamurai:
   Skills:
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
-  - equip{items=mace HAND} @self ~onTimer:1 ?hasaura{aura=smash} 
-  - equip{items=katana OFFHAND} @self ~onTimer:1 ?hasaura{aura=smash} 
- # - heal{amount=50} @self ~onAttack
+  - equip{items=katana HAND} @self ~onTimer:20 >50%
+  - equip{items=wakizashi HAND} @self ~onTimer:20 >50%
+  - equip{items=mace HAND} @self ~onTimer:1 ?hasaura{aura=smash} <50%
+  - equip{items=katana OFFHAND} @self ~onTimer:1 ?hasaura{aura=smash} <50%
+  - heal{amount=50} @self ~onAttack
   #First phase
   - skill{s=samurai_dash} @target ~onCombat 0.5 >50%
   - skill{s=samurai_dash_wakizashi} ~onCombat 0.4 >50%
@@ -20,7 +22,7 @@ ZombieSamurai:
   #Second phase
   # - skill{skill=samurai_dashhell} ~
   - skill{s=samurai_mace} @target ~onTimer:60 <50%
- # - skill{s=samurai_dashhell_ez} @pir{radius=50} ~onTimer:40 <50%
+  - skill{s=samurai_dashhell_ez} @pir{radius=50} ~onTimer:40 <25%
   - skill{s=samurai_mace} @target ~onSignal:go
   - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
 
