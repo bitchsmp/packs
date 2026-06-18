@@ -139,3 +139,11 @@ wakizashi_blueprints:
     FireResistant: true
   Lore:
   - "<gray>Wakizashi"
+longsword_blueprints:
+  Id: paper
+  Display: "<yellow>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Longsword"
