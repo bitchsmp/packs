@@ -7,16 +7,16 @@ samurai_dash:
   - stun{stopai=true;gravity=false;ticks=4} @self
   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby} @selfLocation
   - delay 5
-  - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=true
+  - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=false
     ;onendskill=[
     - sound{sound=minecraft:item.spear.lunge_3} @self
     - teleportto{target=@origin{yoffset=1}} @self
 
     - stun{stopai=true;gravity=false;ticks=20} @self
-    - particle{particle=end_rod;yoffset=1;a=1}
+    - particle{particle=wax_off;yoffset=1;a=1}
     - summon{a=1;type=ZombieSamuraiDashMarkers}
     ];ontickskill=[
-    - particle{particle=end_rod;yoffset=1;a=1}
+    - particle{particle=wax_off;yoffset=1;a=1}
     - summon{a=1;type=ZombieSamuraiDashMarkers}
     ]} @target
 samurai_dash_wakizashi:
@@ -44,8 +44,8 @@ samurai_mace:
   - aura{aura=smash;ontickskill=samurai_mace_attack;ticks=160;interval=1} @self
   #
   - delay 5
-  - skill{s=samurai_mace_lunge} @self
-  - delay 5 >25%
+  - skill{s=samurai_mace_lunge} @self >25%
+  - delay 5 
   - skill{s=samurai_mace_lunge} @self >25%
 
 samurai_mace_lunge:
@@ -69,7 +69,7 @@ samurai_smash:
     - shieldbreak{forcesync=true} @PIR{radius=4.5;limit=1}
     - removeaura{aura=smash} @self
     - delay 2
-    - damage{a=20;triggerskills=true} @PIR{radius=4.5;limit=1}
+    - damage{a=20;triggerskills=true;tags=SMASH;ignoreshield=true} @PIR{radius=4.5;limit=1}
     - sound{sound=item.mace.smash_ground_heavy}
     ]} ?playerInRadius{radius=4.5;amount=>0}
 samurai_smash_removeaura:
@@ -84,20 +84,20 @@ samurai_dashhell:
   Conditions:
   - targetwithin{d=48}
   Skills:
-  - skill{skill=samurai_dashhell_x;chance=0.6}
-  - skill{skill=samurai_dashhell_y}
-  - skill{skill=samurai_dashhell_z;chance=0.6}
-  - skill{skill=samurai_dashhell_xz1;chance=0.6}
-  - skill{skill=samurai_dashhell_xz2;chance=0.6}
-
+  - skill{s=[
+    - skill{s=samurai_dashhell_x}
+    - skill{s=samurai_dashhell_z}
+    - skill{s=samurai_dashhell_y}
+    ]} ?chance{chance=0.5;onfailskill=[
+      - skill{s=[
+        - skill{s=samurai_dashhell_xz1}
+        - skill{s=samurai_dashhell_xz2}
+        - skill{s=samurai_dashhell_y}
+        ]}]}
 samurai_dashhell_ez:
 
   Skills:
-  - skill{skill=samurai_dashhell_x;chance=0.2}
-  - skill{skill=samurai_dashhell_y;chance=0.4}
-  - skill{skill=samurai_dashhell_z;chance=0.2}
-  - skill{skill=samurai_dashhell_xz1;chance=0.2}
-  - skill{skill=samurai_dashhell_xz2;chance=0.2}
+  - randomskill{skills=samurai_dashhell_x,samurai_dashhell_z,samurai_dashhell_xz1,samurai_dashhell_xz2}
 samurai_dashhell_x:
   Skills:
   - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10}
