@@ -37,8 +37,8 @@ ZombieSamurai:
   - skill{s=samurai_dashhell_ez} @pir{radius=50} ~onTimer:40 <25%
   - skill{s=samurai_mace} @target ~onSignal:go
   - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
-  - command{command="execute as <trigger.name> run function dueris:wakizashi"} @trigger{limit=1;target=player} ~onDeath
-  - command{command="execute as <trigger.name> run function dueris:katana"} @trigger{limit=1;target=player} ~onDeath
+  - command{command="execute at <caster.uuid> run function dueris:wakizashi";asop=true} @self ~onDeath
+  - command{command="execute at <caster.uuid> run function dueris:katana";asop=true} @self ~onDeath
 
 
   
@@ -54,7 +54,7 @@ ZombieSamurai:
   - weapon_steel_ingot 2 1
   - katana_blueprints 1 1
   - wakizashi_blueprints 1 1
-  - ENCHANTED_GOLDEN_APPLE 5 1
+  - ENCHANTED_GOLDEN_APPLE 10 1
 
   Options:
     AlwaysShowName: true
