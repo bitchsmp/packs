@@ -40,6 +40,7 @@ ZombieCommanderHussar:
   - skill{skill=DashAttack} ~onTimer:20 @target 0.25 ?biome{biome=plains}
   - skill{skill=SummonZombie} ~onTimer:20 @selfLocation <50% 0.01
   - message{message="<bold><aqua>TIP:</bold><green> Bring more than 1 shield!"} @trigger ~onKillplayer 
+  - message{message="<bold><aqua>TIP:</bold><green> Carefully watch its attack pattern";chance=0.3} @trigger ~onKillplayer 
   - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's number of minions scales with the number of players in its 64 blocks radius"} @trigger ~onKillplayer ?playerInRadius{amount=>1;radius=64}
   - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's "natural habitat" is Plains biome"} @trigger ~onKillplayer ?biome{biome=plains}
   - message{message="<bold><aqua>TIP:</bold><green> Hussar Commander's armor is more effective against high damage attacks"} @trigger ~onKillplayer ?!biome{biome=plains}
