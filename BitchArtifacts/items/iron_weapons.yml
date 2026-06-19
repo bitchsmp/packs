@@ -60,7 +60,7 @@ katana:
     - lunge{velocity=2;velocityY=0} @forward{forward=16}
     - swingarm{}
     - setItemGroupCooldown{key=katana;ticks=60}
-    ]} @Self ~onUse ?!itemGroupOnCooldown{group=katana}
+    ]} @Self ~onUse ?!itemGroupOnCooldown{group=katana} ?!crouching 
 # /give @p minecraft:iron_sword[minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 6.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.4d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "katana"}}, minecraft:custom_name={italic: 0b, text: "Katana", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:katana", minecraft:lore=[{italic: 0b, text: "Right-click: Lunges forward", color: "gray"}], minecraft:unbreakable={},minecraft:use_cooldown={cooldown_group: "minecraft:katana", seconds: 3.0f}]
 wakizashi:
   Material: IRON_SWORD
@@ -85,7 +85,7 @@ wakizashi:
     - lunge{velocity=2.36;velocityY=0} @forward{forward=-16}
     - swingarm{}
     - setItemGroupCooldown{key=wakizashi;ticks=60}
-    ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi}
+    ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi} ?!crouching{}
 # /give @p minecraft:iron_sword[minecraft:attribute_modifiers=[{type: "minecraft:attack_damage", operation: "add_value", amount: 5.0d, id: "minecraft:base_attack_damage", slot: "mainhand"}, {type: "minecraft:attack_speed", operation: "add_value", amount: -2.0d, id: "minecraft:base_attack_speed", slot: "mainhand"}], minecraft:custom_data={PublicBukkitValues: {"mythicmobs:type": "wakizashi"}}, minecraft:custom_name={italic: 0b, text: "Wakizashi", color: "yellow"}, minecraft:damage_resistant={types: "#minecraft:is_fire"}, minecraft:item_model="minecraft:wakizashi", minecraft:lore=[{italic: 0b, text: "Right-click: Lunges backward", color: "gray"}], minecraft:unbreakable={},minecraft:use_cooldown={cooldown_group: "minecraft:wakizashi", seconds: 3.0f}]
 longsword:
   Material: IRON_SWORD
