@@ -1,0 +1,85 @@
+methamphetamine_enhanced:
+  Id: sugar
+  Display: "Enhanced Methamphetamine"
+  Lore:
+  - "<white>"
+  - "<light_purple><italic>The classic."
+  Options:
+    StackSize: 1
+    ItemModel: dueris:methamphetamine_enhanced
+  Consumable:
+    Animation: EAT
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=300;level=9;chance=1}
+    - potion{type=BLINDNESS;duration=200;level=0;chance=1}
+  Potion:
+    Effects:
+    - strength{duration=3000;level=0;ambient=false;icon=true;particles=true}
+    - speed{duration=3000;level=0;ambient=false;icon=true;particles=true}
+    - absorption{duration=3000;level=0;ambient=false;icon=true;particles=true}
+  Skills:
+  - title{title="";fadein=40;fadeout=40;duration=40;cooldown=4} @self ~onConsume
+methamphetamine_pure:
+  Id: sugar
+  Display: "Blue Sky"
+  Lore:
+  - "<white>"
+  - "<light_purple><italic>Tight, tight, tight!"
+  Options:
+    StackSize: 1
+    ItemModel: hbm:powder_schrabidium
+    Glint: true
+  Consumable:
+    Animation: EAT
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=400;level=9;chance=1}
+    - potion{type=BLINDNESS;duration=300;level=0;chance=1}
+  Potion:
+    Effects:
+    - strength{duration=6000;level=0;ambient=false;icon=true;particles=true}
+    - speed{duration=6000;level=0;ambient=false;icon=true;particles=true}
+    - absorption{duration=6000;level=1;ambient=false;icon=true;particles=true}
+  Skills:
+  - title{title="";fadein=40;fadeout=40;duration=100;cooldown=7} @self ~onConsume
+blue_solution:
+  Id: potion
+  Display: "Bottle of Blue Solution"
+  Lore:
+  Options:
+    Color: 27,171,232
+    StackSize: 1
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=300;level=9}
+    - potion{type=BLINDNESS;duration=200;level=0}
+
+blue_solution:
+  Id: potion
+  Display: "Bottle of Blue Solution"
+  Lore:
+  - "<gray>Put this on a campfire or something."
+  Options:
+    Color: 27,171,232
+    StackSize: 1
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=300;level=9}
+    - potion{type=BLINDNESS;duration=200;level=0}
+
+blue_residue:
+  Id: paper
+  Display: "Blue Residue"
+  Lore:
+  Options:
+    ItemModel: hbm:powder_schrabidate
+  Recipes:
+    CAMPFIRE:
+      Type: CAMPFIRE
+      CookingTime: 2000
+      Ingredient: blue_solution
