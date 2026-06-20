@@ -27,6 +27,12 @@ methamphetamine_enhanced:
     - absorption{duration=3000;level=0;ambient=false;icon=true;particles=true}
   Skills:
   - title{title="";fadein=40;fadeout=40;duration=40;cooldown=4} @self ~onConsume
+  Recipes:
+    CAMPFIRE:
+      Type: CAMPFIRE
+      CookingTime: 2000
+      Ingredient: methamphetamine_enhanced_solution
+
 methamphetamine_pure:
   Id: sugar
   Display: "Blue Sky"
@@ -49,7 +55,11 @@ methamphetamine_pure:
     - absorption{duration=6000;level=1;ambient=false;icon=true;particles=true}
   Skills:
   - title{title="";fadein=40;fadeout=40;duration=100;cooldown=7} @self ~onConsume
-
+  Recipes:
+    CAMPFIRE:
+      Type: CAMPFIRE
+      CookingTime: 2000
+      Ingredient: methamphetamine_pure_solution
 blue_solution:
   Id: potion
   Display: "Bottle of Blue Solution"
@@ -65,7 +75,51 @@ blue_solution:
     ConsumeEffects:
     - potion{type=NAUSEA;duration=300;level=9}
     - potion{type=BLINDNESS;duration=200;level=0}
-
+methamphetamine_solution:
+  Id: potion
+  Display: "Bottle of Methamphetamine Solution"
+  Lore:
+  - "<gray>Put this on a campfire or something."
+  Options:
+    Color: 34,193,246
+    StackSize: 1
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=300;level=9}
+    - potion{type=BLINDNESS;duration=200;level=0}
+methamphetamine_enhanced_solution:
+  Id: potion
+  Display: "Bottle of Methamphetamine Enhanced Solution"
+  Lore:
+  - "<gray>Put this on a campfire or something."
+  Options:
+    Color: 34,211,246
+    StackSize: 1
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=600;level=9}
+    - potion{type=BLINDNESS;duration=400;level=0}
+methamphetamine_pure_solution:
+  Id: potion
+  Display: "Bottle of 99.1% Methamphetamine Solution"
+  Lore:
+  - "<gray>Put this on a campfire or something."
+  Options:
+    Color: 0,234,255
+    StackSize: 1
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+    ConsumeEffects:
+    - potion{type=NAUSEA;duration=1000;level=9}
+    - potion{type=BLINDNESS;duration=500;level=0}
 blue_residue:
   Id: paper
   Display: "Blue Residue"
