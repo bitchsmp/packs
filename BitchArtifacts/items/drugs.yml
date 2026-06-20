@@ -43,6 +43,11 @@ methamphetamine:
     - strength{duration=1200;level=0;ambient=false;icon=true;particles=true}
     - speed{duration=1200;level=0;ambient=false;icon=true;particles=true}
     - absorption{duration=1200;level=0;ambient=false;icon=true;particles=true}
+  Recipes:
+    CAMPFIRE:
+      Type: CAMPFIRE
+      CookingTime: 2000
+      Ingredient: methamphetamine_solution
 
 yaba:
   Id: sugar
