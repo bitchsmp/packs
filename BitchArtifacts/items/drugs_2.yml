@@ -1,3 +1,11 @@
+#  ███████████            ████                                          █████
+# ░░███░░░░░███          ░░███                                         ░░███ 
+#  ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+#  ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+#  ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+#  ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+#  █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+# ░░░░░   ░░░░░  
 methamphetamine_enhanced:
   Id: sugar
   Display: "Enhanced Methamphetamine"
@@ -41,20 +49,6 @@ methamphetamine_pure:
     - absorption{duration=6000;level=1;ambient=false;icon=true;particles=true}
   Skills:
   - title{title="";fadein=40;fadeout=40;duration=100;cooldown=7} @self ~onConsume
-blue_solution:
-  Id: potion
-  Display: "Bottle of Blue Solution"
-  Lore:
-  Options:
-    Color: 27,171,232
-    StackSize: 1
-  Consumable:
-    Animation: DRINK
-    HasParticles: false
-    Sound: entity.generic.drink
-    ConsumeEffects:
-    - potion{type=NAUSEA;duration=300;level=9}
-    - potion{type=BLINDNESS;duration=200;level=0}
 
 blue_solution:
   Id: potion
