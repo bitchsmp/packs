@@ -13,7 +13,7 @@ heart_of_darkness_ascended:
   - "<dark_purple>When Applied:"
   - "<light_purple>+20.0 Health"
   Skills:
-  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true;components=[
     - stat{stat=HEALTH;value=20;type=ADD}
     ]} @self ~onUse
   - sound{sound=minecraft:ui.button.click;pitch=1.5} @self ~onUse
