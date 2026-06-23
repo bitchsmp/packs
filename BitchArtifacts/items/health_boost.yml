@@ -22,7 +22,7 @@ heart_piece:
   - "<dark_purple>When Applied:"
   - "<light_purple>+2.0 Health"
   Skills:
-  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true;components=[
     - stat{stat=HEALTH;value=2;type=ADD}
     ]} @self ~onUse
   - sound{sound=minecraft:ui.button.click;pitch=1} @self ~onUse
@@ -39,7 +39,7 @@ heart_container:
   - "<dark_purple>When Applied:"
   - "<light_purple>+5.0 Health"
   Skills:
-  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true;components=[
     - stat{stat=HEALTH;value=5;type=ADD}
     ]} @self ~onUse
   - sound{sound=minecraft:ui.button.click;pitch=1.1} @self ~onUse
@@ -56,7 +56,7 @@ heart_booster:
   - "<dark_purple>When Applied:"
   - "<light_purple>+8.0 Health"
   Skills:
-  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true;components=[
     - stat{stat=HEALTH;value=8;type=ADD}
     ]} @self ~onUse
   - sound{sound=minecraft:ui.button.click;pitch=1.2} @self ~onUse
@@ -73,7 +73,7 @@ black_diamond:
   - "<dark_purple>When Applied:"
   - "<light_purple>+8.0 Health"
   Skills:
-  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true;components=[
     - stat{stat=HEALTH;value=8;type=ADD}
     ]} @self ~onUse
   - sound{sound=minecraft:ui.button.click;pitch=1.2} @self ~onUse
@@ -90,7 +90,7 @@ heart_of_darkness:
   - "<dark_purple>When Applied:"
   - "<light_purple>+10.0 Health"
   Skills:
-  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true;components=[
+  - aura{aura=heart_piece;ticks=2147483647;cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true;components=[
     - stat{stat=HEALTH;value=10;type=ADD}
     ]} @self ~onUse
   - sound{sound=minecraft:ui.button.click;pitch=1.35} @self ~onUse

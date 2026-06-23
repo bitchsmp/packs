@@ -25,7 +25,7 @@ shield_infusion:
     ItemModel: hbm:flask_shield
     StackSize: 1
   Skills:
-  - aura{aura=shield_infused;ticks=120000;showbartimer=true;bartimerdisplay="Super Effect:<yellow> Shield Infused";bartimercolor=YELLOW;cancelonteleport=false;cancelonchangeworld=false;cancelonquit=false;onstartskill=[
+  - aura{aura=shield_infused;ticks=120000;showbartimer=true;bartimerdisplay="Super Effect:<yellow> Shield Infused";bartimercolor=YELLOW;cancelonteleport=false;cancelondeath=false;cancelonchangeworld=false;cancelonquit=false;onstartskill=[
     - potion{type=ABSORPTION;level=9;duration=2400}
     - sound{sound=block.bell.resonate;pitch=2.0}
     ];interval=2400;ontickskill=[

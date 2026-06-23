@@ -16,7 +16,7 @@ royal_wax:
     - onattack{onattackskill=[
       - potion{type=REGENERATION;level=1;duration=100} @self
       ]};
-    ];ticks=6000;showbartimer=true;bartimerdisplay="Super Effect:<#ffedac> Regenerative Waxed";aura=regenerative_wax;bartimercolor=WHITE;cancelonquit=false} ~onConsume @self
+    ];ticks=6000;showbartimer=true;bartimerdisplay="Super Effect:<#ffedac> Regenerative Waxed";aura=regenerative_wax;bartimercolor=WHITE;cancelonquit=false;cancelondeath=false} ~onConsume @self
 
   Consumable:
     Animation: EAT

@@ -28,7 +28,7 @@ toxic_soapy_water:
     - ondamaged{ondamagedskill=[
       - potion{type=POISON;duration=100;level=1} @trigger
       ]}
-    ];ticks=9600;aura=toxic;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic I";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
+    ];ticks=9600;aura=toxic;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic I";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onConsume
 
 toxic_soapy_water_horse:
   Id: paper
@@ -51,4 +51,4 @@ toxic_soapy_water_horse:
     - ondamaged{ondamagedskill=[
       - potion{type=WITHER;duration=100;level=1} @trigger
       ]}
-    ];ticks=9600;aura=toxic;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic II";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=true;overwriteall=true} @self ~onConsume
+    ];ticks=9600;aura=toxic;showbartimer=true;bartimerdisplay="Super Effect:<green> Toxic II";cancelonquit=false;cancelonchangeworld=false;cancelonteleport=false;cancelondeath=false;overwriteall=true} @self ~onConsume

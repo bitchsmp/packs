@@ -20,6 +20,6 @@ v1:
     - onattack{onattackskill=[
       - particle{particle=block;material=redstone_block;yoffset=1.2;speed=0.02;vspread=0.5;hspread=0.2;amount=40} @trigger
       ]}
-    ];showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL";aura=v1;ticks=1200;cancelonquit=false} @self ~onConsume
+    ];showbartimer=true;bartimerdisplay="Super Effect:<dark_red> BLOOD IS FUEL";aura=v1;ticks=1200;cancelonquit=false;cancelondeath=false} @self ~onConsume
 
 

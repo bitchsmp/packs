@@ -26,6 +26,7 @@ spider_milk:
   - removeaura{aura=toxic} @self ~onConsume
   - removeaura{aura=v1} @self ~onConsume
   - removeaura{aura=shield_infused} @self ~onConsume
+  - removeaura{aura=regenerative_wax} @self ~onConsume
   UseRemainder: glass_bottle
   Recipes:
     SHAPELESS:
