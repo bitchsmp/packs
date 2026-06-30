@@ -10,7 +10,7 @@ holy_water_ontick:
   - effect:particle{particle=water_splash;spread=0.3}
 holy_water_onhit:
   Skills:
-  - projectile{bulletType=BLOCK;material=ANVIL;syo=20;velocity=30;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=holy_water_on_anvil_hit;onhitblockskill=holy_water_on_anvil_hitblock;deathdelay=100;hitself=true}
+  - projectile{bulletType=BLOCK;material=ANVIL;syo=30;velocity=30;sfo=0;hnp=true;hr=0.4;vr=0.4;onhitskill=holy_water_on_anvil_hit;onhitblockskill=holy_water_on_anvil_hitblock;deathdelay=100;hitself=true}
 holy_water_on_anvil_hit:
   Skills:
   - damage{amount=120}
