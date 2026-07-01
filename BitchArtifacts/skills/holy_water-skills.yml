@@ -4,7 +4,7 @@ holy_water_projectile:
   Skills:
   - projectile{bulletType=BLOCK;material=AIR;syo=1.62;velocity=20;sfo=0;hnp=true;hr=0.7;vr=0.7;onhitskill=holy_water_onhit;onhitblockskill=holy_water_onhit;drawhitbox=false;gravity=1;ontickskill=holy_water_ontick} @forward{yoffset=1.62}
   - consumeuseddurability{amount=1}
-  - setItemGroupCooldown{key=minecraft:holy_water}
+  - setItemGroupCooldown{key=minecraft:holy_water;ticks=100}
 holy_water_ontick:
   Skills:
   - effect:particle{particle=water_splash;spread=0.3}
