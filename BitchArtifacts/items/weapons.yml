@@ -63,8 +63,9 @@ alternate_crossbow:
   Options:
     ItemModel: dueris:alternate_crossbow
   Lore:
-  - <gray>Turns shooted projectile into hitscans</gray>
-
+  - <gray>Turns shooted projectile into powerful hitscans</gray>
+  - "<gray>Damage scales with Piercing enchantment level, up to 30 damage</gray>"
+  - "<aqua><italic>Max Range: 1024 Blocks</aqua>"
   Skills:
   - variableSet{value=20;type=INTEGER;name=caster.alternate_crossbow_heat} ~onTimer:1 @self ?!varset{name=caster.alternate_crossbow_heat}
   - aura{aura=alternate_crossbow_heat_aura;ticks=600;interval=10;ontickskill=alternate_crossbow_heat_tick} @self ~onTimer:1

@@ -10,7 +10,7 @@ alternate_crossbow_onShoot:
     - skill{s=alternate_crossbow_shoot_piercing4} ?hasEnchant{type=piercing;level=4}
     - skill{s=alternate_crossbow_shoot_multishot} ?hasEnchant{type=multishot}
     - skill{s=alternate_crossbow_shoot_recoil}
-    - sound{sound=ultrakill:altrevolvershoot1d;radius=16;volume=0.25;soundcategory=PLAYERS}
+    - sound{sound=ultrakill:altrevolvershoot1d;radius=64;volume=0.25;soundcategory=PLAYERS;audience=nearby}
 alternate_crossbow_shoot_recoil:
   Conditions:
   - hasEnchant{type=multishot} castinstead alternate_crossbow_shoot_recoil_multishot
@@ -35,45 +35,53 @@ alternate_crossbow_shoot_recoil_multishot:
   - recoil{recoil=1;sprinting=1.5;pitch=-22to-30;yaw=-35to35} @self ?varrange{name=caster.alternate_crossbow_heat;value=>500}
 alternate_crossbow_shoot_multishot:
   Skills:
-  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
-  - projectile{sfo=0;tickinterpolation=6;horizontaloffset=10;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
-  - projectile{sfo=0;tickinterpolation=6;horizontaloffset=-10;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;horizontaloffset=10;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;horizontaloffset=-10;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_shoot_noEnchant:
   Skills:
-  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_shoot_piercing1:
   Skills:
-  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing1;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing1;drawhitbox=false;stopatentity=true;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_shoot_piercing2:
   Skills:
-  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing2;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing2;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_shoot_piercing3:
   Skills:
-  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing3;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing3;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_shoot_piercing4:
   Skills:
-  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing4;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing4;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_projectile_hit:
   Skills:
-  - damage{amount=14;damagecause=projectile;preventimmunity=true;poweraffectsdamage=false}
+  - damage{amount=10;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false}
+  - skill{s=alternate_crossbow_firework}
 alternate_crossbow_projectile_hit_piercing1:
   Skills:
-  - damage{amount=14;damagecause=projectile;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=15;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - skill{s=alternate_crossbow_firework}
 alternate_crossbow_projectile_hit_piercing2:
   Skills:
-  - damage{amount=14;damagecause=projectile;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=20;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - skill{s=alternate_crossbow_firework}
   - delay 1
   - endprojectile{}
 alternate_crossbow_projectile_hit_piercing3:
   Skills:
-  - damage{amount=14;damagecause=projectile;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=25;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - skill{s=alternate_crossbow_firework}
   - delay 2
   - endprojectile{}
 alternate_crossbow_projectile_hit_piercing4:
   Skills:
-  - damage{amount=14;damagecause=projectile;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=30;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
+  - skill{s=alternate_crossbow_firework}
   - delay 3
   - endprojectile{}
+alternate_crossbow_firework:
+  Skills:
+  - summon{a=1;type=alternate_crossbow_marker}
 alternate_crossbow_projectile_tick:
   Skills:
   - particle{particle=electric_spark}
