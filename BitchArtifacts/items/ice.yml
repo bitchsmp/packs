@@ -1,3 +1,11 @@
+#  ███████████            ████                                          █████
+# ░░███░░░░░███          ░░███                                         ░░███ 
+#  ░███    ░███   ██████  ░███   ██████   ██████    █████   ██████   ███████ 
+#  ░██████████   ███░░███ ░███  ███░░███ ░░░░░███  ███░░   ███░░███ ███░░███ 
+#  ░███░░░░░███ ░███████  ░███ ░███████   ███████ ░░█████ ░███████ ░███ ░███ 
+#  ░███    ░███ ░███░░░   ░███ ░███░░░   ███░░███  ░░░░███░███░░░  ░███ ░███ 
+#  █████   █████░░██████  █████░░██████ ░░████████ ██████ ░░██████ ░░████████
+# ░░░░░   ░░░░░  
 liquid_nitrogen_tank:
   Id: turtle_scute
   Display: "Liquid Nitrogen Tank (1000mB)"
@@ -5,8 +13,10 @@ liquid_nitrogen_tank:
     CooldownGroup: nitrogen
   Options:
     ItemModel: hbm:fluid_tank_nitrogen
+    StackSize: 16
   Lore:
-  - "Right-click: Cause a pressure explosion. Freezes everyone in a 16 blocks radius except you"
+  - "<gray>Right-click: Cause a pressure explosion."
+  - "<gray>Freezes everyone in a 16 blocks radius except you"
   Skills:
   - skill{s=[
     - consumeuseditem{}
@@ -24,8 +34,10 @@ liquid_nitrogen_barrel:
     CooldownGroup: nitrogen
   Options:
     ItemModel: hbm:fluid_barrel_nitrogen
+    StackSize: 16
   Lore:
-  - "Right-click: Cause a large pressure explosion. Freezes everyone in a 16 blocks radius except you"
+  - "<gray>Right-click: Cause a large pressure explosion."
+  - "<gray>Freezes everyone in a 16 blocks radius except you"
   Skills:
 
   - skill{s=[
