@@ -1,6 +1,6 @@
 alternate_crossbow:
   Material: crossbow
-  Display: '<white>Alternate Crossbow'
+  Display: '<aqua>Alternate Crossbow'
   Options:
     ItemModel: dueris:alternate_crossbow
   Lore:
