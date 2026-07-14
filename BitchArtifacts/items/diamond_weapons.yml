@@ -20,3 +20,26 @@ alternate_crossbow:
     - actionmessage{message="<yellow><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
     - actionmessage{message="<white><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=<301} 
     ]} ~onTimer:10 @self
+brimstone_claymore:
+# Original name from Blade of Majestica rspack: Brimstone_Claymore
+  Material: netherite_sword
+  Display: '<gold>Brimstone Claymore'
+  Options:
+    ItemModel: minecraft:brimstone_claymore
+    FireResistant: true
+    Unbreakable: true
+  Lore:
+  - "<gray>Has a chance of inflicting extra unextinguishable and unblockable"
+  - "<gray>burning effect of agony and despair to the target when attacking with full charge"
+  - "<white>"
+  Skills:
+  - skill{s=[
+    - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
+      - summon{type=brimstone_claymore_marker;onsurface=false} @TriggerLocation ?~!hasPotion{type=FIRE_RESISTANCE}
+      - summon{type=brimstone_claymore_marker_fireres;onsurface=false} @TriggerLocation ?~hasPotion{type=FIRE_RESISTANCE}
+      - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
+      - ignite{ticks=200}
+      ]} @trigger
+    - sound{sound=ultrakill:firestart;volume=0.6} @self
+    ];chance=0.3} ?!itemRecharging ~onAttack
+  - ignite{ticks=1200} @trigger ~onAttack
