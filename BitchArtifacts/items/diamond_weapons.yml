@@ -92,3 +92,52 @@ tome_of_must_have_been_the_wind:
   - skill{s=tome_of_must_have_been_the_wind_leftclick} @self ~onUse
 
   - skill{s=tome_of_must_have_been_the_wind_leftclick} @self ~onRightclick
+katana_of_weeb:
+  Material: NETHERITE_SWORD
+  Display: '<aqua>Katana of Weeb'
+  Attributes:
+    MainHand:
+      ATTACK_DAMAGE: 8 ADD
+      ATTACK_SPEED: -2.4 ADD
+  Options:
+    ItemModel: minecraft:katana
+    FireResistant: true
+    Unbreakable: true
+
+  Lore:
+  - "<gray>Right-click: Lunges forward</gray>"
+  - "<gray>Can lunges in burst of 5, cooldown 8 seconds</gray>"
+  EquipSlot: MAINHAND
+  Skills:
+  - skill{s=[
+    - aura{aura=katana_of_weeb;maxstacks=5;ticks=160}
+    - sound{sound=item.spear.lunge_3}
+    - lunge{velocity=2;velocityY=0} @forward{forward=16}
+    - swingarm{}
+    ]} @Self ~onUse ?!crouching ?!hasAuraStacks{aura=katana_of_weeb;stacks=5}
+  Rarity: uncommon
+wakizashi_of_japan_glazer:
+  Material: NETHERITE_SWORD
+  Display: '<aqua>Wakizashi of Japan Glazer'
+  UseCooldown:
+    CooldownGroup: wakizashi
+    CooldownSeconds: 3
+  Attributes:
+    MainHand:
+      ATTACK_DAMAGE: 7.5 ADD
+      ATTACK_SPEED: -2.0 ADD
+  Options:
+    ItemModel: minecraft:wakizashi
+    FireResistant: true
+    Unbreakable: true
+  Lore:
+  - "<gray>Right-click: Lunges backward</gray>"
+  - "<gray>based on where you are facing"
+  EquipSlot: MAINHAND
+  Skills:
+  - skill{s=[
+    - sound{sound=item.spear.lunge_3}
+    - velocity{mode=ADD;velocityz=-2.36;relative=true}
+    - swingarm{}
+    - setItemGroupCooldown{key=wakizashi;ticks=40}
+    ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi} ?!crouching 
