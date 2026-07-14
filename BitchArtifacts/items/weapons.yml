@@ -57,28 +57,6 @@ icewhisper:
   - "<gray>To increase damage, upgrade to</gray><gradient:#31292a:#837f7f> Netherite<gray> using <white>Smithing Table</white> and<yellow> Netherite Upgrade"
   Skills:
   - freeze{ticks=140} @trigger ~onAttack
-alternate_crossbow:
-  Material: crossbow
-  Display: '<white>Alternate Crossbow'
-  Options:
-    ItemModel: dueris:alternate_crossbow
-  Lore:
-  - <gray>Turns shooted projectile into powerful hitscans</gray>
-  - "<gray>Damage scales with Piercing enchantment level, up to 30 damage</gray>"
-  - "<aqua><italic>Max Range: 1024 Blocks</aqua>"
-  Skills:
-  - variableSet{value=20;type=INTEGER;name=caster.alternate_crossbow_heat} ~onTimer:1 @self ?!varset{name=caster.alternate_crossbow_heat}
-  - aura{aura=alternate_crossbow_heat_aura;ticks=600;interval=10;ontickskill=alternate_crossbow_heat_tick} @self ~onTimer:1
-  - skill{skill=alternate_crossbow_onShoot} ~onShoot @Self
-  - cancelEvent ~onShoot
-
-  - skill{skill=[
-    - actionmessage{message="<#ff0000><caster.var.alternate_crossbow_heat> °C"} ?varrange{name=caster.alternate_crossbow_heat;value=>600}
-    - actionmessage{message="<red><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>500} ?varrange{name=caster.alternate_crossbow_heat;value=<601}
-    - actionmessage{message="<gold><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=<501}
-    - actionmessage{message="<yellow><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
-    - actionmessage{message="<white><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=<301} 
-    ]} ~onTimer:10 @self
 
 
 #Pls nerf
