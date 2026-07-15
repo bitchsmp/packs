@@ -236,5 +236,6 @@ terrablade:
 
   Skills:
   - skill{s=terrablade_projectile_leftclick} ~onSwing 
+  Rarity: uncommon
 
 
