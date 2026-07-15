@@ -20,6 +20,7 @@ alternate_crossbow:
     - actionmessage{message="<yellow><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
     - actionmessage{message="<white><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=<301} 
     ]} ~onTimer:10 @self
+  Rarity: rare
 brimstone_claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
   Material: netherite_sword
@@ -42,7 +43,7 @@ brimstone_claymore:
     - sound{sound=ultrakill:firestart;volume=0.6} @self
     ];chance=0.35} ?!itemRecharging ~onAttack
   - ignite{ticks=1200} @trigger ~onAttack
-
+  Rarity: epic
 masamune:
   Material: DIAMOND_SWORD
   Display: '<yellow>Masamune'
@@ -58,6 +59,7 @@ masamune:
   AttackRange:
     Min: 2.0
     Max: 4.5
+  Rarity: uncommon
 tome_of_darkness:
   Material: ECHO_SHARD
   Display: '<yellow>Tome of Darkness'
@@ -74,6 +76,7 @@ tome_of_darkness:
   - <gray>No one can see that chat message</gray>
   Skills:
   - skill{s=tome_of_darkness_main} @self ~onTimer:1
+  Rarity: uncommon
 tome_of_must_have_been_the_wind:
   Material: ECHO_SHARD
   Display: '<yellow>Tome of<italic> must have been the wind'
@@ -91,6 +94,7 @@ tome_of_must_have_been_the_wind:
   - skill{s=tome_of_must_have_been_the_wind_leftclick} @self ~onUse
 
   - skill{s=tome_of_must_have_been_the_wind_leftclick} @self ~onRightclick
+  Rarity: uncommon
 katana_of_weeb:
   Material: NETHERITE_SWORD
   Display: '<aqua>Katana of Weeb'
@@ -115,12 +119,12 @@ katana_of_weeb:
     - lunge{velocity=2;velocityY=0} @forward{forward=16}
     - swingarm{}
     ]} @Self ~onUse ?!crouching ?!hasAuraStacks{aura=katana_of_weeb;stacks=5}
-  Rarity: uncommon
+  Rarity: rare
 wakizashi_of_japan_glazer:
   Material: NETHERITE_SWORD
   Display: '<aqua>Wakizashi of Japan Glazer'
   UseCooldown:
-    CooldownGroup: wakizashi
+    CooldownGroup: wakizashi_of_japan_glazer
     CooldownSeconds: 3
   Attributes:
     MainHand:
@@ -140,9 +144,9 @@ wakizashi_of_japan_glazer:
     - particle{particle=flash;a=1;repeat=3;repeatinterval=1}
     - velocity{mode=ADD;velocityz=-2.36;relative=true}
     - swingarm{}
-    - setItemGroupCooldown{key=wakizashi;ticks=40}
-    ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi} ?!crouching 
-  Rarity: uncommon
+    - setItemGroupCooldown{key=wakizashi_of_japan_glazer;ticks=40}
+    ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi_of_japan_glazer} ?!crouching 
+  Rarity: rare
 sabre_super:
   Material: NETHERITE_SWORD
   Display: '<aqua>Super Sabre'
@@ -220,7 +224,7 @@ sabre_super:
   - particle{particle=electric_spark;amount=4;hspread=1;vspread=2;yo=1} @self ~onTimer:1 ?mounted
 
 
-  Rarity: uncommon
+  Rarity: rare
 longsword_marlow:
   Material: NETHERITE_SWORD
   Display: '<aqua>Marlowww Client'
@@ -238,7 +242,7 @@ longsword_marlow:
   Skills:
   AttackRange:
     HitboxMargin: 0.8
-  Rarity: uncommon
+  Rarity: rare
 
 
 #released terrablade
@@ -258,3 +262,12 @@ terrablade:
   Rarity: uncommon
 
 
+###
+masamune_blueprints:
+  Id: paper
+  Display: "<yellow>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Masamune"
