@@ -1,0 +1,20 @@
+cobalt_powder:
+  Id: paper
+  Display: "Cobalt Powder"
+  Lore:
+  - "<gray>Put this in a Blast Furnace or something."
+  Options:
+    ItemModel: hbm:powder_cobalt
+
+
+cobalt_ingot:
+  Id: paper
+  Display: "Cobalt Ingot"
+  Options:
+    ItemModel: hbm:ingot_cobalt
+  Recipes:
+    FURNACE:
+      Type: BLASTING
+      Amount: 1
+      CookingTime: 400
+      Ingredient: cobalt_powder
