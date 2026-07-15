@@ -31,7 +31,6 @@ brimstone_claymore:
   Lore:
   - "<gray>Has a chance of inflicting extra unextinguishable and unblockable"
   - "<gray>burning effect of agony and despair to the target when attacking with full charge"
-  - "<white>"
   Skills:
   - skill{s=[
     - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
@@ -41,7 +40,7 @@ brimstone_claymore:
       - ignite{ticks=200}
       ]} @trigger
     - sound{sound=ultrakill:firestart;volume=0.6} @self
-    ];chance=0.3} ?!itemRecharging ~onAttack
+    ];chance=0.35} ?!itemRecharging ~onAttack
   - ignite{ticks=1200} @trigger ~onAttack
 
 masamune:
