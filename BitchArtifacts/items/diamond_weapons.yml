@@ -110,8 +110,9 @@ katana_of_weeb:
   EquipSlot: MAINHAND
   Skills:
   - skill{s=[
-    - aura{aura=katana_of_weeb;maxstacks=5;ticks=160}
+    - aura{aura=katana_of_weeb;maxstacks=5;ticks=160;showbartimer=true;bartimerdisplay="Cooldown:<aqua> Katana of Weeb";bartimercolor=YELLOW}
     - sound{sound=item.spear.lunge_3}
+    - particle{particle=flash;a=1}
     - lunge{velocity=2;velocityY=0} @forward{forward=16}
     - swingarm{}
     ]} @Self ~onUse ?!crouching ?!hasAuraStacks{aura=katana_of_weeb;stacks=5}
@@ -137,7 +138,9 @@ wakizashi_of_japan_glazer:
   Skills:
   - skill{s=[
     - sound{sound=item.spear.lunge_3}
+    - particle{particle=flash;a=1;repeat=3;repeatinterval=1}
     - velocity{mode=ADD;velocityz=-2.36;relative=true}
     - swingarm{}
     - setItemGroupCooldown{key=wakizashi;ticks=40}
     ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi} ?!crouching 
+  Rarity: uncommon
