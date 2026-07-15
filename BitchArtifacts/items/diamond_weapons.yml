@@ -128,6 +128,14 @@ katana_of_weeb:
     - lunge{velocity=2;velocityY=0} @forward{forward=16}
     - swingarm{}
     ]} @Self ~onUse ?!crouching ?!hasAuraStacks{aura=katana_of_weeb;stacks=5}
+  Recipes:
+    SHAPED:
+      Amount: 1
+      Type: SHAPED
+      Ingredients:
+      - netherite_upgrade_smithing_template | katana | netherite_upgrade_smithing_template
+      - netherite_ingot | netherite_upgrade_smithing_template | netherite_ingot
+      - air | netherite_ingot | air
   Rarity: rare
 wakizashi_of_japan_glazer:
   Material: NETHERITE_SWORD
@@ -155,6 +163,14 @@ wakizashi_of_japan_glazer:
     - swingarm{}
     - setItemGroupCooldown{key=wakizashi_of_japan_glazer;ticks=40}
     ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi_of_japan_glazer} ?!crouching 
+  Recipes:
+    SHAPED:
+      Amount: 1
+      Type: SHAPED
+      Ingredients:
+      - netherite_upgrade_smithing_template | wakizashi | netherite_upgrade_smithing_template
+      - netherite_ingot | netherite_upgrade_smithing_template | netherite_ingot
+      - air | netherite_ingot | air
   Rarity: rare
 sabre_super:
   Material: NETHERITE_SWORD
@@ -231,7 +247,14 @@ sabre_super:
     ]} @self ~onTimer:1 ?mounted
   - particle{particle=electric_spark;amount=4;hspread=1;vspread=2;yoffset=1} @self ~onTimer:1 ?biome{biome=plains,snowy_plains,sunflower_plains}
   - particle{particle=electric_spark;amount=4;hspread=1;vspread=2;yo=1} @self ~onTimer:1 ?mounted
-
+  Recipes:
+    SHAPED:
+      Amount: 1
+      Type: SHAPED
+      Ingredients:
+      - netherite_upgrade_smithing_template | sabre | netherite_upgrade_smithing_template
+      - netherite_ingot | netherite_upgrade_smithing_template | netherite_ingot
+      - air | netherite_ingot | air
 
   Rarity: rare
 longsword_marlow:
@@ -252,6 +275,14 @@ longsword_marlow:
   AttackRange:
     HitboxMargin: 0.8
   Rarity: rare
+  Recipes:
+    SHAPED:
+      Amount: 1
+      Type: SHAPED
+      Ingredients:
+      - netherite_upgrade_smithing_template | longsword | netherite_upgrade_smithing_template
+      - netherite_ingot | netherite_upgrade_smithing_template | netherite_ingot
+      - air | netherite_ingot | air
 
 
 #released terrablade
@@ -269,9 +300,17 @@ terrablade:
   Skills:
   - skill{s=terrablade_projectile_leftclick} ~onSwing 
   Rarity: uncommon
-
-
 ###
+alternate_crossbow_blueprints:
+  Id: paper
+  Display: "<aqua>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Alternate Crossbow"
+  Rarity: rare
+### UNUSED
 masamune_blueprints:
   Id: paper
   Display: "<yellow>Blueprints"
