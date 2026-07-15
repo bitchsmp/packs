@@ -1,20 +1,3 @@
-terrablade:
-  Material: diamond_sword
-  Display: '<yellow>Terrablade'
-  Options:
-    ItemModel: minecraft:terrablade
-  
-  EquipSlot: HAND
-  Lore:
-  - "<gray>Each swing fires a wave of energy"
-  - <gray><italic>Terrarians love this thing</gray>
-  - "<white>"
-  - "<gray>To increase damage, upgrade to</gray><gradient:#31292a:#837f7f> Netherite<gray> using <white>Smithing Table</white> and<yellow> Netherite Upgrade"
-
-  Skills:
-  - skill{s=terrablade_projectile_leftclick} ~onSwing 
-
-
 
 # brimstone_claymore_diamond:
 #   Id: diamond_sword
