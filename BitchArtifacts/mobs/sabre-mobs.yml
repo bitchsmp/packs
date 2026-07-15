@@ -1,0 +1,10 @@
+super_sabre_horse:
+  Type: horse
+  Options:
+    MovementSpeed: 0.3
+    Tamed: true
+    Saddled: true
+    PreventOtherDrops: true
+  Skills:
+  - remove{delay=600} @self ~onSpawnorload 
+  

@@ -144,3 +144,81 @@ wakizashi_of_japan_glazer:
     - setItemGroupCooldown{key=wakizashi;ticks=40}
     ]} @Self ~onUse ?!itemGroupOnCooldown{group=wakizashi} ?!crouching 
   Rarity: uncommon
+sabre_super:
+  Material: NETHERITE_SWORD
+  Display: '<aqua>Super Sabre'
+  UseCooldown:
+    CooldownGroup: super_sabre
+    CooldownSeconds: 45
+  Options:
+    ItemModel: minecraft:sabre
+    FireResistant: true
+    Unbreakable: true
+
+  Lore:
+  - "<gray>The North American F-100 Super Sabre, often nicknamed the <white>Hun</white>, was an American single-engine</gray>"
+  - "<gray>supersonic fighter aircraft developed by <white>North American Aviation</white> during the early Cold War. Designed as a</gray>"
+  - "<gray>successor to the highly successful <white>F-86 Sabre</white>, the F-100 became the first aircraft in the United States Air</gray>"
+  - "<gray>Force's famous <white>Century Series</white> of fighters. It made its maiden flight on <white>25 May 1953</white> and entered</gray>"
+  - "<gray>operational service in <white>1954</white>, ushering in a new era of high-performance supersonic jet combat.</gray>"
+  - ""
+  - "<gray>Originally conceived as an air superiority fighter, the Super Sabre quickly evolved into a versatile</gray>"
+  - "<gray>fighter-bomber capable of delivering conventional and nuclear weapons. It served extensively during</gray>"
+  - "<gray>the <white>Vietnam War</white>, flying hundreds of thousands of combat sorties in close air support, interdiction,</gray>"
+  - "<gray>reconnaissance, and the pioneering <white>Wild Weasel</white> suppression of enemy air defenses missions.</gray>"
+  - ""
+  - "<gray>Although eventually replaced by newer aircraft such as the <white>F-4 Phantom II</white> and <white>A-7 Corsair II</white>,</gray>"
+  - "<gray>the F-100 remained in U.S. Air Force service until <white>1971</white>, and with the Air National Guard until</gray>"
+  - "<gray><white>1979</white>. Its combination of speed, versatility, and combat experience secured its place as one of</gray>"
+  - "<gray>the most influential fighter aircraft of the Cold War.</gray>"
+  - ""
+  - "<white>General Information"
+  - "<white>Manufacturer: <gray>North American Aviation"
+  - "<white>Role: <gray>Supersonic fighter, fighter-bomber"
+  - "<white>First Flight: <gray>25 May 1953"
+  - "<white>Introduced: <gray>September 1954"
+  - "<white>Retired (USAF): <gray>1971"
+  - "<white>Retired (ANG): <gray>1979"
+  - "<white>Produced: <gray>2,294 aircraft"
+  - "<white>Crew: <gray>1 (2 on F-100F trainer)"
+  - "<white>Engine: <gray>1 × Pratt & Whitney J57 afterburning turbojet"
+  - "<white>Maximum Speed: <gray>Mach 1.4 (1,490 km/h)"
+  - "<white>Service Ceiling: <gray>16,800 m (55,000 ft)"
+  - "<white>Main Operators: <gray>United States, France, Denmark, Turkey, Taiwan"
+  - ""
+  - "<white>Notable Records"
+  - "<gray>• First USAF production fighter capable of sustained <white>supersonic level flight</white>.</gray>"
+  - "<gray>• First aircraft of the legendary <white>Century Series</white> fighters.</gray>"
+  - "<gray>• Set a world speed record of <white>1,215 km/h (755 mph)</white> on 29 October 1953.</gray>"
+  - "<gray>• Flew more than <white>360,000 combat sorties</white> during the Vietnam War.</gray>"
+  - "<gray>• The <white>F-100F</white> pioneered the first operational <white>Wild Weasel</white> SAM suppression missions.</gray>"
+  - "<gray>• Served as the aircraft of the <white>USAF Thunderbirds</white> from 1956-1963 and 1964-1968.</gray>"
+  - ""
+  - "<gray>Right-click: Summons a ghost horse"
+  - "<gray>Cooldown: 45 Seconds"
+  - <white>
+  - "<gray>When in any Plains biomes:"
+  - "<blue>+6 Attack Damage"
+  - "<white>"
+  - "<gray>When on mounts:"
+  - "<blue>+3 Attack Damage"
+  EquipSlot: MAINHAND
+  Skills:
+  - skill{s=[
+    - summon{type=super_sabre_horse;amount=1;noise=3;ynoise=0;onsummonskill=[
+      - sound{sound=entity.illusioner.mirror_move}
+      ]}
+    - setItemGroupCooldown{key=super_sabre;ticks=900}
+    ]} ~onUse ?!itemGroupOnCooldown{group=super_sabre}
+
+  - aura{forcesync=true;aura=sabre_plain_buff;duration=2;component=[
+    - stat{stat=ATTACK_DAMAGE;val=6;type=ADDITIVE}
+    ]} @self ~onTimer:1 ?biome{biome=plains,snowy_plains,sunflower_plains}
+  - aura{forcesync=true;aura=sabre_mount_buff;duration=2;component=[
+    - stat{stat=ATTACK_DAMAGE;val=3;type=ADDITIVE}
+    ]} @self ~onTimer:1 ?mounted
+  - particle{particle=electric_spark;amount=4;hspread=1;vspread=2;yoffset=1} @self ~onTimer:1 ?biome{biome=plains,snowy_plains,sunflower_plains}
+  - particle{particle=electric_spark;amount=4;hspread=1;vspread=2;yo=1} @self ~onTimer:1 ?mounted
+
+
+  Rarity: uncommon
