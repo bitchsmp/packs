@@ -221,7 +221,27 @@ sabre_super:
 
 
   Rarity: uncommon
+longsword_marlow:
+  Material: NETHERITE_SWORD
+  Display: '<aqua>Marlowww Client'
+  Attributes:
+    MainHand:
+      ATTACK_DAMAGE: 8 ADD
+      ATTACK_SPEED: -2.4 ADD
+  Options:
+    ItemModel: minecraft:longsword
+    FireResistant: true
+    Unbreakable: true
+  Lore:
+  - "<gray>Makes targets' hitbox a lot bigger."
+  EquipSlot: MAINHAND
+  Skills:
+  AttackRange:
+    HitboxMargin: 0.8
+  Rarity: uncommon
 
+
+#released terrablade
 terrablade:
   Material: diamond_sword
   Display: '<yellow>Terrablade'
