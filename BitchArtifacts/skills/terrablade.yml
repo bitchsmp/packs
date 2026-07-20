@@ -36,7 +36,7 @@ terrablade_projectile_4:
     - sound{sound=terraria:item_60}
 terrablade_projectile_hit:
   Skills:
-  - damage{amount=2;preventknockback=true;preventimmunity=true}
+  - damage{amount=2;preventknockback=false;preventimmunity=false}
 terrablade_projectile_tick:
   Skills:
   - e:particle{particle=reddust;color=#3cff00;amount=1}
