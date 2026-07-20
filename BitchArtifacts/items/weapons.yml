@@ -1,46 +1,4 @@
 
-# brimstone_claymore_diamond:
-#   Id: diamond_sword
-#   Display: 'Brimstone Claymore'
-#   Options:
-#     ItemModel: minecraft:brimstone_claymore
-#     FireResistant: true
-#     Unbreakable: true
-#   Lore:
-#   - "<gray>Causes an extra unextinguishable and unblockable burning effect to the target"
-#   - "<white>"
-#   - "<gray>To increase damage, upgrade to</gray><gradient:#31292a:#837f7f> Netherite<gray> using <white>Smithing Table</white> and<yellow> Netherite Upgrade"
-#   Skills:
-#   - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
-#     - damage{a=0.5;preventknockback=true}
-#     - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
-#     - ignite{ticks=200}
-#     ]} @trigger ~onAttack ?!itemRecharging{}
-#   - sound{sound=ultrakill:firestart;volume=0.6} @self ~onAttack ?!itemRecharging{}
-#   # Recipes:
-#   #   SHAPED:
-#   #     Type: SHAPED
-#   #     Amount: 1
-#   #     Ingredients:
-#   #     - air | diamond | air
-#   #     - air | diamond | air
-#   #     - diamond | brimstone_claymore | diamond
-icewhisper:
-  Material: diamond_axe
-  Display: '<white>Icewhisper'
-  EquipSlot: HAND
-  Stats:
-  - LIFESTEAL_CHANCE 1.0 ADDITIVE
-  Options:
-    ItemModel: minecraft:icewhisper
-
-  Lore:
-  - "<gray>Inflicts Freezing on hit, heals wielder 10% of the damage dealt</gray>"
-  - "<white>"
-  - "<gray>To increase damage, upgrade to</gray><gradient:#31292a:#837f7f> Netherite<gray> using <white>Smithing Table</white> and<yellow> Netherite Upgrade"
-  Skills:
-  - freeze{ticks=140} @trigger ~onAttack
-
 
 #Pls nerf
 creation_splitter:

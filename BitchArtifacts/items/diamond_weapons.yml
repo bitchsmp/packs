@@ -284,6 +284,27 @@ longsword_marlow:
       - netherite_ingot | netherite_upgrade_smithing_template | netherite_ingot
       - air | netherite_ingot | air
 
+icewhisper:
+  Material: netherite_axe
+  Display: '<aqua>Icewhisper'
+  EquipSlot: HAND
+  Stats:
+  - LIFESTEAL_CHANCE 1.0 ADDITIVE
+  Options:
+    ItemModel: minecraft:icewhisper
+  Lore:
+  - "<gray>Inflicts Freezing on hit, heals wielder 10% of the raw damage dealt</gray>"
+
+  Skills:
+  - freeze{ticks=140} @trigger ~onAttack
+  - particle{particle=snowflake;amount=20;speed=0.2;yoffset=1} @trigger ~onAttack ?!itemRecharging
+  - particle{particle=snowflake;amount=5;speed=0.15;yoffset=1} @trigger ~onAttack ?itemRecharging
+  - particle{particle=sculk_soul;amount=10;speed=0.15;yoffset=1} @trigger ~onAttack ?!itemRecharging
+  - particle{particle=sculk_soul;amount=3;speed=0.1;yoffset=1} @trigger ~onAttack ?itemRecharging
+  - sound{sound=entity.wither.shoot;volume=0.5} @trigger ~onAttack ?!itemRecharging
+  - sound{sound=entity.wither.shoot;volume=0.2} @trigger ~onAttack ?itemRecharging
+  Rarity: rare
+
 
 #released terrablade
 terrablade:
@@ -310,12 +331,12 @@ alternate_crossbow_blueprints:
   Lore:
   - "<gray>Alternate Crossbow"
   Rarity: rare
-### UNUSED
-masamune_blueprints:
+icewhisper_blueprints:
   Id: paper
-  Display: "<yellow>Blueprints"
+  Display: "<aqua>Blueprints"
   Options:
     ItemModel: hbm:blueprints
     FireResistant: true
   Lore:
-  - "<gray>Masamune"
+  - "<gray>Icewhisper"
+  Rarity: rare
