@@ -55,27 +55,27 @@ alternate_crossbow_shoot_piercing4:
   - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=1024;poweraffectsvelocity=false;onstartskill=alternate_crossbow_projectile_start;onhitskill=alternate_crossbow_projectile_hit_piercing4;drawhitbox=false;stopatentity=false;hr=0.6;vr=0.6;hnp=true;ontickskill=alternate_crossbow_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
 alternate_crossbow_projectile_hit:
   Skills:
-  - damage{amount=10;damagecause=entity_explosion;preventimmunity=false;poweraffectsdamage=false}
+  - damage{amount=10;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false}
   - skill{s=alternate_crossbow_firework}
 alternate_crossbow_projectile_hit_piercing1:
   Skills:
-  - damage{amount=15;damagecause=entity_explosion;preventimmunity=false;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=13;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - skill{s=alternate_crossbow_firework}
 alternate_crossbow_projectile_hit_piercing2:
   Skills:
-  - damage{amount=20;damagecause=entity_explosion;preventimmunity=false;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=16;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - skill{s=alternate_crossbow_firework}
   - delay 1
   - endprojectile{}
 alternate_crossbow_projectile_hit_piercing3:
   Skills:
-  - damage{amount=25;damagecause=entity_explosion;preventimmunity=false;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=19;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - skill{s=alternate_crossbow_firework}
   - delay 2
   - endprojectile{}
 alternate_crossbow_projectile_hit_piercing4:
   Skills:
-  - damage{amount=30;damagecause=entity_explosion;preventimmunity=false;poweraffectsdamage=false;ignoreshield=true}
+  - damage{amount=22;damagecause=entity_explosion;preventimmunity=true;poweraffectsdamage=false;ignoreshield=true}
   - skill{s=alternate_crossbow_firework}
   - delay 3
   - endprojectile{}
