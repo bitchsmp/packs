@@ -40,7 +40,7 @@ greatbow:
     - sound{sound=entity.ghast.shoot;pitch=1.5;volume=0.7} @self 
     ]} ~onShootbow ?bowshoottension{force=1}
   - skill{skill=[
-  - command{command="execute at @s as @e[type=minecraft:arrow,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self 
+    - command{command="execute at @s as @e[type=minecraft:arrow,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self 
     ]} ~onShootbow ?!bowshoottension{force=1}
   # - skills{s=[
   #   - setVar{value="0 0 0";type=STRING;name=caster.greatbow;save=true}
