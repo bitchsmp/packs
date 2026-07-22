@@ -304,7 +304,22 @@ icewhisper:
   - sound{sound=entity.wither.shoot;volume=0.5} @trigger ~onAttack ?!itemRecharging
   - sound{sound=entity.wither.shoot;volume=0.2} @trigger ~onAttack ?itemRecharging
   Rarity: rare
+greatbow:
+  Material: bow
+  Display: '<aqua>Greatbow'
+  ArrowDamage: 7
+  Options:
+    ItemModel: nixx:greatbow
+    FireResistant: true
 
+  Skills:
+  - skill{skill=[
+    - command{command="execute at @s as @e[type=minecraft:arrow,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow";ascaster=true;asop=true;delay=1} @self 
+    - sound{sound=entity.ghast.shoot;pitch=1.5;volume=0.7} @self 
+    ]} ~onShootbow ?bowshoottension{force=1}
+  - skill{skill=[
+    - command{command="execute at @s as @e[type=minecraft:arrow,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self 
+    ]} ~onShootbow ?!bowshoottension{force=1}
 
 #released terrablade
 terrablade:
@@ -339,4 +354,13 @@ icewhisper_blueprints:
     FireResistant: true
   Lore:
   - "<gray>Icewhisper"
+  Rarity: rare
+greatbow_blueprints:
+  Id: paper
+  Display: "<aqua>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Greatbow"
   Rarity: rare
