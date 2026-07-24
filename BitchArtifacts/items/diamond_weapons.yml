@@ -358,13 +358,12 @@ greatbow:
     ItemModel: nixx:greatbow
     FireResistant: true
   Lore:
-  - "<gray><italic>A powerful bow that requires you to pull all the way back."
-  - "<gray><italic>Can only use normal arrows."
+  - "<gray><italic>A powerful wind-charged bow that requires you to pull all the way back."
   Skills:
   - skill{skill=[
-    - command{command="execute at @s as @e[type=minecraft:arrow,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow";ascaster=true;asop=true;delay=1} @self
+    - command{command="execute at @s as @e[type=#arrows,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow";ascaster=true;asop=true;delay=1} @self
     - sound{sound=entity.ghast.shoot;pitch=1.5;volume=0.7} @self 
     ]} ~onShootbow ?bowshoottension{force=1}
   - skill{skill=[
-    - command{command="execute at @s as @e[type=minecraft:arrow,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self
+    - command{command="execute at @s as @e[type=#arrows,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self
     ]} ~onShootbow ?!bowshoottension{force=1}
