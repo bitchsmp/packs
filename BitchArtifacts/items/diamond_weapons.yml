@@ -394,3 +394,24 @@ alternate_crossbow_proximity:
 #   - cancelEvent ~onShoot
 
 #   Rarity: rare
+
+alternate_bow_sentry:
+  Material: bow
+  Display: '<aqua>Alternate Bow'
+  Options:
+    ItemModel: minecraft:bow #give item model later
+  Lore:
+  - "<#0077bb>Turns any arrow into a Sentry's"
+  - "<#0077bb>powerful, instant harming lightning attack."
+  Skills:
+  - skill{s=[
+    - command{command="function incendium:item/sentrys_gluttony/start_ray";ascaster=true;asop=true}
+    - command{command="kill @e[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
+    ]} ~onShoot ?bowTension{force=>0.5}
+  - skill{s=[
+    - command{command="function incendium:item/sentrys_gluttony/fail";ascaster=true;asop=true;delay=1}
+    - command{command="kill @e[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
+    - actionmessage{message="<aqua><bold>Alternate Bow</bold> must be atleast half-pulled"}
+    ]} ~onShoot ?!bowTension{force=>0.5}
+
+  Rarity: rare
