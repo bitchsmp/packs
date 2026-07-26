@@ -367,3 +367,30 @@ greatbow:
   - skill{skill=[
     - command{command="execute at @s as @e[type=#arrows,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self
     ]} ~onShootbow ?!bowshoottension{force=1}
+
+
+alternate_crossbow_proximity:
+  Material: crossbow
+  UseCooldown:
+    CooldownGroup: dueris:alternate_crossbow_proximity
+  Display: '<aqua>Alternate Crossbow'
+  Options:
+    ItemModel: minecraft:crossbow #give item model later
+  Lore:
+  Skills:
+  - skill{skill=alternate_crossbow_proximity_onShoot} ~onShoot @Self ?!itemGroupOnCooldown{group=dueris:alternate_crossbow_proximity}
+  - cancelEvent ~onShoot
+
+  Rarity: rare
+  
+# alternate_bow_rapid:
+#   Material: bow
+#   Display: '<aqua>Alternate Bow'
+#   Options:
+#     ItemModel: minecraft:bow #give item model later
+#   Lore:
+#   Skills:
+#   - shoot{damage=1;adjustvelocity=true;fo=0} ~onShoot
+#   - cancelEvent ~onShoot
+
+#   Rarity: rare

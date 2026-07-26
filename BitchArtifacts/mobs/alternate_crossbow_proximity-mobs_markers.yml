@@ -1,0 +1,8 @@
+alternate_crossbow_proximity_marker:
+  Type: marker
+  Skills:
+  - command{command="tp @s ~ ~0.1 ~";ascaster=true} @self ~onSpawnorLoad
+  - command{command="function dueris:alternate_crossbow_proximity_firework";ascaster=true} @self ~onSpawnorLoad
+  - command{command="execute as @e[type=minecraft:firework_rocket,tag=dueris.firework,limit=1,sort=nearest,distance=..3] run data modify entity @s Owner set from entity <owner.uuid> UUID";ascaster=true} @self ~onSpawnorLoad
+
+  - remove{delay=2} @self ~onSpawnorLoad

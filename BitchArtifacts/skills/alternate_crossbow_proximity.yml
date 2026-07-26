@@ -1,0 +1,48 @@
+alternate_crossbow_proximity_onShoot:
+  Skills:
+  - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=60}
+  - sound{sound=dueris:artillery_shoot}
+  - projectile{sfo=0;tickinterpolation=1;velocity=64;gravity=0.2;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_proximity_projectile_start;onhitskill=alternate_crossbow_proximity_projectile_hit;onhitblockskill=alternate_crossbow_proximity_projectile_hitblock;onendskill=alternate_crossbow_proximity_projectile_hitblock;stopatentity=true;hr=1.85;vr=1.85;hnp=true;ontickskill=alternate_crossbow_proximity_projectile_tick;stopatblock=true;deathdelay=0;drawhitbox=true;hitself=false;maxduration=80} @Forward{yOffset=1.62}
+alternate_crossbow_proximity_projectile_tick:
+  Skills:
+  - particle{particle=flame;a=3;speed=0.08}
+alternate_crossbow_proximity_projectile_hit:
+  Skills:
+
+  - skill{s=alternate_crossbow_proximity_explode_sound}
+  - summon{type=alternate_crossbow_proximity_marker} @origin
+  - particle{particle=campfire_cozy_smoke;amount=50;speed=0.01;spread=1.7} @origin
+  - particle{particle=explosion_emitter;amount=1} @origin
+  - skill{s=alternate_crossbow_proximity_knockback;delay=2}
+alternate_crossbow_proximity_projectile_hitblock:
+  Skills:
+  - skill{s=alternate_crossbow_proximity_explode_sound}
+  - summon{type=alternate_crossbow_proximity_marker} @origin
+  - particle{particle=campfire_cozy_smoke;amount=50;speed=0.01;spread=1.7} @origin
+  - particle{particle=explosion_emitter;amount=1} @origin
+  - skill{s=alternate_crossbow_proximity_knockback;delay=2}
+
+alternate_crossbow_proximity_explode_sound:
+  Skills:
+  - sound{sound=entity.generic.explode;volume=4;sourceisorigin=true;audience=nearby;soundcategory=PLAYERS}
+  - sound{sound=dueris:artillery_explode;volume=10;sourceisorigin=true;audience=@entitiesInRingNearOrigin{target=player;min=64;max=160;targetself=true};soundcategory=PLAYERS;delay=5}
+alternate_crossbow_proximity_knockback:
+  Skills:
+
+  - randomskill{skills=[
+    - velocity{mode=ADD;velocityx=2;velocityy=1}
+    ],[
+    - velocity{mode=ADD;velocityz=2;velocityy=1}
+    ],[
+    - velocity{mode=ADD;velocityx=-2;velocityy=1}
+    ],[
+    - velocity{mode=ADD;velocityz=-2;velocityy=1}
+    ],[
+    - velocity{mode=ADD;velocityx=2;velocityy=-1}
+    ],[
+    - velocity{mode=ADD;velocityz=2;velocityy=-1}
+    ],[
+    - velocity{mode=ADD;velocityx=-2;velocityy=-1}
+    ],[
+    - velocity{mode=ADD;velocityz=-2;velocityy=-1}
+    ]} ~onSpawnorLoad @ENO{radius=4;targetself=true}
