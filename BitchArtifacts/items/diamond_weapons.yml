@@ -374,9 +374,11 @@ alternate_crossbow_proximity:
   UseCooldown:
     CooldownGroup: dueris:alternate_crossbow_proximity
   Display: '<aqua>Alternate Crossbow'
-  Options:
-    ItemModel: minecraft:crossbow #give item model later
   Lore:
+  - "<#d5b200>Fires a proximity-fused projectile that detonates near its target."
+  - "<#d5b200>Excels at bringing down airborne targets."
+  Options:
+    ItemModel: dueris:alternate_crossbow_proximity
   Skills:
   - skill{skill=alternate_crossbow_proximity_onShoot} ~onShoot @Self ?!itemGroupOnCooldown{group=dueris:alternate_crossbow_proximity}
   - cancelEvent ~onShoot
