@@ -331,6 +331,15 @@ alternate_crossbow_blueprints:
   Lore:
   - "<gray>Alternate Crossbow"
   Rarity: rare
+alternate_bow_blueprints:
+  Id: paper
+  Display: "<aqua>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Alternate Bow"
+  Rarity: rare
 icewhisper_blueprints:
   Id: paper
   Display: "<aqua>Blueprints"
@@ -381,7 +390,6 @@ alternate_crossbow_proximity:
     ItemModel: dueris:alternate_crossbow_proximity
   Skills:
   - skill{skill=alternate_crossbow_proximity_onShoot} ~onShoot @Self ?!itemGroupOnCooldown{group=dueris:alternate_crossbow_proximity}
-  - cancelEvent ~onShoot
 
   Rarity: rare
   
@@ -400,8 +408,11 @@ alternate_crossbow_proximity:
 alternate_bow_sentry:
   Material: bow
   Display: '<aqua>Alternate Bow'
+  UseCooldown:
+    CooldownGroup: alternate_bow_sentry
+    CooldownSeconds: 1
   Options:
-    ItemModel: minecraft:bow #give item model later
+    ItemModel: dueris:alternate_bow_sentry
   Lore:
   - "<#0077bb>Turns any arrow into a Sentry's"
   - "<#0077bb>powerful, instant harming lightning attack."
@@ -409,6 +420,9 @@ alternate_bow_sentry:
   - skill{s=[
     - command{command="function incendium:item/sentrys_gluttony/start_ray";ascaster=true;asop=true}
     - command{command="kill @e[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
+    - setItemGroupCooldown{key=alternate_bow_sentry;ticks=20}
+    - sound{sound=minecraft:block.respawn_anchor.charge;volume=2;pitch=1}
+    - sound{sound=minecraft:entity.ender_dragon.hurt;volume=2;pitch=1.5}
     ]} ~onShoot ?bowTension{force=>0.5}
   - skill{s=[
     - command{command="function incendium:item/sentrys_gluttony/fail";ascaster=true;asop=true;delay=1}

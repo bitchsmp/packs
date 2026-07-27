@@ -1,5 +1,7 @@
 alternate_crossbow_proximity_onShoot:
   Skills:
+
+  - command{command="kill @e[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
   - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=70} ?!hasEnchant{type=quick_charge}
   - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=60} ?hasEnchant{type=quick_charge;level=1}
   - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=50} ?hasEnchant{type=quick_charge;level=2}
