@@ -359,7 +359,6 @@ greatbow_blueprints:
   - "<gray>Greatbow"
   Rarity: rare
 
-#unreleased
 greatbow:
   Material: bow
   Display: '<aqua>Greatbow'
@@ -393,17 +392,6 @@ alternate_crossbow_proximity:
 
   Rarity: rare
   
-# alternate_bow_rapid:
-#   Material: bow
-#   Display: '<aqua>Alternate Bow'
-#   Options:
-#     ItemModel: minecraft:bow #give item model later
-#   Lore:
-#   Skills:
-#   - shoot{damage=1;adjustvelocity=true;fo=0} ~onShoot
-#   - cancelEvent ~onShoot
-
-#   Rarity: rare
 
 alternate_bow_sentry:
   Material: bow
