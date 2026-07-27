@@ -411,11 +411,11 @@ alternate_bow_sentry:
     - setItemGroupCooldown{key=alternate_bow_sentry;ticks=20}
     - sound{sound=minecraft:block.respawn_anchor.charge;volume=2;pitch=1}
     - sound{sound=minecraft:entity.ender_dragon.hurt;volume=2;pitch=1.5}
-    ]} ~onShoot ?bowTension{force=>0.5}
+    ]} ~onShoot ?bowTension{force=>0.5} ?!itemGroupOnCooldown{group=alternate_bow_sentry}
   - skill{s=[
     - command{command="function incendium:item/sentrys_gluttony/fail";ascaster=true;asop=true;delay=1}
     - command{command="kill @e[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
     - actionmessage{message="<aqua><bold>Alternate Bow</bold> must be atleast half-pulled"}
-    ]} ~onShoot ?!bowTension{force=>0.5}
+    ]} ~onShoot ?!bowTension{force=>0.5} ?!itemGroupOnCooldown{group=alternate_bow_sentry}
 
   Rarity: rare
