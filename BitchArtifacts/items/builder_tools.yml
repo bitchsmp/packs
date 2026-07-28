@@ -1,0 +1,11 @@
+builders_helmet:
+  Material: golden_helmet
+  Display: "Builder's Helmet"
+  Attributes:
+    Head:
+      block_interaction_range: 3 add
+      safe_fall_distance: 3 add
+      fall_damage_multiplier: -0.5 add
+      jump_strength: 0.1 add
+  Options:
+    MaxDurability: 165
