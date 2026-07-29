@@ -4,8 +4,8 @@ alternate_crossbow_proximity_onShoot:
   - command{command="kill @e[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
   - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=70} ?!hasEnchant{type=quick_charge}
   - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=60} ?hasEnchant{type=quick_charge;level=1}
-  - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=50} ?hasEnchant{type=quick_charge;level=2}
-  - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=40} ?hasEnchant{type=quick_charge;level=3}
+  - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=40} ?hasEnchant{type=quick_charge;level=2}
+  - setItemGroupCooldown{key=dueris:alternate_crossbow_proximity;ticks=20} ?hasEnchant{type=quick_charge;level=3}
   - sound{sound=dueris:artillery_shoot}
   - projectile{sfo=0;tickinterpolation=1;velocity=64;gravity=0.2;syo=1.62;maxrange=128;poweraffectsvelocity=false;onstartskill=alternate_crossbow_proximity_projectile_start;onhitskill=alternate_crossbow_proximity_projectile_hit;onhitblockskill=alternate_crossbow_proximity_projectile_hitblock;onendskill=alternate_crossbow_proximity_projectile_hitblock;stopatentity=true;hr=1.85;vr=1.85;hnp=true;ontickskill=alternate_crossbow_proximity_projectile_tick;stopatblock=true;deathdelay=0;drawhitbox=false;hitself=false;maxduration=80} @Forward{yOffset=1.62}
 alternate_crossbow_proximity_projectile_tick:
