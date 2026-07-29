@@ -45,7 +45,7 @@ brimstone_claymore:
   - skill{s=[
     - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
       - summon{type=brimstone_claymore_marker;onsurface=false} @TriggerLocation ?~!hasPotion{type=FIRE_RESISTANCE}
-      - summon{type=brimstone_claymore_marker_fireres;onsurface=false} @TriggerLocation ?~hasPotion{type=FIRE_RESISTANCE}
+      - damage{amount=2;damagecause=FIRE_TICK;ignoreshield=true} ?~hasPotion{type=FIRE_RESISTANCE}
       - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
       - ignite{ticks=200}
       ]} @trigger
