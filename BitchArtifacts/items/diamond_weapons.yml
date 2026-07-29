@@ -518,7 +518,7 @@ alternate_bow_railcannon:
   - "<gray>Does not require a full draw to be effective."
   - "<gray>The higher the Power enchantment level, the lower the cooldown."
   Options:
-    ItemModel: dueris:alternate_bow_burst #will change later
+    ItemModel: dueris:alternate_bow_railcannon
   Skills:
 
   - skill{skill=alternate_bow_railcannon_shoot} ~onShoot ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
