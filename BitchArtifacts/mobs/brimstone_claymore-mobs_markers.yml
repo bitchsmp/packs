@@ -2,7 +2,7 @@ brimstone_claymore_marker:
   Type: marker
   Skills:
   - command{command="function dueris:brimstone_claymore_firework";ascaster=true} @self ~onSpawnorLoad
-  - command{command="execute as @e[type=minecraft:firework_rocket,tag=in.firework,limit=1,sort=nearest] run data modify entity @s Owner set from entity <owner.uuid> UUID";ascaster=true} @self ~onSpawnorLoad
+  - command{command="execute as @e[type=minecraft:firework_rocket,tag=in.firework,limit=1,sort=nearest,distance=..3] run data modify entity @s Owner set from entity <owner.uuid> UUID";ascaster=true} @self ~onSpawnorLoad
   - remove{delay=2} @self ~onSpawnorLoad
 # brimstone_claymore_marker_fireres:
 #   Type: marker
