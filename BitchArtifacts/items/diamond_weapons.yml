@@ -523,8 +523,8 @@ alternate_bow_railcannon:
 
   - skill{skill=alternate_bow_railcannon_shoot} ~onShoot ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
 
-  - sound{sound=ultrakill:railcannonfull;radius=25;volume=0.5} @self ~onHold ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
-  - sound{sound=ultrakill:railcannonfull;radius=25;volume=0.5} @self ~onTimer:40 ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
+  - sound{sound=ultrakill:railcannonfull;radius=25;volume=0.25} @self ~onHold ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
+  - sound{sound=ultrakill:railcannonfull;radius=25;volume=0.25} @self ~onTimer:40 ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
 
   - skill{skill=alternate_bow_railcannon_particle} @self ~onTimer:1 ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
   Rarity: rare

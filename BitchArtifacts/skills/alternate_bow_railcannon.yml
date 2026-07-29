@@ -2,7 +2,7 @@ alternate_bow_railcannon_shoot:
   Skills:
   - command{command="kill @n[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
 
-  - sound{sound=ultrakill:electric_railcannon}
+  - sound{sound=ultrakill:electric_railcannon;volume=0.75;radius=48}
   - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=16;poweraffectsvelocity=false;onstartskill=alternate_bow_railcannon_projectile_start;onhitskill=alternate_bow_railcannon_projectile_hit;drawhitbox=false;stopatentity=false;hr=1;vr=1;hnp=true;ontickskill=alternate_bow_railcannon_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
   - delay 1
   - setItemGroupCooldown{key=minecraft:alternate_bow_railcannon;ticks=320} @self ?!hasEnchant{type=power}
