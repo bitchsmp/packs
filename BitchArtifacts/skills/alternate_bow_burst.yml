@@ -1,0 +1,7 @@
+alternate_bow_burst_end:
+  Skills:
+  - particle{particle=lava;amount=5;spread=0.3}
+  - particle{particle=explosion;a=1}
+alternate_bow_burst_tick:
+  Skills:
+  - particle{particle=drip_lava;amount=1}

@@ -419,3 +419,109 @@ alternate_bow_sentry:
     ]} ~onShoot ?!bowTension{force=>0.5} ?!itemGroupOnCooldown{group=alternate_bow_sentry}
 
   Rarity: rare
+
+
+#unreleased
+electronium_ingot:
+  Id: paper
+  Display: "Electronium Ingot"
+  Lore:
+  - "<red>⚠<bold> Caution</bold>"
+  - "<yellow>Handle with care."
+  Options:
+    ItemModel: hbm:ingot_electronium
+  Skills:
+
+  - command{command="function incendium:item/sentrys_wrath/explode";asop=true;ascaster=true} ~onHold
+  - command{command="function incendium:item/sentrys_wrath/explode";asop=true;ascaster=true} ~onTimer:60
+  - command{command="function incendium:item/sentrys_wrath/explode";asop=true;ascaster=true} ~onDrop_Item
+
+
+alternate_bow_burst:
+  Material: bow
+  Display: '<aqua>Alternate Bow'
+  Lore:
+  - "Shoots arrows in bursts of 5. Does not inflict invulnerability frames."
+  - "Arrows fired later in the burst deal more damage."
+  - "Deals significantly more damage when fully charged."
+  Options:
+    ItemModel: dueris:alternate_bow_burst
+  Skills:
+  - skill{skill=[
+    - sound{sound=entity.generic.explode;pitch=2.0;radius=25}
+    - command{command="kill @n[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
+
+    - shoot{damage=8;delay=1;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.2;radius=25;delay=1}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=1} @self
+
+    - shoot{damage=10;delay=3;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.25;radius=25;delay=3}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=3} @self
+
+    - shoot{damage=12;delay=5;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.3;radius=25;delay=5}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=5} @self
+
+    - shoot{damage=14;delay=7;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.35;radius=25;delay=7}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=7} @self
+
+    - shoot{damage=14;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?!hasEnchant{type=power}
+    - shoot{damage=16;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=36;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=1}
+    - shoot{damage=18;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=40;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=2}
+    - shoot{damage=20;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=44;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=3}
+    - shoot{damage=22;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=48;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=4}
+    - shoot{damage=24;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=52;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=5}
+    - sound{sound=ultrakill:shoot1;volume=0.6;radius=25;delay=9}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=9} @self
+
+
+    ]} ~onShoot ?bowTension{force=>0.7}
+
+
+
+  - skill{skill=[
+    - command{command="kill @n[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
+    - shoot{damage=2;delay=1;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=1}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=1} @self
+
+    - shoot{damage=4;delay=3;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=3}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=3} @self
+
+    - shoot{damage=6;delay=5;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=5}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=5} @self
+
+    - shoot{damage=8;delay=7;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=7}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=7} @self
+
+    - shoot{damage=10;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true}
+    - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=9}
+    - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=9} @self
+
+
+    ]} ~onShoot ?!bowTension{force=>0.7}
+  Rarity: rare
+
+alternate_bow_railcannon:
+  Material: bow
+  Display: '<aqua>Alternate Bow'
+  UseCooldown:
+    CooldownGroup: minecraft:alternate_bow_railcannon
+    CooldownSeconds: 1
+  Lore:
+  Options:
+    ItemModel: dueris:alternate_bow_burst #will change later
+  Skills:
+
+  - skill{skill=alternate_bow_railcannon_shoot} ~onShoot ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
+
+  - sound{sound=ultrakill:railcannonfull;radius=25;volume=0.5} @self ~onHold ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
+  - sound{sound=ultrakill:railcannonfull;radius=25;volume=0.5} @self ~onTimer:40 ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
+
+  - skill{skill=alternate_bow_railcannon_particle} @self ~onTimer:1 ?!itemGroupOnCooldown{group=minecraft:alternate_bow_railcannon}
+  Rarity: rare

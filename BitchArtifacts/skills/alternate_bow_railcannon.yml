@@ -1,0 +1,25 @@
+alternate_bow_railcannon_shoot:
+  Skills:
+
+  - sound{sound=ultrakill:electric_railcannon}
+  - projectile{sfo=0;tickinterpolation=6;velocity=256;syo=1.62;maxrange=16;poweraffectsvelocity=false;onstartskill=alternate_bow_railcannon_projectile_start;onhitskill=alternate_bow_railcannon_projectile_hit;drawhitbox=true;stopatentity=false;hr=1;vr=1;hnp=true;ontickskill=alternate_bow_railcannon_projectile_tick;highAccuracyMode=true;stopatblock=true;deathdelay=0} @Forward{yOffset=1.62}
+  - delay 1
+  - setItemGroupCooldown{key=minecraft:alternate_bow_railcannon;ticks=320} @self ?!hasEnchant{type=power}
+  - setItemGroupCooldown{key=alternate_bow_railcannon;ticks=300} ?hasEnchant{type=power;level=1}
+  - setItemGroupCooldown{key=alternate_bow_railcannon;ticks=280} ?hasEnchant{type=power;level=2}
+  - setItemGroupCooldown{key=alternate_bow_railcannon;ticks=260} ?hasEnchant{type=power;level=3}
+  - setItemGroupCooldown{key=alternate_bow_railcannon;ticks=240} ?hasEnchant{type=power;level=4}
+  - setItemGroupCooldown{key=alternate_bow_railcannon;ticks=220} ?hasEnchant{type=power;level=5}
+alternate_bow_railcannon_projectile_hit:
+  Skills:
+  - damage{amount=50;damagecause=entity_explosion;poweraffectsdamage=false}
+alternate_bow_railcannon_projectile_tick:
+  Skills:
+  - particle{particle=wax_off;amount=50;spread=0.5}
+  - particle{particle=soul_fire_flame;amount=150;spread=0.2;speed=1}
+  - particle{particle=flame;amount=100;spread=0.5;speed=0}
+
+alternate_bow_railcannon_particle:
+  Skills:
+  - particle{particle=flame;amount=5;spread=0.5;speed=0.4;yoffset=1}
+  - particle{particle=electric_spark;amount=5;spread=1;speed=0.4;yoffset=1}
