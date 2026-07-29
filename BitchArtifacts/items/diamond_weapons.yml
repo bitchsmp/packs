@@ -451,28 +451,28 @@ alternate_bow_burst:
     - sound{sound=entity.generic.explode;pitch=2.0;radius=25}
     - command{command="kill @n[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
 
-    - shoot{damage=6;delay=1;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true}
+    - shoot{damage=6;delay=1;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true;pav=false}
     - sound{sound=ultrakill:shoot1;volume=0.2;radius=25;delay=1}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=1} @self
 
-    - shoot{damage=8;delay=3;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true}
+    - shoot{damage=8;delay=3;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true;pav=false}
     - sound{sound=ultrakill:shoot1;volume=0.25;radius=25;delay=3}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=3} @self
 
-    - shoot{damage=10;delay=5;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true}
+    - shoot{damage=10;delay=5;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true;pav=false}
     - sound{sound=ultrakill:shoot1;volume=0.3;radius=25;delay=5}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=5} @self
 
-    - shoot{damage=12;delay=7;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true}
+    - shoot{damage=12;delay=7;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true;pav=false}
     - sound{sound=ultrakill:shoot1;volume=0.35;radius=25;delay=7}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=7} @self
 
-    - shoot{damage=14;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?!hasEnchant{type=power}
-    - shoot{damage=15;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=26;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=1}
-    - shoot{damage=16;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=28;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=2}
-    - shoot{damage=17;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=30;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=3}
-    - shoot{damage=18;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=4}
-    - shoot{damage=20;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=36;expiration=10;bounce=true;preventimmunity=true;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=5}
+    - shoot{damage=14;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=24;expiration=10;bounce=true;preventimmunity=true;pav=false;ontickskill=alternate_bow_burst_tick;interval=1} ?!hasEnchant{type=power}
+    - shoot{damage=15;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=26;expiration=10;bounce=true;preventimmunity=true;pav=false;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=1}
+    - shoot{damage=16;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=28;expiration=10;bounce=true;preventimmunity=true;pav=false;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=2}
+    - shoot{damage=17;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=30;expiration=10;bounce=true;preventimmunity=true;pav=false;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=3}
+    - shoot{damage=18;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=32;expiration=10;bounce=true;preventimmunity=true;pav=false;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=4}
+    - shoot{damage=20;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=36;expiration=10;bounce=true;preventimmunity=true;pav=false;ontickskill=alternate_bow_burst_tick;interval=1} ?hasEnchant{type=power;level=5}
     - sound{sound=ultrakill:shoot1;volume=0.6;radius=25;delay=9}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=9} @self
 
@@ -483,23 +483,23 @@ alternate_bow_burst:
 
   - skill{skill=[
     - command{command="kill @n[type=#arrows,tag=!in.checked,distance=..3]";ascaster=true;asop=true;delay=1}
-    - shoot{damage=2;delay=1;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.7}
+    - shoot{damage=2;delay=1;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.7}
     - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=1}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=1} @self
 
-    - shoot{damage=2;delay=3;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.75}
+    - shoot{damage=2;delay=3;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.75}
     - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=3}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=3} @self
 
-    - shoot{damage=2;delay=5;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.8}
+    - shoot{damage=2;delay=5;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.8}
     - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=5}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=5} @self
 
-    - shoot{damage=2;delay=7;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.85}
+    - shoot{damage=2;delay=7;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.85}
     - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=7}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=7} @self
 
-    - shoot{damage=2;delay=9;poweraffectsdamage=true;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.9}
+    - shoot{damage=2;delay=9;poweraffectsdamage=false;forwardoffset=0;startyoffset=1.62;onendskill=alternate_bow_burst_end;maxdistance=16;expiration=10;bounce=true;preventimmunity=true;accuracy=0.9}
     - sound{sound=ultrakill:shoot1;volume=0.1;radius=25;delay=9}
     - recoil{recoil=1;sprinting=1.5;pitch=-2;delay=9} @self
 
