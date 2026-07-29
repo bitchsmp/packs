@@ -421,7 +421,7 @@ alternate_bow_sentry:
   Rarity: rare
 
 
-#unreleased
+
 electronium_ingot:
   Id: paper
   Display: "Electronium Ingot"
