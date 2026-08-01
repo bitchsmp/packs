@@ -297,6 +297,8 @@ icewhisper:
 
   Skills:
   - freeze{ticks=140} @trigger ~onAttack
+  - potion{type=SLOWNESS;duration=120;level=1} @trigger ~onAttack ?!itemRecharging
+  - potion{type=SLOWNESS;duration=80;level=1} @trigger ~onAttack ?itemRecharging
   - particle{particle=snowflake;amount=20;speed=0.2;yoffset=1} @trigger ~onAttack ?!itemRecharging
   - particle{particle=snowflake;amount=5;speed=0.15;yoffset=1} @trigger ~onAttack ?itemRecharging
   - particle{particle=sculk_soul;amount=10;speed=0.15;yoffset=1} @trigger ~onAttack ?!itemRecharging
