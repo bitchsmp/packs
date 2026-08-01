@@ -43,14 +43,14 @@ brimstone_claymore:
   - "<gray>burning effect of agony and despair to the target when attacking with full charge"
   Skills:
   - skill{s=[
-    - aura{aura=UltraBurn;duration=200;interval=20;ontickskill=[
+    - aura{aura=UltraBurn;duration=300;interval=20;ontickskill=[
       - summon{type=brimstone_claymore_marker;onsurface=false} @TriggerLocation ?~!hasPotion{type=FIRE_RESISTANCE}
       - damage{amount=2;damagecause=MAGIC;ignoreshield=true} ?~hasPotion{type=FIRE_RESISTANCE}
       - effect:particles{particle=flame;amount=50;hS=0.1;vS=0.1;speed=0.3}
       - ignite{ticks=200}
       ]} @trigger
     - sound{sound=ultrakill:firestart;volume=0.6} @self
-    ];chance=0.35} ?!itemRecharging ~onAttack
+    ];chance=0.5} ?!itemRecharging ~onAttack
   - ignite{ticks=1200} @trigger ~onAttack
   Rarity: epic
 masamune:
@@ -371,10 +371,10 @@ greatbow:
   - skill{skill=[
     - command{command="execute at @s as @e[type=#arrows,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow";ascaster=true;asop=true;delay=1} @self
     - sound{sound=entity.ghast.shoot;pitch=1.5;volume=0.7} @self 
-    ]} ~onShootbow ?bowshoottension{force=>0.85}
+    ]} ~onShootbow ?bowshoottension{force=>0.75}
   - skill{skill=[
     - command{command="execute at @s as @e[type=#arrows,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,distance=..3] run tag @s add dueris.greatbow_weak";ascaster=true;asop=true;delay=1} @self
-    ]} ~onShootbow ?!bowshoottension{force=>0.85}
+    ]} ~onShootbow ?!bowshoottension{force=>0.75}
 
 
 alternate_crossbow_proximity:
