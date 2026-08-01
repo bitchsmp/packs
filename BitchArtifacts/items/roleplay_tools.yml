@@ -1,3 +1,4 @@
+#RELEASED
 diamond_gavel:
   Id: stick
   Display: "Diamond Gavel"
@@ -5,6 +6,7 @@ diamond_gavel:
     ItemModel: hbm:diamond_gavel
   Skills:
   - sound{sound=block.anvil.use;cooldown=3;pitch=0.5} @self ~onSwing
+#RELEASED
 ducttape:
   Id: paper
   Display: "Duct Tape"
