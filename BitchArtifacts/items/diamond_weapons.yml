@@ -18,7 +18,7 @@ alternate_crossbow:
   - "<aqua>Max Range: 1024 Blocks</aqua>"
   Skills:
   - variableSet{value=20;type=INTEGER;name=caster.alternate_crossbow_heat} ~onTimer:1 @self ?!varset{name=caster.alternate_crossbow_heat}
-  - aura{aura=alternate_crossbow_heat_aura;ticks=600;interval=10;ontickskill=alternate_crossbow_heat_tick} @self ~onTimer:1
+  - aura{aura=alternate_crossbow_heat_aura;ticks=1200;interval=10;ontickskill=alternate_crossbow_heat_tick;cancelonquit=false} @self ~onTimer:1
   - skill{skill=alternate_crossbow_onShoot} ~onShoot @Self
   - cancelEvent ~onShoot
 
@@ -28,7 +28,7 @@ alternate_crossbow:
     - actionmessage{message="<gold><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>400} ?varrange{name=caster.alternate_crossbow_heat;value=<501}
     - actionmessage{message="<yellow><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=>300} ?varrange{name=caster.alternate_crossbow_heat;value=<401}
     - actionmessage{message="<white><caster.var.alternate_crossbow_heat> °C"} @self ?varrange{name=caster.alternate_crossbow_heat;value=<301} 
-    ]} ~onTimer:10 @self
+    ]} ~onTimer:1 @self
   Rarity: rare
 brimstone_claymore:
 # Original name from Blade of Majestica rspack: Brimstone_Claymore
