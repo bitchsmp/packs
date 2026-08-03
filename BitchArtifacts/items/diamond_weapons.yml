@@ -371,11 +371,14 @@ greatbow:
   - "<gray><italic>A powerful wind-charged bow that requires you to pull all the way back."
   Skills:
   - skill{skill=[
-    - command{command="execute at @s as @e[distance=..3,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,type=#arrows] run tag @s add dueris.greatbow";ascaster=true;asop=true;delay=1} @self
-    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run data modify entity @s damage set value 7";ascaster=true;asop=true;delay=1} @self
-    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run data modify entity @s damage set value 9";ascaster=true;asop=true;delay=1} @self ?hasPotion{type=WIND_CHARGED}
-    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run data modify entity @s crit set value false";ascaster=true;asop=true;delay=1} @self
     - sound{sound=entity.ghast.shoot;pitch=1.5;volume=0.7} @self
+    - command{command="execute at @s as @e[distance=..3,tag=!dueris.greatbow,tag=!dueris.greatbow_weak,limit=1,sort=nearest,type=#arrows] run tag @s add dueris.greatbow";ascaster=true;asop=true;delay=1} @self
+    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run data modify entity @s damage set value 7";ascaster=true;asop=true;delay=1} @self ?!hasPotion{type=WIND_CHARGED}
+    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run data modify entity @s crit set value false";ascaster=true;asop=true;delay=1} @self
+
+    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run data modify entity @s damage set value 9";ascaster=true;asop=true;delay=1} @self ?hasPotion{type=WIND_CHARGED}
+    - command{command="execute at @s as @e[distance=..3,tag=dueris.greatbow,limit=1,sort=nearest,type=#arrows] run tag @s add dueris.greatbow_strong";ascaster=true;asop=true;delay=1} @self ?hasPotion{type=WIND_CHARGED}
+
 
     ]} ~onShootbow ?bowshoottension{force=>0.75}
 
