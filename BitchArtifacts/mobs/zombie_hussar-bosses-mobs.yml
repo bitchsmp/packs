@@ -2,7 +2,7 @@
 
 ZombieCommanderHussar:
   Type: ZOMBIE
-  Display: '&6Zombie Hussar Commander'
+  Display: '&6Zombie Hussar Commander (rematch)'
   Health: 500
   Faction: zombie_hussar
   Damage: 5
@@ -77,7 +77,7 @@ ZombieCommanderHussar:
     DigOutOfGround: true
   BossBar:
     Enabled: true
-    Title: "&6Zombie Hussar Commander"
+    Title: "&6Zombie Hussar Commander (rematch)"
     Range: 64
     Color: GREEN
     Style: SEGMENTED_6

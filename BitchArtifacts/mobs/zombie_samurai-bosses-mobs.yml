@@ -2,7 +2,7 @@
 
 ZombieSamurai:
   Type: ZOMBIE
-  Display: '&6Zombie Samurai'
+  Display: '&6Zombie Samurai (rematch)'
   Health: 500
   Faction: zombie_samurai
   Damage: 1
@@ -77,14 +77,14 @@ ZombieSamurai:
     DigOutOfGround: true
   BossBar:
     Enabled: true
-    Title: "&6Zombie Samurai"
+    Title: "&6Zombie Samurai (rematch)"
     Range: 64
     Color: GOLD
     Style: SEGMENTED_6
 
 ZombieSamuraiDashMarkers:
   Type: ARMOR_STAND
-  Display: '&6Zombie Samurai'
+  Display: '&6Zombie Samurai (rematch)'
   Faction: zombie_samurai
   Options:
     VisibleByDefault: false
