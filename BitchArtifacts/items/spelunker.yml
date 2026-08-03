@@ -1,0 +1,19 @@
+spelunking_potion:
+  Id: potion
+  Display: Potion of Spelunking
+  Options:
+    Color: 255,157,0
+    Glint: true
+    HideFlags: true
+  Consumable:
+    Animation: DRINK
+    HasParticles: false
+    Sound: entity.generic.drink
+  Lore:
+  - "<blue>Spelunking (06:00)"
+  - ""
+  - "<dark_purple>When Applied"
+  - "<gray>See nearby Ancient Debris"
+
+  Skills:
+  - command{command="spelunk <caster.name> 360s";asop=true;ascaster=true} @self ~onConsume
