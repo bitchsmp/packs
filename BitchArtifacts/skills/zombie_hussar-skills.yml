@@ -7,7 +7,7 @@ DashAttack:
   - setskillcd{skill=DashAttack;seconds=2} ?biome{biome=plains}
   - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=64}
   - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=32;audience=world} @PlayersInRadius{r=32}
-  - particle{particle=soul_fire_flame;yoffset=3} @selfLocation
+  - particle{particle=soul_fire_flame;yoffset=3;amount=10;speed=0.05} @selfLocation
   - delay 8
   - delay 8 ?healthpercent{percent=<50%}
   - sudoskill{target=@self;skill=[

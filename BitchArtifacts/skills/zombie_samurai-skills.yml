@@ -3,9 +3,9 @@ samurai_dash:
   Conditions:
   - targetwithin{d=25}
   Skills:
-  - skill{skill=samurai_dashhell} <75%
+  - skill{skill=samurai_dashhell} =25%-75%
   - stun{stopai=true;gravity=false;ticks=4} @self
-  - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=25;audience=nearby} @selfLocation
+  - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=64;audience=nearby} @selfLocation
   - delay 5
   - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=5;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=16;velocity=120;drawhitbox=false
     ;onendskill=[
@@ -27,57 +27,57 @@ samurai_dash_wakizashi:
   Skills:
   - sound{sound=minecraft:item.spear.lunge_3} @self
   - teleport @forward{f=-6;yoffset=1}
-samurai_mace:
-  Cooldown: 3
-  Conditions:
-  - targetWithin{distance=45}
-  Skills:
-  - sound{sound=entity.wind_charge.throw;pitch=0.5}
-  - delay 1
-  - particle{particle=gust_emitter_small;a=1} @selfLocation 
-  - sound{sound=entity.wind_charge.wind_burst;pitch=0.75}
-  - velocity{velocityy=1.5;mode=ADD} @self
-  - delay 20
-  - sound{sound=minecraft:item.spear.lunge_3} @self
-  - aura{aura=lunging;ticks=20} @self
-  - leap{velocity=100} @targetLocation{yoffset=10}
-  - aura{aura=smash;ontickskill=samurai_mace_attack;ticks=160;interval=1} @self
-  #
-  - delay 5
-  - skill{s=samurai_mace_lunge} @self >25%
-  - delay 5 
-  - skill{s=samurai_mace_lunge} @self >25%
+# samurai_mace:
+#   Cooldown: 3
+#   Conditions:
+#   - targetWithin{distance=45}
+#   Skills:
+#   - sound{sound=entity.wind_charge.throw;pitch=0.5}
+#   - delay 1
+#   - particle{particle=gust_emitter_small;a=1} @selfLocation 
+#   - sound{sound=entity.wind_charge.wind_burst;pitch=0.75}
+#   - velocity{velocityy=1.5;mode=ADD} @self
+#   - delay 20
+#   - sound{sound=minecraft:item.spear.lunge_3} @self
+#   - aura{aura=lunging;ticks=20} @self
+#   - leap{velocity=100} @targetLocation{yoffset=10}
+#   - aura{aura=smash;ontickskill=samurai_mace_attack;ticks=160;interval=1} @self
+#   #
+#   - delay 5
+#   - skill{s=samurai_mace_lunge} @self >25%
+#   - delay 5 
+#   - skill{s=samurai_mace_lunge} @self >25%
 
-samurai_mace_lunge:
-  Conditions:
-  - targetWithin{distance=24} true
-  - targetWithin{distance=11} false
-  Skills:
-  - aura{aura=lunging;ticks=20}
-  - sound{sound=minecraft:item.spear.lunge_3} @self
-  - leap{velocity=150} @targetLocation{yoffset=10}
-samurai_mace_attack:
-  Skills:
-  - skill{s=samurai_smash}
-  - skill{s=samurai_smash_removeaura}
-samurai_smash:
-  Conditions:
-  - directionalvelocity{y=<0} true
-  Skills:
-  - message{message=aura} @PlayersInWorld{}
-  - skill{skill=[
-    - shieldbreak{forcesync=true} @PIR{radius=4.5;limit=1}
-    - removeaura{aura=smash} @self
-    - delay 2
-    - damage{a=20;triggerskills=true;tags=SMASH;ignoreshield=true} @PIR{radius=4.5;limit=1}
-    - sound{sound=item.mace.smash_ground_heavy}
-    ]} ?playerInRadius{radius=4.5;amount=>0}
-samurai_smash_removeaura:
-  Conditions:
-  - hasAura{aura=lunging} false
-  Skills:
-  - removeaura{aura=smash} ?directionalvelocity{y=0}
-  - removeaura{aura=smash} ?directionalvelocity{y=>0}
+# samurai_mace_lunge:
+#   Conditions:
+#   - targetWithin{distance=24} true
+#   - targetWithin{distance=11} false
+#   Skills:
+#   - aura{aura=lunging;ticks=20}
+#   - sound{sound=minecraft:item.spear.lunge_3} @self
+#   - leap{velocity=150} @targetLocation{yoffset=10}
+# samurai_mace_attack:
+#   Skills:
+#   - skill{s=samurai_smash}
+#   - skill{s=samurai_smash_removeaura}
+# samurai_smash:
+#   Conditions:
+#   - directionalvelocity{y=<0} true
+#   Skills:
+#   - message{message=aura} @PlayersInWorld{}
+#   - skill{skill=[
+#     - shieldbreak{forcesync=true} @PIR{radius=4.5;limit=1}
+#     - removeaura{aura=smash} @self
+#     - delay 2
+#     - damage{a=20;triggerskills=true;tags=SMASH;ignoreshield=true} @PIR{radius=4.5;limit=1}
+#     - sound{sound=item.mace.smash_ground_heavy}
+#     ]} ?playerInRadius{radius=4.5;amount=>0}
+# samurai_smash_removeaura:
+#   Conditions:
+#   - hasAura{aura=lunging} false
+#   Skills:
+#   - removeaura{aura=smash} ?directionalvelocity{y=0}
+#   - removeaura{aura=smash} ?directionalvelocity{y=>0}
 
 samurai_dashhell:
   Cooldown: 1
@@ -98,6 +98,7 @@ samurai_dashhell_ez:
 
   Skills:
   - randomskill{skills=samurai_dashhell_x,samurai_dashhell_z,samurai_dashhell_xz1,samurai_dashhell_xz2}
+  - effect:sound{s=ultrakill:blueflash;volume=1.5;pitch=1;radius=64;audience=nearby} @selfLocation
 samurai_dashhell_x:
   Skills:
   - summon{amount=1;type=ZombieSamuraiDashMarkersQuiet} @targetLocation{x=-10}
