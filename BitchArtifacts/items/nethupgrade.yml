@@ -1,0 +1,9 @@
+netherite_upgrade_template_blueprints:
+  Id: paper
+  Display: "<aqua>Blueprints"
+  Options:
+    ItemModel: hbm:blueprints
+    FireResistant: true
+  Lore:
+  - "<gray>Netherite Upgrade Template"
+  Rarity: rare

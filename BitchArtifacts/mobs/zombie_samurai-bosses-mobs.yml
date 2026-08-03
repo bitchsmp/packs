@@ -55,6 +55,7 @@ ZombieSamurai:
   - katana MAINHAND
   - wakizashi OFFHAND
   Drops:
+  - netherite_upgrade_template_blueprints 5-9 1
   - weapon_steel_ingot 3-8 1
   - katana_blueprints 1 1
   - wakizashi_blueprints 1 1
