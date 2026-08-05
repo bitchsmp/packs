@@ -2,6 +2,7 @@
 DashAttack:
   Cooldown: 4
   Conditions:
+  - playerInRadius{radius=100;amount=>2}
   - targetwithin{d=25}
   Skills:
   - setskillcd{skill=DashAttack;seconds=2} ?biome{biome=plains}
@@ -22,9 +23,11 @@ DashAttack:
 
 #
 SummonZombie:
-  Cooldown: 15
+  Cooldown: 10
+  Conditions:
+  - playerInRadius{radius=100;amount=>2}
   Skills:
-  - setskillcd{skill=SummonZombie;seconds=5} ?biome{biome=plains} 
+  - setskillcd{skill=SummonZombie;seconds=3} ?biome{biome=plains} 
   - message{m="<caster.name><&co> Arise, my minions!"} @PlayersInRadius{r=64}
   - delay 20
   - summon{mob=ZombieHussarMinion;amount=1;noise=5} @Self

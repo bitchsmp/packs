@@ -2,12 +2,20 @@
 
 ZombieCommanderHussar:
   Type: ZOMBIE
-  Display: '&6Zombie Hussar Commander (rematch)'
-  Health: 500
+  Display: '&6Zombie Hussar Commander (final rematch)'
+  Health: 2000
   Faction: zombie_hussar
   Damage: 5
 
   Skills:
+  - skill{s=[
+    - cancelEvent
+    - message{message="<gold>Zombie Hussar Commander<green> thinks this would be a fair fight if you bring more fighters."} @trigger
+    - message{message="<green>Unless you bring more than 2 warriors, he will not accept the fight."} @trigger
+    - sound{sound=block.anvil.land;pitch=2} @self
+    ]} ~onDamaged ?!playerInRadius{radius=100;amount=>2}
+  - cancelEvent ~onAttack ?!playerInRadius{radius=100;amount=>2}
+
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload 
   - skill{skill=[
@@ -23,7 +31,7 @@ ZombieCommanderHussar:
     ]} ~onDamaged ?DamageAmount{damageamount=>199}
   
   - attribute{attribute=STEP_HEIGHT;amount=69} @self ~onSpawnorload
-  - heal{amount=100;overheal=false} @self ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
+  - heal{amount=2;overheal=false} @self ~onTimer:1 ?!playerInRadius{radius=64;a=>0}
   - remove @child ~onTimer:50 ?!playerInRadius{radius=64;a=>0}
 
   - particle{particle=egg_crack;amount=6;hspread=0.5;vspread=1;yoffset=1} @self ~onTimer:20 ?biome{biome=plains}
@@ -47,14 +55,15 @@ ZombieCommanderHussar:
   - message{m="<bold><gold>Zombie Hussar Commander has been defeated"} @server ~onDeath 
   Equipment:
   - NETHERITE_HELMET HEAD
+  - NETHERITE_LEGGINGS FEET
   - NETHERITE_BOOTS FEET
   - sabre MAINHAND
   Drops:
   - sabre 1 1
-  - weapon_steel_ingot 2to6 1
-  - sabre_blueprints 1 1
-  - longsword_blueprints 1 1
-  - ENCHANTED_GOLDEN_APPLE 2-7 1
+  - weapon_steel_ingot 10to20 1
+  - sabre_blueprints 2 1
+  - longsword_blueprints 3 1
+  - ENCHANTED_GOLDEN_APPLE 2-20 1
   - IRON_INGOT 5 1
   - IRON_INGOT 4 0.9
   - IRON_INGOT 3 0.8
@@ -66,7 +75,7 @@ ZombieCommanderHussar:
     MovementSpeed: 0.31
     MaxCombatDistance: 16
     PreventOtherDrops: true
-    FollowRange: 64
+    FollowRange: 100
     PreventRandomEquipment: true
     PreventConversion: true
     PreventRenaming: true
@@ -77,7 +86,7 @@ ZombieCommanderHussar:
     DigOutOfGround: true
   BossBar:
     Enabled: true
-    Title: "&6Zombie Hussar Commander (rematch)"
+    Title: "&6Zombie Hussar Commander (final rematch)"
     Range: 64
     Color: GREEN
     Style: SEGMENTED_6
