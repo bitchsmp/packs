@@ -60,9 +60,9 @@ ZombieCommanderHussar:
   - sabre MAINHAND
   Drops:
   - sabre 1 1
-  - weapon_steel_ingot 10to20 1
-  - sabre_blueprints 2 1
-  - longsword_blueprints 3 1
+  - weapon_steel_ingot 16to25 1
+  - sabre_blueprints 4 1
+  - longsword_blueprints 9 1
   - ENCHANTED_GOLDEN_APPLE 2-20 1
   - IRON_INGOT 5 1
   - IRON_INGOT 4 0.9
