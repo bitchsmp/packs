@@ -2,6 +2,7 @@ samurai_dash:
   Cooldown: 4
   Conditions:
   - targetwithin{d=25}
+  - playerInRadius{radius=100;amount=>2}
   Skills:
   - skill{skill=samurai_dashhell} =25%-75%
   - stun{stopai=true;gravity=false;ticks=4} @self
@@ -23,6 +24,7 @@ samurai_dash_wakizashi:
   Cooldown: 1
   Conditions:
   - skillOnCooldown{skill=samurai_dash}
+  - playerInRadius{radius=100;amount=>2}
   - targetwithin{d=25} true
   Skills:
   - sound{sound=minecraft:item.spear.lunge_3} @self
@@ -95,6 +97,8 @@ samurai_dashhell:
         - skill{s=samurai_dashhell_y}
         ]}]}
 samurai_dashhell_ez:
+  Conditions:
+  - playerInRadius{radius=100;amount=>2}
 
   Skills:
   - randomskill{skills=samurai_dashhell_x,samurai_dashhell_z,samurai_dashhell_xz1,samurai_dashhell_xz2}

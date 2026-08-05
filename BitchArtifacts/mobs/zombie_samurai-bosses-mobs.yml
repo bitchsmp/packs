@@ -2,8 +2,8 @@
 
 ZombieSamurai:
   Type: ZOMBIE
-  Display: '&6Zombie Samurai (rematch)'
-  Health: 500
+  Display: '&6Zombie Samurai (final rematch)'
+  Health: 1000
   Faction: zombie_samurai
   Damage: 1
   AIGoalSelectors:
@@ -13,6 +13,15 @@ ZombieSamurai:
   
 
   Skills:
+  - skill{s=[
+    - cancelEvent
+    - message{message="<gold>Zombie Samurai<green> thinks this would be a fair fight if you bring more fighters."} @trigger
+    - message{message="<green>Unless you bring more than 2 warriors, he will not accept the fight."} @trigger
+    - sound{sound=block.anvil.land;pitch=2} @self
+    ]} ~onDamaged ?!playerInRadius{radius=100;amount=>2}
+
+  - cancelEvent ~onAttack ?!playerInRadius{radius=100;amount=>2}
+  
   - dismount ~onTimer:20
   - remove @child ~onDeath
   - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
@@ -56,18 +65,18 @@ ZombieSamurai:
   - wakizashi OFFHAND
   Drops:
   - netherite_upgrade_template_blueprints 5-9 1
-  - weapon_steel_ingot 3-8 1
-  - katana_blueprints 1 1
-  - wakizashi_blueprints 1 1
-  - ENCHANTED_GOLDEN_APPLE 5-15 1
+  - weapon_steel_ingot 20-30 1
+  - katana_blueprints 2 1
+  - wakizashi_blueprints 3 1
+  - ENCHANTED_GOLDEN_APPLE 15-50 1
   - music_disc_wemmbu_thinking_emoji_rival 1 1
 
   Options:
     AlwaysShowName: true
-    MovementSpeed: 0.27
-    MaxCombatDistance: 32
+    MovementSpeed: 0.275
+    MaxCombatDistance: 48
     PreventOtherDrops: true
-    FollowRange: 64
+    FollowRange: 100
     PreventRandomEquipment: true
     PreventConversion: true
     PreventRenaming: true
@@ -78,14 +87,14 @@ ZombieSamurai:
     DigOutOfGround: true
   BossBar:
     Enabled: true
-    Title: "&6Zombie Samurai (rematch)"
+    Title: "&6Zombie Samurai (final rematch)"
     Range: 64
     Color: GOLD
     Style: SEGMENTED_6
 
 ZombieSamuraiDashMarkers:
   Type: ARMOR_STAND
-  Display: '&6Zombie Samurai (rematch)'
+  Display: '&6Zombie Samurai (final rematch)'
   Faction: zombie_samurai
   Options:
     VisibleByDefault: false
