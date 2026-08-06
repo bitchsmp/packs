@@ -1,0 +1,88 @@
+
+
+marlowww:
+  Type: ZOMBIE
+  Display: '&fMarlowww: &bGuardian of The End'
+  Health: 1000
+  Faction: marlowww
+  Damage: 1
+  AITargetSelectors:
+  - clear
+  - player
+  AIGoalSelectors:
+  - clear
+  - meleeAttack{followUnseen=true}
+  - float
+  
+
+  Skills:
+  - dismount ~onTimer:20
+  - remove @child ~onDeath
+  - potion{type=FIRE_RESISTANCE;duration=2147483647;hasparticles=false} @self ~onSpawnorload
+  - attribute{attribute=STEP_HEIGHT;amount=69} @self ~onSpawnorload
+  - heal{amount=25;overheal=false} @self ~onTimer:50 ?!playerInRadius{radius=100;a=>0}
+  - cancelEvent ~onDamaged ?DamageCause{damagecause=ENTITY_EXPLOSION}
+  - cancelEvent ~onDamaged ?DamageCause{damagecause=BLOCK_EXPLOSION}
+  - cancelEvent ~onDamaged ?DamageCause{damagecause=FALL}
+  - command{command="execute in the_end run tp @s 0 70 0";ascaster=true} @self ~onDamaged ?DamageCause{damagecause=VOID}
+  - command{command="execute in the_end run effect give @e[type=ender_dragon] resistance 30 100";ascaster=true} @self ~onTimer:20
+
+  - cancelEvent ~onDamaged ?DamageCause{damagecause=VOID}
+
+  - skill{s=marlow_crystal_line} @target ~onTimer:20 0.2
+  - skill{s=marlow_crystal_line} @target ~onCombat 0.5
+  Equipment:
+  - NETHERITE_HELMET HEAD
+  - NETHERITE_CHESTPLATE CHEST
+  - NETHERITE_LEGGINGS LEGS
+  - NETHERITE_BOOTS FEET
+  - end_crystal MAINHAND
+  - crossbow OFFHAND
+  Drops:
+  Options:
+    KnockbackResistance: 1
+    AlwaysShowName: true
+    MovementSpeed: 0.27
+    MaxCombatDistance: 32
+    PreventOtherDrops: true
+    FollowRange: 64
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    Despawn: NEVER
+    PreventSunburn: true
+    PreventTransformation: true
+    Glowing: true
+    DigOutOfGround: true
+  BossBar:
+    Enabled: true
+    Title: "&fMarlowww: &bGuardian of The End"
+    Range: 256
+    Color: WHITE
+    Style: SEGMENTED_6
+  Disguise: player Marlowww
+
+marlowww_crystal_line_marker:
+  Type: ARMOR_STAND
+  Display: '&fMarlowww: &bGuardian of The End'
+  Faction: marlowww
+  Options:
+    VisibleByDefault: false
+  #
+    NoAI: true
+    Silent: true
+    CanMove: false
+    Marker: true
+    HasGravity: false
+    Invincible: true
+    Interactable: false
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventConversion: true
+    PreventRenaming: true
+    PreventSunburn: true
+    PreventTransformation: true
+  Skills:
+  - command{command="summon end_crystal ~ ~ ~";ascaster=true} ~onSpawnorload
+  - explode{yield=1;delay=60} @selfLocation{} ~onSpawnorload
+  - remove{delay=62} @self ~onSpawnorload

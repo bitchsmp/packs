@@ -1,0 +1,12 @@
+marlow_crystal_line:
+  Cooldown: 10
+  Skills:
+  - effect:sound{s=ultrakill:blueflash;volume=1.0;pitch=1;radius=64;audience=nearby} @selfLocation
+  - delay 5
+  - projectile{hp=false;hnp=false;verticalradius=0.1;tickinterpolation=0;horizontalradius=0.1;stopatentity=false;stopatblock=true;maxrange=64;velocity=24;drawhitbox=false
+    ;onendskill=[
+    - summon{a=1;type=marlowww_crystal_line_marker}
+    ];ontickskill=[
+    - summon{a=1;type=marlowww_crystal_line_marker}
+    ]} @target
+
