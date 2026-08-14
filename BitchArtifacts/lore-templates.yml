@@ -1,17 +1,8 @@
-attachable_weapons:
-  - Filler: ' '
-  - Conditions:
-    - notEmpty <item.lore.Description>
-    Line: '<item.lore.Description>'
-  - Line:
-    - '{augments-each:SKIN_SWORD}<augment.display>'
-    - '{augments-each:SKIN_AXE}<augment.display>'
-    - '{augments-each:SKIN_MACE}<augment.display>'
-    - '{augments-each:SKIN_HOE}<augment.display>'
-    - '{augments-each:SKIN_BOW}<augment.display>'
-    - '{augments-each:SKIN_CROSSBOW}<augment.display>'
-    - '{augments-each:SKIN_SPEAR}<augment.display>'
+armor_stats:
+
+  - Line: '<light_purple>Custom Armors allow you to allocate 10 Armor Stats to them.'
+  - Line: '<lore.Test>'
   - Filler: ' '
   - Line:
-    - '{stats}<yellow>Bonus Stats:'
+    - '{stats}<yellow>When equipped:'
     - '{stats-each}<blue><stat.display>'

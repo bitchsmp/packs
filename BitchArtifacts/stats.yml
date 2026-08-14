@@ -34,8 +34,8 @@ BONUS_DAMAGE:
   BaseValue: 0
 
 CRITICAL_STRIKE_CHANCE:
-  Enabled: false
-  Display: 'Critical Strike'
+  Enabled: true
+  Display: 'Strong Critical Strike'
   Formatting:
     Additive: '+<value> Critical Strike'
     Multiply: '+<value> Critical Strike'
@@ -43,11 +43,12 @@ CRITICAL_STRIKE_CHANCE:
   BaseValue: 0
   MinValue: 0
   Skills:
-    - particles{p=crit;a=50;hS=1;y=1;s=1} @trigger
+    - particles{p=crit;a=50;hS=0.2;y=1.2;s=0.4} @trigger
+    - sound{sound=entity.player.attack.crit} @self
 
 CRITICAL_STRIKE_DAMAGE:
-  Enabled: false
-  Display: 'Critical Damage'
+  Enabled: true
+  Display: 'Strong Critical Damage'
   Formatting:
     Additive: '+<value> Critical Damage'
     Multiply: '+<value> Critical Damage'
@@ -64,7 +65,7 @@ CRITICAL_STRIKE_RESILIENCE:
   BaseValue: 0
 
 DAMAGE_REDUCTION:
-  Enabled: false
+  Enabled: true
   Display: 'Damage Reduction'
   Formatting:
     Additive: '+<value> Damage Reduction'
@@ -73,7 +74,7 @@ DAMAGE_REDUCTION:
   BaseValue: 0
 
 DEFENSE:
-  Enabled: false
+  Enabled: true
   Display: 'Defense'
   Formatting:
     Additive: '+<value> Defense'
@@ -82,7 +83,7 @@ DEFENSE:
   BaseValue: 0
 
 DODGE_CHANCE:
-  Enabled: false
+  Enabled: true
   Display: 'Dodge'
   Formatting:
     Additive: '+<value> Dodge Chance'
@@ -226,7 +227,7 @@ BURNING_TIME:
   BaseValue: 0
 
 EXPLOSION_KNOCKBACK_RESISTANCE:
-    Enabled: false
+    Enabled: true
     Display: 'Explosion Knockback Resistance'
     Formatting:
         Additive: '+<value> Explosion Knockback Resistance'
@@ -244,7 +245,7 @@ FALL_DAMAGE_MULTIPLIER:
     BaseValue: 1
 
 GRAVITY:
-    Enabled: false
+    Enabled: true
     Display: 'Gravity'
     Formatting:
         Additive: '+<value> Gravity'
@@ -253,7 +254,7 @@ GRAVITY:
     BaseValue: 0
 
 JUMP_STRENGTH:
-    Enabled: false
+    Enabled: true
     Display: 'Jump Strength'
     Formatting:
         Additive: '+<value> Jump Strength'
@@ -262,7 +263,7 @@ JUMP_STRENGTH:
     BaseValue: 0
 
 KNOCKBACK_RESISTANCE:
-    Enabled: false
+    Enabled: true
     Display: 'Knockback Resistance'
     Formatting:
         Additive: '+<value> Knockback Resistance'
@@ -280,7 +281,7 @@ MOVEMENT_EFFICIENCY:
     BaseValue: 0
 
 OXYGEN_BONUS:
-    Enabled: false
+    Enabled: true
     Display: 'Oxygen Bonus'
     Formatting:
         Additive: '+<value> Oxygen Bonus'
@@ -307,7 +308,7 @@ SNEAKING_SPEED:
     BaseValue: 0
 
 STEP_HEIGHT:
-    Enabled: false
+    Enabled: true
     Display: 'Step Height'
     Formatting:
         Additive: '+<value> Step Height'

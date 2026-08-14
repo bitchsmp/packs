@@ -1,0 +1,151 @@
+custom_helmet:
+  Id: netherite_helmet
+  Display: "<gold>Custom Helmet"
+  EquipSlot: HEAD
+  Lore:
+    Template: armor_stats
+  Attributes:
+    Head:
+      ARMOR: 0
+  AugmentationSlots:
+    Type: ARMOR_STAT
+    Amount: 10
+    Chance: 1     
+  Options:
+  Hide:
+    - ATTRIBUTES
+custom_chesplate:
+  Id: netherite_chestplate
+  Display: "<gold>Custom Chesplate"
+  EquipSlot: BODY
+  Lore:
+    Template: armor_stats
+  Attributes:
+    Chest:
+      ARMOR: 0 
+  AugmentationSlots:
+    Type: ARMOR_STAT
+    Amount: 10
+    Chance: 1     
+  Options:
+  Hide:
+    - ATTRIBUTES
+custom_leggings:
+  Id: netherite_leggings
+  Display: "<gold>Custom Leggings"
+  EquipSlot: LEGGINGS
+  Lore:
+    Template: armor_stats
+  Attributes:
+    Legs:
+      ARMOR: 0 
+  AugmentationSlots:
+    Type: ARMOR_STAT
+    Amount: 10
+    Chance: 1     
+  Options:
+  Hide:
+    - ATTRIBUTES
+custom_boots:
+  Id: netherite_boots
+  Display: "<gold>Custom Boots"
+  EquipSlot: BOOTS
+  Lore:
+    Template: armor_stats
+  Attributes:
+    Feet:
+      ARMOR: 0
+  AugmentationSlots:
+    Type: ARMOR_STAT
+    Amount: 10
+    Chance: 1     
+  Options:
+  Hide:
+    - ATTRIBUTES
+ 
+armor_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<white> Armor'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - ARMOR 1 ADDITIVE
+attack_speed_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<white> Attack Speed'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - ATTACK_SPEED 0.5 ADDITIVE
+health_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<white> Health'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - HEALTH 3 ADDITIVE
+
+armor_toughness_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<white> Armor Toughness'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - ARMOR_TOUGHNESS 1 ADDITIVE
+knockback_resistance_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<white> Knockback Resistance'
+  Lore: "<gray>Although it says +0.1, it's actually +1!"
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - KNOCKBACK_RESISTANCE 0.1 ADDITIVE
+health_regeneration_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<white> Health Regeneration'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - HEALTH_REGENERATION 1 ADDITIVE
+jump_strength_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<yellow> Jump Strength'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - JUMP_STRENGTH 0.1 ADDITIVE
+smash_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<yellow> Smash'
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - JUMP_STRENGTH 0.6 ADDITIVE
+    - GRAVITY 0.12 ADDITIVE
+critical_chance_point:
+  Material: NETHERITE_SCRAP
+  Display: '<red>Armor Stats:<yellow> Strong Critical Strike Chance'
+  Lore:
+  - "<gray>Strong Critical Strikes are hits that deal double damage. They can only be triggered by chance."
+  Augmentation:
+    Type: ARMOR_STAT
+    Tooltip: ''
+    Icon: ''
+    Stats:
+    - CRITICAL_STRIKE_CHANCE 0.1 ADDITIVE
