@@ -1,7 +1,7 @@
 # Mythicmobs and MythicCrucible packs
 This repository stores packs made for Minecraft Bukkit/Spigot/Paper plugin "Mythicmobs" and "MythicCrucible"
 
-Packs are mainly made by Dueris
+Packs are mainly made by quocnam201010
 
 ## Note:
 For AttachableWeapon pack, remember to copy the stats.yml and paste it in the main /plugin/MythicMobs folder, via init.sh or init.bat
@@ -23,11 +23,6 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
      - MythicMobs 5.12.1
      - MythicCrucible 5.12.0
 
-   - [OLD] Direct Download Links:
-
-     - MythicMobs: [5.11.2-20260204.105031-34](https://mvn.lumine.io/repository/maven/io/lumine/Mythic-Dist/5.12.1-SNAPSHOT/Mythic-Dist-5.12.1-20260517.185811-35)
-     - MythicCrucible: [MythicCrucible-2.4.0-20260302.231936-30](https://mvn.lumine.io/repository/maven/io/lumine/MythicCrucible/2.4.0-SNAPSHOT/MythicCrucible-2.4.0-20260302.231936-30.jar)
-
 
 3. LibsDisguise Plugin
 
@@ -38,9 +33,10 @@ For AttachableWeapon pack, remember to copy the stats.yml and paste it in the ma
 
 ## Contributors:
 
-Dueris: Lead Developer
+quocnam201010: Lead Developer
 
 
 ## Former contributors:
 
 VuFelix: Former developer of the "Hakurei Gohei Pack"; supporter.
+
